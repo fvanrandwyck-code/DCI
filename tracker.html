@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracker — Digital Connectivity Insights</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="site-name">DCI</a>
+      <a href="tracker.html" class="active">Tracker</a>
+      <a href="analysis.html">Analysis</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <main>
+    <h1>Tracker</h1>
+    <p class="tracker-meta">
+      UK digital infrastructure policy developments from DCMS, Ofcom, and DBIST — filtered for telecoms relevance.
+    </p>
+
+    <div class="tracker-notice">
+      <strong>Note:</strong> This feed currently shows placeholder entries. Live RSS integration from DCMS, Ofcom, and DBIST is being set up — real items will appear here once feed URLs are confirmed.
+    </div>
+
+    <div class="source-filters">
+      <button class="active" data-source="all" onclick="filterFeed('all', this)">All sources</button>
+      <button data-source="DCMS" onclick="filterFeed('DCMS', this)">DCMS</button>
+      <button data-source="Ofcom" onclick="filterFeed('Ofcom', this)">Ofcom</button>
+      <button data-source="DBIST" onclick="filterFeed('DBIST', this)">DBIST</button>
+    </div>
+
+    <div id="feed-container">
+      <!-- Feed items rendered by tracker.js -->
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>Digital Connectivity Insights</span>
+      <span>Written in a personal capacity. Not the views of any employer.</span>
+    </div>
+  </footer>
+
+  <script src="js/tracker.js"></script>
+
+</body>
+</html>
