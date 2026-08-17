@@ -1,31 +1,49 @@
 // ── Sources ────────────────────────────────────────────────────────────────────
 //
-// All three sources use the gov.uk search API (Access-Control-Allow-Origin: *)
-// so they can be fetched directly from the browser with no proxy needed.
+// Each group maps to one filter button and can pull from multiple gov.uk
+// organisation slugs — the current department plus its immediate predecessor.
+// All use the gov.uk search API (Access-Control-Allow-Origin: *) so no
+// proxy is needed.
 //
-// "Ofcom (formal publications)" covers documents Ofcom files with or via gov.uk
-// — annual reports, statutory consultations, regulatory decisions. It does NOT
-// include Ofcom's own news, press releases, or enforcement notices, which live
-// on ofcom.org.uk and are blocked by Cloudflare from automated fetching.
-// Those items are added manually in manual-entries.js.
+// Orgs are listed current-first within each group. Where a document is tagged
+// to both a current and a legacy department (common during gov.uk re-tagging),
+// the current department's tag wins after deduplication.
+//
+// DCMS  group: DCMS (current)  + DSIT (dissolved July 2026)
+// DBIST group: DBIST (current) + DBT  (immediate predecessor)
+// Ofcom group: Ofcom formal publications on gov.uk only
+//              Items from ofcom.org.uk (Cloudflare-blocked) go in manual-entries.js
 //
 const SOURCES = {
   DCMS: {
-    label: 'DCMS',
-    apiUrl: 'https://www.gov.uk/api/search.json?filter_organisations=department-for-culture-media-and-sport&order=-public_timestamp&count=50',
+    orgs: [
+      { slug: 'department-for-culture-media-and-sport',          tag: 'DCMS',  label: 'DCMS'  },
+      { slug: 'department-for-science-innovation-and-technology', tag: 'DSIT',  label: 'DSIT'  },
+    ],
   },
   DBIST: {
-    label: 'DBIST',
-    // Items tagged to legacy DBT may also appear here during gov.uk's re-tagging period
-    apiUrl: 'https://www.gov.uk/api/search.json?filter_organisations=department-for-business-innovation-science-and-trade&order=-public_timestamp&count=50',
+    orgs: [
+      { slug: 'department-for-business-innovation-science-and-trade', tag: 'DBIST', label: 'DBIST' },
+      { slug: 'department-for-business-and-trade',                    tag: 'DBT',   label: 'DBT'   },
+    ],
   },
   Ofcom: {
-    label: 'Ofcom (formal publications)',
-    apiUrl: 'https://www.gov.uk/api/search.json?filter_organisations=ofcom&order=-public_timestamp&count=50',
+    orgs: [
+      { slug: 'ofcom', tag: 'Ofcom', label: 'Ofcom (formal publications)' },
+    ],
   },
 };
 
+// Lookup: tag → { group, label } — used when resolving manual-entries.js items
+const TAG_META = {};
+for (const [groupId, group] of Object.entries(SOURCES)) {
+  for (const org of group.orgs) {
+    TAG_META[org.tag] = { group: groupId, label: org.label };
+  }
+}
+
 // Keywords used to filter items for telecoms relevance.
+// Applied identically to every item from every source, including DSIT and DBT.
 // Extend this list as coverage needs change.
 const KEYWORDS = [
   'telecoms', 'telecom', 'broadband', 'mobile', 'spectrum',
@@ -62,27 +80,49 @@ function matchesKeyword(item) {
 
 function getVisibleItems() {
   return allItems.filter(item => {
-    const sourceMatch = activeSource === 'all' || item.source === activeSource;
-    return sourceMatch && matchesKeyword(item);
+    const groupMatch = activeSource === 'all' || item.group === activeSource;
+    return groupMatch && matchesKeyword(item);
   });
 }
 
 // ── Fetching ───────────────────────────────────────────────────────────────────
 
-async function fetchGovUkSource(sourceId) {
-  const source = SOURCES[sourceId];
-  const res = await fetch(source.apiUrl);
+async function fetchOrgSlug(groupId, org) {
+  const apiUrl = `https://www.gov.uk/api/search.json?filter_organisations=${org.slug}&order=-public_timestamp&count=50`;
+  const res = await fetch(apiUrl);
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const data = await res.json();
 
   return (data.results || []).map(r => ({
-    id: sourceId + ':' + r.link,
-    source: sourceId,
-    date: r.public_timestamp ? r.public_timestamp.slice(0, 10) : '',
-    title: r.title || '',
+    id:      org.tag + ':' + r.link,
+    source:  org.tag,    // true originating department tag — displayed in feed
+    group:   groupId,    // filter group — determines which button reveals this item
+    label:   org.label,  // display label shown in the source tag
+    date:    r.public_timestamp ? r.public_timestamp.slice(0, 10) : '',
+    title:   r.title || '',
     context: r.description || '',
-    url: 'https://www.gov.uk' + r.link,
+    url:     'https://www.gov.uk' + r.link,
   }));
+}
+
+// Fetches all org slugs within a group in parallel and merges results.
+// Current dept is listed first in each group's orgs array, so it wins
+// on URL deduplication when the same document carries multiple org tags.
+async function fetchGroup(groupId) {
+  const group = SOURCES[groupId];
+  const results = await Promise.allSettled(
+    group.orgs.map(org => fetchOrgSlug(groupId, org))
+  );
+
+  const items = [];
+  for (const [i, result] of results.entries()) {
+    if (result.status === 'fulfilled') {
+      items.push(...result.value);
+    } else {
+      console.warn(`[DCI Tracker] ${group.orgs[i].tag} fetch failed:`, result.reason);
+    }
+  }
+  return items;
 }
 
 // ── Rendering ──────────────────────────────────────────────────────────────────
@@ -96,18 +136,16 @@ function renderFeed() {
     return;
   }
 
-  container.innerHTML = items.map(item => {
-    const label = SOURCES[item.source]?.label || item.source;
-    return `
-    <article class="feed-item" data-source="${escapeHtml(item.source)}">
+  container.innerHTML = items.map(item => `
+    <article class="feed-item" data-source="${escapeHtml(item.group)}">
       <p class="feed-item-meta">
-        <span class="source-tag">${escapeHtml(label)}</span>
+        <span class="source-tag">${escapeHtml(item.label)}</span>
         <span>${formatDate(item.date)}</span>
       </p>
       <h3><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></h3>
       ${item.context ? `<p>${escapeHtml(item.context)}</p>` : ''}
-    </article>`;
-  }).join('');
+    </article>
+  `).join('');
 }
 
 // ── Filter button handler ──────────────────────────────────────────────────────
@@ -126,38 +164,44 @@ async function init() {
   document.getElementById('feed-container').innerHTML = '<p class="no-results">Loading…</p>';
 
   const [dcmsResult, dbistResult, ofcomResult] = await Promise.allSettled([
-    fetchGovUkSource('DCMS'),
-    fetchGovUkSource('DBIST'),
-    fetchGovUkSource('Ofcom'),
+    fetchGroup('DCMS'),
+    fetchGroup('DBIST'),
+    fetchGroup('Ofcom'),
   ]);
 
   const items = [];
-
-  for (const [sourceId, result] of [['DCMS', dcmsResult], ['DBIST', dbistResult], ['Ofcom', ofcomResult]]) {
+  for (const [groupId, result] of [['DCMS', dcmsResult], ['DBIST', dbistResult], ['Ofcom', ofcomResult]]) {
     if (result.status === 'fulfilled') {
       items.push(...result.value);
     } else {
-      console.warn(`[DCI Tracker] ${sourceId} fetch failed:`, result.reason);
+      console.warn(`[DCI Tracker] ${groupId} group fetch failed:`, result.reason);
     }
   }
 
-  // Merge manual entries from manual-entries.js (loaded before this script)
-  const manualItems = (typeof MANUAL_ENTRIES !== 'undefined' ? MANUAL_ENTRIES : []).map(e => ({
-    id: 'manual:' + e.url,
-    source: e.source,
-    date: e.date,
-    title: e.title,
-    context: e.context || '',
-    url: e.url,
-  }));
+  // Merge manual entries from manual-entries.js (loaded before this script).
+  // TAG_META resolves each entry's source tag to the correct group and display label.
+  const manualItems = (typeof MANUAL_ENTRIES !== 'undefined' ? MANUAL_ENTRIES : []).map(e => {
+    const meta = TAG_META[e.source] || { group: e.source, label: e.source };
+    return {
+      id:      'manual:' + e.url,
+      source:  e.source,
+      group:   meta.group,
+      label:   meta.label,
+      date:    e.date,
+      title:   e.title,
+      context: e.context || '',
+      url:     e.url,
+    };
+  });
   items.push(...manualItems);
 
-  // Deduplicate by id, sort by date descending
-  const seen = new Set();
+  // Deduplicate by URL (current dept wins over legacy, as orgs are ordered current-first),
+  // then sort by date descending.
+  const seenUrls = new Set();
   allItems = items
     .filter(item => {
-      if (seen.has(item.id)) return false;
-      seen.add(item.id);
+      if (seenUrls.has(item.url)) return false;
+      seenUrls.add(item.url);
       return true;
     })
     .sort((a, b) => b.date.localeCompare(a.date));
