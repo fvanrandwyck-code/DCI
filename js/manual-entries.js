@@ -36,7 +36,11 @@
 // ───────────────────────────────────────────────────────────────────────────────
 
 const MANUAL_ENTRIES = [
-
-  // Add real entries here. Delete or keep the example above as a reference.
-
+  {
+    source:  'Ofcom',
+    date:    '2026-07-28',
+    title:   'Ofcom proposes to block new Openreach commercial offer to protect fair competition and keep long-term prices low',
+    context: 'The first time Ofcom has moved to block a commercial offer from Openreach — provisionally ruling that steep discounts targeted at new full-fibre customers could undermine altnets\' ability to compete. Consultation open until 27 August, final decision expected by end of September.',
+    url:     'https://www.ofcom.org.uk/phones-and-broadband/telecoms-infrastructure/ofcom-proposes-to-block-new-openreach-commercial-offer-to-protect-fair-competition-and-keep-long-term-prices-low',
+  },
 ];
