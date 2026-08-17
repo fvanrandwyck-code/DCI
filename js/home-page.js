@@ -1,12 +1,3 @@
-// ── Helpers ────────────────────────────────────────────────────────────────────
-
-function daysSince(dateStr) {
-  const d = new Date(dateStr + 'T00:00:00');
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  return Math.floor((today - d) / 86400000);
-}
-
 // ── Rendering ──────────────────────────────────────────────────────────────────
 
 function renderOpenConsultations(allItems) {
@@ -41,12 +32,12 @@ function renderOpenConsultations(allItems) {
   `).join('');
 }
 
-function renderThisWeek(allItems) {
+function renderLatestPublications(allItems) {
   const recent = allItems
-    .filter(item => matchesKeyword(item) && daysSince(item.date) <= 7)
-    .slice(0, 5);
+    .filter(item => matchesKeyword(item))
+    .slice(0, 7);
 
-  const container = document.getElementById('this-week');
+  const container = document.getElementById('latest-publications');
 
   if (recent.length === 0) {
     container.innerHTML = '<p class="no-results">Nothing published in the last 7 days.</p>';
@@ -69,12 +60,12 @@ function renderThisWeek(allItems) {
 
 async function init() {
   document.getElementById('open-consultations').innerHTML = '<p class="no-results">Loading…</p>';
-  document.getElementById('this-week').innerHTML = '<p class="no-results">Loading…</p>';
+  document.getElementById('latest-publications').innerHTML = '<p class="no-results">Loading…</p>';
 
   const allItems = await loadAllItems();
 
   renderOpenConsultations(allItems);
-  renderThisWeek(allItems);
+  renderLatestPublications(allItems);
 }
 
 init();
