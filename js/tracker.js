@@ -129,15 +129,17 @@ async function fetchOrgSlug(groupId, org) {
   const data = await res.json();
 
   return (data.results || []).map(r => ({
-    id:      org.tag + ':' + r.link,
-    source:  org.tag,    // true originating department tag — displayed in feed
-    group:   groupId,    // filter group — determines which button reveals this item
-    label:   org.label,  // display label shown in the source tag
-    type:    mapFormat(r.format || ''),
-    date:    r.public_timestamp ? r.public_timestamp.slice(0, 10) : '',
-    title:   r.title || '',
-    context: r.description || '',
-    url:     'https://www.gov.uk' + r.link,
+    id:        org.tag + ':' + r.link,
+    source:    org.tag,    // true originating department tag — displayed in feed
+    group:     groupId,    // filter group — determines which button reveals this item
+    label:     org.label,  // display label shown in the source tag
+    rawFormat: r.format || '',  // preserved so fetchDeadlines can identify open consultations
+    type:      mapFormat(r.format || ''),
+    date:      r.public_timestamp ? r.public_timestamp.slice(0, 10) : '',
+    title:     r.title || '',
+    context:   r.description || '',
+    url:       'https://www.gov.uk' + r.link,
+    deadline:  null,
   }));
 }
 
@@ -161,6 +163,65 @@ async function fetchGroup(groupId) {
   return items;
 }
 
+// Fetches closing dates from the gov.uk content API for open consultation and
+// call-for-evidence items. Mutates items in place; per-item failures are silent
+// so the feed still renders without a bar if the content API call fails.
+async function fetchDeadlines(items) {
+  const targets = items.filter(item =>
+    item.rawFormat === 'open_consultation' ||
+    item.rawFormat === 'open_call_for_evidence'
+  );
+  if (targets.length === 0) return;
+
+  await Promise.allSettled(
+    targets.map(async item => {
+      const path = item.url.replace('https://www.gov.uk', '');
+      const res = await fetch('https://www.gov.uk/api/content' + path);
+      if (!res.ok) return;
+      const data = await res.json();
+      if (data.details && data.details.closing_date) {
+        item.deadline = data.details.closing_date;
+      }
+    })
+  );
+}
+
+// ── Deadline bar ───────────────────────────────────────────────────────────────
+
+const DEADLINE_TYPES = new Set(['Consultation', 'Call for evidence']);
+
+function renderDeadlineBar(item) {
+  if (!item.deadline || !DEADLINE_TYPES.has(item.type)) return '';
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const published = new Date(item.date + 'T00:00:00');
+  const deadline  = new Date(item.deadline);
+
+  const total    = deadline - published;
+  const elapsed  = today - published;
+  const fraction = total <= 0 ? 1 : Math.min(Math.max(elapsed / total, 0), 1);
+  const pct      = Math.round(fraction * 100);
+  const isPast   = today > deadline;
+
+  let colorClass;
+  if (isPast || fraction >= 0.75) colorClass = 'bar-red';
+  else if (fraction >= 0.5)       colorClass = 'bar-amber';
+  else                            colorClass = 'bar-green';
+
+  const verb     = isPast ? 'Closed' : 'Closes';
+  const dateText = deadline.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+
+  return `
+      <div class="deadline-bar">
+        <div class="deadline-bar-track">
+          <div class="deadline-bar-fill ${colorClass}" style="width:${pct}%"></div>
+        </div>
+        <span class="deadline-label${isPast ? ' deadline-past' : ''}">${verb} ${dateText}</span>
+      </div>`;
+}
+
 // ── Rendering ──────────────────────────────────────────────────────────────────
 
 function renderFeed() {
@@ -181,6 +242,7 @@ function renderFeed() {
       </p>
       <h3><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></h3>
       ${item.context ? `<p>${escapeHtml(item.context)}</p>` : ''}
+      ${renderDeadlineBar(item)}
     </article>
   `).join('');
 }
@@ -220,15 +282,16 @@ async function init() {
   const manualItems = (typeof MANUAL_ENTRIES !== 'undefined' ? MANUAL_ENTRIES : []).map(e => {
     const meta = TAG_META[e.source] || { group: e.source, label: e.source };
     return {
-      id:      'manual:' + e.url,
-      source:  e.source,
-      group:   meta.group,
-      label:   meta.label,
-      type:    e.type || '',
-      date:    e.date,
-      title:   e.title,
-      context: e.context || '',
-      url:     e.url,
+      id:       'manual:' + e.url,
+      source:   e.source,
+      group:    meta.group,
+      label:    meta.label,
+      type:     e.type || '',
+      date:     e.date,
+      title:    e.title,
+      context:  e.context || '',
+      url:      e.url,
+      deadline: e.deadline || null,
     };
   });
   items.push(...manualItems);
@@ -243,6 +306,8 @@ async function init() {
       return true;
     })
     .sort((a, b) => b.date.localeCompare(a.date));
+
+  await fetchDeadlines(allItems);
 
   renderFeed();
 }

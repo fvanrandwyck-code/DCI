@@ -310,6 +310,51 @@ hr {
   text-align: center;
 }
 
+/* ── Deadline bar ── */
+
+.deadline-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.deadline-bar-track {
+  flex: 1;
+  height: 6px;
+  background: #e0e0e0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.deadline-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+}
+
+.deadline-bar-fill.bar-green { background: #4caf50; }
+.deadline-bar-fill.bar-amber { background: #e08c00; }
+.deadline-bar-fill.bar-red   { background: #c62828; }
+
+.deadline-label {
+  font-family: system-ui, sans-serif;
+  font-size: 0.75rem;
+  color: #555;
+  white-space: nowrap;
+}
+
+.deadline-label.deadline-past {
+  color: #c62828;
+}
+
+@media (max-width: 600px) {
+  .deadline-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.3rem;
+  }
+}
+
 /* ── About page ── */
 
 .about-content em {

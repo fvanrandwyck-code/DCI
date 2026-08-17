@@ -16,13 +16,16 @@
 //
 // ── FIELDS ─────────────────────────────────────────────────────────────────────
 //
-//   source  — always 'Ofcom' (renders as "Ofcom (formal publications)" in the feed)
-//   type    — use one of the nine values below (must match exactly, case-sensitive)
-//   date    — publication date, YYYY-MM-DD format
-//   title   — the item headline, as it appears on Ofcom's site
-//   context — 1–2 sentences of your own context: what it is and why it matters
-//             for operators/investors. This is the value-add over the raw headline.
-//   url     — direct link to the item on ofcom.org.uk
+//   source   — always 'Ofcom' (renders as "Ofcom (formal publications)" in the feed)
+//   type     — use one of the nine values below (must match exactly, case-sensitive)
+//   date     — publication date, YYYY-MM-DD format
+//   title    — the item headline, as it appears on Ofcom's site
+//   context  — 1–2 sentences of your own context: what it is and why it matters
+//              for operators/investors. This is the value-add over the raw headline.
+//   url      — direct link to the item on ofcom.org.uk
+//   deadline — (optional) response deadline, YYYY-MM-DD format
+//              Only needed for 'Consultation' and 'Call for evidence' entries.
+//              Renders a colour-coded progress bar showing time elapsed vs deadline.
 //
 // ── VALID TYPE VALUES ──────────────────────────────────────────────────────────
 //
@@ -39,12 +42,13 @@
 // ── EXAMPLE ────────────────────────────────────────────────────────────────────
 //
 //   {
-//     source:  'Ofcom',
-//     type:    'Consultation',
-//     date:    '2026-08-15',
-//     title:   'Ofcom opens consultation on wholesale broadband pricing: Openreach charge controls 2027–2031',
-//     context: 'Four-year charge control review covering leased lines and physical infrastructure access. Key input for operators whose commercial models depend on Openreach wholesale pricing — decisions expected Q1 2027.',
-//     url:     'https://www.ofcom.org.uk/consultations-and-statements/category-1/wholesale-broadband-pricing',
+//     source:   'Ofcom',
+//     type:     'Consultation',
+//     date:     '2026-08-15',
+//     deadline: '2026-10-15',
+//     title:    'Ofcom opens consultation on wholesale broadband pricing: Openreach charge controls 2027–2031',
+//     context:  'Four-year charge control review covering leased lines and physical infrastructure access. Key input for operators whose commercial models depend on Openreach wholesale pricing — decisions expected Q1 2027.',
+//     url:      'https://www.ofcom.org.uk/consultations-and-statements/category-1/wholesale-broadband-pricing',
 //   },
 //
 // ───────────────────────────────────────────────────────────────────────────────
