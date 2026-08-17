@@ -38,6 +38,34 @@
 const MANUAL_ENTRIES = [
   {
     source:  'Ofcom',
+    date:    '2026-07-08',
+    title:   'Ofcom fines Virgin Media £28m for repeatedly preventing customers from cancelling contracts',
+    context: 'One of Ofcom\'s larger recent enforcement actions against an operator, targeting conduct that obstructs switching -- directly relevant to how Ofcom polices contract and retention practices across the industry.',
+    url:     'https://www.ofcom.org.uk/phones-and-broadband/switching-provider/ofcom-fines-virgin-media-28m-for-repeatedly-preventing-customers-from-cancelling-contracts',
+  },
+  {
+    source:  'Ofcom',
+    date:    '2026-07-15',
+    title:   'New rules to thwart text message scammers and protect consumers and businesses',
+    context: 'New regulatory requirements on how operators must handle and filter scam SMS traffic -- an operational compliance obligation landing directly on telecoms providers, not just a consumer-advice update.',
+    url:     'https://www.ofcom.org.uk/phones-and-broadband/scam-calls-and-messages/new-rules-to-thwart-text-message-scammers-and-protect-consumers-and-businesses',
+  },
+  {
+    source:  'Ofcom',
+    date:    '2026-07-16',
+    title:   'Protection for prisons, power stations and airports against hostile drones',
+    context: 'A spectrum-policy decision enabling counter-drone technology at sensitive sites -- relevant to the spectrum-management side of digital infrastructure policy, even though the framing is security-led.',
+    url:     'https://www.ofcom.org.uk/spectrum/innovative-use-of-spectrum/protection-for-prisons-power-stations-and-airports-against-hostile-drones',
+  },
+  {
+    source:  'Ofcom',
+    date:    '2026-07-23',
+    title:   'Ofcom: Telecoms and pay-TV complaints fall to record low',
+    context: 'Ofcom\'s regular industry complaints benchmark -- a standard reference point for how operators are performing on service quality, often cited in wider debates about competition and regulation.',
+    url:     'https://www.ofcom.org.uk/phones-and-broadband/service-quality/ofcom-telecoms-and-pay-tv-complaints-fall-to-record-low',
+  },
+  {
+    source:  'Ofcom',
     date:    '2026-07-28',
     title:   'Ofcom proposes to block new Openreach commercial offer to protect fair competition and keep long-term prices low',
     context: 'The first time Ofcom has moved to block a commercial offer from Openreach — provisionally ruling that steep discounts targeted at new full-fibre customers could undermine altnets\' ability to compete. Consultation open until 27 August, final decision expected by end of September.',
