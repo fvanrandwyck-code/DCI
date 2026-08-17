@@ -42,6 +42,41 @@ for (const [groupId, group] of Object.entries(SOURCES)) {
   }
 }
 
+// ── Format → Type label mapping ────────────────────────────────────────────────
+//
+// Maps gov.uk API `format` field values to the nine display labels used
+// across the tracker. Unlisted raw values fall back to the raw value itself.
+//
+const FORMAT_LABELS = {
+  open_consultation:         'Consultation',
+  closed_call_for_evidence:  'Consultation',
+  consultation_outcome:      'Consultation',
+  call_for_evidence_outcome: 'Consultation',
+  open_call_for_evidence:    'Call for evidence',
+  decision:                  'Decision',
+  guidance:                  'Guidance',
+  detailed_guide:            'Guidance',
+  statutory_guidance:        'Guidance',
+  notice:                    'Notice',
+  policy_paper:              'Policy paper',
+  research:                  'Report',
+  independent_report:        'Report',
+  corporate_report:          'Report',
+  press_release:             'Press release',
+  news_story:                'Press release',
+  speech:                    'Press release',
+  correspondence:            'Press release',
+  official_statistics:       'Statistics',
+  statistics_announcement:   'Statistics',
+  statistics:                'Statistics',
+  national_statistics:       'Statistics',
+  statistical_data_set:      'Statistics',
+};
+
+function mapFormat(raw) {
+  return FORMAT_LABELS[raw] || raw;
+}
+
 // Keywords used to filter items for telecoms relevance.
 // Applied identically to every item from every source, including DSIT and DBT.
 // Extend this list as coverage needs change.
@@ -98,6 +133,7 @@ async function fetchOrgSlug(groupId, org) {
     source:  org.tag,    // true originating department tag — displayed in feed
     group:   groupId,    // filter group — determines which button reveals this item
     label:   org.label,  // display label shown in the source tag
+    type:    mapFormat(r.format || ''),
     date:    r.public_timestamp ? r.public_timestamp.slice(0, 10) : '',
     title:   r.title || '',
     context: r.description || '',
@@ -140,6 +176,7 @@ function renderFeed() {
     <article class="feed-item" data-source="${escapeHtml(item.group)}">
       <p class="feed-item-meta">
         <span class="source-tag">${escapeHtml(item.label)}</span>
+        ${item.type ? `<span class="type-tag">${escapeHtml(item.type)}</span>` : ''}
         <span>${formatDate(item.date)}</span>
       </p>
       <h3><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></h3>
@@ -187,6 +224,7 @@ async function init() {
       source:  e.source,
       group:   meta.group,
       label:   meta.label,
+      type:    e.type || '',
       date:    e.date,
       title:   e.title,
       context: e.context || '',
