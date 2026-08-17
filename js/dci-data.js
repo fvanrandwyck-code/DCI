@@ -78,7 +78,7 @@ function mapFormat(raw) {
 }
 
 // Keywords used to filter items for telecoms relevance.
-// Applied identically to every item from every source, including DSIT and DBT.
+// Applied identically to every item from every source.
 // Extend this list as coverage needs change.
 const KEYWORDS = [
   'telecoms', 'telecom', 'broadband', 'mobile', 'spectrum',
@@ -86,11 +86,6 @@ const KEYWORDS = [
   'gigabit', 'connectivity', 'infrastructure', 'network',
   'rollout', 'coverage', 'roaming', 'satellite',
 ];
-
-// ── State ──────────────────────────────────────────────────────────────────────
-
-let allItems = [];
-let activeSource = 'all';
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
 
@@ -111,13 +106,6 @@ function formatDate(dateStr) {
 function matchesKeyword(item) {
   const text = (item.title + ' ' + item.context).toLowerCase();
   return KEYWORDS.some(kw => text.includes(kw.toLowerCase()));
-}
-
-function getVisibleItems() {
-  return allItems.filter(item => {
-    const groupMatch = activeSource === 'all' || item.group === activeSource;
-    return groupMatch && matchesKeyword(item);
-  });
 }
 
 // ── Fetching ───────────────────────────────────────────────────────────────────
@@ -157,7 +145,7 @@ async function fetchGroup(groupId) {
     if (result.status === 'fulfilled') {
       items.push(...result.value);
     } else {
-      console.warn(`[DCI Tracker] ${group.orgs[i].tag} fetch failed:`, result.reason);
+      console.warn(`[DCI] ${group.orgs[i].tag} fetch failed:`, result.reason);
     }
   }
   return items;
@@ -222,46 +210,13 @@ function renderDeadlineBar(item) {
       </div>`;
 }
 
-// ── Rendering ──────────────────────────────────────────────────────────────────
-
-function renderFeed() {
-  const container = document.getElementById('feed-container');
-  const items = getVisibleItems();
-
-  if (items.length === 0) {
-    container.innerHTML = '<p class="no-results">No telecoms-relevant items found for this source.</p>';
-    return;
-  }
-
-  container.innerHTML = items.map(item => `
-    <article class="feed-item" data-source="${escapeHtml(item.group)}">
-      <p class="feed-item-meta">
-        <span class="source-tag">${escapeHtml(item.label)}</span>
-        ${item.type ? `<span class="type-tag">${escapeHtml(item.type)}</span>` : ''}
-        <span>${formatDate(item.date)}</span>
-      </p>
-      <h3><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></h3>
-      ${item.context ? `<p>${escapeHtml(item.context)}</p>` : ''}
-      ${renderDeadlineBar(item)}
-    </article>
-  `).join('');
-}
-
-// ── Filter button handler ──────────────────────────────────────────────────────
-
-function filterFeed(source, buttonEl) {
-  activeSource = source;
-  document.querySelectorAll('.source-filters button').forEach(btn => {
-    btn.classList.toggle('active', btn === buttonEl);
-  });
-  renderFeed();
-}
-
-// ── Init ───────────────────────────────────────────────────────────────────────
-
-async function init() {
-  document.getElementById('feed-container').innerHTML = '<p class="no-results">Loading…</p>';
-
+// ── Shared data loader ─────────────────────────────────────────────────────────
+//
+// Fetches all sources in parallel, merges manual entries, deduplicates by URL,
+// sorts by date descending, and fetches deadlines for open consultations.
+// Returns Promise<Item[]>. Called once per page load by each page's init().
+//
+async function loadAllItems() {
   const [dcmsResult, dbistResult, ofcomResult] = await Promise.allSettled([
     fetchGroup('DCMS'),
     fetchGroup('DBIST'),
@@ -273,7 +228,7 @@ async function init() {
     if (result.status === 'fulfilled') {
       items.push(...result.value);
     } else {
-      console.warn(`[DCI Tracker] ${groupId} group fetch failed:`, result.reason);
+      console.warn(`[DCI] ${groupId} group fetch failed:`, result.reason);
     }
   }
 
@@ -299,7 +254,7 @@ async function init() {
   // Deduplicate by URL (current dept wins over legacy, as orgs are ordered current-first),
   // then sort by date descending.
   const seenUrls = new Set();
-  allItems = items
+  const allItems = items
     .filter(item => {
       if (seenUrls.has(item.url)) return false;
       seenUrls.add(item.url);
@@ -309,7 +264,5 @@ async function init() {
 
   await fetchDeadlines(allItems);
 
-  renderFeed();
+  return allItems;
 }
-
-init();

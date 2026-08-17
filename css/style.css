@@ -160,6 +160,23 @@ hr {
   }
 }
 
+/* ── Homepage sections ── */
+
+.home-section {
+  margin-bottom: 0.5rem;
+}
+
+.home-item {
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+
+.home-tracker-cta {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
 /* ── Tracker page ── */
 
 .tracker-meta {
