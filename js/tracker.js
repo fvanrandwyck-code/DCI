@@ -216,7 +216,7 @@ function renderDeadlineBar(item) {
   return `
       <div class="deadline-bar">
         <div class="deadline-bar-track">
-          <div class="deadline-bar-fill ${colorClass}" style="width:${pct}%"></div>
+          <div class="deadline-bar-fill ${colorClass}" style="width:max(${pct}%,4px)"></div>
         </div>
         <span class="deadline-label${isPast ? ' deadline-past' : ''}">${verb} ${dateText}</span>
       </div>`;
