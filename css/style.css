@@ -457,6 +457,20 @@ hr {
   font-style: italic;
 }
 
+/* ── Wide layout (homepage + Tracker) ────────────────────────────────────────
+   About page stays at 800px — prose reads better narrow.
+   Homepage and Tracker widen to 1050px: these pages are scanned as lists,
+   not read as prose, so the standard readability width doesn't apply.
+   The extra room lets headlines sit on fewer lines and gives deadline bars
+   meaningful space to function as progress indicators.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+body.wide nav .nav-inner,
+body.wide main,
+body.wide footer .footer-inner {
+  max-width: 1050px;
+}
+
 /* ── Responsive ───────────────────────────────────────────────────────────── */
 
 @media (max-width: 600px) {
