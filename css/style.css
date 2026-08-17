@@ -89,28 +89,13 @@ nav a.active {
   color: var(--teal);
 }
 
-/* ── Signature motif ──────────────────────────────────────────────────────────
-   A repeating-segment bar beneath the nav — three teal ticks (2px each,
-   1px gaps between) followed by a wider gap and a single hairline tick.
-   Echoes the deadline bar's segmented, colour-coded visual language as
-   quiet, recognisable branding consistent across all pages.
-   ─────────────────────────────────────────────────────────────────────────── */
+/* ── Nav rule ─────────────────────────────────────────────────────────────── */
 
 nav::after {
   content: '';
   display: block;
-  height: 4px;
-  background: repeating-linear-gradient(
-    to right,
-    var(--teal)     0,    var(--teal)     2px,
-    transparent     2px,  transparent     3px,
-    var(--teal)     3px,  var(--teal)     5px,
-    transparent     5px,  transparent     6px,
-    var(--teal)     6px,  var(--teal)     8px,
-    transparent     8px,  transparent     18px,
-    var(--hairline) 18px, var(--hairline) 19px,
-    transparent     19px, transparent     26px
-  );
+  height: 2px;
+  background: var(--teal);
 }
 
 /* ── Page layout ──────────────────────────────────────────────────────────── */
