@@ -1,105 +1,173 @@
+/* ── Fonts ────────────────────────────────────────────────────────────────────
+   IBM Plex Sans  400/600  — headings, UI chrome
+   Source Serif 4 400/ital — body prose (About page, homepage tagline)
+   IBM Plex Mono  500      — all tags, dates, labels, nav, tracker chrome
+   ─────────────────────────────────────────────────────────────────────────── */
+
+/* ── Custom properties ────────────────────────────────────────────────────── */
+
+:root {
+  --paper:    #F6F7F5;
+  --ink:      #12181F;
+  --teal:     #0F6E56;
+  --hairline: #D7DBDD;
+
+  --sans:  'IBM Plex Sans',  system-ui, sans-serif;
+  --serif: 'Source Serif 4', Georgia, serif;
+  --mono:  'IBM Plex Mono',  'Courier New', monospace;
+}
+
+/* ── Reset ────────────────────────────────────────────────────────────────── */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* ── Base ─────────────────────────────────────────────────────────────────── */
+
 body {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 18px;
+  font-family: var(--sans);
+  font-size: 16px;
   line-height: 1.6;
-  color: #111;
-  background: #fff;
+  color: var(--ink);
+  background: var(--paper);
 }
 
 a {
-  color: #111;
-}
-
-a:hover {
+  color: var(--teal);
   text-decoration: none;
 }
 
-/* ── Navigation ── */
+a:hover {
+  text-decoration: underline;
+}
+
+/* ── Navigation ───────────────────────────────────────────────────────────── */
 
 nav {
-  border-bottom: 1px solid #111;
-  padding: 1rem 0;
+  padding: 1.25rem 0 0;
 }
 
 nav .nav-inner {
   max-width: 800px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1.5rem 1.25rem;
   display: flex;
   align-items: baseline;
   gap: 2rem;
 }
 
 nav .site-name {
-  font-weight: bold;
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   text-decoration: none;
+  color: var(--ink);
   margin-right: auto;
 }
 
 nav a {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   text-decoration: none;
-  font-size: 0.9rem;
-  font-family: system-ui, sans-serif;
+  color: var(--ink);
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: var(--teal);
+  text-decoration: none;
 }
 
 nav a.active {
-  text-decoration: underline;
+  color: var(--teal);
 }
 
-/* ── Page layout ── */
+/* ── Signature motif ──────────────────────────────────────────────────────────
+   A repeating-segment bar beneath the nav — three teal ticks (2px each,
+   1px gaps between) followed by a wider gap and a single hairline tick.
+   Echoes the deadline bar's segmented, colour-coded visual language as
+   quiet, recognisable branding consistent across all pages.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+nav::after {
+  content: '';
+  display: block;
+  height: 4px;
+  background: repeating-linear-gradient(
+    to right,
+    var(--teal)     0,    var(--teal)     2px,
+    transparent     2px,  transparent     3px,
+    var(--teal)     3px,  var(--teal)     5px,
+    transparent     5px,  transparent     6px,
+    var(--teal)     6px,  var(--teal)     8px,
+    transparent     8px,  transparent     18px,
+    var(--hairline) 18px, var(--hairline) 19px,
+    transparent     19px, transparent     26px
+  );
+}
+
+/* ── Page layout ──────────────────────────────────────────────────────────── */
 
 main {
   max-width: 800px;
   margin: 0 auto;
-  padding: 3rem 1.5rem;
+  padding: 2.5rem 1.5rem;
 }
 
 footer {
-  border-top: 1px solid #ccc;
-  padding: 1.5rem 0;
-  margin-top: 4rem;
+  border-top: 1px solid var(--hairline);
+  padding: 1.25rem 0;
+  margin-top: 3rem;
 }
 
 footer .footer-inner {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 1.5rem;
-  font-size: 0.8rem;
-  font-family: system-ui, sans-serif;
-  color: #666;
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #999;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
-/* ── Typography ── */
+/* ── Typography ───────────────────────────────────────────────────────────── */
 
 h1 {
+  font-family: var(--sans);
+  font-weight: 600;
   font-size: 2rem;
-  line-height: 1.2;
+  line-height: 1.15;
   margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: 1.4rem;
-  margin-top: 2.5rem;
-  margin-bottom: 0.75rem;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1.3;
+  margin-top: 2.25rem;
+  margin-bottom: 0.6rem;
 }
 
 h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.4rem;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.975rem;
+  line-height: 1.4;
+  margin-bottom: 0.2rem;
 }
 
 p {
@@ -117,106 +185,99 @@ li {
 
 hr {
   border: none;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--hairline);
   margin: 2rem 0;
 }
 
-/* ── Homepage ── */
+/* ── Homepage hero ────────────────────────────────────────────────────────── */
 
 .hero {
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 2.5rem;
-  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--hairline);
+  padding-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.75rem;
+  line-height: 1.08;
 }
 
 .hero .tagline {
+  font-family: var(--serif);
   font-size: 1.1rem;
-  color: #444;
-  margin-top: 0.5rem;
+  line-height: 1.75;
+  color: #555;
+  margin-top: 0.85rem;
   margin-bottom: 0;
 }
 
-.content-sections {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-}
-
-.content-section h2 {
-  margin-top: 0;
-  font-size: 1.2rem;
-}
-
-.content-section .section-link {
-  display: inline-block;
-  margin-top: 0.75rem;
-  font-family: system-ui, sans-serif;
-  font-size: 0.85rem;
-}
-
-@media (max-width: 600px) {
-  .content-sections {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ── Homepage sections ── */
+/* ── Homepage sections ────────────────────────────────────────────────────── */
 
 .home-section {
   margin-bottom: 0.5rem;
 }
 
 .home-item {
-  padding-top: 0.9rem;
-  padding-bottom: 0.9rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .home-tracker-cta {
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #555;
   margin-top: 2rem;
-  font-size: 0.95rem;
-  color: #444;
 }
 
-/* ── Tracker page ── */
+/* ── Tracker page ─────────────────────────────────────────────────────────── */
 
 .tracker-meta {
-  font-family: system-ui, sans-serif;
-  font-size: 0.85rem;
-  color: #555;
-  margin-bottom: 2rem;
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 1.5rem;
 }
 
 .source-filters {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
 }
 
 .source-filters button {
-  font-family: system-ui, sans-serif;
-  font-size: 0.8rem;
-  padding: 0.3rem 0.8rem;
-  border: 1px solid #999;
-  background: #fff;
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--hairline);
+  background: var(--paper);
+  color: var(--ink);
   cursor: pointer;
 }
 
 .source-filters button:hover,
 .source-filters button.active {
-  background: #111;
-  color: #fff;
-  border-color: #111;
+  background: var(--teal);
+  color: var(--paper);
+  border-color: var(--teal);
 }
 
 .tracker-notice {
-  background: #f5f5f5;
-  border-left: 3px solid #999;
+  border-left: 3px solid var(--teal);
   padding: 0.75rem 1rem;
-  font-family: system-ui, sans-serif;
-  font-size: 0.85rem;
-  color: #555;
-  margin-bottom: 2rem;
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  color: #777;
+  margin-bottom: 1.75rem;
+  line-height: 1.6;
 }
 
 #feed-container {
@@ -226,108 +287,68 @@ hr {
 }
 
 .feed-item {
-  border-top: 1px solid #ddd;
-  padding: 1.25rem 0;
+  border-top: 1px solid var(--hairline);
+  padding: 1rem 0;
 }
 
 .feed-item:last-child {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--hairline);
 }
 
 .feed-item-meta {
-  font-family: system-ui, sans-serif;
-  font-size: 0.75rem;
-  color: #777;
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.68rem;
+  color: #999;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 0.3rem;
+  letter-spacing: 0.07em;
+  margin-bottom: 0.35rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: baseline;
 }
 
 .feed-item-meta .source-tag {
-  font-weight: 600;
-  margin-right: 0.75rem;
+  color: var(--ink);
 }
 
 .feed-item-meta .type-tag {
-  margin-right: 0.75rem;
+  color: #999;
 }
 
 .feed-item h3 {
-  font-size: 1rem;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.3rem;
 }
 
 .feed-item h3 a {
+  color: var(--ink);
   text-decoration: none;
 }
 
 .feed-item h3 a:hover {
-  text-decoration: underline;
+  color: var(--teal);
 }
 
 .feed-item p {
   font-size: 0.9rem;
-  color: #333;
+  color: #555;
+  line-height: 1.6;
   margin-bottom: 0;
 }
 
 .no-results {
-  font-family: system-ui, sans-serif;
-  color: #666;
-  font-size: 0.9rem;
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: #aaa;
 }
 
-/* ── Analysis page ── */
-
-.analysis-intro {
-  color: #444;
-  margin-bottom: 2rem;
-}
-
-.analysis-item {
-  border-top: 1px solid #ddd;
-  padding: 1.5rem 0;
-}
-
-.analysis-item:last-child {
-  border-bottom: 1px solid #ddd;
-}
-
-.analysis-item-meta {
-  font-family: system-ui, sans-serif;
-  font-size: 0.8rem;
-  color: #777;
-  margin-bottom: 0.4rem;
-}
-
-.analysis-item h2 {
-  font-size: 1.25rem;
-  margin-top: 0;
-  margin-bottom: 0.4rem;
-}
-
-.analysis-item h2 a {
-  text-decoration: none;
-}
-
-.analysis-item h2 a:hover {
-  text-decoration: underline;
-}
-
-.analysis-item .excerpt {
-  color: #333;
-  font-size: 0.95rem;
-}
-
-.placeholder-message {
-  font-family: system-ui, sans-serif;
-  color: #666;
-  border: 1px dashed #ccc;
-  padding: 2rem;
-  text-align: center;
-}
-
-/* ── Deadline bar ── */
+/* ── Deadline bar ─────────────────────────────────────────────────────────────
+   Status colours (green/amber/red) are functional and unchanged.
+   The track background uses --hairline to match the rest of the palette.
+   ─────────────────────────────────────────────────────────────────────────── */
 
 .deadline-bar {
   display: flex;
@@ -339,7 +360,7 @@ hr {
 .deadline-bar-track {
   flex: 1;
   height: 6px;
-  background: #e0e0e0;
+  background: var(--hairline);
   border-radius: 3px;
   overflow: hidden;
 }
@@ -354,9 +375,12 @@ hr {
 .deadline-bar-fill.bar-red   { background: #c62828; }
 
 .deadline-label {
-  font-family: system-ui, sans-serif;
-  font-size: 0.75rem;
-  color: #555;
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.65rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #999;
   white-space: nowrap;
 }
 
@@ -372,9 +396,86 @@ hr {
   }
 }
 
-/* ── About page ── */
+/* ── Analysis page ────────────────────────────────────────────────────────── */
+
+.analysis-intro {
+  font-family: var(--serif);
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.analysis-item {
+  border-top: 1px solid var(--hairline);
+  padding: 1.5rem 0;
+}
+
+.analysis-item:last-child {
+  border-bottom: 1px solid var(--hairline);
+}
+
+.analysis-item-meta {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.68rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 0.4rem;
+}
+
+.analysis-item h2 {
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.analysis-item h2 a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.analysis-item h2 a:hover {
+  color: var(--teal);
+}
+
+.analysis-item .excerpt {
+  font-family: var(--serif);
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.placeholder-message {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: #aaa;
+  border: 1px dashed var(--hairline);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ── About page ───────────────────────────────────────────────────────────── */
+
+.about-content p,
+.about-content li {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.about-content li {
+  margin-bottom: 0.5rem;
+}
 
 .about-content em {
   font-style: italic;
-  color: #444;
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
 }
