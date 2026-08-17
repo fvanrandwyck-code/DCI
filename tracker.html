@@ -24,14 +24,14 @@
     </p>
 
     <div class="tracker-notice">
-      <strong>Sources:</strong> DCMS and DBIST pull live data from the gov.uk search API, filtered for telecoms relevance. Ofcom is not yet connected — feed URL pending confirmation.
+      <strong>Sources:</strong> DCMS, DBIST, and Ofcom pull live data from the gov.uk search API, filtered for telecoms relevance. The Ofcom source covers formal publications on gov.uk — reports, statutory consultations, and regulatory decisions. Enforcement notices, consultation launches, and press releases from ofcom.org.uk are added manually.
     </div>
 
     <div class="source-filters">
       <button class="active" data-source="all" onclick="filterFeed('all', this)">All sources</button>
       <button data-source="DCMS" onclick="filterFeed('DCMS', this)">DCMS</button>
-      <button data-source="Ofcom" onclick="filterFeed('Ofcom', this)">Ofcom</button>
       <button data-source="DBIST" onclick="filterFeed('DBIST', this)">DBIST</button>
+      <button data-source="Ofcom" onclick="filterFeed('Ofcom', this)">Ofcom (formal publications)</button>
     </div>
 
     <div id="feed-container">
@@ -46,6 +46,7 @@
     </div>
   </footer>
 
+  <script src="js/manual-entries.js"></script>
   <script src="js/tracker.js"></script>
 
 </body>

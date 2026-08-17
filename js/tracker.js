@@ -1,12 +1,13 @@
 // ── Sources ────────────────────────────────────────────────────────────────────
 //
-// DCMS and DBIST use the gov.uk search API directly from the browser —
-// the API returns Access-Control-Allow-Origin: * so no proxy is needed.
+// All three sources use the gov.uk search API (Access-Control-Allow-Origin: *)
+// so they can be fetched directly from the browser with no proxy needed.
 //
-// Ofcom (ofcom.org.uk) is blocked by Cloudflare bot protection for
-// programmatic requests. apiUrl is null until a usable feed URL is
-// confirmed manually in a browser, at which point it should route through
-// an rss2json proxy (see the fetchSource stub below).
+// "Ofcom (formal publications)" covers documents Ofcom files with or via gov.uk
+// — annual reports, statutory consultations, regulatory decisions. It does NOT
+// include Ofcom's own news, press releases, or enforcement notices, which live
+// on ofcom.org.uk and are blocked by Cloudflare from automated fetching.
+// Those items are added manually in manual-entries.js.
 //
 const SOURCES = {
   DCMS: {
@@ -19,11 +20,8 @@ const SOURCES = {
     apiUrl: 'https://www.gov.uk/api/search.json?filter_organisations=department-for-business-innovation-science-and-trade&order=-public_timestamp&count=50',
   },
   Ofcom: {
-    label: 'Ofcom',
-    // TODO: confirm feed URL by checking https://www.ofcom.org.uk/news-centre in a browser
-    // (View Source → search for <link rel="alternate">) then wire via:
-    // `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedUrl)}`
-    apiUrl: null,
+    label: 'Ofcom (formal publications)',
+    apiUrl: 'https://www.gov.uk/api/search.json?filter_organisations=ofcom&order=-public_timestamp&count=50',
   },
 };
 
@@ -87,26 +85,10 @@ async function fetchGovUkSource(sourceId) {
   }));
 }
 
-// Stub for future Ofcom RSS integration via rss2json proxy.
-// When a feed URL is confirmed, replace this with a real fetch.
-async function fetchOfcom() {
-  return [];
-}
-
 // ── Rendering ──────────────────────────────────────────────────────────────────
 
 function renderFeed() {
   const container = document.getElementById('feed-container');
-
-  if (activeSource === 'Ofcom') {
-    container.innerHTML = `
-      <p class="no-results">
-        Ofcom is not yet connected — feed URL pending confirmation.
-        Visit <a href="https://www.ofcom.org.uk/news-centre" target="_blank" rel="noopener">Ofcom's news centre</a> directly in the meantime.
-      </p>`;
-    return;
-  }
-
   const items = getVisibleItems();
 
   if (items.length === 0) {
@@ -114,16 +96,18 @@ function renderFeed() {
     return;
   }
 
-  container.innerHTML = items.map(item => `
+  container.innerHTML = items.map(item => {
+    const label = SOURCES[item.source]?.label || item.source;
+    return `
     <article class="feed-item" data-source="${escapeHtml(item.source)}">
       <p class="feed-item-meta">
-        <span class="source-tag">${escapeHtml(item.source)}</span>
+        <span class="source-tag">${escapeHtml(label)}</span>
         <span>${formatDate(item.date)}</span>
       </p>
       <h3><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></h3>
       ${item.context ? `<p>${escapeHtml(item.context)}</p>` : ''}
-    </article>
-  `).join('');
+    </article>`;
+  }).join('');
 }
 
 // ── Filter button handler ──────────────────────────────────────────────────────
@@ -141,24 +125,32 @@ function filterFeed(source, buttonEl) {
 async function init() {
   document.getElementById('feed-container').innerHTML = '<p class="no-results">Loading…</p>';
 
-  const [dcmsResult, dbistResult] = await Promise.allSettled([
+  const [dcmsResult, dbistResult, ofcomResult] = await Promise.allSettled([
     fetchGovUkSource('DCMS'),
     fetchGovUkSource('DBIST'),
+    fetchGovUkSource('Ofcom'),
   ]);
 
   const items = [];
 
-  if (dcmsResult.status === 'fulfilled') {
-    items.push(...dcmsResult.value);
-  } else {
-    console.warn('[DCI Tracker] DCMS fetch failed:', dcmsResult.reason);
+  for (const [sourceId, result] of [['DCMS', dcmsResult], ['DBIST', dbistResult], ['Ofcom', ofcomResult]]) {
+    if (result.status === 'fulfilled') {
+      items.push(...result.value);
+    } else {
+      console.warn(`[DCI Tracker] ${sourceId} fetch failed:`, result.reason);
+    }
   }
 
-  if (dbistResult.status === 'fulfilled') {
-    items.push(...dbistResult.value);
-  } else {
-    console.warn('[DCI Tracker] DBIST fetch failed:', dbistResult.reason);
-  }
+  // Merge manual entries from manual-entries.js (loaded before this script)
+  const manualItems = (typeof MANUAL_ENTRIES !== 'undefined' ? MANUAL_ENTRIES : []).map(e => ({
+    id: 'manual:' + e.url,
+    source: e.source,
+    date: e.date,
+    title: e.title,
+    context: e.context || '',
+    url: e.url,
+  }));
+  items.push(...manualItems);
 
   // Deduplicate by id, sort by date descending
   const seen = new Set();
