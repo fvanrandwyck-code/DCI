@@ -85,6 +85,7 @@ const KEYWORDS = [
   '5G', '4G', 'fibre', 'fiber', 'Ofcom', 'BDUK', 'Openreach',
   'gigabit', 'connectivity', 'infrastructure', 'network',
   'rollout', 'coverage', 'roaming', 'satellite',
+  'radiofrequency', 'jammer',
 ];
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
@@ -351,4 +352,61 @@ async function fetchMoreItems(paginationState, seenUrls) {
 
   const allExhausted = fetchTasks.every(({ key }) => exhaustedKeys.has(key));
   return { newItems, allExhausted };
+}
+
+// ── Open consultations loader ──────────────────────────────────────────────────
+//
+// Queries every org slug specifically for open_consultation and
+// open_call_for_evidence formats, guaranteeing completeness regardless of
+// how much other content has been published since. Used by the homepage only.
+// Returns items with deadlines populated; keyword filtering is done by the caller.
+//
+async function fetchOpenConsultationsItems() {
+  const OPEN_FORMATS = ['open_consultation', 'open_call_for_evidence'];
+  const fetchTasks = [];
+
+  for (const [groupId, group] of Object.entries(SOURCES)) {
+    for (const org of group.orgs) {
+      for (const format of OPEN_FORMATS) {
+        fetchTasks.push({ groupId, org, format });
+      }
+    }
+  }
+
+  const results = await Promise.allSettled(
+    fetchTasks.map(({ groupId, org, format }) =>
+      fetch(`https://www.gov.uk/api/search.json?filter_organisations=${org.slug}&filter_format=${format}&order=-public_timestamp&count=50`)
+        .then(res => { if (!res.ok) throw new Error(`HTTP ${res.status}`); return res.json(); })
+        .then(data => (data.results || []).map(r => ({
+          id:        org.tag + ':' + r.link,
+          source:    org.tag,
+          group:     groupId,
+          label:     org.label,
+          rawFormat: r.format || format,
+          type:      mapFormat(r.format || format),
+          date:      r.public_timestamp ? r.public_timestamp.slice(0, 10) : '',
+          title:     r.title || '',
+          context:   r.description || '',
+          url:       'https://www.gov.uk' + r.link,
+          deadline:  null,
+        })))
+    )
+  );
+
+  const seenUrls = new Set();
+  const items = [];
+
+  for (const result of results) {
+    if (result.status === 'fulfilled') {
+      for (const item of result.value) {
+        if (!seenUrls.has(item.url)) {
+          seenUrls.add(item.url);
+          items.push(item);
+        }
+      }
+    }
+  }
+
+  await fetchDeadlines(items);
+  return items;
 }

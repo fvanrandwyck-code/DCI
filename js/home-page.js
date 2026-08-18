@@ -1,12 +1,11 @@
 // ── Rendering ──────────────────────────────────────────────────────────────────
 
-function renderOpenConsultations(allItems) {
+function renderOpenConsultations(consultationItems) {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  const open = allItems
+  const open = consultationItems
     .filter(item =>
-      DEADLINE_TYPES.has(item.type) &&
       item.deadline &&
       new Date(item.deadline) > today &&
       matchesKeyword(item)
@@ -62,9 +61,12 @@ async function init() {
   document.getElementById('open-consultations').innerHTML = '<p class="no-results">Loading…</p>';
   document.getElementById('latest-publications').innerHTML = '<p class="no-results">Loading…</p>';
 
-  const { items: allItems } = await loadAllItems();
+  const [{ items: allItems }, consultationItems] = await Promise.all([
+    loadAllItems(),
+    fetchOpenConsultationsItems(),
+  ]);
 
-  renderOpenConsultations(allItems);
+  renderOpenConsultations(consultationItems);
   renderLatestPublications(allItems);
 }
 
