@@ -62,7 +62,7 @@ async function init() {
   document.getElementById('open-consultations').innerHTML = '<p class="no-results">Loading…</p>';
   document.getElementById('latest-publications').innerHTML = '<p class="no-results">Loading…</p>';
 
-  const allItems = await loadAllItems();
+  const { items: allItems } = await loadAllItems();
 
   renderOpenConsultations(allItems);
   renderLatestPublications(allItems);

@@ -393,6 +393,48 @@ hr {
   }
 }
 
+/* ── Load more ────────────────────────────────────────────────────────────── */
+
+.load-more-wrap {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+#load-more-btn {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.5rem 1.25rem;
+  border: 1px solid var(--teal);
+  background: var(--paper);
+  color: var(--teal);
+  cursor: pointer;
+}
+
+#load-more-btn:hover:not(:disabled) {
+  background: var(--teal);
+  color: var(--paper);
+}
+
+#load-more-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+#load-more-status {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.65rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #999;
+}
+
 /* ── Analysis page ────────────────────────────────────────────────────────── */
 
 .analysis-intro {

@@ -110,18 +110,24 @@ function matchesKeyword(item) {
 
 // ── Fetching ───────────────────────────────────────────────────────────────────
 
-async function fetchOrgSlug(groupId, org) {
-  const apiUrl = `https://www.gov.uk/api/search.json?filter_organisations=${org.slug}&order=-public_timestamp&count=50`;
+const PAGE_SIZE = 50;
+
+// Returns { items, total } — total lets callers detect exhaustion.
+async function fetchOrgSlug(groupId, org, start = 0) {
+  const apiUrl = `https://www.gov.uk/api/search.json?filter_organisations=${org.slug}&order=-public_timestamp&count=${PAGE_SIZE}&start=${start}`;
   const res = await fetch(apiUrl);
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const data = await res.json();
 
-  return (data.results || []).map(r => ({
+  const results = data.results || [];
+  const total   = data.total   || 0;
+
+  const items = results.map(r => ({
     id:        org.tag + ':' + r.link,
-    source:    org.tag,    // true originating department tag — displayed in feed
-    group:     groupId,    // filter group — determines which button reveals this item
-    label:     org.label,  // display label shown in the source tag
-    rawFormat: r.format || '',  // preserved so fetchDeadlines can identify open consultations
+    source:    org.tag,
+    group:     groupId,
+    label:     org.label,
+    rawFormat: r.format || '',
     type:      mapFormat(r.format || ''),
     date:      r.public_timestamp ? r.public_timestamp.slice(0, 10) : '',
     title:     r.title || '',
@@ -129,26 +135,35 @@ async function fetchOrgSlug(groupId, org) {
     url:       'https://www.gov.uk' + r.link,
     deadline:  null,
   }));
+
+  return { items, total };
 }
 
-// Fetches all org slugs within a group in parallel and merges results.
-// Current dept is listed first in each group's orgs array, so it wins
-// on URL deduplication when the same document carries multiple org tags.
+// Returns { items, orgOffsets, orgExhausted } so callers can track pagination state.
 async function fetchGroup(groupId) {
   const group = SOURCES[groupId];
   const results = await Promise.allSettled(
-    group.orgs.map(org => fetchOrgSlug(groupId, org))
+    group.orgs.map(org => fetchOrgSlug(groupId, org, 0))
   );
 
   const items = [];
+  const orgOffsets  = {}; // orgSlug → nextStart
+  const orgExhausted = {}; // orgSlug → boolean
+
   for (const [i, result] of results.entries()) {
+    const org = group.orgs[i];
     if (result.status === 'fulfilled') {
-      items.push(...result.value);
+      const { items: orgItems, total } = result.value;
+      items.push(...orgItems);
+      orgOffsets[org.slug]   = orgItems.length;
+      orgExhausted[org.slug] = orgItems.length < PAGE_SIZE || orgItems.length >= total;
     } else {
-      console.warn(`[DCI] ${group.orgs[i].tag} fetch failed:`, result.reason);
+      console.warn(`[DCI] ${org.tag} fetch failed:`, result.reason);
+      orgOffsets[org.slug]   = 0;
+      orgExhausted[org.slug] = false;
     }
   }
-  return items;
+  return { items, orgOffsets, orgExhausted };
 }
 
 // Fetches closing dates from the gov.uk content API for open consultation and
@@ -214,26 +229,35 @@ function renderDeadlineBar(item) {
 //
 // Fetches all sources in parallel, merges manual entries, deduplicates by URL,
 // sorts by date descending, and fetches deadlines for open consultations.
-// Returns Promise<Item[]>. Called once per page load by each page's init().
+// Returns { items, seenUrls, paginationState } so the Tracker page can load
+// more items on demand. The homepage only needs items.
 //
 async function loadAllItems() {
-  const [dcmsResult, dbistResult, ofcomResult] = await Promise.allSettled([
-    fetchGroup('DCMS'),
-    fetchGroup('DBIST'),
-    fetchGroup('Ofcom'),
-  ]);
+  const groupIds = Object.keys(SOURCES);
+  const groupResults = await Promise.allSettled(
+    groupIds.map(groupId => fetchGroup(groupId))
+  );
 
   const items = [];
-  for (const [groupId, result] of [['DCMS', dcmsResult], ['DBIST', dbistResult], ['Ofcom', ofcomResult]]) {
+  const paginationOffsets = {};
+  const exhaustedKeys = new Set();
+
+  for (const [i, result] of groupResults.entries()) {
+    const groupId = groupIds[i];
+    paginationOffsets[groupId] = {};
     if (result.status === 'fulfilled') {
-      items.push(...result.value);
+      const { items: groupItems, orgOffsets, orgExhausted } = result.value;
+      items.push(...groupItems);
+      paginationOffsets[groupId] = orgOffsets;
+      for (const [slug, isExhausted] of Object.entries(orgExhausted)) {
+        if (isExhausted) exhaustedKeys.add(`${groupId}:${slug}`);
+      }
     } else {
       console.warn(`[DCI] ${groupId} group fetch failed:`, result.reason);
     }
   }
 
   // Merge manual entries from manual-entries.js (loaded before this script).
-  // TAG_META resolves each entry's source tag to the correct group and display label.
   const manualItems = (typeof MANUAL_ENTRIES !== 'undefined' ? MANUAL_ENTRIES : []).map(e => {
     const meta = TAG_META[e.source] || { group: e.source, label: e.source };
     return {
@@ -264,5 +288,67 @@ async function loadAllItems() {
 
   await fetchDeadlines(allItems);
 
-  return allItems;
+  return {
+    items: allItems,
+    seenUrls,
+    paginationState: { offsets: paginationOffsets, exhaustedKeys },
+  };
+}
+
+// ── Paginated loader ───────────────────────────────────────────────────────────
+//
+// Fetches the next batch from each non-exhausted org, deduplicates against
+// seenUrls (mutated in place), fetches deadlines for any new open consultations,
+// and returns { newItems, allExhausted }.
+//
+async function fetchMoreItems(paginationState, seenUrls) {
+  const { offsets, exhaustedKeys } = paginationState;
+
+  const fetchTasks = [];
+  for (const [groupId, group] of Object.entries(SOURCES)) {
+    const groupOffsets = offsets[groupId] || {};
+    for (const org of group.orgs) {
+      const key = `${groupId}:${org.slug}`;
+      if (exhaustedKeys.has(key)) continue;
+      fetchTasks.push({ groupId, org, start: groupOffsets[org.slug] || 0, key });
+    }
+  }
+
+  if (fetchTasks.length === 0) {
+    return { newItems: [], allExhausted: true };
+  }
+
+  const results = await Promise.allSettled(
+    fetchTasks.map(({ groupId, org, start }) => fetchOrgSlug(groupId, org, start))
+  );
+
+  const rawItems = [];
+
+  for (const [i, result] of results.entries()) {
+    const { groupId, org, start, key } = fetchTasks[i];
+    if (!offsets[groupId]) offsets[groupId] = {};
+
+    if (result.status === 'fulfilled') {
+      const { items, total } = result.value;
+      rawItems.push(...items);
+      const nextStart = start + items.length;
+      offsets[groupId][org.slug] = nextStart;
+      if (items.length < PAGE_SIZE || nextStart >= total) exhaustedKeys.add(key);
+    } else {
+      console.warn(`[DCI] Load more failed for ${org.tag}:`, result.reason);
+    }
+  }
+
+  const newItems = rawItems.filter(item => {
+    if (seenUrls.has(item.url)) return false;
+    seenUrls.add(item.url);
+    return true;
+  });
+
+  newItems.sort((a, b) => b.date.localeCompare(a.date));
+
+  await fetchDeadlines(newItems);
+
+  const allExhausted = fetchTasks.every(({ key }) => exhaustedKeys.has(key));
+  return { newItems, allExhausted };
 }
