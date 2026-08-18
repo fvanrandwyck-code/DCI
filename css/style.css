@@ -469,6 +469,23 @@ hr {
   font-style: italic;
 }
 
+.about-content p.bio-contact {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: #888;
+  margin-top: 0.25rem;
+}
+
+.about-content p.bio-contact a {
+  color: #888;
+}
+
+.about-content p.bio-contact a:hover {
+  color: var(--teal);
+}
+
 /* ── Wide layout (homepage + Tracker) ────────────────────────────────────────
    About page stays at 800px — prose reads better narrow.
    Homepage and Tracker widen to 1050px: these pages are scanned as lists,
