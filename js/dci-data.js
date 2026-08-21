@@ -416,7 +416,8 @@ async function fetchOpenConsultationsItems() {
   const seenUrls = new Set();
   const items = [];
 
-  for (const result of results) {
+  for (const [i, result] of results.entries()) {
+    const { org, format } = fetchTasks[i];
     if (result.status === 'fulfilled') {
       for (const item of result.value) {
         if (!seenUrls.has(item.url)) {
@@ -424,6 +425,8 @@ async function fetchOpenConsultationsItems() {
           items.push(item);
         }
       }
+    } else {
+      console.warn(`[DCI] ${org.tag} ${format} fetch failed:`, result.reason);
     }
   }
 
