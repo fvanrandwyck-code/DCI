@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital Connectivity Insights</title>
+  <title>Policy — Digital Connectivity Insights</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;600&family=Source+Serif+4:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
@@ -14,35 +14,37 @@
   <nav>
     <div class="nav-inner">
       <a href="index.html" class="site-name">DCI</a>
-      <a href="policy.html">Policy</a>
+      <a href="policy.html" class="active">Policy</a>
       <a href="politics.html">Politics</a>
       <a href="about.html">About</a>
     </div>
   </nav>
 
   <main>
-    <section class="hero">
-      <h1>Digital Connectivity Insights</h1>
-      <p class="tagline">Why UK policymakers are making the decisions they're making about digital infrastructure — and what that means for the industry building it. Built by a former Whitehall Telecoms Policy Official, Digital Connectivity Insights (DCI) tracks the relationship between UK government and the telecoms industry — what's being decided about digital infrastructure, and what it means for the people building, running, and investing in it.</p>
-    </section>
+    <h1>Policy Tracker</h1>
+    <p class="tracker-meta">
+      UK digital infrastructure policy developments from DCMS, Ofcom, and DBIST — filtered for telecoms relevance.
+    </p>
 
-    <section class="home-section">
-      <h2>Open consultations</h2>
-      <div id="open-consultations"><p class="no-results">Loading…</p></div>
-    </section>
+    <div class="tracker-notice">
+      <strong>Sources:</strong> DCMS, DBIST, and Ofcom pull live data from the gov.uk search API, filtered for telecoms relevance. The Ofcom source covers formal publications on gov.uk — reports, statutory consultations, and regulatory decisions. Enforcement notices, consultation launches, and press releases from ofcom.org.uk are added manually.
+    </div>
 
-    <section class="home-section">
-      <h2>Latest publications</h2>
-      <div id="latest-publications"><p class="no-results">Loading…</p></div>
-    </section>
+    <div class="source-filters">
+      <button class="active" data-source="all" onclick="filterFeed('all', this)">All sources</button>
+      <button data-source="DCMS" onclick="filterFeed('DCMS', this)">DCMS</button>
+      <button data-source="DBIST" onclick="filterFeed('DBIST', this)">DBIST</button>
+      <button data-source="Ofcom" onclick="filterFeed('Ofcom', this)">Ofcom (formal publications)</button>
+    </div>
 
-    <p class="home-tracker-cta">DCI tracks UK digital infrastructure policy in near-real time — what DCMS, Ofcom, and DBIST are publishing, deciding, and consulting on, filtered for telecoms relevance and put in context for operators, investors, and public affairs professionals who need to stay up to date with what is going on in Whitehall and where government is heading.</p>
+    <div id="feed-container">
+      <!-- Feed items rendered by policy-page.js -->
+    </div>
 
-    <p><a href="policy.html">View Policy Tracker →</a></p>
-
-    <hr>
-
-    <p>Written independently, in a personal capacity by Frederik van Randwyck. <a href="about.html">About this website →</a></p>
+    <div class="load-more-wrap">
+      <button id="load-more-btn" onclick="loadMore()" style="display:none">Load more</button>
+      <span id="load-more-status"></span>
+    </div>
   </main>
 
   <footer>
@@ -57,7 +59,7 @@
 
   <script src="js/manual-entries.js"></script>
   <script src="js/dci-data.js"></script>
-  <script src="js/home-page.js"></script>
+  <script src="js/policy-page.js"></script>
 
 </body>
 </html>
