@@ -77,6 +77,21 @@ function mapFormat(raw) {
   return FORMAT_LABELS[raw] || raw;
 }
 
+// gov.uk API `format` values that are never real content — org index pages,
+// topic finders, nav scaffolding, etc. Identified as "definitely noise"
+// during the Type tag work above but never actually excluded from results,
+// only from the display mapping. Filtered out wherever items are fetched so
+// none of this can surface anywhere on the site.
+const EXCLUDED_FORMATS = new Set([
+  'organisation',
+  'finder',
+  'topical_event',
+  'about',
+  'our_governance',
+  'media_enquiries',
+  'step_by_step_nav',
+]);
+
 // Keywords used to filter items for telecoms relevance.
 // Applied identically to every item from every source.
 // Extend this list as coverage needs change.
@@ -113,15 +128,18 @@ function matchesKeyword(item) {
 
 const PAGE_SIZE = 50;
 
-// Returns { items, total } — total lets callers detect exhaustion.
+// Returns { items, rawCount, total } — rawCount is the number of API results
+// consumed by this page (before the noise-format exclusion), which callers
+// need for pagination offsets; total lets callers detect exhaustion.
 async function fetchOrgSlug(groupId, org, start = 0) {
   const apiUrl = `https://www.gov.uk/api/search.json?filter_organisations=${org.slug}&order=-public_timestamp&count=${PAGE_SIZE}&start=${start}`;
   const res = await fetch(apiUrl);
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const data = await res.json();
 
-  const results = data.results || [];
-  const total   = data.total   || 0;
+  const rawResults = data.results || [];
+  const results     = rawResults.filter(r => !EXCLUDED_FORMATS.has(r.format));
+  const total       = data.total || 0;
 
   const items = results.map(r => ({
     id:        org.tag + ':' + r.link,
@@ -137,7 +155,7 @@ async function fetchOrgSlug(groupId, org, start = 0) {
     deadline:  null,
   }));
 
-  return { items, total };
+  return { items, rawCount: rawResults.length, total };
 }
 
 // Returns { items, orgOffsets, orgExhausted } so callers can track pagination state.
@@ -154,10 +172,10 @@ async function fetchGroup(groupId) {
   for (const [i, result] of results.entries()) {
     const org = group.orgs[i];
     if (result.status === 'fulfilled') {
-      const { items: orgItems, total } = result.value;
+      const { items: orgItems, rawCount, total } = result.value;
       items.push(...orgItems);
-      orgOffsets[org.slug]   = orgItems.length;
-      orgExhausted[org.slug] = orgItems.length < PAGE_SIZE || orgItems.length >= total;
+      orgOffsets[org.slug]   = rawCount;
+      orgExhausted[org.slug] = rawCount < PAGE_SIZE || rawCount >= total;
     } else {
       console.warn(`[DCI] ${org.tag} fetch failed:`, result.reason);
       orgOffsets[org.slug]   = 0;
@@ -330,11 +348,11 @@ async function fetchMoreItems(paginationState, seenUrls) {
     if (!offsets[groupId]) offsets[groupId] = {};
 
     if (result.status === 'fulfilled') {
-      const { items, total } = result.value;
+      const { items, rawCount, total } = result.value;
       rawItems.push(...items);
-      const nextStart = start + items.length;
+      const nextStart = start + rawCount;
       offsets[groupId][org.slug] = nextStart;
-      if (items.length < PAGE_SIZE || nextStart >= total) exhaustedKeys.add(key);
+      if (rawCount < PAGE_SIZE || nextStart >= total) exhaustedKeys.add(key);
     } else {
       console.warn(`[DCI] Load more failed for ${org.tag}:`, result.reason);
     }
@@ -377,19 +395,21 @@ async function fetchOpenConsultationsItems() {
     fetchTasks.map(({ groupId, org, format }) =>
       fetch(`https://www.gov.uk/api/search.json?filter_organisations=${org.slug}&filter_format=${format}&order=-public_timestamp&count=50`)
         .then(res => { if (!res.ok) throw new Error(`HTTP ${res.status}`); return res.json(); })
-        .then(data => (data.results || []).map(r => ({
-          id:        org.tag + ':' + r.link,
-          source:    org.tag,
-          group:     groupId,
-          label:     org.label,
-          rawFormat: r.format || format,
-          type:      mapFormat(r.format || format),
-          date:      r.public_timestamp ? r.public_timestamp.slice(0, 10) : '',
-          title:     r.title || '',
-          context:   r.description || '',
-          url:       'https://www.gov.uk' + r.link,
-          deadline:  null,
-        })))
+        .then(data => (data.results || [])
+          .filter(r => !EXCLUDED_FORMATS.has(r.format))
+          .map(r => ({
+            id:        org.tag + ':' + r.link,
+            source:    org.tag,
+            group:     groupId,
+            label:     org.label,
+            rawFormat: r.format || format,
+            type:      mapFormat(r.format || format),
+            date:      r.public_timestamp ? r.public_timestamp.slice(0, 10) : '',
+            title:     r.title || '',
+            context:   r.description || '',
+            url:       'https://www.gov.uk' + r.link,
+            deadline:  null,
+          })))
     )
   );
 
