@@ -433,3 +433,197 @@ async function fetchOpenConsultationsItems() {
   await fetchDeadlines(items);
   return items;
 }
+
+// ── Parliamentary Written Questions ──────────────────────────────────────────
+//
+// Politics tracker data source: UK Parliament's Written Questions API.
+// Unlike gov.uk's search, which is already scoped to a single department,
+// this API searches the full text of every written question ever tabled —
+// so broad KEYWORDS terms ("infrastructure", "network", "coverage") match
+// huge, mostly-irrelevant volumes here. Testing showed the API's latency
+// scales with the number of OR'd search terms in a single call, not with
+// how many results those terms match: one call joining all of KEYWORDS
+// times out / 500s, but splitting into several smaller parallel calls (5-6
+// terms each) stays fast without losing any recall — no need to narrow the
+// keywords themselves. PARLIAMENT_START scopes results to the current
+// Parliament (elected 4 July 2024) rather than a rolling recent window,
+// since the site's public affairs audience wants to see what current
+// MPs/Lords have said since being elected.
+//
+// The API has no sort/order parameter — result order is relevance-based,
+// not chronological, though it empirically clusters toward recent items.
+// Items are re-sorted by dateTabled client-side, same as everywhere else
+// on the site; this is an approximation until "Load more" pagination
+// (added later, same as the Policy tracker) makes it exhaustive.
+//
+const PQ_API_BASE      = 'https://questions-statements-api.parliament.uk/api/writtenquestions/questions';
+const PQ_CHUNK_SIZE    = 6;
+const PARLIAMENT_START = '2024-07-04';
+const PQ_TAKE          = 50;
+
+// Short display labels for departments that answer telecoms-relevant PQs —
+// mirrors the SOURCES tag style used elsewhere. Falls back to the raw
+// answeringBodyName for anything unmapped.
+const PQ_ANSWERING_BODY_LABELS = {
+  'Department for Culture, Media and Sport':            'DCMS',
+  'Department for Digital, Culture, Media and Sport':   'DCMS',
+  'Department for Science, Innovation and Technology':  'DSIT',
+  'Department for Business, Innovation, Science and Trade': 'DBIST',
+  'Department for Business and Trade':                  'DBT',
+  'Ministry of Defence':                                'MoD',
+  'Department for Transport':                           'DfT',
+  'Department for Energy Security and Net Zero':        'DESNZ',
+  'Foreign, Commonwealth and Development Office':       'FCDO',
+};
+
+function mapAnsweringBody(name) {
+  return PQ_ANSWERING_BODY_LABELS[name] || name;
+}
+
+function chunkArray(arr, size) {
+  const chunks = [];
+  for (let i = 0; i < arr.length; i += size) chunks.push(arr.slice(i, i + size));
+  return chunks;
+}
+
+// Most questionText values open with a fixed preamble ("To ask His
+// Majesty's Government ..." / "To ask the Secretary of State for X, ...")
+// before the actual question content. Stripped, with the remaining text
+// re-capitalised, so it reads as a standalone sentence rather than a
+// fragment starting mid-clause ("why no..." -> "Why no..."). Leaves text
+// unchanged if it doesn't match either common preamble form.
+function stripQuestionPreamble(text) {
+  const stripped = text.replace(
+    /^To ask (?:His Majesty's Government|Her Majesty's Government|the (?:Secretary of State|Minister|Chancellor|Prime Minister)[^,]*),?\s*/i,
+    ''
+  );
+  if (stripped === text) return text;
+  return stripped.charAt(0).toUpperCase() + stripped.slice(1);
+}
+
+function truncate(text, maxLen) {
+  if (text.length <= maxLen) return text;
+  return text.slice(0, maxLen).replace(/\s+\S*$/, '') + '…';
+}
+
+// memberName/memberParty are surfaced separately (rather than folded into
+// context as before) so the render layer can use the asking member as the
+// item headline. Both are null when askingMember data is missing — the
+// render layer falls back to the topic heading as the headline in that case.
+function mapQuestionToItem(v) {
+  const dateTabled = (v.dateTabled || '').slice(0, 10);
+  const member = v.askingMember;
+  return {
+    id:            'PQ:' + v.uin,
+    house:         v.house,
+    label:         mapAnsweringBody(v.answeringBodyName || ''),
+    memberName:    (member && member.name) || null,
+    memberParty:   (member && member.partyAbbreviation) || null,
+    title:         v.heading || truncate(stripQuestionPreamble(v.questionText || ''), 80),
+    date:          dateTabled,
+    dateAnswered:  v.dateAnswered ? v.dateAnswered.slice(0, 10) : null,
+    context:       truncate(stripQuestionPreamble(v.questionText || ''), 180),
+    url:           `https://questions-statements.parliament.uk/written-questions/detail/${dateTabled}/${v.uin}`,
+  };
+}
+
+async function fetchParliamentaryQuestions() {
+  const chunks = chunkArray(KEYWORDS, PQ_CHUNK_SIZE);
+
+  const results = await Promise.allSettled(
+    chunks.map(chunk => {
+      const searchTerm = encodeURIComponent(chunk.join(' '));
+      const url = `${PQ_API_BASE}?searchTerm=${searchTerm}&tabledWhenFrom=${PARLIAMENT_START}&expandMember=true&take=${PQ_TAKE}`;
+      return fetch(url).then(res => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      });
+    })
+  );
+
+  const seenIds = new Set();
+  const items = [];
+
+  for (const [i, result] of results.entries()) {
+    if (result.status === 'fulfilled') {
+      for (const r of (result.value.results || [])) {
+        const v = r.value;
+        if (seenIds.has(v.id)) continue;
+        seenIds.add(v.id);
+        items.push(mapQuestionToItem(v));
+      }
+    } else {
+      console.warn(`[DCI] PQ chunk ${i} (${chunks[i].join(', ')}) fetch failed:`, result.reason);
+    }
+  }
+
+  items.sort((a, b) => b.date.localeCompare(a.date));
+  return items;
+}
+
+// PQ-specific relevance filter — NOT used by matchesKeyword() or any
+// gov.uk/Policy tracker source. Several KEYWORDS terms are too broad
+// against Parliament's unscoped full-text search to be useful alone —
+// they only work as filters on gov.uk because that search is already
+// scoped to a relevant department. Every KEYWORDS term not listed below
+// still matches on its own bare presence, unchanged.
+//
+// - mobile / infrastructure / satellite: fine on gov.uk, noisy here
+//   (e.g. "Mobile Power" aid programme, Ofgem electricity infrastructure,
+//   MoD Skynet/satellite procurement, NHS "satellite radiotherapy units")
+//   — require a telecoms-specific compound phrase nearby instead of the
+//   bare word.
+// - Ofcom: a regulator name covering broadcasting, post, and online
+//   safety as well as telecoms (e.g. a Supreme Court gender-identity
+//   case referencing Ofcom's broadcasting remit) — a fixed phrase list
+//   doesn't fit a proper noun the way it does a common noun, so instead
+//   requires co-occurrence with ANY other KEYWORDS term as corroboration.
+//
+// Every tightened term stays unchanged in the actual API searchTerm query
+// (this is a client-side filter applied after fetching, not a change to
+// what's searched for), so recall/speed are unaffected.
+const PQ_TIGHTENED_TERMS = {
+  mobile: [
+    'mobile broadband', 'mobile coverage', 'mobile network', 'mobile phone',
+    'mobile mast', 'mobile operator', 'mobile signal', 'mobile connectivity',
+    'mobile infrastructure', 'mobile market',
+  ],
+  infrastructure: [
+    'digital infrastructure', 'telecoms infrastructure', 'telecommunications infrastructure',
+    'broadband infrastructure', 'network infrastructure', 'mobile infrastructure',
+    'critical national infrastructure', 'connectivity infrastructure',
+  ],
+  satellite: [
+    'satellite broadband', 'satellite communications', 'satellite connectivity',
+    'satellite internet', 'satellite network',
+  ],
+  ofcom: null, // special case: needs co-occurrence with any OTHER KEYWORDS term
+};
+
+function matchesPQRelevance(item) {
+  const text = (item.title + ' ' + item.context).toLowerCase();
+  const tightened = new Set(Object.keys(PQ_TIGHTENED_TERMS));
+
+  const freeMatch = KEYWORDS.some(kw => {
+    const lower = kw.toLowerCase();
+    return !tightened.has(lower) && text.includes(lower);
+  });
+  if (freeMatch) return true;
+
+  for (const kw of KEYWORDS) {
+    const lower = kw.toLowerCase();
+    if (!tightened.has(lower) || !text.includes(lower)) continue;
+
+    const compounds = PQ_TIGHTENED_TERMS[lower];
+    if (compounds) {
+      if (compounds.some(phrase => text.includes(phrase))) return true;
+    } else {
+      const corroborated = KEYWORDS.some(other => {
+        const otherLower = other.toLowerCase();
+        return otherLower !== lower && text.includes(otherLower);
+      });
+      if (corroborated) return true;
+    }
+  }
+  return false;
+}

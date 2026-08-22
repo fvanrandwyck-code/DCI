@@ -327,6 +327,21 @@ hr {
   color: var(--teal);
 }
 
+/* Politics tracker: combined member-name + topic headline/link, coloured
+   by house — deliberately muted/deeper than the deadline bar's bright
+   red/amber/green so it can't be misread as a status indicator. The
+   House word in the meta line below stays plain (no colour, no
+   underline), matching the other meta-line elements. */
+.feed-item h3.pq-house-commons a {
+  color: #2f5233;
+  text-decoration: underline;
+}
+
+.feed-item h3.pq-house-lords a {
+  color: #6d1f2f;
+  text-decoration: underline;
+}
+
 .feed-item p {
   font-size: 0.9rem;
   color: #555;
