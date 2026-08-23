@@ -527,38 +527,48 @@ function mapQuestionToItem(v) {
   };
 }
 
-async function fetchParliamentaryQuestions() {
+async function fetchQuestionChunk(chunk) {
+  const searchTerm = encodeURIComponent(chunk.join(' '));
+  const url = `${PQ_API_BASE}?searchTerm=${searchTerm}&tabledWhenFrom=${PARLIAMENT_START}&expandMember=true&take=${PQ_TAKE}`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const data = await res.json();
+  return (data.results || []).map(r => mapQuestionToItem(r.value));
+}
+
+// Streaming variant: calls onChunk(newItems) as soon as each of the
+// parallel chunk requests resolves, rather than waiting for the slowest —
+// chunks can take anywhere from a few seconds to ~20s (see PQ fetching
+// notes above), so this lets the page render whatever arrives first
+// instead of leaving visitors staring at a blank "Loading…" state.
+// newItems is deduplicated against every chunk delivered so far and
+// pre-sorted by dateTabled within itself (not merged/re-sorted against
+// already-delivered chunks — see politics-page.js for how the caller
+// reconciles this with a single stable page of results). Returns a
+// promise that resolves once every chunk has settled (fulfilled or
+// rejected), so the caller can do one final ordering pass.
+function fetchParliamentaryQuestionsStreaming(onChunk) {
   const chunks = chunkArray(KEYWORDS, PQ_CHUNK_SIZE);
-
-  const results = await Promise.allSettled(
-    chunks.map(chunk => {
-      const searchTerm = encodeURIComponent(chunk.join(' '));
-      const url = `${PQ_API_BASE}?searchTerm=${searchTerm}&tabledWhenFrom=${PARLIAMENT_START}&expandMember=true&take=${PQ_TAKE}`;
-      return fetch(url).then(res => {
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        return res.json();
-      });
-    })
-  );
-
   const seenIds = new Set();
-  const items = [];
 
-  for (const [i, result] of results.entries()) {
-    if (result.status === 'fulfilled') {
-      for (const r of (result.value.results || [])) {
-        const v = r.value;
-        if (seenIds.has(v.id)) continue;
-        seenIds.add(v.id);
-        items.push(mapQuestionToItem(v));
-      }
-    } else {
-      console.warn(`[DCI] PQ chunk ${i} (${chunks[i].join(', ')}) fetch failed:`, result.reason);
-    }
-  }
-
-  items.sort((a, b) => b.date.localeCompare(a.date));
-  return items;
+  return Promise.all(
+    chunks.map((chunk, i) =>
+      fetchQuestionChunk(chunk)
+        .then(items => {
+          const newItems = [];
+          for (const item of items) {
+            if (seenIds.has(item.id)) continue;
+            seenIds.add(item.id);
+            newItems.push(item);
+          }
+          newItems.sort((a, b) => b.date.localeCompare(a.date));
+          if (newItems.length > 0) onChunk(newItems);
+        })
+        .catch(err => {
+          console.warn(`[DCI] PQ chunk ${i} (${chunk.join(', ')}) fetch failed:`, err);
+        })
+    )
+  );
 }
 
 // PQ-specific relevance filter — NOT used by matchesKeyword() or any
