@@ -5,37 +5,12 @@ let visibleItems = [];
 let shownCount   = 0;
 
 // ── Item rendering ─────────────────────────────────────────────────────────────
-
-function houseClass(house) {
-  if (house === 'Commons') return 'pq-house-commons';
-  if (house === 'Lords')   return 'pq-house-lords';
-  return '';
-}
+// Headline/meta-line construction (buildQuestionHeadline, buildQuestionMetaLine)
+// lives in dci-data.js — shared with the homepage's "Latest Questions" section.
 
 function renderItemHtml(item) {
-  // Plain pipe-separated meta line, all in the same light grey (inherited
-  // from .feed-item-meta) — no per-element colour, no brackets. House
-  // colouring lives only on the headline below.
-  const metaParts = [escapeHtml(item.house), formatDate(item.date), escapeHtml(item.label)];
-  if (!item.dateAnswered) metaParts.push('Awaiting answer');
-  const metaLine = metaParts.join(' | ');
-
-  // Single headline/link: "{member} ({party}) | {topic}" coloured by
-  // house — pipe rather than colon, since topics often contain their own
-  // colon (e.g. "South Eastern Main Line: Mobile Broadband"). "MP"
-  // appended for Commons members only (Lords titles like "Lord X" /
-  // "Baroness X" already convey status on their own). Falls back to the
-  // topic heading alone, uncoloured, when askingMember data is missing.
-  let headlineText, h3Class;
-  if (item.memberName) {
-    const mpSuffix = item.house === 'Commons' ? ' MP' : '';
-    const party = item.memberParty ? ` (${escapeHtml(item.memberParty)})` : '';
-    headlineText = `${escapeHtml(item.memberName)}${mpSuffix}${party} | ${escapeHtml(item.title)}`;
-    h3Class = houseClass(item.house);
-  } else {
-    headlineText = escapeHtml(item.title);
-    h3Class = '';
-  }
+  const metaLine = buildQuestionMetaLine(item);
+  const { html: headlineText, className: h3Class } = buildQuestionHeadline(item);
 
   return `
     <article class="feed-item">

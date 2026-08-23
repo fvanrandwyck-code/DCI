@@ -527,6 +527,45 @@ function mapQuestionToItem(v) {
   };
 }
 
+// ── PQ item rendering helpers ─────────────────────────────────────────────────
+//
+// Shared between the Politics tracker (politics-page.js) and the
+// homepage's "Latest Questions" section (home-page.js) so the headline
+// format and house colouring can't drift between the two.
+
+function pqHouseClass(house) {
+  if (house === 'Commons') return 'pq-house-commons';
+  if (house === 'Lords')   return 'pq-house-lords';
+  return '';
+}
+
+// Single headline/link: "{member} ({party}) | {topic}" coloured by house
+// — pipe rather than colon, since topics often contain their own colon
+// (e.g. "South Eastern Main Line: Mobile Broadband"). "MP" appended for
+// Commons members only (Lords titles like "Lord X" / "Baroness X"
+// already convey status on their own). Falls back to the topic heading
+// alone, uncoloured, when askingMember data is missing.
+function buildQuestionHeadline(item) {
+  if (!item.memberName) {
+    return { html: escapeHtml(item.title), className: '' };
+  }
+  const mpSuffix = item.house === 'Commons' ? ' MP' : '';
+  const party = item.memberParty ? ` (${escapeHtml(item.memberParty)})` : '';
+  return {
+    html: `${escapeHtml(item.memberName)}${mpSuffix}${party} | ${escapeHtml(item.title)}`,
+    className: pqHouseClass(item.house),
+  };
+}
+
+// Plain pipe-separated meta line, all in the same light grey (inherited
+// from .feed-item-meta) — no per-element colour, no brackets. House
+// colouring lives only on the headline above.
+function buildQuestionMetaLine(item) {
+  const parts = [escapeHtml(item.house), formatDate(item.date), escapeHtml(item.label)];
+  if (!item.dateAnswered) parts.push('Awaiting answer');
+  return parts.join(' | ');
+}
+
 async function fetchQuestionChunk(chunk) {
   const searchTerm = encodeURIComponent(chunk.join(' '));
   const url = `${PQ_API_BASE}?searchTerm=${searchTerm}&tabledWhenFrom=${PARLIAMENT_START}&expandMember=true&take=${PQ_TAKE}`;

@@ -22,6 +22,42 @@ function renderItemHtml(item) {
     </article>`;
 }
 
+// ── Open consultations ────────────────────────────────────────────────────────
+// Moved here from the homepage — same filter/sort logic and deadline-bar
+// treatment, just plain .feed-item spacing now that it's a full section on
+// its own page rather than a condensed homepage card.
+
+function renderOpenConsultations(consultationItems) {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const open = consultationItems
+    .filter(item =>
+      item.deadline &&
+      new Date(item.deadline) > today &&
+      matchesKeyword(item)
+    )
+    .sort((a, b) => a.deadline.localeCompare(b.deadline)); // closest deadline first
+
+  const container = document.getElementById('open-consultations');
+
+  if (open.length === 0) {
+    container.innerHTML = '<p class="no-results">No open telecoms consultations or calls for evidence at the moment.</p>';
+    return;
+  }
+
+  container.innerHTML = open.map(item => `
+    <article class="feed-item">
+      <p class="feed-item-meta">
+        <span class="source-tag">${escapeHtml(item.label)}</span>
+        <span class="type-tag">${escapeHtml(item.type)}</span>
+      </p>
+      <h3><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></h3>
+      ${renderDeadlineBar(item)}
+    </article>
+  `).join('');
+}
+
 // ── Visible items ──────────────────────────────────────────────────────────────
 
 function getVisibleItems() {
@@ -125,14 +161,22 @@ function filterFeed(source, buttonEl) {
 
 async function init() {
   document.getElementById('feed-container').innerHTML = '<p class="no-results">Loading…</p>';
+  document.getElementById('open-consultations').innerHTML = '<p class="no-results">Loading…</p>';
 
-  const result = await loadAllItems();
-  allItems        = result.items;
-  seenUrls        = result.seenUrls;
-  paginationState = result.paginationState;
+  // Both fetches are started here, before either is awaited, and each
+  // renders independently as soon as its own data lands — the main feed
+  // must not wait on Open Consultations (or vice versa).
+  const feedPromise = loadAllItems().then(result => {
+    allItems        = result.items;
+    seenUrls        = result.seenUrls;
+    paginationState = result.paginationState;
+    renderFeed();
+    updateLoadMoreButton(isAllExhausted());
+  });
 
-  renderFeed();
-  updateLoadMoreButton(isAllExhausted());
+  const consultationsPromise = fetchOpenConsultationsItems().then(renderOpenConsultations);
+
+  await Promise.all([feedPromise, consultationsPromise]);
 }
 
 init();

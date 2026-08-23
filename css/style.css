@@ -213,17 +213,36 @@ hr {
   margin-bottom: 0.5rem;
 }
 
+/* Section masthead ("Policy" / "Politics" on the homepage, "Open
+   Consultations" / "Tracker" on policy.html) — reuses the site's existing
+   mono/uppercase/letter-spaced "data chrome" language already applied to
+   tags, nav, and tracker-meta, rather than a new style, but sized larger
+   than that meta-text convention so it reads clearly as a masthead. */
+.section-heading {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 2.25rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Trailing descriptive clause folded into the same heading line (e.g.
+   "Policy — Latest Publications from DCMS, DBIST and Ofcom") — a full
+   sentence in uppercase tracked mono reads as a wall of shouting, so the
+   detail half drops the caps/tracking/weight and picks up a muted colour,
+   leaving only the short label ("Policy") as the bold masthead. */
+.section-heading-detail {
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 400;
+  color: #888;
+}
+
 .home-item {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
-
-.home-tracker-cta {
-  font-family: var(--serif);
-  font-size: 1rem;
-  line-height: 1.75;
-  color: #555;
-  margin-top: 2rem;
 }
 
 /* ── Tracker page ─────────────────────────────────────────────────────────── */

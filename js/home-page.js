@@ -1,36 +1,5 @@
 // ── Rendering ──────────────────────────────────────────────────────────────────
 
-function renderOpenConsultations(consultationItems) {
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-
-  const open = consultationItems
-    .filter(item =>
-      item.deadline &&
-      new Date(item.deadline) > today &&
-      matchesKeyword(item)
-    )
-    .sort((a, b) => a.deadline.localeCompare(b.deadline)); // closest deadline first
-
-  const container = document.getElementById('open-consultations');
-
-  if (open.length === 0) {
-    container.innerHTML = '<p class="no-results">No open telecoms consultations or calls for evidence at the moment.</p>';
-    return;
-  }
-
-  container.innerHTML = open.map(item => `
-    <article class="feed-item home-item">
-      <p class="feed-item-meta">
-        <span class="source-tag">${escapeHtml(item.label)}</span>
-        <span class="type-tag">${escapeHtml(item.type)}</span>
-      </p>
-      <h3><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></h3>
-      ${renderDeadlineBar(item)}
-    </article>
-  `).join('');
-}
-
 function renderLatestPublications(allItems) {
   const recent = allItems
     .filter(item => matchesKeyword(item))
@@ -55,19 +24,59 @@ function renderLatestPublications(allItems) {
   `).join('');
 }
 
+const HOME_QUESTIONS_LIMIT = 7;
+
+function renderQuestionRowHtml(item) {
+  const metaLine = buildQuestionMetaLine(item);
+  const { html: headlineText, className: h3Class } = buildQuestionHeadline(item);
+
+  return `
+    <article class="feed-item home-item">
+      <p class="feed-item-meta">${metaLine}</p>
+      <h3 class="${h3Class}"><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${headlineText}</a></h3>
+    </article>`;
+}
+
 // ── Init ───────────────────────────────────────────────────────────────────────
 
 async function init() {
-  document.getElementById('open-consultations').innerHTML = '<p class="no-results">Loading…</p>';
-  document.getElementById('latest-publications').innerHTML = '<p class="no-results">Loading…</p>';
+  const publicationsEl = document.getElementById('latest-publications');
+  const questionsEl    = document.getElementById('latest-questions');
+  publicationsEl.innerHTML = '<p class="no-results">Loading…</p>';
+  questionsEl.innerHTML    = '<p class="no-results">Fetching Parliamentary data — this can take up to 20 seconds…</p>';
 
-  const [{ items: allItems }, consultationItems] = await Promise.all([
-    loadAllItems(),
-    fetchOpenConsultationsItems(),
-  ]);
+  // Both fetches are started here, before either is awaited, so they run
+  // concurrently rather than one blocking the other.
+  const publicationsPromise = loadAllItems().then(({ items }) => {
+    renderLatestPublications(items);
+  });
 
-  renderOpenConsultations(consultationItems);
-  renderLatestPublications(allItems);
+  let questionItems = [];
+  let questionsShown = 0;
+  let questionsLoadingCleared = false;
+
+  const questionsPromise = fetchParliamentaryQuestionsStreaming(newRawItems => {
+    const relevant = newRawItems.filter(matchesPQRelevance);
+    if (relevant.length === 0 || questionsShown >= HOME_QUESTIONS_LIMIT) return;
+
+    if (!questionsLoadingCleared) {
+      questionsEl.innerHTML = '';
+      questionsLoadingCleared = true;
+    }
+
+    questionItems.push(...relevant);
+    const target = Math.min(HOME_QUESTIONS_LIMIT, questionItems.length);
+    const next = questionItems.slice(questionsShown, target);
+    if (next.length === 0) return;
+    questionsEl.insertAdjacentHTML('beforeend', next.map(renderQuestionRowHtml).join(''));
+    questionsShown = target;
+  }).then(() => {
+    if (questionsShown === 0) {
+      questionsEl.innerHTML = '<p class="no-results">No telecoms-relevant parliamentary questions found.</p>';
+    }
+  });
+
+  await Promise.all([publicationsPromise, questionsPromise]);
 }
 
 init();
