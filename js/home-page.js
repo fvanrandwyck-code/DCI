@@ -24,11 +24,11 @@ function renderLatestPublications(allItems) {
   `).join('');
 }
 
-const HOME_QUESTIONS_LIMIT = 7;
+const HOME_POLITICS_LIMIT = 7;
 
-function renderQuestionRowHtml(item) {
-  const metaLine = buildQuestionMetaLine(item);
-  const { html: headlineText, className: h3Class } = buildQuestionHeadline(item);
+function renderPoliticsRowHtml(item) {
+  const metaLine = buildPoliticsMetaLine(item);
+  const { html: headlineText, className: h3Class } = buildPoliticsHeadline(item);
 
   return `
     <article class="feed-item home-item">
@@ -41,9 +41,9 @@ function renderQuestionRowHtml(item) {
 
 async function init() {
   const publicationsEl = document.getElementById('latest-publications');
-  const questionsEl    = document.getElementById('latest-questions');
+  const politicsEl      = document.getElementById('latest-questions');
   publicationsEl.innerHTML = '<p class="no-results">Loading…</p>';
-  questionsEl.innerHTML    = '<p class="no-results">Fetching Parliamentary data — this can take up to 20 seconds…</p>';
+  politicsEl.innerHTML      = '<p class="no-results">Fetching Parliamentary data — this can take up to 20 seconds…</p>';
 
   // Both fetches are started here, before either is awaited, so they run
   // concurrently rather than one blocking the other.
@@ -51,32 +51,39 @@ async function init() {
     renderLatestPublications(items);
   });
 
-  let questionItems = [];
-  let questionsShown = 0;
-  let questionsLoadingCleared = false;
+  let politicsItems = [];
+  let politicsShown = 0;
+  let politicsLoadingCleared = false;
 
-  const questionsPromise = fetchParliamentaryQuestionsStreaming(newRawItems => {
+  // Questions and Statements stream into the same callback and share one
+  // combined cap of 7 — same merge pattern as politics.html.
+  const onChunk = newRawItems => {
     const relevant = newRawItems.filter(matchesPQRelevance);
-    if (relevant.length === 0 || questionsShown >= HOME_QUESTIONS_LIMIT) return;
+    if (relevant.length === 0 || politicsShown >= HOME_POLITICS_LIMIT) return;
 
-    if (!questionsLoadingCleared) {
-      questionsEl.innerHTML = '';
-      questionsLoadingCleared = true;
+    if (!politicsLoadingCleared) {
+      politicsEl.innerHTML = '';
+      politicsLoadingCleared = true;
     }
 
-    questionItems.push(...relevant);
-    const target = Math.min(HOME_QUESTIONS_LIMIT, questionItems.length);
-    const next = questionItems.slice(questionsShown, target);
+    politicsItems.push(...relevant);
+    const target = Math.min(HOME_POLITICS_LIMIT, politicsItems.length);
+    const next = politicsItems.slice(politicsShown, target);
     if (next.length === 0) return;
-    questionsEl.insertAdjacentHTML('beforeend', next.map(renderQuestionRowHtml).join(''));
-    questionsShown = target;
-  }).then(() => {
-    if (questionsShown === 0) {
-      questionsEl.innerHTML = '<p class="no-results">No telecoms-relevant parliamentary questions found.</p>';
+    politicsEl.insertAdjacentHTML('beforeend', next.map(renderPoliticsRowHtml).join(''));
+    politicsShown = target;
+  };
+
+  const politicsPromise = Promise.all([
+    fetchParliamentaryQuestionsStreaming(onChunk),
+    fetchWrittenStatementsStreaming(onChunk),
+  ]).then(() => {
+    if (politicsShown === 0) {
+      politicsEl.innerHTML = '<p class="no-results">No telecoms-relevant parliamentary questions or statements found.</p>';
     }
   });
 
-  await Promise.all([publicationsPromise, questionsPromise]);
+  await Promise.all([publicationsPromise, politicsPromise]);
 }
 
 init();

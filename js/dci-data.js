@@ -96,7 +96,7 @@ const EXCLUDED_FORMATS = new Set([
 // Applied identically to every item from every source.
 // Extend this list as coverage needs change.
 const KEYWORDS = [
-  'telecoms', 'telecom', 'broadband', 'mobile', 'spectrum',
+  'telecoms', 'telecom', 'telephone', 'broadband', 'mobile', 'spectrum',
   '5G', '4G', 'fibre', 'fiber', 'Ofcom', 'BDUK', 'Openreach',
   'gigabit', 'connectivity', 'infrastructure', 'network',
   'rollout', 'coverage', 'roaming', 'satellite',
@@ -515,6 +515,7 @@ function mapQuestionToItem(v) {
   const member = v.askingMember;
   return {
     id:            'PQ:' + v.uin,
+    contentType:   'question',
     house:         v.house,
     label:         mapAnsweringBody(v.answeringBodyName || ''),
     memberName:    (member && member.name) || null,
@@ -527,11 +528,14 @@ function mapQuestionToItem(v) {
   };
 }
 
-// ── PQ item rendering helpers ─────────────────────────────────────────────────
+// ── Politics tracker item rendering helpers ─────────────────────────────────
 //
 // Shared between the Politics tracker (politics-page.js) and the
-// homepage's "Latest Questions" section (home-page.js) so the headline
-// format and house colouring can't drift between the two.
+// homepage's "Latest Questions & Statements" section (home-page.js) so
+// the headline format and house colouring can't drift between the two.
+// Used for both item.contentType === 'question' and 'statement' — the
+// two content types render identically apart from the type label and
+// the "Awaiting answer" tag, which only applies to questions.
 
 function pqHouseClass(house) {
   if (house === 'Commons') return 'pq-house-commons';
@@ -544,8 +548,8 @@ function pqHouseClass(house) {
 // (e.g. "South Eastern Main Line: Mobile Broadband"). "MP" appended for
 // Commons members only (Lords titles like "Lord X" / "Baroness X"
 // already convey status on their own). Falls back to the topic heading
-// alone, uncoloured, when askingMember data is missing.
-function buildQuestionHeadline(item) {
+// alone, uncoloured, when member data is missing.
+function buildPoliticsHeadline(item) {
   if (!item.memberName) {
     return { html: escapeHtml(item.title), className: '' };
   }
@@ -559,10 +563,14 @@ function buildQuestionHeadline(item) {
 
 // Plain pipe-separated meta line, all in the same light grey (inherited
 // from .feed-item-meta) — no per-element colour, no brackets. House
-// colouring lives only on the headline above.
-function buildQuestionMetaLine(item) {
-  const parts = [escapeHtml(item.house), formatDate(item.date), escapeHtml(item.label)];
-  if (!item.dateAnswered) parts.push('Awaiting answer');
+// colouring lives only on the headline above. Includes a Question/
+// Statement type tag so the two content types are distinguishable at a
+// glance in a merged feed; "Awaiting answer" only applies to questions —
+// statements are made, not answered, and never carry a dateAnswered field.
+function buildPoliticsMetaLine(item) {
+  const typeLabel = item.contentType === 'statement' ? 'Statement' : 'Question';
+  const parts = [escapeHtml(item.house), typeLabel, formatDate(item.date), escapeHtml(item.label)];
+  if (item.contentType !== 'statement' && !item.dateAnswered) parts.push('Awaiting answer');
   return parts.join(' | ');
 }
 
@@ -610,6 +618,79 @@ function fetchParliamentaryQuestionsStreaming(onChunk) {
   );
 }
 
+// ── Written Ministerial Statements ──────────────────────────────────────────
+//
+// Second content type in the Politics tracker, merged into the same feed
+// as Parliamentary Questions rather than shown separately. Same API
+// family, same chunking/date-floor/streaming approach — see the PQ
+// fetching notes above, all of which apply equally here (confirmed via
+// direct investigation: same CORS, same searchTerm OR-union behaviour,
+// same latency-scales-with-term-count issue the chunking works around).
+//
+// Statements have no "asked/answered" pair — a minister proactively
+// informs Parliament, so there's no dateAnswered/"Awaiting answer"
+// equivalent (handled in buildPoliticsMetaLine above). A statement made
+// in one House is often mirrored by a companion statement in the other
+// (see hasLinkedStatements/linkedStatements in the raw API response) —
+// these are deliberately NOT collapsed here; each has its own uin and is
+// treated as a genuinely distinct item, correctly attributed to its own
+// House and member.
+const WS_API_BASE = 'https://questions-statements-api.parliament.uk/api/writtenstatements/statements';
+
+function mapStatementToItem(v) {
+  const dateMade = (v.dateMade || '').slice(0, 10);
+  const member = v.member;
+  return {
+    id:          'WS:' + v.uin,
+    contentType: 'statement',
+    house:       v.house,
+    label:       mapAnsweringBody(v.answeringBodyName || ''),
+    memberName:  (member && member.name) || null,
+    memberParty: (member && member.partyAbbreviation) || null,
+    title:       v.title || truncate(v.text || '', 80),
+    date:        dateMade,
+    context:     truncate(v.text || '', 180),
+    url:         `https://questions-statements.parliament.uk/written-statements/detail/${dateMade}/${v.uin}`,
+  };
+}
+
+async function fetchStatementChunk(chunk) {
+  const searchTerm = encodeURIComponent(chunk.join(' '));
+  const url = `${WS_API_BASE}?searchTerm=${searchTerm}&madeWhenFrom=${PARLIAMENT_START}&expandMember=true&take=${PQ_TAKE}`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const data = await res.json();
+  return (data.results || []).map(r => mapStatementToItem(r.value));
+}
+
+// Mirrors fetchParliamentaryQuestionsStreaming exactly — see that
+// function's comment for the rationale. Dedup is scoped to this call's
+// own seenIds, keyed by uin, so it never collides with question ids
+// (prefixed 'PQ:' vs 'WS:').
+function fetchWrittenStatementsStreaming(onChunk) {
+  const chunks = chunkArray(KEYWORDS, PQ_CHUNK_SIZE);
+  const seenIds = new Set();
+
+  return Promise.all(
+    chunks.map((chunk, i) =>
+      fetchStatementChunk(chunk)
+        .then(items => {
+          const newItems = [];
+          for (const item of items) {
+            if (seenIds.has(item.id)) continue;
+            seenIds.add(item.id);
+            newItems.push(item);
+          }
+          newItems.sort((a, b) => b.date.localeCompare(a.date));
+          if (newItems.length > 0) onChunk(newItems);
+        })
+        .catch(err => {
+          console.warn(`[DCI] WS chunk ${i} (${chunk.join(', ')}) fetch failed:`, err);
+        })
+    )
+  );
+}
+
 // PQ-specific relevance filter — NOT used by matchesKeyword() or any
 // gov.uk/Policy tracker source. Several KEYWORDS terms are too broad
 // against Parliament's unscoped full-text search to be useful alone —
@@ -617,10 +698,13 @@ function fetchParliamentaryQuestionsStreaming(onChunk) {
 // scoped to a relevant department. Every KEYWORDS term not listed below
 // still matches on its own bare presence, unchanged.
 //
-// - mobile / infrastructure / satellite: fine on gov.uk, noisy here
-//   (e.g. "Mobile Power" aid programme, Ofgem electricity infrastructure,
-//   MoD Skynet/satellite procurement, NHS "satellite radiotherapy units")
-//   — require a telecoms-specific compound phrase nearby instead of the
+// - mobile / infrastructure / satellite / telephone: fine on gov.uk, noisy
+//   here (e.g. "Mobile Power" aid programme, Ofgem electricity
+//   infrastructure, MoD Skynet/satellite procurement, NHS "satellite
+//   radiotherapy units", "telephone" as generic department contact-line
+//   filler — confirmed 822 questions matched bare "telephone", dominated
+//   by Universal Credit/HMRC/GP/immigration phone-line questions) —
+//   require a telecoms-specific compound phrase nearby instead of the
 //   bare word.
 // - Ofcom: a regulator name covering broadcasting, post, and online
 //   safety as well as telecoms (e.g. a Supreme Court gender-identity
@@ -646,9 +730,27 @@ const PQ_TIGHTENED_TERMS = {
     'satellite broadband', 'satellite communications', 'satellite connectivity',
     'satellite internet', 'satellite network',
   ],
+  // "telephone service" deliberately excluded — that's the generic
+  // "contact us" phrasing responsible for most of the 822-match noise
+  // on bare "telephone", not a telecoms-specific signal.
+  telephone: [
+    'telephone numbers', 'telephone network', 'telephone fraud',
+  ],
   ofcom: null, // special case: needs co-occurrence with any OTHER KEYWORDS term
 };
 
+// KNOWN LIMITATION: this only ever sees item.title + item.context, both
+// built from the list endpoint's ~258-char truncated text (see
+// mapQuestionToItem/mapStatementToItem). The server's own searchTerm
+// match is against the FULL text, so an item can legitimately match
+// server-side on a keyword that appears past the truncation point and
+// then fail this client-side re-check — a false negative, not a bug in
+// the logic below. Confirmed in practice on a real statement whose only
+// "telecoms" mention was ~300 characters past the truncated snippet.
+// Applies equally to questions (never fixed there either, just never
+// surfaced by a real example before). Fetching full text to close this
+// gap was deliberately ruled out (one extra API call per candidate item)
+// — accepted as a known gap rather than fixed for now.
 function matchesPQRelevance(item) {
   const text = (item.title + ' ' + item.context).toLowerCase();
   const tightened = new Set(Object.keys(PQ_TIGHTENED_TERMS));

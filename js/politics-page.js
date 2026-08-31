@@ -1,16 +1,27 @@
 // ── State ──────────────────────────────────────────────────────────────────────
 
 const PQ_PAGE_SIZE = 20;
-let visibleItems = [];
-let shownCount   = 0;
+let visibleItems  = [];  // full merged pool (questions + statements), append-only
+let activeFilter  = 'all'; // 'all' | 'question' | 'statement'
+let shownCount    = 0;   // position within the CURRENTLY FILTERED view
+
+// Items matching the active content-type filter — the underlying pool
+// (visibleItems) always holds both types regardless of which filter is
+// selected, so switching filters never needs a new fetch.
+function getFilteredItems() {
+  if (activeFilter === 'all') return visibleItems;
+  return visibleItems.filter(item => item.contentType === activeFilter);
+}
 
 // ── Item rendering ─────────────────────────────────────────────────────────────
-// Headline/meta-line construction (buildQuestionHeadline, buildQuestionMetaLine)
-// lives in dci-data.js — shared with the homepage's "Latest Questions" section.
+// Headline/meta-line construction (buildPoliticsHeadline, buildPoliticsMetaLine)
+// lives in dci-data.js — shared with the homepage's "Latest Questions &
+// Statements" section. Works for both item.contentType 'question' and
+// 'statement' items in this same merged feed.
 
 function renderItemHtml(item) {
-  const metaLine = buildQuestionMetaLine(item);
-  const { html: headlineText, className: h3Class } = buildQuestionHeadline(item);
+  const metaLine = buildPoliticsMetaLine(item);
+  const { html: headlineText, className: h3Class } = buildPoliticsHeadline(item);
 
   return `
     <article class="feed-item">
@@ -30,27 +41,56 @@ function appendRendered(items) {
 function updateLoadMoreButton() {
   const btn = document.getElementById('load-more-btn');
   if (!btn) return;
-  btn.style.display = shownCount >= visibleItems.length ? 'none' : '';
+  btn.style.display = shownCount >= getFilteredItems().length ? 'none' : '';
 }
 
 function loadMore() {
-  const next = visibleItems.slice(shownCount, shownCount + PQ_PAGE_SIZE);
+  const filtered = getFilteredItems();
+  const next = filtered.slice(shownCount, shownCount + PQ_PAGE_SIZE);
   appendRendered(next);
   shownCount += next.length;
   updateLoadMoreButton();
 }
 
 // Used while chunks are still streaming in: reveals newly-arrived items
-// only until the first page is full, then stops — anything beyond that
-// waits for an explicit "Load more" click, same contract as loadMore()
-// above. Keeps progressive rendering from fighting with pagination.
+// (of whichever content type is currently filtered) only until the first
+// page is full, then stops — anything beyond that waits for an explicit
+// "Load more" click, same contract as loadMore() above. Keeps progressive
+// rendering from fighting with pagination.
 function revealUpToFirstPage() {
   if (shownCount >= PQ_PAGE_SIZE) return;
-  const target = Math.min(PQ_PAGE_SIZE, visibleItems.length);
-  const next = visibleItems.slice(shownCount, target);
+  const filtered = getFilteredItems();
+  const target = Math.min(PQ_PAGE_SIZE, filtered.length);
+  const next = filtered.slice(shownCount, target);
   if (next.length === 0) return;
   appendRendered(next);
   shownCount = target;
+}
+
+// ── Content-type filter (All / Questions / Statements) ─────────────────────────
+// Filters the already-loaded visibleItems pool — no new fetch, same
+// principle as loadMore() above. A full re-render, mirroring the Policy
+// tracker's filterFeed()/renderFeed() pattern.
+
+function renderFeed() {
+  const container = document.getElementById('feed-container');
+  const filtered = getFilteredItems();
+  const firstPage = filtered.slice(0, PQ_PAGE_SIZE);
+
+  container.innerHTML = firstPage.length === 0
+    ? '<p class="no-results">No telecoms-relevant items for this filter.</p>'
+    : firstPage.map(renderItemHtml).join('');
+
+  shownCount = firstPage.length;
+  updateLoadMoreButton();
+}
+
+function filterFeed(filter, buttonEl) {
+  activeFilter = filter;
+  document.querySelectorAll('.source-filters button').forEach(btn => {
+    btn.classList.toggle('active', btn === buttonEl);
+  });
+  renderFeed();
 }
 
 // ── Init ───────────────────────────────────────────────────────────────────────
@@ -63,7 +103,11 @@ async function init() {
   shownCount = 0;
   let loadingMessageCleared = false;
 
-  await fetchParliamentaryQuestionsStreaming(newRawItems => {
+  // Questions and Statements stream into the same callback — both content
+  // types merge into one array as their chunks land, no separate merge
+  // step needed. Statement chunks tend to resolve much faster than
+  // question chunks, so they're often what fills the first page initially.
+  const onChunk = newRawItems => {
     const relevant = newRawItems.filter(matchesPQRelevance);
     if (relevant.length === 0) return;
 
@@ -75,18 +119,23 @@ async function init() {
     visibleItems.push(...relevant);
     revealUpToFirstPage();
     updateLoadMoreButton();
-  });
+  };
 
-  // Every chunk has now settled. Items already on screen keep their
-  // position — only the not-yet-revealed remainder gets sorted, so
-  // "Load more" pulls in correct date order from here on.
+  await Promise.all([
+    fetchParliamentaryQuestionsStreaming(onChunk),
+    fetchWrittenStatementsStreaming(onChunk),
+  ]);
+
+  // Every chunk (both types) has now settled. Items already on screen
+  // keep their position — only the not-yet-revealed remainder gets
+  // sorted, so "Load more" pulls in correct date order from here on.
   const shown = visibleItems.slice(0, shownCount);
   const rest  = visibleItems.slice(shownCount).sort((a, b) => b.date.localeCompare(a.date));
   visibleItems = shown.concat(rest);
   updateLoadMoreButton();
 
   if (visibleItems.length === 0) {
-    container.innerHTML = '<p class="no-results">No telecoms-relevant parliamentary questions found.</p>';
+    container.innerHTML = '<p class="no-results">No telecoms-relevant parliamentary questions or statements found.</p>';
   }
 }
 

@@ -23,8 +23,14 @@
   <main>
     <h1>Politics Tracker</h1>
     <p class="tracker-meta">
-      Parliamentary written questions relevant to UK digital infrastructure and telecoms, since the start of this Parliament (4 July 2024). Debates and statements to follow.
+      Parliamentary written questions and ministerial statements relevant to UK digital infrastructure and telecoms, since the start of this Parliament (4 July 2024). Debates to follow.
     </p>
+
+    <div class="source-filters">
+      <button class="active" data-filter="all" onclick="filterFeed('all', this)">All</button>
+      <button data-filter="question" onclick="filterFeed('question', this)">Questions</button>
+      <button data-filter="statement" onclick="filterFeed('statement', this)">Statements</button>
+    </div>
 
     <div id="feed-container">
       <!-- Feed items rendered by politics-page.js -->
