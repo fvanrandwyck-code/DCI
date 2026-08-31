@@ -698,12 +698,18 @@ function fetchWrittenStatementsStreaming(onChunk) {
 // scoped to a relevant department. Every KEYWORDS term not listed below
 // still matches on its own bare presence, unchanged.
 //
-// - mobile / infrastructure / satellite / telephone: fine on gov.uk, noisy
-//   here (e.g. "Mobile Power" aid programme, Ofgem electricity
-//   infrastructure, MoD Skynet/satellite procurement, NHS "satellite
-//   radiotherapy units", "telephone" as generic department contact-line
-//   filler — confirmed 822 questions matched bare "telephone", dominated
-//   by Universal Credit/HMRC/GP/immigration phone-line questions) —
+// - mobile / infrastructure / satellite / telephone / coverage / network:
+//   fine on gov.uk, noisy here (e.g. "Mobile Power" aid programme, Ofgem
+//   electricity infrastructure, MoD Skynet/satellite procurement, NHS
+//   "satellite radiotherapy units", "telephone" as generic department
+//   contact-line filler — confirmed 822 questions matched bare
+//   "telephone", dominated by Universal Credit/HMRC/GP/immigration
+//   phone-line questions — "coverage" as NHS/vaccination/media/fire-
+//   service coverage — confirmed 1,270 raw matches on bare "coverage",
+//   of which only 5 relied on it exclusively, and the 2 genuine ones
+//   were already protected by the "mobile" compounds below — "network"
+//   as proper nouns like "Network Rail" and school-sport partnership
+//   names, confirmed 8 of 9 items relying on it solely were noise) —
 //   require a telecoms-specific compound phrase nearby instead of the
 //   bare word.
 // - Ofcom: a regulator name covering broadcasting, post, and online
@@ -721,10 +727,15 @@ const PQ_TIGHTENED_TERMS = {
     'mobile mast', 'mobile operator', 'mobile signal', 'mobile connectivity',
     'mobile infrastructure', 'mobile market',
   ],
+  // "critical national infrastructure" deliberately excluded — a
+  // cross-sectoral UK government term spanning energy, water, finance,
+  // transport, and health as well as telecoms (confirmed: matched a
+  // statement about medical device software regulation), not a
+  // telecoms-specific signal the way the other compounds below are.
   infrastructure: [
     'digital infrastructure', 'telecoms infrastructure', 'telecommunications infrastructure',
     'broadband infrastructure', 'network infrastructure', 'mobile infrastructure',
-    'critical national infrastructure', 'connectivity infrastructure',
+    'connectivity infrastructure',
   ],
   satellite: [
     'satellite broadband', 'satellite communications', 'satellite connectivity',
@@ -735,6 +746,21 @@ const PQ_TIGHTENED_TERMS = {
   // on bare "telephone", not a telecoms-specific signal.
   telephone: [
     'telephone numbers', 'telephone network', 'telephone fraud',
+  ],
+  coverage: [
+    'mobile coverage', 'network coverage', 'signal coverage',
+    'broadband coverage', 'coverage notspot', 'coverage black spot',
+  ],
+  // Bare "network" is dominated by proper nouns ("Network Rail", "PE and
+  // School Sport Partnerships Network") rather than telecoms usage —
+  // confirmed 8 of 9 items relying on it solely were noise. The one
+  // genuine case (Voice over Internet Protocol, matching "Public
+  // Switched Telephone Network") is already protected by the existing
+  // "telephone network" compound above regardless of this list.
+  network: [
+    'mobile network', 'broadband network', 'telecoms network', 'telecommunications network',
+    'telephone network', '5G network', '4G network', 'fibre network', 'fiber network',
+    'network coverage', 'network infrastructure', 'communications network',
   ],
   ofcom: null, // special case: needs co-occurrence with any OTHER KEYWORDS term
 };

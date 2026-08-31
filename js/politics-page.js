@@ -74,6 +74,16 @@ function revealUpToFirstPage() {
 
 function renderFeed() {
   const container = document.getElementById('feed-container');
+
+  // Full rebuild — nothing on screen to protect, unlike during streaming
+  // (see init()'s settle-time comment: that sort only ever covers the
+  // *unrevealed* tail, leaving the originally-streamed prefix in arrival
+  // order for DOM stability). A user-triggered filter switch has no such
+  // constraint, so this is the moment to canonicalise ordering — without
+  // it, switching filters and back re-exposes that stale prefix instead
+  // of a true top-N-by-date.
+  visibleItems.sort((a, b) => b.date.localeCompare(a.date));
+
   const filtered = getFilteredItems();
   const firstPage = filtered.slice(0, PQ_PAGE_SIZE);
 
@@ -126,16 +136,23 @@ async function init() {
     fetchWrittenStatementsStreaming(onChunk),
   ]);
 
-  // Every chunk (both types) has now settled. Items already on screen
-  // keep their position — only the not-yet-revealed remainder gets
-  // sorted, so "Load more" pulls in correct date order from here on.
-  const shown = visibleItems.slice(0, shownCount);
-  const rest  = visibleItems.slice(shownCount).sort((a, b) => b.date.localeCompare(a.date));
-  visibleItems = shown.concat(rest);
-  updateLoadMoreButton();
-
+  // Every chunk (both types) has now settled. During streaming,
+  // revealUpToFirstPage() only ever appended new items without a full
+  // re-sort, so the initially-revealed prefix is still in raw
+  // chunk-arrival order, not necessarily correct date order — an item
+  // that arrived slightly later in a slower chunk could rank ahead of
+  // it by date but never get the chance to displace it (this was the
+  // actual bug: that prefix was never revisited, so such items stayed
+  // permanently hidden below the fold even after loading finished).
+  // Now that every chunk is in, do a ONE-TIME full re-sort + re-render
+  // via renderFeed() — same function the filter buttons already use, so
+  // this also respects whichever filter is currently active. A single
+  // reflow at the exact moment loading completes is expected; nothing
+  // re-sorts again after this, so already-read content won't shift later.
   if (visibleItems.length === 0) {
     container.innerHTML = '<p class="no-results">No telecoms-relevant parliamentary questions or statements found.</p>';
+  } else {
+    renderFeed();
   }
 }
 

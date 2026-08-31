@@ -51,15 +51,28 @@ async function init() {
     renderLatestPublications(items);
   });
 
-  let politicsItems = [];
-  let politicsShown = 0;
+  let politicsItems = [];  // full accumulated pool — always grows, never capped mid-stream
+  let politicsShown = 0;   // how many rows are currently rendered (progressive reveal only)
   let politicsLoadingCleared = false;
 
+  function revealUpToLimit() {
+    if (politicsShown >= HOME_POLITICS_LIMIT) return;
+    const target = Math.min(HOME_POLITICS_LIMIT, politicsItems.length);
+    const next = politicsItems.slice(politicsShown, target);
+    if (next.length === 0) return;
+    politicsEl.insertAdjacentHTML('beforeend', next.map(renderPoliticsRowHtml).join(''));
+    politicsShown = target;
+  }
+
   // Questions and Statements stream into the same callback and share one
-  // combined cap of 7 — same merge pattern as politics.html.
+  // combined cap of 7 — same merge pattern as politics.html. Every
+  // relevant item is accumulated into politicsItems regardless of the
+  // display cap — capping *acceptance* (rather than just display) meant
+  // later-arriving chunks were silently dropped rather than evaluated
+  // against what was already shown.
   const onChunk = newRawItems => {
     const relevant = newRawItems.filter(matchesPQRelevance);
-    if (relevant.length === 0 || politicsShown >= HOME_POLITICS_LIMIT) return;
+    if (relevant.length === 0) return;
 
     if (!politicsLoadingCleared) {
       politicsEl.innerHTML = '';
@@ -67,20 +80,23 @@ async function init() {
     }
 
     politicsItems.push(...relevant);
-    const target = Math.min(HOME_POLITICS_LIMIT, politicsItems.length);
-    const next = politicsItems.slice(politicsShown, target);
-    if (next.length === 0) return;
-    politicsEl.insertAdjacentHTML('beforeend', next.map(renderPoliticsRowHtml).join(''));
-    politicsShown = target;
+    revealUpToLimit();
   };
 
   const politicsPromise = Promise.all([
     fetchParliamentaryQuestionsStreaming(onChunk),
     fetchWrittenStatementsStreaming(onChunk),
   ]).then(() => {
-    if (politicsShown === 0) {
-      politicsEl.innerHTML = '<p class="no-results">No telecoms-relevant parliamentary questions or statements found.</p>';
-    }
+    // Every chunk has now settled. Streaming only ever appended in
+    // arrival order, so without a final correction the homepage could
+    // permanently show a stale top 7 even after every relevant item has
+    // actually arrived — same one-time settle-time fix as politics.html.
+    politicsItems.sort((a, b) => b.date.localeCompare(a.date));
+    const top = politicsItems.slice(0, HOME_POLITICS_LIMIT);
+
+    politicsEl.innerHTML = top.length === 0
+      ? '<p class="no-results">No telecoms-relevant parliamentary questions or statements found.</p>'
+      : top.map(renderPoliticsRowHtml).join('');
   });
 
   await Promise.all([publicationsPromise, politicsPromise]);
