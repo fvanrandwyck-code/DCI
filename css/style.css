@@ -361,6 +361,37 @@ hr {
   text-decoration: underline;
 }
 
+/* Sitting status — small coloured dot, deliberately muted/distinct from
+   both the deadline bar's bright red/green and the pq-house colours
+   above, so it reads as its own signal rather than a house indicator. */
+.sitting-status-line {
+  font-family: var(--mono);
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sitting-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.sitting-dot-sitting {
+  background: #3d7a52;
+}
+
+.sitting-dot-recess {
+  background: #9c3b3b;
+}
+
 .feed-item p {
   font-size: 0.9rem;
   color: #555;

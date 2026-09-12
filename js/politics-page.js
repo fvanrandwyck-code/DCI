@@ -31,6 +31,57 @@ function renderItemHtml(item) {
     </article>`;
 }
 
+// ── Parliamentary Business (Sitting Status + Debates & Committees) ─────────────
+// Independent of the Questions/Statements feed below — both fetches here
+// are fast (small, curated), so each renders as soon as its own data
+// lands rather than waiting on the slower PQ/WS load.
+
+function renderSittingStatus(statuses) {
+  const container = document.getElementById('sitting-status');
+  container.innerHTML = statuses.map(s => {
+    const dotClass = s.sitting ? 'sitting-dot-sitting' : 'sitting-dot-recess';
+    const verb = s.sitting ? 'Sitting' : 'Recess';
+    const dateText = s.date ? ` until ${formatDate(s.date)}` : '';
+    return `<p class="sitting-status-line"><span class="sitting-dot ${dotClass}"></span>${escapeHtml(s.house)}: ${verb}${dateText}</p>`;
+  }).join('');
+}
+
+function renderCommitteeEventHtml(item) {
+  const metaLine = [escapeHtml(item.house), 'Committee', formatDate(item.date), escapeHtml(item.committee)].join(' | ');
+  return `
+    <article class="feed-item">
+      <h3 class="${pqHouseClass(item.house)}"><a href="${escapeHtml(item.url)}" target="_blank" rel="noopener">${escapeHtml(item.title)}</a></h3>
+      <p class="feed-item-meta">${metaLine}</p>
+      ${item.context ? `<p>${escapeHtml(item.context)}</p>` : ''}
+    </article>`;
+}
+
+async function initParliamentaryBusiness() {
+  document.getElementById('sitting-status').innerHTML = '<p class="no-results">Loading…</p>';
+  document.getElementById('committee-events').innerHTML = '<p class="no-results">Loading…</p>';
+
+  const sittingPromise = fetchSittingStatus()
+    .then(renderSittingStatus)
+    .catch(err => {
+      console.warn('[DCI] Sitting status fetch failed:', err);
+      document.getElementById('sitting-status').innerHTML = '<p class="no-results">Sitting status unavailable.</p>';
+    });
+
+  const committeePromise = fetchUpcomingCommitteeEvents()
+    .then(items => {
+      const container = document.getElementById('committee-events');
+      container.innerHTML = items.length === 0
+        ? '<p class="no-results">No telecoms-relevant committee sessions scheduled in the next 30 days.</p>'
+        : items.map(renderCommitteeEventHtml).join('');
+    })
+    .catch(err => {
+      console.warn('[DCI] Committee events fetch failed:', err);
+      document.getElementById('committee-events').innerHTML = '<p class="no-results">Committee schedule unavailable.</p>';
+    });
+
+  await Promise.all([sittingPromise, committeePromise]);
+}
+
 // ── Load more (reveals more of the already-fetched batch — no new fetch) ───────
 
 function appendRendered(items) {
@@ -106,6 +157,10 @@ function filterFeed(filter, buttonEl) {
 // ── Init ───────────────────────────────────────────────────────────────────────
 
 async function init() {
+  // Started first, before anything is awaited, so it runs concurrently
+  // with the Questions/Statements load below rather than waiting on it.
+  const parliamentaryBusinessPromise = initParliamentaryBusiness();
+
   const container = document.getElementById('feed-container');
   container.innerHTML = '<p class="no-results">Fetching Parliamentary data — this can take up to 20 seconds…</p>';
 
@@ -154,6 +209,8 @@ async function init() {
   } else {
     renderFeed();
   }
+
+  await parliamentaryBusinessPromise;
 }
 
 init();

@@ -804,3 +804,140 @@ function matchesPQRelevance(item) {
   }
   return false;
 }
+
+// ── Parliamentary Business (Sitting Status + Debates & Committees) ─────────────
+//
+// Separate data source from Questions/Statements — Parliament's "What's on"
+// (Calendar) API, whatson-api.parliament.uk. Confirmed via direct
+// investigation: CORS open, forward-looking (schedule data, not Hansard
+// history). The nonsitting endpoint has no date-range limit; the events
+// endpoint enforces a hard ~30-day max range per request (confirmed
+// empirically — a 30-day window succeeds, 44 days fails with a 400).
+const WHATSON_API_BASE = 'https://whatson-api.parliament.uk/calendar';
+
+// ── Sitting status ───────────────────────────────────────────────────────────
+
+// Only CategoryCode "2" (Recess) counts toward sitting/recess status — the
+// same nonsitting feed also includes "Non-sitting Friday" and "Bank
+// Holiday" entries, which would make the widget claim "recess" every
+// routine constituency Friday if included.
+const RECESS_CATEGORY_CODE = '2';
+
+async function fetchSittingStatus() {
+  const today = new Date();
+  const past = new Date(today);   past.setDate(past.getDate() - 60);
+  const future = new Date(today); future.setDate(future.getDate() + 200);
+  const fmt = d => d.toISOString().slice(0, 10);
+
+  const url = `${WHATSON_API_BASE}/events/nonsitting.json?startDate=${fmt(past)}&endDate=${fmt(future)}`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const data = await res.json();
+
+  const todayStr = fmt(today);
+  const recesses = data.filter(e => e.CategoryCode === RECESS_CATEGORY_CODE);
+
+  function statusForHouse(house) {
+    const houseRecesses = recesses
+      .filter(r => r.House === house)
+      .sort((a, b) => a.StartDate.localeCompare(b.StartDate));
+
+    const current = houseRecesses.find(r =>
+      r.StartDate.slice(0, 10) <= todayStr && todayStr <= r.EndDate.slice(0, 10)
+    );
+    if (current) {
+      return { house, sitting: false, date: current.EndDate.slice(0, 10) };
+    }
+
+    const next = houseRecesses.find(r => r.StartDate.slice(0, 10) > todayStr);
+    return { house, sitting: true, date: next ? next.StartDate.slice(0, 10) : null };
+  }
+
+  return [statusForHouse('Commons'), statusForHouse('Lords')];
+}
+
+// ── Upcoming Debates & Committees ────────────────────────────────────────────
+//
+// Investigation found that generic KEYWORDS searchTerm queries against this
+// API return nothing — committee/inquiry names are short, formal titles
+// that rarely contain prose-oriented keywords like "broadband", unlike
+// PQ/WS answer text (confirmed: zero matches across 6 months for every
+// term tried, despite the search mechanism itself working correctly).
+// Scoping by a small curated list of telecoms-adjacent committees instead
+// — the same "curated list, not broad search" approach used for Bills to
+// Watch — surfaces real sessions that keyword search missed entirely.
+// matchesPQRelevance() is then applied within that curated scope, since
+// even a telecoms-adjacent committee's business isn't always
+// telecoms-relevant (e.g. an Online Safety Act evidence session sits in
+// Ofcom's broadcasting remit, not telecoms).
+const PARLIAMENTARY_COMMITTEES = [
+  { id: 135, house: 'Commons' }, // Science, Innovation and Technology Committee
+  { id: 193, house: 'Lords' },   // Science and Technology Committee
+  { id: 170, house: 'Lords' },   // Communications and Digital Committee
+  { id: 365, house: 'Commons' }, // Business and Trade Committee
+];
+
+const COMMITTEE_EVENTS_WINDOW_DAYS = 30;
+
+// VERIFICATION STATUS: as of 2026-09-12, this pipeline has only been
+// confirmed correctly REJECTING real scheduled sessions (e.g. "Machinery
+// of government changes", "The Online Safety Act: implementation and
+// impact" — both genuinely off-topic) — it has not yet been observed
+// producing a genuine positive hit that actually renders in the browser.
+// The relevance logic itself (matchesPQRelevance/PQ_TIGHTENED_TERMS) is
+// the same one already proven extensively on Questions/Statements, so
+// this was shipped without waiting for a positive example, which may be
+// rare given how narrow this tracker's telecoms scope is relative to
+// these committees' full remits. If you're reading this after a
+// telecoms-relevant committee session has actually appeared, check it
+// rendered correctly (URL, house colouring, meta line) and remove this
+// comment — that's the still-outstanding verification.
+function mapCommitteeEventToItem(e) {
+  const committeeName = (e.Committee && e.Committee.Description) || '';
+  const inquiry = e.Committee && e.Committee.Inquiries && e.Committee.Inquiries.length
+    ? e.Committee.Inquiries.map(i => i.Description).join('; ')
+    : '';
+  return {
+    id:        'CTE:' + e.Id,
+    house:     e.House,
+    committee: committeeName,
+    date:      (e.StartDate || '').slice(0, 10),
+    title:     inquiry || committeeName || 'Committee session',
+    context:   (e.SummarisedDetails || '').replace(/\s+/g, ' ').trim(),
+    url:       e.Committee && e.Committee.Id
+      ? `https://committees.parliament.uk/committee/${e.Committee.Id}/`
+      : 'https://committees.parliament.uk/',
+  };
+}
+
+async function fetchUpcomingCommitteeEvents() {
+  const today = new Date();
+  const end = new Date(today);
+  end.setDate(end.getDate() + COMMITTEE_EVENTS_WINDOW_DAYS);
+  const fmt = d => d.toISOString().slice(0, 10);
+  const startDate = fmt(today);
+  const endDate = fmt(end);
+
+  const results = await Promise.allSettled(
+    PARLIAMENTARY_COMMITTEES.map(({ id }) =>
+      fetch(`${WHATSON_API_BASE}/events/list.json?startDate=${startDate}&endDate=${endDate}&committeeId=${id}`)
+        .then(res => { if (!res.ok) throw new Error(`HTTP ${res.status}`); return res.json(); })
+    )
+  );
+
+  const items = [];
+  for (const [i, result] of results.entries()) {
+    if (result.status === 'fulfilled') {
+      for (const e of result.value) {
+        if (e.Category !== 'Oral evidence') continue;
+        items.push(mapCommitteeEventToItem(e));
+      }
+    } else {
+      console.warn(`[DCI] Committee ${PARLIAMENTARY_COMMITTEES[i].id} events fetch failed:`, result.reason);
+    }
+  }
+
+  const relevant = items.filter(matchesPQRelevance);
+  relevant.sort((a, b) => a.date.localeCompare(b.date)); // ascending — nearest upcoming first
+  return relevant;
+}
