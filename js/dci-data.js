@@ -13,6 +13,12 @@
 // DBIST group: DBIST (current) + DBT  (immediate predecessor)
 // Ofcom group: Ofcom formal publications on gov.uk only
 //              Items from ofcom.org.uk (Cloudflare-blocked) go in manual-entries.js
+// UKSA  group: UK Space Agency — telecoms/connectivity is one narrow slice of
+//              a much broader remit (climate/planetary science, defense,
+//              general space commerce), so bare keyword matching against it
+//              is noisier than DCMS/DBIST/Ofcom's already telecoms-adjacent
+//              content. See matchesUKSARelevance() below for the tightening
+//              applied specifically to this group.
 //
 const SOURCES = {
   DCMS: {
@@ -30,6 +36,11 @@ const SOURCES = {
   Ofcom: {
     orgs: [
       { slug: 'ofcom', tag: 'Ofcom', label: 'Ofcom (formal publications)' },
+    ],
+  },
+  UKSA: {
+    orgs: [
+      { slug: 'uk-space-agency', tag: 'UKSA', label: 'UKSA' },
     ],
   },
 };
@@ -803,6 +814,54 @@ function matchesPQRelevance(item) {
     }
   }
   return false;
+}
+
+// ── UKSA relevance filter ────────────────────────────────────────────────────
+//
+// A separate function layered on top of matchesKeyword() — NOT a change
+// to matchesKeyword() itself, which is untouched and still used as-is
+// for DCMS/DBIST/Ofcom. UKSA's remit is much broader than those three
+// (climate/planetary science, defense, general space commerce, with
+// telecoms/connectivity as one narrow slice), so bare "satellite" and
+// "infrastructure" are noisy in the same way they were on the
+// Parliamentary side: confirmed via real-data investigation that only
+// 2 of 7 keyword-matched UKSA items were genuinely telecoms-relevant,
+// the other 5 being Earth-observation climate grants, orbital-object
+// licensing regulation, small-satellite research funding, and satellite
+// defense/security. Reuses PQ_TIGHTENED_TERMS.satellite and
+// .infrastructure directly (same compound lists already tested and
+// proven on the Politics tracker) rather than maintaining a second,
+// UKSA-specific list that could drift out of sync.
+const UKSA_TIGHTENED_TERMS = {
+  satellite:      PQ_TIGHTENED_TERMS.satellite,
+  infrastructure: PQ_TIGHTENED_TERMS.infrastructure,
+};
+
+function matchesUKSARelevance(item) {
+  const text = (item.title + ' ' + item.context).toLowerCase();
+  const tightened = new Set(Object.keys(UKSA_TIGHTENED_TERMS));
+
+  const freeMatch = KEYWORDS.some(kw => {
+    const lower = kw.toLowerCase();
+    return !tightened.has(lower) && text.includes(lower);
+  });
+  if (freeMatch) return true;
+
+  for (const kw of KEYWORDS) {
+    const lower = kw.toLowerCase();
+    if (!tightened.has(lower) || !text.includes(lower)) continue;
+    if (UKSA_TIGHTENED_TERMS[lower].some(phrase => text.includes(phrase))) return true;
+  }
+  return false;
+}
+
+// Single dispatch point: UKSA items get the tightened filter above,
+// every other group keeps using plain matchesKeyword() unchanged. Call
+// sites that may see items from any SOURCES group (Latest Publications,
+// Open Consultations, the main Policy feed and its Load More) should use
+// this rather than calling matchesKeyword() directly.
+function matchesItemRelevance(item) {
+  return item.group === 'UKSA' ? matchesUKSARelevance(item) : matchesKeyword(item);
 }
 
 // ── Parliamentary Business (Sitting Status + Debates & Committees) ─────────────

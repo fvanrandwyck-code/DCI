@@ -35,7 +35,7 @@ function renderOpenConsultations(consultationItems) {
     .filter(item =>
       item.deadline &&
       new Date(item.deadline) > today &&
-      matchesKeyword(item)
+      matchesItemRelevance(item)
     )
     .sort((a, b) => a.deadline.localeCompare(b.deadline)); // closest deadline first
 
@@ -63,7 +63,7 @@ function renderOpenConsultations(consultationItems) {
 function getVisibleItems() {
   return allItems.filter(item => {
     const groupMatch = activeSource === 'all' || item.group === activeSource;
-    return groupMatch && matchesKeyword(item);
+    return groupMatch && matchesItemRelevance(item);
   });
 }
 
@@ -129,7 +129,7 @@ async function loadMore() {
   // Determine which new items are visible under the current filter.
   const visibleNew = newItems.filter(item => {
     const groupMatch = activeSource === 'all' || item.group === activeSource;
-    return groupMatch && matchesKeyword(item);
+    return groupMatch && matchesItemRelevance(item);
   });
 
   if (visibleNew.length > 0) {

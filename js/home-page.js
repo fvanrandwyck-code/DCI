@@ -2,7 +2,7 @@
 
 function renderLatestPublications(allItems) {
   const recent = allItems
-    .filter(item => matchesKeyword(item))
+    .filter(item => matchesItemRelevance(item))
     .slice(0, 7);
 
   const container = document.getElementById('latest-publications');
