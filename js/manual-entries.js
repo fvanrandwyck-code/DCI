@@ -131,7 +131,7 @@ const MANUAL_ENTRIES = [
     type:    'Statistics',
     date:    '2026-09-12',
     title:   'Around 3.5 million Brits hit switch amidst cost-of-living concerns',
-    context: 'New Ofcom data on switching behaviour driven by cost-of-living pressures.',
+    context: 'Published alongside the launch of Ofcom\'s new Consumer Hub (ofcom.org.uk/onyourside), offering money-saving tips and tools for broadband, mobile and pay-TV customers. New research shows out-of-contract customers bundling services from the same provider could save over £100 a year by switching.',
     url:     'https://www.ofcom.org.uk/phones-and-broadband/switching-provider/around-3.5-million-brits-hit-switch-amidst-cost-of-living-concerns',
   },
   {

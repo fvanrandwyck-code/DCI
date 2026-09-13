@@ -56,9 +56,32 @@ function renderCommitteeEventHtml(item) {
     </article>`;
 }
 
+function renderBillHtml(bill) {
+  return `
+    <article class="feed-item">
+      <h3 class="${pqHouseClass(bill.house)}"><a href="${escapeHtml(bill.url)}" target="_blank" rel="noopener">${escapeHtml(bill.title)}</a></h3>
+      <p class="feed-item-meta">${escapeHtml(buildBillStatusLine(bill))}</p>
+      ${renderStageTracker(bill)}
+      ${bill.stageDetail ? `<p>${escapeHtml(bill.stageDetail)}</p>` : ''}
+      <p>${escapeHtml(bill.context)}</p>
+    </article>`;
+}
+
+function renderBillsToWatch() {
+  const container = document.getElementById('bills-to-watch');
+  container.innerHTML = MANUAL_BILLS.length === 0
+    ? '<p class="no-results">No bills currently being tracked.</p>'
+    : MANUAL_BILLS.map(renderBillHtml).join('');
+}
+
 async function initParliamentaryBusiness() {
   document.getElementById('sitting-status').innerHTML = '<p class="no-results">Loading…</p>';
   document.getElementById('committee-events').innerHTML = '<p class="no-results">Loading…</p>';
+
+  // Bills to Watch is hand-curated local data (manual-bills.js) — no
+  // fetch involved, so it renders immediately rather than joining the
+  // Promise.all below with the two API-backed sub-blocks.
+  renderBillsToWatch();
 
   const sittingPromise = fetchSittingStatus()
     .then(renderSittingStatus)

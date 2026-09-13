@@ -255,6 +255,77 @@ function renderDeadlineBar(item) {
       </div>`;
 }
 
+// ── Bill stage tracker ───────────────────────────────────────────────────────
+//
+// Resolves a MANUAL_BILLS entry's effective stage list (accounting for
+// hasPingPong) and a per-index House lookup — shared by renderStageTracker()
+// and formatStageStatus() below so both read from exactly the same data.
+function resolveBillStages(bill) {
+  const stages = bill.hasPingPong
+    ? [...BILL_STAGE_BACKBONE.slice(0, 10), 'Consideration of Amendments', 'Royal Assent']
+    : BILL_STAGE_BACKBONE;
+  const houseForIndex = i => (i < 10 ? billStageHouse(i, bill.originatingHouse) : null);
+  return { stages, houseForIndex };
+}
+
+// "Lords Report stage" / "Commons 2nd Reading" / "Royal Assent" — matches
+// real Parliamentary terminology, where only Committee and Report take
+// the word "stage" (a "2nd Reading" is never called "2nd Reading stage").
+// Stages with no House (Royal Assent, Consideration of Amendments) get no
+// House prefix.
+function formatStageStatus(stageName, house) {
+  if (!house) return stageName;
+  if (stageName === 'Committee' || stageName === 'Report') return `${house} ${stageName} stage`;
+  return `${house} ${stageName}`;
+}
+
+// Feeds the consolidated "Status | ..." line in renderBillHtml() (see
+// politics-page.js) — combines the current stage (via formatStageStatus)
+// with the bill's own nextMilestone text, so both live in one place
+// rather than being split across a separate tracker caption and a
+// trailing "Next:" sentence in the context paragraph.
+function buildBillStatusLine(bill) {
+  const { stages, houseForIndex } = resolveBillStages(bill);
+  const currentHouse = houseForIndex(bill.currentStageIndex);
+  const statusText = formatStageStatus(stages[bill.currentStageIndex], currentHouse);
+  return `Status | ${statusText}. ${bill.nextMilestone}`;
+}
+
+// Renders a MANUAL_BILLS entry's position on BILL_STAGE_BACKBONE as a row
+// of pill-shaped segments, each coloured by which House that stage
+// belongs to — see the CSS comment above .stage-tracker for why this
+// deliberately doesn't reuse the deadline bar's time-based fill/colour
+// logic. A stage is only ever coloured once it's actually been reached:
+// upcoming stages (including all of the second House, before the bill
+// gets there) stay hollow/neutral regardless of which House they'll
+// eventually belong to, since colouring them ahead of time would assert
+// a House-passage that hasn't happened yet. Royal Assent is never
+// House-coloured — it isn't a Commons or Lords event. hasPingPong
+// (optional) inserts an extra "Consideration of Amendments" stage before
+// Royal Assent for the small minority of bills that need it.
+function renderStageTracker(bill) {
+  const { stages, houseForIndex } = resolveBillStages(bill);
+
+  const dots = stages.map((stageName, i) => {
+    const house = houseForIndex(i);
+    const reached = i <= bill.currentStageIndex;
+    const houseClass = reached && house ? ` stage-dot-${house.toLowerCase()}` : '';
+
+    let cls;
+    if (i < bill.currentStageIndex) cls = 'stage-dot-complete';
+    else if (i === bill.currentStageIndex) cls = 'stage-dot-current';
+    else cls = 'stage-dot-upcoming';
+
+    const tooltip = house ? `${stageName} (${house})` : stageName;
+    return `<span class="stage-dot ${cls}${houseClass}" title="${escapeHtml(tooltip)}"></span>`;
+  }).join('');
+
+  return `
+      <div class="stage-tracker">
+        <div class="stage-tracker-track">${dots}</div>
+      </div>`;
+}
+
 // ── Shared data loader ─────────────────────────────────────────────────────────
 //
 // Fetches all sources in parallel, merges manual entries, deduplicates by URL,
@@ -969,6 +1040,25 @@ function mapCommitteeEventToItem(e) {
   };
 }
 
+// KNOWN GAP: this only ever surfaces Category === 'Oral evidence' events
+// (upcoming scheduled sessions) — it does NOT surface committee report
+// PUBLICATIONS (whatson-api has a separate "Publication of Report"
+// category for that). This is structural, not a curation-list problem:
+// widening PARLIAMENTARY_COMMITTEES would not catch a report release,
+// and narrowing it wouldn't lose any. Confirmed via a real example — a
+// Public Accounts Committee report on Ofcom's broadband regulation
+// (11 Sept 2026) had no corresponding calendar event under either
+// category in this API for its committee, so it wouldn't have surfaced
+// here regardless of whether PAC were curated. PAC was evaluated and
+// deliberately NOT added to PARLIAMENTARY_COMMITTEES on separate
+// grounds: real-data check found 6 unrelated oral evidence sessions/
+// month (HS2, armed forces housing, devolution — PAC's value-for-money
+// remit spans every department) against ~2 relevant sessions across 4
+// months from the current curated list — the same noise-volume problem
+// the curated-list approach exists to avoid. Catching report
+// publications (from any committee, curated or not) would need a
+// separate content type/fetcher — see the "Reports" investigation notes
+// for the Politics tracker.
 async function fetchUpcomingCommitteeEvents() {
   const today = new Date();
   const end = new Date(today);

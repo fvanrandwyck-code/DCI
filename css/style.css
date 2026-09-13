@@ -450,6 +450,68 @@ hr {
   color: #c62828;
 }
 
+/* ── Bill stage tracker ───────────────────────────────────────────────────────
+   A continuous row of pill-shaped segments — deliberately NOT the deadline
+   bar's time-based percentage fill or red/amber/green status colours, since
+   a bill's position in the legislative process isn't a countdown to a
+   deadline. Uses the site's neutral chrome tokens (--ink for reached
+   stages, --hairline for upcoming ones) rather than a fourth
+   semantically-loaded colour family, so "progress" reads as structural
+   rather than urgency-coded. The combined current-stage/next-milestone
+   status line lives in the item's normal .feed-item-meta above this
+   tracker, not a separate caption here.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.stage-tracker {
+  margin-top: 0.75rem;
+}
+
+.stage-tracker-track {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.stage-dot {
+  flex: 1;
+  height: 6px;
+  border-radius: 2px;
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+}
+
+.stage-dot-complete {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.stage-dot-current {
+  height: 9px;
+}
+
+/* House colouring — only ever applied to a stage once it's actually been
+   reached (see renderStageTracker's `reached` check); upcoming stages
+   never get these classes, so they stay neutral hollow segments
+   regardless of which House they'll eventually belong to. Reuses the
+   exact same colours as the pq-house-commons/lords headline classes
+   elsewhere on the Politics tracker, rather than introducing a new hue.
+   Declared after .stage-dot-complete/.stage-dot-current so they take
+   priority when combined with either. */
+.stage-dot-commons {
+  background: #2f5233;
+  border-color: #2f5233;
+}
+
+.stage-dot-lords {
+  background: #6d1f2f;
+  border-color: #6d1f2f;
+}
+
+.stage-dot-upcoming {
+  background: var(--paper);
+  border-color: var(--hairline);
+}
+
 @media (max-width: 600px) {
   .deadline-bar {
     flex-direction: column;
