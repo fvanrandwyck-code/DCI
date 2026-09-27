@@ -112,6 +112,18 @@ const KEYWORDS = [
   'gigabit', 'connectivity', 'infrastructure', 'network',
   'rollout', 'coverage', 'roaming', 'satellite',
   'radiofrequency', 'jammer',
+  // Added to widen satellite/spectrum recall — each tested individually
+  // against real gov.uk and Parliament data with zero false positives
+  // (see project notes). Being multi-word phrases already makes
+  // "spectrum auction"/"orbital slot"/"direct-to-device"/"low earth
+  // orbit" precise on their own — no compound-phrase tightening needed,
+  // same principle already used for existing tightening compounds
+  // elsewhere. Deliberately excludes bare "LEO": confirmed as a real,
+  // recurring false-positive source (collides with the surname of a
+  // sitting peer, Lord Leong, among unrelated matches) — "low earth
+  // orbit" already covers the legitimate signal without that risk.
+  'spectrum auction', 'orbital slot', 'non-geostationary', 'NGSO',
+  'direct-to-device', 'D2D', 'low earth orbit',
 ];
 
 // ── Helpers ────────────────────────────────────────────────────────────────────
