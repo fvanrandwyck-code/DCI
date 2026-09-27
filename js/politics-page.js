@@ -32,9 +32,6 @@ function renderItemHtml(item) {
 }
 
 // ── Parliamentary Business (Sitting Status + Debates & Committees) ─────────────
-// Independent of the Questions/Statements feed below — both fetches here
-// are fast (small, curated), so each renders as soon as its own data
-// lands rather than waiting on the slower PQ/WS load.
 
 function renderSittingStatus(statuses) {
   const container = document.getElementById('sitting-status');
@@ -74,35 +71,23 @@ function renderBillsToWatch() {
     : MANUAL_BILLS.map(renderBillHtml).join('');
 }
 
-async function initParliamentaryBusiness() {
-  document.getElementById('sitting-status').innerHTML = '<p class="no-results">Loading…</p>';
-  document.getElementById('committee-events').innerHTML = '<p class="no-results">Loading…</p>';
+// ── Data freshness label ────────────────────────────────────────────────────
+// All Parliament-sourced data on this page (Questions, Statements, Sitting
+// Status, Committee events) comes from one pre-built static file rather
+// than a live fetch — see POLITICS_DATA_URL below. This label makes that
+// batch-refresh cadence transparent rather than silently implying
+// real-time data.
 
-  // Bills to Watch is hand-curated local data (manual-bills.js) — no
-  // fetch involved, so it renders immediately rather than joining the
-  // Promise.all below with the two API-backed sub-blocks.
-  renderBillsToWatch();
+function formatDateTime(iso) {
+  if (!iso) return '';
+  const d = new Date(iso);
+  return d.toLocaleString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+}
 
-  const sittingPromise = fetchSittingStatus()
-    .then(renderSittingStatus)
-    .catch(err => {
-      console.warn('[DCI] Sitting status fetch failed:', err);
-      document.getElementById('sitting-status').innerHTML = '<p class="no-results">Sitting status unavailable.</p>';
-    });
-
-  const committeePromise = fetchUpcomingCommitteeEvents()
-    .then(items => {
-      const container = document.getElementById('committee-events');
-      container.innerHTML = items.length === 0
-        ? '<p class="no-results">No telecoms-relevant committee sessions scheduled in the next 30 days.</p>'
-        : items.map(renderCommitteeEventHtml).join('');
-    })
-    .catch(err => {
-      console.warn('[DCI] Committee events fetch failed:', err);
-      document.getElementById('committee-events').innerHTML = '<p class="no-results">Committee schedule unavailable.</p>';
-    });
-
-  await Promise.all([sittingPromise, committeePromise]);
+function renderFreshnessLabel(iso) {
+  const el = document.getElementById('data-freshness');
+  if (!el) return;
+  el.textContent = iso ? `Parliamentary data last refreshed ${formatDateTime(iso)}.` : '';
 }
 
 // ── Load more (reveals more of the already-fetched batch — no new fetch) ───────
@@ -126,21 +111,6 @@ function loadMore() {
   updateLoadMoreButton();
 }
 
-// Used while chunks are still streaming in: reveals newly-arrived items
-// (of whichever content type is currently filtered) only until the first
-// page is full, then stops — anything beyond that waits for an explicit
-// "Load more" click, same contract as loadMore() above. Keeps progressive
-// rendering from fighting with pagination.
-function revealUpToFirstPage() {
-  if (shownCount >= PQ_PAGE_SIZE) return;
-  const filtered = getFilteredItems();
-  const target = Math.min(PQ_PAGE_SIZE, filtered.length);
-  const next = filtered.slice(shownCount, target);
-  if (next.length === 0) return;
-  appendRendered(next);
-  shownCount = target;
-}
-
 // ── Content-type filter (All / Questions / Statements) ─────────────────────────
 // Filters the already-loaded visibleItems pool — no new fetch, same
 // principle as loadMore() above. A full re-render, mirroring the Policy
@@ -149,13 +119,9 @@ function revealUpToFirstPage() {
 function renderFeed() {
   const container = document.getElementById('feed-container');
 
-  // Full rebuild — nothing on screen to protect, unlike during streaming
-  // (see init()'s settle-time comment: that sort only ever covers the
-  // *unrevealed* tail, leaving the originally-streamed prefix in arrival
-  // order for DOM stability). A user-triggered filter switch has no such
-  // constraint, so this is the moment to canonicalise ordering — without
-  // it, switching filters and back re-exposes that stale prefix instead
-  // of a true top-N-by-date.
+  // visibleItems arrives pre-sorted from data/politics-data.json, but a
+  // full rebuild is cheap and this keeps renderFeed() correct regardless
+  // of caller — always a full, clean re-render, never a partial update.
   visibleItems.sort((a, b) => b.date.localeCompare(a.date));
 
   const filtered = getFilteredItems();
@@ -178,62 +144,57 @@ function filterFeed(filter, buttonEl) {
 }
 
 // ── Init ───────────────────────────────────────────────────────────────────────
+//
+// All Parliament-sourced content on this page — Questions, Statements,
+// Sitting Status, and Committee events — now comes from ONE pre-built
+// static file rather than live client-side fetches against Parliament's
+// API (which took 8-20+ seconds even with progressive rendering). The
+// file is refreshed on a schedule by a GitHub Action
+// (.github/workflows/refresh-politics-data.yml), which runs the exact
+// same fetch/filter functions below server-side (see
+// scripts/build-politics-data.mjs) — this page just loads the result.
+// Bills to Watch stays separate (manual-bills.js, hand-curated, no
+// fetch involved either way).
+const POLITICS_DATA_URL = 'data/politics-data.json';
 
 async function init() {
-  // Started first, before anything is awaited, so it runs concurrently
-  // with the Questions/Statements load below rather than waiting on it.
-  const parliamentaryBusinessPromise = initParliamentaryBusiness();
+  renderBillsToWatch();
 
   const container = document.getElementById('feed-container');
-  container.innerHTML = '<p class="no-results">Fetching Parliamentary data — this can take up to 20 seconds…</p>';
+  container.innerHTML = '<p class="no-results">Loading…</p>';
+  document.getElementById('sitting-status').innerHTML = '<p class="no-results">Loading…</p>';
+  document.getElementById('committee-events').innerHTML = '<p class="no-results">Loading…</p>';
 
-  visibleItems = [];
-  shownCount = 0;
-  let loadingMessageCleared = false;
+  let data;
+  try {
+    const res = await fetch(POLITICS_DATA_URL);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    data = await res.json();
+  } catch (err) {
+    console.warn('[DCI] Politics data fetch failed:', err);
+    container.innerHTML = '<p class="no-results">Parliamentary data unavailable.</p>';
+    document.getElementById('sitting-status').innerHTML = '<p class="no-results">Sitting status unavailable.</p>';
+    document.getElementById('committee-events').innerHTML = '<p class="no-results">Committee schedule unavailable.</p>';
+    return;
+  }
 
-  // Questions and Statements stream into the same callback — both content
-  // types merge into one array as their chunks land, no separate merge
-  // step needed. Statement chunks tend to resolve much faster than
-  // question chunks, so they're often what fills the first page initially.
-  const onChunk = newRawItems => {
-    const relevant = newRawItems.filter(matchesPQRelevance);
-    if (relevant.length === 0) return;
+  renderFreshnessLabel(data.generatedAt);
 
-    if (!loadingMessageCleared) {
-      container.innerHTML = '';
-      loadingMessageCleared = true;
-    }
-
-    visibleItems.push(...relevant);
-    revealUpToFirstPage();
-    updateLoadMoreButton();
-  };
-
-  await Promise.all([
-    fetchParliamentaryQuestionsStreaming(onChunk),
-    fetchWrittenStatementsStreaming(onChunk),
-  ]);
-
-  // Every chunk (both types) has now settled. During streaming,
-  // revealUpToFirstPage() only ever appended new items without a full
-  // re-sort, so the initially-revealed prefix is still in raw
-  // chunk-arrival order, not necessarily correct date order — an item
-  // that arrived slightly later in a slower chunk could rank ahead of
-  // it by date but never get the chance to displace it (this was the
-  // actual bug: that prefix was never revisited, so such items stayed
-  // permanently hidden below the fold even after loading finished).
-  // Now that every chunk is in, do a ONE-TIME full re-sort + re-render
-  // via renderFeed() — same function the filter buttons already use, so
-  // this also respects whichever filter is currently active. A single
-  // reflow at the exact moment loading completes is expected; nothing
-  // re-sorts again after this, so already-read content won't shift later.
+  visibleItems = data.items || [];
   if (visibleItems.length === 0) {
     container.innerHTML = '<p class="no-results">No telecoms-relevant parliamentary questions or statements found.</p>';
+    shownCount = 0;
+    updateLoadMoreButton();
   } else {
     renderFeed();
   }
 
-  await parliamentaryBusinessPromise;
+  renderSittingStatus(data.sittingStatus || []);
+
+  const events = data.committeeEvents || [];
+  document.getElementById('committee-events').innerHTML = events.length === 0
+    ? '<p class="no-results">No telecoms-relevant committee sessions scheduled in the next 30 days.</p>'
+    : events.map(renderCommitteeEventHtml).join('');
 }
 
 init();

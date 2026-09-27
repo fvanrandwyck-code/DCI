@@ -38,12 +38,18 @@ function renderPoliticsRowHtml(item) {
 }
 
 // ── Init ───────────────────────────────────────────────────────────────────────
+//
+// The Politics section loads the same pre-built static file politics.html
+// uses (see js/politics-page.js's init() comment for the full picture) —
+// a GitHub Action refreshes it on a schedule, so this is just a fast
+// static-file fetch rather than a live call to Parliament's API.
+const POLITICS_DATA_URL = 'data/politics-data.json';
 
 async function init() {
   const publicationsEl = document.getElementById('latest-publications');
   const politicsEl      = document.getElementById('latest-questions');
   publicationsEl.innerHTML = '<p class="no-results">Loading…</p>';
-  politicsEl.innerHTML      = '<p class="no-results">Fetching Parliamentary data — this can take up to 20 seconds…</p>';
+  politicsEl.innerHTML      = '<p class="no-results">Loading…</p>';
 
   // Both fetches are started here, before either is awaited, so they run
   // concurrently rather than one blocking the other.
@@ -51,53 +57,18 @@ async function init() {
     renderLatestPublications(items);
   });
 
-  let politicsItems = [];  // full accumulated pool — always grows, never capped mid-stream
-  let politicsShown = 0;   // how many rows are currently rendered (progressive reveal only)
-  let politicsLoadingCleared = false;
-
-  function revealUpToLimit() {
-    if (politicsShown >= HOME_POLITICS_LIMIT) return;
-    const target = Math.min(HOME_POLITICS_LIMIT, politicsItems.length);
-    const next = politicsItems.slice(politicsShown, target);
-    if (next.length === 0) return;
-    politicsEl.insertAdjacentHTML('beforeend', next.map(renderPoliticsRowHtml).join(''));
-    politicsShown = target;
-  }
-
-  // Questions and Statements stream into the same callback and share one
-  // combined cap of 7 — same merge pattern as politics.html. Every
-  // relevant item is accumulated into politicsItems regardless of the
-  // display cap — capping *acceptance* (rather than just display) meant
-  // later-arriving chunks were silently dropped rather than evaluated
-  // against what was already shown.
-  const onChunk = newRawItems => {
-    const relevant = newRawItems.filter(matchesPQRelevance);
-    if (relevant.length === 0) return;
-
-    if (!politicsLoadingCleared) {
-      politicsEl.innerHTML = '';
-      politicsLoadingCleared = true;
-    }
-
-    politicsItems.push(...relevant);
-    revealUpToLimit();
-  };
-
-  const politicsPromise = Promise.all([
-    fetchParliamentaryQuestionsStreaming(onChunk),
-    fetchWrittenStatementsStreaming(onChunk),
-  ]).then(() => {
-    // Every chunk has now settled. Streaming only ever appended in
-    // arrival order, so without a final correction the homepage could
-    // permanently show a stale top 7 even after every relevant item has
-    // actually arrived — same one-time settle-time fix as politics.html.
-    politicsItems.sort((a, b) => b.date.localeCompare(a.date));
-    const top = politicsItems.slice(0, HOME_POLITICS_LIMIT);
-
-    politicsEl.innerHTML = top.length === 0
-      ? '<p class="no-results">No telecoms-relevant parliamentary questions or statements found.</p>'
-      : top.map(renderPoliticsRowHtml).join('');
-  });
+  const politicsPromise = fetch(POLITICS_DATA_URL)
+    .then(res => { if (!res.ok) throw new Error(`HTTP ${res.status}`); return res.json(); })
+    .then(data => {
+      const top = (data.items || []).slice(0, HOME_POLITICS_LIMIT);
+      politicsEl.innerHTML = top.length === 0
+        ? '<p class="no-results">No telecoms-relevant parliamentary questions or statements found.</p>'
+        : top.map(renderPoliticsRowHtml).join('');
+    })
+    .catch(err => {
+      console.warn('[DCI] Politics data fetch failed:', err);
+      politicsEl.innerHTML = '<p class="no-results">Parliamentary data unavailable.</p>';
+    });
 
   await Promise.all([publicationsPromise, politicsPromise]);
 }

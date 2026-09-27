@@ -1,0 +1,40 @@
+name: Refresh Politics data
+
+on:
+  schedule:
+    - cron: '0 */4 * * *'   # every 4 hours — see build-politics-data.mjs / project notes
+  workflow_dispatch: {}      # manual "Run workflow" button, for on-demand refresh/testing
+
+permissions:
+  contents: write            # needed to commit the refreshed data file back to the repo
+
+concurrency:
+  group: refresh-politics-data
+  cancel-in-progress: false  # let an in-flight run finish rather than racing a new one
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build Politics data
+        run: node scripts/build-politics-data.mjs
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/politics-data.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: refresh Politics data [skip ci]"
+            git push
+          fi
