@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T23:29:02.191Z",
+  "generatedAt": "2026-09-30T04:20:44.203Z",
   "items": [
     {
       "id": "PQ:29069",
@@ -93,6 +93,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29080"
     },
     {
+      "id": "PQ:28544",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Imogen Walker",
+      "memberParty": "Lab",
+      "title": "Mobile Phones: Rural Areas",
+      "date": "2026-09-09",
+      "dateAnswered": "2026-09-16",
+      "context": "Culture, Media and Sport, what steps her Department is taking to improve the resilience of mobile networks during power outages in rural communities.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-09/28544"
+    },
+    {
       "id": "PQ:HL3369",
       "contentType": "question",
       "house": "Lords",
@@ -119,19 +132,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-09/28567"
     },
     {
-      "id": "PQ:28544",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Imogen Walker",
-      "memberParty": "Lab",
-      "title": "Mobile Phones: Rural Areas",
-      "date": "2026-09-09",
-      "dateAnswered": "2026-09-16",
-      "context": "Culture, Media and Sport, what steps her Department is taking to improve the resilience of mobile networks during power outages in rural communities.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-09/28544"
-    },
-    {
       "id": "PQ:27405",
       "contentType": "question",
       "house": "Commons",
@@ -143,19 +143,6 @@
       "dateAnswered": "2026-09-14",
       "context": "Culture, Media and Sport, what assessment she has made of the adequacy of the availability of gigabit-capable broadband for small businesses in Royal Sutton Coldfield.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-07/27405"
-    },
-    {
-      "id": "PQ:27068",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "MoD",
-      "memberName": "Ben Obese-Jecty",
-      "memberParty": "Con",
-      "title": "Defence: Telecommunications",
-      "date": "2026-09-03",
-      "dateAnswered": "2026-09-14",
-      "context": "What progress he has made in securing sovereign capability to develop terahertz point-to-point narrow-beam links.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-03/27068"
     },
     {
       "id": "PQ:27093",
@@ -184,17 +171,17 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-03/27092"
     },
     {
-      "id": "PQ:26650",
+      "id": "PQ:27068",
       "contentType": "question",
       "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Dr Luke Evans",
+      "label": "MoD",
+      "memberName": "Ben Obese-Jecty",
       "memberParty": "Con",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-09-02",
-      "dateAnswered": "2026-09-21",
-      "context": "If she will publish the criteria used to assess whether to use the emergency alerts system on Friday 14 August 2026.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-02/26650"
+      "title": "Defence: Telecommunications",
+      "date": "2026-09-03",
+      "dateAnswered": "2026-09-14",
+      "context": "What progress he has made in securing sovereign capability to develop terahertz point-to-point narrow-beam links.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-03/27068"
     },
     {
       "id": "PQ:HL3004",
@@ -210,6 +197,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-02/HL3004"
     },
     {
+      "id": "PQ:26650",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Cabinet Office",
+      "memberName": "Dr Luke Evans",
+      "memberParty": "Con",
+      "title": "Emergencies: Mobile Phones",
+      "date": "2026-09-02",
+      "dateAnswered": "2026-09-21",
+      "context": "If she will publish the criteria used to assess whether to use the emergency alerts system on Friday 14 August 2026.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-02/26650"
+    },
+    {
       "id": "PQ:HL3003",
       "contentType": "question",
       "house": "Lords",
@@ -221,19 +221,6 @@
       "dateAnswered": "2026-09-14",
       "context": "Whether they will place in the Library of the House a copy of (1) the Government guidance, and (2) any industry best practice guidance endorsed by the Government, regarding the…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-02/HL3003"
-    },
-    {
-      "id": "PQ:25967",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Sir John Hayes",
-      "memberParty": "Con",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-09-01",
-      "dateAnswered": "2026-09-16",
-      "context": "Which Minister gave authorisation for the national emergency alert sent in August 2026.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-01/25967"
     },
     {
       "id": "PQ:HL2792",
@@ -249,43 +236,17 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-01/HL2792"
     },
     {
-      "id": "PQ:21326",
+      "id": "PQ:25967",
       "contentType": "question",
       "house": "Commons",
       "label": "Cabinet Office",
-      "memberName": "Alex Burghart",
+      "memberName": "Sir John Hayes",
       "memberParty": "Con",
       "title": "Emergencies: Mobile Phones",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-21",
-      "context": "Whether any assessment has been made of the number of mobile phones where the users have turned off government and emergency alerts in their phone settings.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21326"
-    },
-    {
-      "id": "PQ:21322",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Alex Burghart",
-      "memberParty": "Con",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-21",
-      "context": "With reference to the press release, \"Emergency Alert to be sent to England and Wales as Government steps up wildfire response with funding, military support and BBQ ban\", 14…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21322"
-    },
-    {
-      "id": "PQ:22519",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Shivani Raja",
-      "memberParty": "Con",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-21",
-      "context": "What the cost to the public purse was of planning, executing and reviewing the recent Emergency Alert regarding wildfires by department, mobile network operator and third-party…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/22519"
+      "date": "2026-09-01",
+      "dateAnswered": "2026-09-16",
+      "context": "Which Minister gave authorisation for the national emergency alert sent in August 2026.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-01/25967"
     },
     {
       "id": "PQ:24950",
@@ -314,19 +275,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/24949"
     },
     {
-      "id": "PQ:21323",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Alex Burghart",
-      "memberParty": "Con",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-21",
-      "context": "What, if any, is the statutory basis for the operation of the UK Emergency Alert service in (a) England and Wales, (b) Scotland and (c) Northern Ireland.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21323"
-    },
-    {
       "id": "PQ:25866",
       "contentType": "question",
       "house": "Commons",
@@ -351,71 +299,6 @@
       "dateAnswered": "2026-09-17",
       "context": "Culture, Media and Sport, what assessment she has made of whether rural broadband and mobile connectivity are sufficient to support the deployment of agricultural robotics in…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/24345"
-    },
-    {
-      "id": "PQ:23274",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Ben Obese-Jecty",
-      "memberParty": "Con",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-16",
-      "context": "What was the cost of the Emergency Alert sent to England and Wales on 14 August 2026.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/23274"
-    },
-    {
-      "id": "PQ:21332",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Alex Burghart",
-      "memberParty": "Con",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-16",
-      "context": "With reference to the document, Frequency Asked Questions about Emergency Alerts, published by the Cabinet Office in 2023, what are the latest criteria for use of the Emergency…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21332"
-    },
-    {
-      "id": "PQ:21324",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Alex Burghart",
-      "memberParty": "Con",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-16",
-      "context": "With reference to the answer of 27 January 2025, to Question 25755, on Emergencies: Mobile Phones, if she will place the One Year Evaluation Report in the Library.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21324"
-    },
-    {
-      "id": "PQ:21995",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Home Office",
-      "memberName": "Saqib Bhatti",
-      "memberParty": "Con",
-      "title": "Fraud: Mobile Phones",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-16",
-      "context": "If she will commit to ensuring the government tackle mobile phone fraud.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21995"
-    },
-    {
-      "id": "PQ:22640",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department for Business, Innovation, Science and Trade ",
-      "memberName": "Mr Andrew Snowden",
-      "memberParty": "Con",
-      "title": "Satellite Communications: Finance",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-08",
-      "context": "Innovation, Science and Trade, with reference to his Department's press notice entitled UK invests in homegrown space tech to boost national resilience, published on 20 July 2026,…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/22640"
     },
     {
       "id": "PQ:25865",
@@ -468,6 +351,162 @@
       "dateAnswered": "2026-09-08",
       "context": "Culture, Media and Sport, what steps her Department is taking to improve the accountability of mobile network operators where people are victims of fraud.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21179"
+    },
+    {
+      "id": "PQ:22640",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department for Business, Innovation, Science and Trade ",
+      "memberName": "Mr Andrew Snowden",
+      "memberParty": "Con",
+      "title": "Satellite Communications: Finance",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-08",
+      "context": "Innovation, Science and Trade, with reference to his Department's press notice entitled UK invests in homegrown space tech to boost national resilience, published on 20 July 2026,…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/22640"
+    },
+    {
+      "id": "PQ:23564",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Cabinet Office",
+      "memberName": "Martin Wrigley",
+      "memberParty": "LD",
+      "title": "Emergencies: Mobile Phones",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-29",
+      "context": "If she will make an assessment of the potential impact of the recent usage of the Emergency Alert System on victims of domestic violence with concealed phones.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/23564"
+    },
+    {
+      "id": "PQ:21898",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Cabinet Office",
+      "memberName": "Dr Luke Evans",
+      "memberParty": "Con",
+      "title": "Emergencies: Mobile Phones",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-29",
+      "context": "What recent assessment she has made about the [i] relevance and [ii] effectiveness of the current level of threshold for the use of the national emergency alerts system.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21898"
+    },
+    {
+      "id": "PQ:22722",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Cabinet Office",
+      "memberName": "Mr Andrew Snowden",
+      "memberParty": "Con",
+      "title": "Emergencies: Mobile Phones",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-29",
+      "context": "What role does the Cabinet Office play in deciding whether the Emergency Alerts system should be used during periods of extreme heat.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/22722"
+    },
+    {
+      "id": "PQ:21326",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Cabinet Office",
+      "memberName": "Alex Burghart",
+      "memberParty": "Con",
+      "title": "Emergencies: Mobile Phones",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-21",
+      "context": "Whether any assessment has been made of the number of mobile phones where the users have turned off government and emergency alerts in their phone settings.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21326"
+    },
+    {
+      "id": "PQ:21322",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Cabinet Office",
+      "memberName": "Alex Burghart",
+      "memberParty": "Con",
+      "title": "Emergencies: Mobile Phones",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-21",
+      "context": "With reference to the press release, \"Emergency Alert to be sent to England and Wales as Government steps up wildfire response with funding, military support and BBQ ban\", 14…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21322"
+    },
+    {
+      "id": "PQ:22519",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Cabinet Office",
+      "memberName": "Shivani Raja",
+      "memberParty": "Con",
+      "title": "Emergencies: Mobile Phones",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-21",
+      "context": "What the cost to the public purse was of planning, executing and reviewing the recent Emergency Alert regarding wildfires by department, mobile network operator and third-party…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/22519"
+    },
+    {
+      "id": "PQ:21323",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Cabinet Office",
+      "memberName": "Alex Burghart",
+      "memberParty": "Con",
+      "title": "Emergencies: Mobile Phones",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-21",
+      "context": "What, if any, is the statutory basis for the operation of the UK Emergency Alert service in (a) England and Wales, (b) Scotland and (c) Northern Ireland.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21323"
+    },
+    {
+      "id": "PQ:23274",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Cabinet Office",
+      "memberName": "Ben Obese-Jecty",
+      "memberParty": "Con",
+      "title": "Emergencies: Mobile Phones",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-16",
+      "context": "What was the cost of the Emergency Alert sent to England and Wales on 14 August 2026.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/23274"
+    },
+    {
+      "id": "PQ:21332",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Cabinet Office",
+      "memberName": "Alex Burghart",
+      "memberParty": "Con",
+      "title": "Emergencies: Mobile Phones",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-16",
+      "context": "With reference to the document, Frequency Asked Questions about Emergency Alerts, published by the Cabinet Office in 2023, what are the latest criteria for use of the Emergency…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21332"
+    },
+    {
+      "id": "PQ:21324",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Cabinet Office",
+      "memberName": "Alex Burghart",
+      "memberParty": "Con",
+      "title": "Emergencies: Mobile Phones",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-16",
+      "context": "With reference to the answer of 27 January 2025, to Question 25755, on Emergencies: Mobile Phones, if she will place the One Year Evaluation Report in the Library.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21324"
+    },
+    {
+      "id": "PQ:21995",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Home Office",
+      "memberName": "Saqib Bhatti",
+      "memberParty": "Con",
+      "title": "Fraud: Mobile Phones",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-16",
+      "context": "If she will commit to ensuring the government tackle mobile phone fraud.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21995"
     },
     {
       "id": "PQ:19640",
