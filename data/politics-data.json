@@ -1,6 +1,45 @@
 {
-  "generatedAt": "2026-10-02T14:31:50.451Z",
+  "generatedAt": "2026-10-02T20:23:59.134Z",
   "items": [
+    {
+      "id": "PQ:29081",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Graeme Downie",
+      "memberParty": "Lab",
+      "title": "Broadband: Rural Areas",
+      "date": "2026-09-10",
+      "dateAnswered": "2026-09-15",
+      "context": "Culture, Media and Sport, what assessment her Department has made of the potential merits of updating equivalent power flux density limits on (a) satellite broadband connectivity…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29081"
+    },
+    {
+      "id": "PQ:29080",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Graeme Downie",
+      "memberParty": "Lab",
+      "title": "Satellites: Radio Frequencies",
+      "date": "2026-09-10",
+      "dateAnswered": "2026-09-15",
+      "context": "Culture, Media and Sport, what discussions her Department has had with Ofcom about the UK's position on satellite spectrum rules prior to the International Telecommunication Union…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29080"
+    },
+    {
+      "id": "PQ:29008",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Cabinet Office",
+      "memberName": "Cat Eccles",
+      "memberParty": "Lab",
+      "title": "Emergencies: Mobile Phones",
+      "date": "2026-09-10",
+      "dateAnswered": "2026-09-30",
+      "context": "What her Department's policy is on choosing whether to issue an Emergency Alert nationally or to target a specific geographical location; and whether she plans to enhance the…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29008"
+    },
     {
       "id": "PQ:29069",
       "contentType": "question",
@@ -65,45 +104,6 @@
       "dateAnswered": "2026-09-17",
       "context": "Culture, Media and Sport, what assessment she has made of the adequacy of protections for micro and small businesses entering into long-term telecommunications contracts.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29064"
-    },
-    {
-      "id": "PQ:29081",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Graeme Downie",
-      "memberParty": "Lab",
-      "title": "Broadband: Rural Areas",
-      "date": "2026-09-10",
-      "dateAnswered": "2026-09-15",
-      "context": "Culture, Media and Sport, what assessment her Department has made of the potential merits of updating equivalent power flux density limits on (a) satellite broadband connectivity…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29081"
-    },
-    {
-      "id": "PQ:29080",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Graeme Downie",
-      "memberParty": "Lab",
-      "title": "Satellites: Radio Frequencies",
-      "date": "2026-09-10",
-      "dateAnswered": "2026-09-15",
-      "context": "Culture, Media and Sport, what discussions her Department has had with Ofcom about the UK's position on satellite spectrum rules prior to the International Telecommunication Union…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29080"
-    },
-    {
-      "id": "PQ:29008",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Cat Eccles",
-      "memberParty": "Lab",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-09-10",
-      "dateAnswered": "2026-09-30",
-      "context": "What her Department's policy is on choosing whether to issue an Emergency Alert nationally or to target a specific geographical location; and whether she plans to enhance the…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29008"
     },
     {
       "id": "PQ:28544",
@@ -197,19 +197,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-03/27092"
     },
     {
-      "id": "PQ:HL3004",
-      "contentType": "question",
-      "house": "Lords",
-      "label": "DCMS",
-      "memberName": "Lord Caine",
-      "memberParty": "Con",
-      "title": "Broadband: Infrastructure",
-      "date": "2026-09-02",
-      "dateAnswered": "2026-09-14",
-      "context": "What requirements they make of broadband fibre companies to inform local authorities and residents when erecting telegraph poles for broadband; and whether there is official…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-02/HL3004"
-    },
-    {
       "id": "PQ:26650",
       "contentType": "question",
       "house": "Commons",
@@ -223,17 +210,17 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-02/26650"
     },
     {
-      "id": "PQ:HL2792",
+      "id": "PQ:HL3004",
       "contentType": "question",
       "house": "Lords",
-      "label": "MoD",
-      "memberName": "Baroness Bennett of Manor Castle",
-      "memberParty": "Green",
-      "title": "Defence: Protest",
-      "date": "2026-09-01",
-      "dateAnswered": "2026-09-15",
-      "context": "What steps they are taking to ensure that the rights to protest and privacy are not infringed by the pilot project to use underground fibre optic cables as sensors at a defence…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-01/HL2792"
+      "label": "DCMS",
+      "memberName": "Lord Caine",
+      "memberParty": "Con",
+      "title": "Broadband: Infrastructure",
+      "date": "2026-09-02",
+      "dateAnswered": "2026-09-14",
+      "context": "What requirements they make of broadband fibre companies to inform local authorities and residents when erecting telegraph poles for broadband; and whether there is official…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-02/HL3004"
     },
     {
       "id": "PQ:25967",
@@ -247,6 +234,19 @@
       "dateAnswered": "2026-09-16",
       "context": "Which Minister gave authorisation for the national emergency alert sent in August 2026.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-01/25967"
+    },
+    {
+      "id": "PQ:HL2792",
+      "contentType": "question",
+      "house": "Lords",
+      "label": "MoD",
+      "memberName": "Baroness Bennett of Manor Castle",
+      "memberParty": "Green",
+      "title": "Defence: Protest",
+      "date": "2026-09-01",
+      "dateAnswered": "2026-09-15",
+      "context": "What steps they are taking to ensure that the rights to protest and privacy are not infringed by the pilot project to use underground fibre optic cables as sensors at a defence…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-01/HL2792"
     },
     {
       "id": "PQ:22121",
@@ -275,32 +275,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/22122"
     },
     {
-      "id": "PQ:24950",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Zöe Franklin",
-      "memberParty": "LD",
-      "title": "Mobile Phones: Standards",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-21",
-      "context": "Culture, Media and Sport, what assessment she has made of the potential merits of introducing strengthened service standards and automatic compensation for mobile network…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/24950"
-    },
-    {
-      "id": "PQ:24949",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Zöe Franklin",
-      "memberParty": "LD",
-      "title": "Mobile Phones: Complaints",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-21",
-      "context": "Culture, Media and Sport, what assessment she has made of the adequacy of the eight-week complaint resolution timeframe for mobile network providers.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/24949"
-    },
-    {
       "id": "PQ:25866",
       "contentType": "question",
       "house": "Commons",
@@ -327,6 +301,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/24345"
     },
     {
+      "id": "PQ:22640",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department for Business, Innovation, Science and Trade ",
+      "memberName": "Mr Andrew Snowden",
+      "memberParty": "Con",
+      "title": "Satellite Communications: Finance",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-08",
+      "context": "Innovation, Science and Trade, with reference to his Department's press notice entitled UK invests in homegrown space tech to boost national resilience, published on 20 July 2026,…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/22640"
+    },
+    {
       "id": "PQ:25865",
       "contentType": "question",
       "house": "Commons",
@@ -351,19 +338,6 @@
       "dateAnswered": "2026-09-11",
       "context": "Culture, Media and Sport, what assessment she has made of the adequacy of mobile phone coverage in rural villages.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/25864"
-    },
-    {
-      "id": "PQ:24559",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Tristan Osborne",
-      "memberParty": "Lab",
-      "title": "Broadband: Infrastructure",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-08",
-      "context": "Culture, Media and Sport, what discussions she has held with the Competitions and Market Authority on how to promote investment in UK broadband infrastructure and full fibre…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/24559"
     },
     {
       "id": "PQ:21897",
@@ -470,6 +444,32 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/22519"
     },
     {
+      "id": "PQ:24950",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Zöe Franklin",
+      "memberParty": "LD",
+      "title": "Mobile Phones: Standards",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-21",
+      "context": "Culture, Media and Sport, what assessment she has made of the potential merits of introducing strengthened service standards and automatic compensation for mobile network…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/24950"
+    },
+    {
+      "id": "PQ:24949",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Zöe Franklin",
+      "memberParty": "LD",
+      "title": "Mobile Phones: Complaints",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-21",
+      "context": "Culture, Media and Sport, what assessment she has made of the adequacy of the eight-week complaint resolution timeframe for mobile network providers.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/24949"
+    },
+    {
       "id": "PQ:21323",
       "contentType": "question",
       "house": "Commons",
@@ -535,17 +535,17 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21995"
     },
     {
-      "id": "PQ:22640",
+      "id": "PQ:24559",
       "contentType": "question",
       "house": "Commons",
-      "label": "Department for Business, Innovation, Science and Trade ",
-      "memberName": "Mr Andrew Snowden",
-      "memberParty": "Con",
-      "title": "Satellite Communications: Finance",
+      "label": "DCMS",
+      "memberName": "Tristan Osborne",
+      "memberParty": "Lab",
+      "title": "Broadband: Infrastructure",
       "date": "2026-08-28",
       "dateAnswered": "2026-09-08",
-      "context": "Innovation, Science and Trade, with reference to his Department's press notice entitled UK invests in homegrown space tech to boost national resilience, published on 20 July 2026,…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/22640"
+      "context": "Culture, Media and Sport, what discussions she has held with the Competitions and Market Authority on how to promote investment in UK broadband infrastructure and full fibre…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/24559"
     },
     {
       "id": "PQ:19640",
