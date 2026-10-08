@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T15:17:07.252Z",
+  "generatedAt": "2026-10-08T21:04:26.596Z",
   "items": [
     {
       "id": "PQ:29069",
@@ -366,19 +366,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/25864"
     },
     {
-      "id": "PQ:22640",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department for Business, Innovation, Science and Trade ",
-      "memberName": "Mr Andrew Snowden",
-      "memberParty": "Con",
-      "title": "Satellite Communications: Finance",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-08",
-      "context": "Innovation, Science and Trade, with reference to his Department's press notice entitled UK invests in homegrown space tech to boost national resilience, published on 20 July 2026,…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/22640"
-    },
-    {
       "id": "PQ:21331",
       "contentType": "question",
       "house": "Commons",
@@ -572,6 +559,19 @@
       "dateAnswered": "2026-09-16",
       "context": "If she will commit to ensuring the government tackle mobile phone fraud.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21995"
+    },
+    {
+      "id": "PQ:22640",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department for Business, Innovation, Science and Trade ",
+      "memberName": "Mr Andrew Snowden",
+      "memberParty": "Con",
+      "title": "Satellite Communications: Finance",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-08",
+      "context": "Innovation, Science and Trade, with reference to his Department's press notice entitled UK invests in homegrown space tech to boost national resilience, published on 20 July 2026,…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/22640"
     },
     {
       "id": "PQ:19640",
