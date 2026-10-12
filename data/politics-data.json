@@ -1,6 +1,95 @@
 {
-  "generatedAt": "2026-10-12T04:41:10.130Z",
+  "generatedAt": "2026-10-12T17:27:39.293Z",
   "items": [
+    {
+      "id": "WS:HLWS368",
+      "contentType": "statement",
+      "house": "Lords",
+      "label": "DCMS",
+      "memberName": "Baroness Mackenzie of Sherwood",
+      "memberParty": "Lab",
+      "title": "Continuity of supply of telecommunications services",
+      "date": "2026-10-12",
+      "context": "I am repeating the following Written Ministerial Statement made today in the other place by my Right Honourable Friend the Secretary of State for the Department for Digital,…",
+      "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-10-12/HLWS368"
+    },
+    {
+      "id": "WS:HCWS358",
+      "contentType": "statement",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Lisa Nandy",
+      "memberParty": "Lab",
+      "title": "Continuity of supply of telecommunications services",
+      "date": "2026-10-12",
+      "context": "On Monday 5 October 2026, BT Group PLC announced it had acquired TalkTalk Telecom Group out of administration in a rescue deal. As has been widely reported, TalkTalk had been…",
+      "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-10-12/HCWS358"
+    },
+    {
+      "id": "PQ:30165",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Imogen Walker",
+      "memberParty": "Lab",
+      "title": "Project Gigabit: Hamilton and Clyde Valley",
+      "date": "2026-09-15",
+      "dateAnswered": "2026-10-12",
+      "context": "Culture, Media and Sport, what estimate she has made of the number of (a) households and (b) businesses in Hamilton and Clyde Valley constituency that will receive gigabit-capable…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30165"
+    },
+    {
+      "id": "PQ:29807",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Cabinet Office",
+      "memberName": "Alex Brewer",
+      "memberParty": "LD",
+      "title": "Emergencies: Mobile Phones",
+      "date": "2026-09-14",
+      "dateAnswered": "2026-10-12",
+      "context": "What assessment her Department made of the risk that alerts could expose survivors of domestic abuse relying on a concealed phone to seek help prior to issuing the Emergency Alert…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-14/29807"
+    },
+    {
+      "id": "PQ:29797",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Cabinet Office",
+      "memberName": "Alex Brewer",
+      "memberParty": "LD",
+      "title": "Emergencies: Mobile Phones",
+      "date": "2026-09-14",
+      "dateAnswered": "2026-10-12",
+      "context": "What assessment her Department has made of the adequacy of the period of time between announcing the Emergency Alert of 14 August 2025 to the public and the alert itself being…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-14/29797"
+    },
+    {
+      "id": "PQ:29810",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Cabinet Office",
+      "memberName": "Alex Brewer",
+      "memberParty": "LD",
+      "title": "Emergencies: Mobile Phones",
+      "date": "2026-09-14",
+      "dateAnswered": "2026-10-12",
+      "context": "What data her Department holds on the national opt-out rate from Emergency Alerts; and what estimate she has made of the number of mobile phone users successfully reached by the…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-14/29810"
+    },
+    {
+      "id": "PQ:29809",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Cabinet Office",
+      "memberName": "Alex Brewer",
+      "memberParty": "LD",
+      "title": "Emergencies: Mobile Phones",
+      "date": "2026-09-14",
+      "dateAnswered": "2026-10-12",
+      "context": "What criteria her Department applies in distinguishing between the use of Emergency Alerts to (a) warn of danger that is imminent and (b) help prevent a serious incident from…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-14/29809"
+    },
     {
       "id": "PQ:29069",
       "contentType": "question",
@@ -145,19 +234,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-09/HL3369"
     },
     {
-      "id": "PQ:28567",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Peter Fortune",
-      "memberParty": "Con",
-      "title": "Telemedicine",
-      "date": "2026-09-09",
-      "dateAnswered": "2026-09-16",
-      "context": "Culture, Media and Sport, what discussions her Department has had with the telecare and telecoms industries on enabling network operators to safely move telecare customers between…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-09/28567"
-    },
-    {
       "id": "PQ:27405",
       "contentType": "question",
       "house": "Commons",
@@ -247,19 +323,6 @@
       "dateAnswered": "2026-09-15",
       "context": "What steps they are taking to ensure that the rights to protest and privacy are not infringed by the pilot project to use underground fibre optic cables as sensors at a defence…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-01/HL2792"
-    },
-    {
-      "id": "PQ:25967",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Sir John Hayes",
-      "memberParty": "Con",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-09-01",
-      "dateAnswered": "2026-09-16",
-      "context": "Which Minister gave authorisation for the national emergency alert sent in August 2026.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-01/25967"
     },
     {
       "id": "PQ:22121",
@@ -533,58 +596,6 @@
       "dateAnswered": "2026-09-21",
       "context": "What, if any, is the statutory basis for the operation of the UK Emergency Alert service in (a) England and Wales, (b) Scotland and (c) Northern Ireland.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21323"
-    },
-    {
-      "id": "PQ:23274",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Ben Obese-Jecty",
-      "memberParty": "Con",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-16",
-      "context": "What was the cost of the Emergency Alert sent to England and Wales on 14 August 2026.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/23274"
-    },
-    {
-      "id": "PQ:21332",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Alex Burghart",
-      "memberParty": "Con",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-16",
-      "context": "With reference to the document, Frequency Asked Questions about Emergency Alerts, published by the Cabinet Office in 2023, what are the latest criteria for use of the Emergency…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21332"
-    },
-    {
-      "id": "PQ:21324",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Alex Burghart",
-      "memberParty": "Con",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-16",
-      "context": "With reference to the answer of 27 January 2025, to Question 25755, on Emergencies: Mobile Phones, if she will place the One Year Evaluation Report in the Library.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21324"
-    },
-    {
-      "id": "PQ:21995",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Home Office",
-      "memberName": "Saqib Bhatti",
-      "memberParty": "Con",
-      "title": "Fraud: Mobile Phones",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-16",
-      "context": "If she will commit to ensuring the government tackle mobile phone fraud.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21995"
     },
     {
       "id": "PQ:19640",
