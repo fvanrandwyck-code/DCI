@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15T16:27:24.708Z",
+  "generatedAt": "2026-10-15T22:55:15.106Z",
   "items": [
     {
       "id": "WS:HLWS368",
@@ -24,6 +24,32 @@
       "date": "2026-10-12",
       "context": "On Monday 5 October 2026, BT Group PLC announced it had acquired TalkTalk Telecom Group out of administration in a rescue deal. As has been widely reported, TalkTalk had been…",
       "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-10-12/HCWS358"
+    },
+    {
+      "id": "PQ:30418",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Home Office",
+      "memberName": "Melanie Onn",
+      "memberParty": "Lab",
+      "title": "Emergencies: Mobile Phones",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-15",
+      "context": "What assessment she has made of the potential use of geographically targeted Emergency Alerts to assist police in cases involving missing children and vulnerable adults who are…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/30418"
+    },
+    {
+      "id": "PQ:30172",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Daniel Francis",
+      "memberParty": "Lab",
+      "title": "Broadband: Bexleyheath and Crayford",
+      "date": "2026-09-15",
+      "dateAnswered": "2026-10-15",
+      "context": "Culture, Media and Sport, what steps her Department is taking to help increase levels of low-cost broadband options in Bexleyheath and Crayford.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30172"
     },
     {
       "id": "PQ:30165",
@@ -52,30 +78,69 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30113"
     },
     {
-      "id": "PQ:30202",
+      "id": "PQ:30043",
       "contentType": "question",
       "house": "Commons",
-      "label": "Department for Environment, Food and Rural Affairs",
-      "memberName": "Bradley Thomas",
+      "label": "DCMS",
+      "memberName": "Shivani Raja",
       "memberParty": "Con",
-      "title": "Sustainable Farming Incentive",
+      "title": "Mobile Phones: Pornography",
       "date": "2026-09-15",
-      "dateAnswered": "2026-10-13",
-      "context": "Food and Rural Affairs, (a) what plans her Department has for publishing additional information on the rollout of the SFI Scheme for 2026 and 2027 which will include a clear…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30202"
+      "dateAnswered": "2026-10-15",
+      "context": "Culture, Media and Sport, what legislative enforcement action her Department plans to take against major technology companies following the expiry of the Government deadline for…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30043"
     },
     {
-      "id": "PQ:30231",
+      "id": "PQ:29533",
       "contentType": "question",
       "house": "Commons",
-      "label": "DfT",
-      "memberName": "Mike Martin",
-      "memberParty": "LD",
-      "title": "Public Transport: South East",
-      "date": "2026-09-15",
-      "dateAnswered": "2026-10-13",
-      "context": "What steps her Department is taking to improve (i) rail connectivity and (ii) bus services between Paddock Wood and Brighton.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30231"
+      "label": "DCMS",
+      "memberName": "James Wild",
+      "memberParty": "Con",
+      "title": "Mobile Broadband: Rural Areas",
+      "date": "2026-09-14",
+      "dateAnswered": "2026-10-15",
+      "context": "Culture, Media and Sport, what assessment she has made of the potential effectiveness of the commercial rollout in filling remaining coverage gaps once the Shared Rural Network…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-14/29533"
+    },
+    {
+      "id": "PQ:29534",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "James Wild",
+      "memberParty": "Con",
+      "title": "Project Gigabit: Contracts",
+      "date": "2026-09-14",
+      "dateAnswered": "2026-10-15",
+      "context": "Culture, Media and Sport, if she will list for each regional Project Gigabit contract agreed the (i) value (ii) date signed (iii) the number of premises to be connected and…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-14/29534"
+    },
+    {
+      "id": "PQ:29531",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "James Wild",
+      "memberParty": "Con",
+      "title": "Broadband",
+      "date": "2026-09-14",
+      "dateAnswered": "2026-10-15",
+      "context": "Culture, Media and Sport, what the latest estimated percentage is of premises with access to gigabit-capable broadband, and how this compares with the Government’s 99% by 2032…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-14/29531"
+    },
+    {
+      "id": "PQ:29624",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Shivani Raja",
+      "memberParty": "Con",
+      "title": "Mobile Phones: Pornography",
+      "date": "2026-09-14",
+      "dateAnswered": "2026-10-15",
+      "context": "Culture, Media and Sport, what legislative steps her Department plans to take against major technology companies following the expiry of the deadline for tech firms to introduce…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-14/29624"
     },
     {
       "id": "PQ:29807",
@@ -299,32 +364,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-04/27258"
     },
     {
-      "id": "PQ:27093",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Susan Murray",
-      "memberParty": "LD",
-      "title": "Broadband and Telephone Services: Competition",
-      "date": "2026-09-03",
-      "dateAnswered": "2026-09-10",
-      "context": "Culture, Media and Sport, what assessment her Department has made of the adequacy of protections under Ofcom's General Conditions for vulnerable customers who lose (a) broadband…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-03/27093"
-    },
-    {
-      "id": "PQ:27092",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Susan Murray",
-      "memberParty": "LD",
-      "title": "Broadband: Competition",
-      "date": "2026-09-03",
-      "dateAnswered": "2026-09-10",
-      "context": "Culture, Media and Sport, what assessment her Department has made of the adequacy of arrangements for monitoring compliance with Ofcom's One Touch Switch process in the context of…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-03/27092"
-    },
-    {
       "id": "PQ:HL3004",
       "contentType": "question",
       "house": "Lords",
@@ -336,19 +375,6 @@
       "dateAnswered": "2026-09-14",
       "context": "What requirements they make of broadband fibre companies to inform local authorities and residents when erecting telegraph poles for broadband; and whether there is official…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-02/HL3004"
-    },
-    {
-      "id": "PQ:26650",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Dr Luke Evans",
-      "memberParty": "Con",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-09-02",
-      "dateAnswered": "2026-09-21",
-      "context": "If she will publish the criteria used to assess whether to use the emergency alerts system on Friday 14 August 2026.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-02/26650"
     },
     {
       "id": "PQ:HL2792",
@@ -596,45 +622,6 @@
       "dateAnswered": "2026-09-21",
       "context": "Whether any assessment has been made of the number of mobile phones where the users have turned off government and emergency alerts in their phone settings.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21326"
-    },
-    {
-      "id": "PQ:21322",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Alex Burghart",
-      "memberParty": "Con",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-21",
-      "context": "With reference to the press release, \"Emergency Alert to be sent to England and Wales as Government steps up wildfire response with funding, military support and BBQ ban\", 14…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21322"
-    },
-    {
-      "id": "PQ:22519",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Shivani Raja",
-      "memberParty": "Con",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-21",
-      "context": "What the cost to the public purse was of planning, executing and reviewing the recent Emergency Alert regarding wildfires by department, mobile network operator and third-party…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/22519"
-    },
-    {
-      "id": "PQ:21323",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Alex Burghart",
-      "memberParty": "Con",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-21",
-      "context": "What, if any, is the statutory basis for the operation of the UK Emergency Alert service in (a) England and Wales, (b) Scotland and (c) Northern Ireland.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21323"
     },
     {
       "id": "PQ:19640",
