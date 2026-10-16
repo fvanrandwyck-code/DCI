@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-16T03:27:09.662Z",
+  "generatedAt": "2026-10-16T08:48:27.140Z",
   "items": [
     {
       "id": "WS:HLWS368",
@@ -39,19 +39,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/30418"
     },
     {
-      "id": "PQ:30165",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Imogen Walker",
-      "memberParty": "Lab",
-      "title": "Project Gigabit: Hamilton and Clyde Valley",
-      "date": "2026-09-15",
-      "dateAnswered": "2026-10-12",
-      "context": "Culture, Media and Sport, what estimate she has made of the number of (a) households and (b) businesses in Hamilton and Clyde Valley constituency that will receive gigabit-capable…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30165"
-    },
-    {
       "id": "PQ:30172",
       "contentType": "question",
       "house": "Commons",
@@ -63,6 +50,19 @@
       "dateAnswered": "2026-10-15",
       "context": "Culture, Media and Sport, what steps her Department is taking to help increase levels of low-cost broadband options in Bexleyheath and Crayford.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30172"
+    },
+    {
+      "id": "PQ:30165",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Imogen Walker",
+      "memberParty": "Lab",
+      "title": "Project Gigabit: Hamilton and Clyde Valley",
+      "date": "2026-09-15",
+      "dateAnswered": "2026-10-12",
+      "context": "Culture, Media and Sport, what estimate she has made of the number of (a) households and (b) businesses in Hamilton and Clyde Valley constituency that will receive gigabit-capable…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30165"
     },
     {
       "id": "PQ:30043",
@@ -195,32 +195,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-14/29809"
     },
     {
-      "id": "PQ:29081",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Graeme Downie",
-      "memberParty": "Lab",
-      "title": "Broadband: Rural Areas",
-      "date": "2026-09-10",
-      "dateAnswered": "2026-09-15",
-      "context": "Culture, Media and Sport, what assessment her Department has made of the potential merits of updating equivalent power flux density limits on (a) satellite broadband connectivity…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29081"
-    },
-    {
-      "id": "PQ:29080",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Graeme Downie",
-      "memberParty": "Lab",
-      "title": "Satellites: Radio Frequencies",
-      "date": "2026-09-10",
-      "dateAnswered": "2026-09-15",
-      "context": "Culture, Media and Sport, what discussions her Department has had with Ofcom about the UK's position on satellite spectrum rules prior to the International Telecommunication Union…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29080"
-    },
-    {
       "id": "PQ:29069",
       "contentType": "question",
       "house": "Commons",
@@ -284,6 +258,32 @@
       "dateAnswered": "2026-09-17",
       "context": "Culture, Media and Sport, what assessment she has made of the adequacy of protections for micro and small businesses entering into long-term telecommunications contracts.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29064"
+    },
+    {
+      "id": "PQ:29081",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Graeme Downie",
+      "memberParty": "Lab",
+      "title": "Broadband: Rural Areas",
+      "date": "2026-09-10",
+      "dateAnswered": "2026-09-15",
+      "context": "Culture, Media and Sport, what assessment her Department has made of the potential merits of updating equivalent power flux density limits on (a) satellite broadband connectivity…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29081"
+    },
+    {
+      "id": "PQ:29080",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Graeme Downie",
+      "memberParty": "Lab",
+      "title": "Satellites: Radio Frequencies",
+      "date": "2026-09-10",
+      "dateAnswered": "2026-09-15",
+      "context": "Culture, Media and Sport, what discussions her Department has had with Ofcom about the UK's position on satellite spectrum rules prior to the International Telecommunication Union…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29080"
     },
     {
       "id": "PQ:28902",
@@ -416,45 +416,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/22122"
     },
     {
-      "id": "PQ:25866",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "James McMurdock",
-      "memberParty": "Ind",
-      "title": "Telecommunications: Rural Areas",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-18",
-      "context": "Culture, Media and Sport, what steps she is taking to ensure that residents in rural communities can access emergency communications where there is a) limited or b) no reliable…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/25866"
-    },
-    {
-      "id": "PQ:24345",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Callum Anderson",
-      "memberParty": "Lab",
-      "title": "Agriculture: Robotics",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-17",
-      "context": "Culture, Media and Sport, what assessment she has made of whether rural broadband and mobile connectivity are sufficient to support the deployment of agricultural robotics in…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/24345"
-    },
-    {
-      "id": "PQ:22640",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department for Business, Innovation, Science and Trade ",
-      "memberName": "Mr Andrew Snowden",
-      "memberParty": "Con",
-      "title": "Satellite Communications: Finance",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-08",
-      "context": "Innovation, Science and Trade, with reference to his Department's press notice entitled UK invests in homegrown space tech to boost national resilience, published on 20 July 2026,…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/22640"
-    },
-    {
       "id": "PQ:24950",
       "contentType": "question",
       "house": "Commons",
@@ -481,6 +442,32 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/24949"
     },
     {
+      "id": "PQ:25866",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "James McMurdock",
+      "memberParty": "Ind",
+      "title": "Telecommunications: Rural Areas",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-18",
+      "context": "Culture, Media and Sport, what steps she is taking to ensure that residents in rural communities can access emergency communications where there is a) limited or b) no reliable…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/25866"
+    },
+    {
+      "id": "PQ:24345",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Callum Anderson",
+      "memberParty": "Lab",
+      "title": "Agriculture: Robotics",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-17",
+      "context": "Culture, Media and Sport, what assessment she has made of whether rural broadband and mobile connectivity are sufficient to support the deployment of agricultural robotics in…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/24345"
+    },
+    {
       "id": "PQ:25865",
       "contentType": "question",
       "house": "Commons",
@@ -505,6 +492,19 @@
       "dateAnswered": "2026-09-11",
       "context": "Culture, Media and Sport, what assessment she has made of the adequacy of mobile phone coverage in rural villages.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/25864"
+    },
+    {
+      "id": "PQ:22640",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department for Business, Innovation, Science and Trade ",
+      "memberName": "Mr Andrew Snowden",
+      "memberParty": "Con",
+      "title": "Satellite Communications: Finance",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-08",
+      "context": "Innovation, Science and Trade, with reference to his Department's press notice entitled UK invests in homegrown space tech to boost national resilience, published on 20 July 2026,…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/22640"
     },
     {
       "id": "PQ:20673",
