@@ -134,9 +134,9 @@ const MANUAL_BILLS = [
     currentStageIndex: 8,
     hasPingPong:       false,
     stageDetail:       '',
-    nextMilestone:     'No Report stage sitting date scheduled yet.',
+    nextMilestone:     'Sitting scheduled for 26 October 2026.',
     context:           'A DSIT bill establishing new cyber security duties for critical infrastructure operators, data centres, and managed service providers.',
     url:               'https://bills.parliament.uk/bills/4035',
-    lastChecked:       '2026-09-13',
+    lastChecked:       '2026-10-17',
   },
 ];

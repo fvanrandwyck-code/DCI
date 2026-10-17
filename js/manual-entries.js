@@ -91,7 +91,7 @@ const MANUAL_ENTRIES = [
     type:    'Notice',
     date:    '2026-07-28',
     title:   'Ofcom proposes to block new Openreach commercial offer to protect fair competition and keep long-term prices low',
-    context: 'The first time Ofcom has moved to block a commercial offer from Openreach — provisionally ruling that steep discounts targeted at new full-fibre customers could undermine altnets\' ability to compete. Consultation open until 27 August, final decision expected by end of September.',
+    context: 'The first time Ofcom has moved to block a commercial offer from Openreach — provisionally ruling that steep discounts targeted at new full-fibre customers could undermine altnets\' ability to compete. Ofcom published its final statement on 28 September — see the separate entry.',
     url:     'https://www.ofcom.org.uk/phones-and-broadband/telecoms-infrastructure/ofcom-proposes-to-block-new-openreach-commercial-offer-to-protect-fair-competition-and-keep-long-term-prices-low',
   },
   {
@@ -141,5 +141,29 @@ const MANUAL_ENTRIES = [
     title:   'Consultation: Future use of 2 GHz MSS',
     context: 'Ofcom\'s consultation on short-term authorisation for current licensees EchoStar and Viasat, and longer-term UK authorisation approaches for the 2 GHz MSS band. Page updated 11 September, after the original 18 August response deadline — likely movement toward a decision, though the exact change isn\'t visible to us (Ofcom\'s site blocks automated access).',
     url:     'https://www.ofcom.org.uk/spectrum/frequencies/future-use-of-2-ghz-mss',
+  },
+  {
+    source:  'Ofcom',
+    type:    'Decision',
+    date:    '2026-09-28',
+    title:   'Statement: Openreach\'s proposed commercial offers',
+    context: 'Ofcom\'s final decision following its July consultation: it is directing Openreach to withdraw its Incremental New to Openreach Customer Offer, and is not intervening on Openreach\'s other notified offers.',
+    url:     'https://www.ofcom.org.uk/phones-and-broadband/telecoms-infrastructure/openreachs-proposed-commercial-offers',
+  },
+  {
+    source:  'Ofcom',
+    type:    'Press release',
+    date:    '2026-10-05',
+    title:   'Advice for TalkTalk customers following BT acquisition announcement',
+    context: 'Ofcom\'s response to the announced deal for BT Group to acquire TalkTalk Group: customers need do nothing differently, and Ofcom says it will monitor the transition and is in contact with BT about its expectations. A notable consolidation among UK broadband providers.',
+    url:     'https://www.ofcom.org.uk/phones-and-broadband/telecoms-infrastructure/advice-for-talktalk-customers-following-acquisition-announcement',
+  },
+  {
+    source:  'Ofcom',
+    type:    'Notice',
+    date:    '2026-09-24',
+    title:   'Ofcom launches investigations into whether two telecoms companies failed to prevent misuse of their phone numbers by scammers',
+    context: 'Investigations into Vonage Business Limited and Voxbone SA under General Condition B1 (effective use of numbers and oversight of how they are used), part of Ofcom\'s enforcement programme on phone and text scams.',
+    url:     'https://www.ofcom.org.uk/phones-and-broadband/phone-numbers/ofcom-launches-investigations-into-whether-two-telecoms-companies-failed-to-prevent-misuse-of-their-phone-numbers-by-scammers',
   },
 ];
