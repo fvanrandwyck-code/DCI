@@ -269,66 +269,34 @@ function renderDeadlineBar(item) {
 
 // ── Bill stage tracker ───────────────────────────────────────────────────────
 //
-// Resolves a MANUAL_BILLS entry's effective stage list (accounting for
-// hasPingPong) and a per-index House lookup — shared by renderStageTracker()
-// and formatStageStatus() below so both read from exactly the same data.
-function resolveBillStages(bill) {
-  const stages = bill.hasPingPong
-    ? [...BILL_STAGE_BACKBONE.slice(0, 10), 'Consideration of Amendments', 'Royal Assent']
-    : BILL_STAGE_BACKBONE;
-  const houseForIndex = i => (i < 10 ? billStageHouse(i, bill.originatingHouse) : null);
-  return { stages, houseForIndex };
-}
-
-// "Lords Report stage" / "Commons 2nd Reading" / "Royal Assent" — matches
-// real Parliamentary terminology, where only Committee and Report take
-// the word "stage" (a "2nd Reading" is never called "2nd Reading stage").
-// Stages with no House (Royal Assent, Consideration of Amendments) get no
-// House prefix.
-function formatStageStatus(stageName, house) {
-  if (!house) return stageName;
-  if (stageName === 'Committee' || stageName === 'Report') return `${house} ${stageName} stage`;
-  return `${house} ${stageName}`;
-}
-
-// Feeds the consolidated "Status | ..." line in renderBillHtml() (see
-// politics-page.js) — combines the current stage (via formatStageStatus)
-// with the bill's own nextMilestone text, so both live in one place
-// rather than being split across a separate tracker caption and a
-// trailing "Next:" sentence in the context paragraph.
-function buildBillStatusLine(bill) {
-  const { stages, houseForIndex } = resolveBillStages(bill);
-  const currentHouse = houseForIndex(bill.currentStageIndex);
-  const statusText = formatStageStatus(stages[bill.currentStageIndex], currentHouse);
-  return `Status | ${statusText}. ${bill.nextMilestone}`;
-}
-
-// Renders a MANUAL_BILLS entry's position on BILL_STAGE_BACKBONE as a row
-// of pill-shaped segments, each coloured by which House that stage
-// belongs to — see the CSS comment above .stage-tracker for why this
-// deliberately doesn't reuse the deadline bar's time-based fill/colour
-// logic. A stage is only ever coloured once it's actually been reached:
-// upcoming stages (including all of the second House, before the bill
-// gets there) stay hollow/neutral regardless of which House they'll
+// bill.stages (when present) is a fully pre-computed array of
+// { reached, current, house, name } records, built server-side by
+// scripts/build-bills-data.mjs: reached-stage name/house come straight
+// from the Bills API's own stage history; upcoming-stage name/house come
+// from a fixed backbone the build script owns (not loaded into the
+// browser — nothing here needs it). This function just draws whatever
+// it's given — no stage-mapping logic happens at render time. Empty/
+// absent for withdrawn, defeated, or never-successfully-fetched bills;
+// renderBillHtml() (politics-page.js) skips calling this for those.
+//
+// A stage is only ever coloured once it's actually been reached:
+// upcoming stages stay hollow/neutral regardless of which House they'll
 // eventually belong to, since colouring them ahead of time would assert
 // a House-passage that hasn't happened yet. Royal Assent is never
-// House-coloured — it isn't a Commons or Lords event. hasPingPong
-// (optional) inserts an extra "Consideration of Amendments" stage before
-// Royal Assent for the small minority of bills that need it.
+// House-coloured — it isn't a Commons or Lords event. The "Consideration
+// of Amendments" (ping-pong) segment, when present at all, is always
+// either reached or current — it's only added to the array once the
+// bill's real history shows it actually happened (see the build script's
+// PING_PONG_STAGE_IDS), never shown as a hollow/upcoming placeholder.
 function renderStageTracker(bill) {
-  const { stages, houseForIndex } = resolveBillStages(bill);
-
-  const dots = stages.map((stageName, i) => {
-    const house = houseForIndex(i);
-    const reached = i <= bill.currentStageIndex;
-    const houseClass = reached && house ? ` stage-dot-${house.toLowerCase()}` : '';
-
+  const dots = bill.stages.map(stage => {
+    const houseClass = stage.reached && stage.house ? ` stage-dot-${stage.house.toLowerCase()}` : '';
     let cls;
-    if (i < bill.currentStageIndex) cls = 'stage-dot-complete';
-    else if (i === bill.currentStageIndex) cls = 'stage-dot-current';
+    if (stage.current) cls = 'stage-dot-current';
+    else if (stage.reached) cls = 'stage-dot-complete';
     else cls = 'stage-dot-upcoming';
 
-    const tooltip = house ? `${stageName} (${house})` : stageName;
+    const tooltip = stage.house ? `${stage.name} (${stage.house})` : stage.name;
     return `<span class="stage-dot ${cls}${houseClass}" title="${escapeHtml(tooltip)}"></span>`;
   }).join('');
 
@@ -336,6 +304,29 @@ function renderStageTracker(bill) {
       <div class="stage-tracker">
         <div class="stage-tracker-track">${dots}</div>
       </div>`;
+}
+
+// "Lords Report stage" / "Commons 2nd reading" / "Royal Assent" — the
+// Bills API's own stage descriptions already carry correct Parliamentary
+// wording (e.g. "Report stage", "1st reading", "Committee of the whole
+// House"), so this is a plain House prefix, not pattern-matching on the
+// stage name. Stages with no House (Royal Assent) get no prefix.
+function formatStageStatus(stageName, house) {
+  return house ? `${house} ${stageName}` : stageName;
+}
+
+// Feeds the consolidated "Status | ..." line in renderBillHtml() (see
+// politics-page.js). For end states (Royal Assent, withdrawn, defeated,
+// never-successfully-fetched) the current-stage/next-milestone pairing
+// doesn't apply cleanly, so those get their own simpler phrasing instead
+// of "Status | {stage}. {milestone}".
+function buildBillStatusLine(bill) {
+  if (bill.status === 'unavailable') return 'Status unavailable';
+  if (bill.status === 'withdrawn' || bill.status === 'defeated' || bill.status === 'act') {
+    return `Status | ${bill.nextMilestone}`;
+  }
+  const statusText = formatStageStatus(bill.currentStageName, bill.currentStageHouse);
+  return `Status | ${statusText}. ${bill.nextMilestone}`;
 }
 
 // ── Shared data loader ─────────────────────────────────────────────────────────

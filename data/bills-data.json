@@ -1,0 +1,97 @@
+{
+  "generatedAt": "2026-10-17T21:03:42.845Z",
+  "bills": [
+    {
+      "billId": 4035,
+      "title": "Cyber Security and Resilience (Network and Information Systems) Bill",
+      "url": "https://bills.parliament.uk/bills/4035",
+      "status": "active",
+      "currentHouse": "Lords",
+      "currentStageName": "Report stage",
+      "currentStageHouse": "Lords",
+      "currentStageIndex": 8,
+      "nextMilestone": "Sitting scheduled for 26 October 2026.",
+      "lastStageActivityDate": "2026-09-07",
+      "lastConfirmedAt": "2026-10-17T21:03:42.845Z",
+      "stages": [
+        {
+          "index": 0,
+          "reached": true,
+          "current": false,
+          "house": "Commons",
+          "name": "1st reading"
+        },
+        {
+          "index": 1,
+          "reached": true,
+          "current": false,
+          "house": "Commons",
+          "name": "2nd reading"
+        },
+        {
+          "index": 2,
+          "reached": true,
+          "current": false,
+          "house": "Commons",
+          "name": "Committee stage"
+        },
+        {
+          "index": 3,
+          "reached": true,
+          "current": false,
+          "house": "Commons",
+          "name": "Report stage"
+        },
+        {
+          "index": 4,
+          "reached": true,
+          "current": false,
+          "house": "Commons",
+          "name": "3rd reading"
+        },
+        {
+          "index": 5,
+          "reached": true,
+          "current": false,
+          "house": "Lords",
+          "name": "1st reading"
+        },
+        {
+          "index": 6,
+          "reached": true,
+          "current": false,
+          "house": "Lords",
+          "name": "2nd reading"
+        },
+        {
+          "index": 7,
+          "reached": true,
+          "current": false,
+          "house": "Lords",
+          "name": "Committee stage"
+        },
+        {
+          "index": 8,
+          "reached": true,
+          "current": true,
+          "house": "Lords",
+          "name": "Report stage"
+        },
+        {
+          "index": 9,
+          "reached": false,
+          "current": false,
+          "house": "Lords",
+          "name": "3rd reading"
+        },
+        {
+          "index": 10,
+          "reached": false,
+          "current": false,
+          "house": null,
+          "name": "Royal Assent"
+        }
+      ]
+    }
+  ]
+}

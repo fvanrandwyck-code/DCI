@@ -53,22 +53,108 @@ function renderCommitteeEventHtml(item) {
     </article>`;
 }
 
+// bill here is the result of merging a js/manual-bills.js entry
+// ({ billId, context }) with its fetched record from
+// data/bills-data.json (title, url, status, stage history, etc.) — see
+// renderBillsToWatch() below for where that merge happens. A bill listed
+// in manual-bills.js but never yet present in the fetched data (just
+// added, build hasn't run) gets a synthesised 'unavailable' stub with
+// the same shape, so this function never has to special-case "missing"
+// vs. "fetched but status unavailable" — they're identical by the time
+// they get here.
 function renderBillHtml(bill) {
+  if (bill.status === 'unavailable') {
+    return `
+    <article class="feed-item">
+      <h3><a href="${escapeHtml(bill.url)}" target="_blank" rel="noopener">${escapeHtml(bill.title || `Bill ${bill.billId}`)}</a></h3>
+      <p class="feed-item-meta">Status unavailable</p>
+      <p>${escapeHtml(bill.context)}</p>
+    </article>`;
+  }
+
+  // Royal Assent gets the full tracker (status 'act'); withdrawn/defeated
+  // get the status line only, no tracker — there's no "position in the
+  // process" left to usefully show once a bill has died.
+  const showTracker = bill.status === 'active' || bill.status === 'act';
+  const lastActivity = bill.lastStageActivityDate
+    ? `<p class="feed-item-meta">Last stage activity: ${formatDate(bill.lastStageActivityDate)}</p>`
+    : '';
+
   return `
     <article class="feed-item">
-      <h3 class="${pqHouseClass(bill.house)}"><a href="${escapeHtml(bill.url)}" target="_blank" rel="noopener">${escapeHtml(bill.title)}</a></h3>
+      <h3 class="${pqHouseClass(bill.currentHouse)}"><a href="${escapeHtml(bill.url)}" target="_blank" rel="noopener">${escapeHtml(bill.title)}</a></h3>
       <p class="feed-item-meta">${escapeHtml(buildBillStatusLine(bill))}</p>
-      ${renderStageTracker(bill)}
-      ${bill.stageDetail ? `<p>${escapeHtml(bill.stageDetail)}</p>` : ''}
+      ${showTracker ? renderStageTracker(bill) : ''}
+      ${lastActivity}
       <p>${escapeHtml(bill.context)}</p>
     </article>`;
 }
 
-function renderBillsToWatch() {
+const BILLS_DATA_URL = 'data/bills-data.json';
+
+function billUnavailableStub(entry) {
+  return {
+    billId: entry.billId,
+    title: null,
+    url: `https://bills.parliament.uk/bills/${entry.billId}`,
+    status: 'unavailable',
+    currentHouse: null, currentStageName: null, currentStageHouse: null,
+    nextMilestone: null, lastStageActivityDate: null, lastConfirmedAt: null, stages: [],
+    context: entry.context,
+  };
+}
+
+// The oldest lastConfirmedAt among the currently-listed bills — NOT the
+// fetched file's own generatedAt, which only says when the build script
+// last RAN, not when every listed bill was last successfully confirmed.
+// A held-back bill (see build-bills-data.mjs's backwards-move/
+// unrecognized-stage safeguards) carries its lastConfirmedAt forward
+// unchanged from whenever it was last actually confirmed, which can be
+// well before the file's generatedAt — using the oldest value here means
+// the freshness label can never overstate how current the stalest card
+// on screen actually is. A bill that's never been confirmed at all
+// (lastConfirmedAt: null, e.g. a brand new listing or persistent
+// failure) is excluded from this calculation rather than treated as
+// "infinitely stale" — there's a separate "Status unavailable" card for
+// that case already.
+function oldestLastConfirmedAt(bills) {
+  const known = bills.map(b => b.lastConfirmedAt).filter(Boolean);
+  if (known.length === 0) return null;
+  return known.reduce((oldest, iso) => (iso < oldest ? iso : oldest));
+}
+
+// Merges js/manual-bills.js's { billId, context } list with
+// data/bills-data.json's fetched records at render time — the manual
+// file owns WHICH bills appear and the editorial text; everything else
+// (title, URL, stage, status) comes from the fetched file. A bill
+// listed but not yet present in the fetched data (just added, or every
+// fetch attempt has failed so far) renders the same 'unavailable' stub
+// renderBillHtml() already knows how to draw.
+async function renderBillsToWatch() {
   const container = document.getElementById('bills-to-watch');
-  container.innerHTML = MANUAL_BILLS.length === 0
+  container.innerHTML = '<p class="no-results">Loading…</p>';
+
+  let fetchedBills = [];
+  try {
+    const res = await fetch(BILLS_DATA_URL);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+    fetchedBills = data.bills || [];
+  } catch (err) {
+    console.warn('[DCI] Bills data fetch failed:', err);
+  }
+
+  const fetchedById = new Map(fetchedBills.map(b => [b.billId, b]));
+  const merged = MANUAL_BILLS.map(entry => {
+    const fetched = fetchedById.get(entry.billId);
+    return fetched ? { ...fetched, context: entry.context } : billUnavailableStub(entry);
+  });
+
+  renderBillsFreshnessLabel(oldestLastConfirmedAt(merged));
+
+  container.innerHTML = merged.length === 0
     ? '<p class="no-results">No bills currently being tracked.</p>'
-    : MANUAL_BILLS.map(renderBillHtml).join('');
+    : merged.map(renderBillHtml).join('');
 }
 
 // ── Data freshness label ────────────────────────────────────────────────────
@@ -88,6 +174,16 @@ function renderFreshnessLabel(iso) {
   const el = document.getElementById('data-freshness');
   if (!el) return;
   el.textContent = iso ? `Parliamentary data last refreshed ${formatDateTime(iso)}.` : '';
+}
+
+// Same pattern, separate label — Bills to Watch is fetched on its own
+// schedule (.github/workflows/refresh-bills-data.yml), independent of
+// the Questions/Statements/Sitting Status/Committee events refresh
+// above, so it gets its own "as of" timestamp rather than sharing one.
+function renderBillsFreshnessLabel(iso) {
+  const el = document.getElementById('bills-freshness');
+  if (!el) return;
+  el.textContent = iso ? `Bill status refreshed ${formatDateTime(iso)}.` : '';
 }
 
 // ── Load more (reveals more of the already-fetched batch — no new fetch) ───────
@@ -146,19 +242,20 @@ function filterFeed(filter, buttonEl) {
 // ── Init ───────────────────────────────────────────────────────────────────────
 //
 // All Parliament-sourced content on this page — Questions, Statements,
-// Sitting Status, and Committee events — now comes from ONE pre-built
-// static file rather than live client-side fetches against Parliament's
-// API (which took 8-20+ seconds even with progressive rendering). The
-// file is refreshed on a schedule by a GitHub Action
-// (.github/workflows/refresh-politics-data.yml), which runs the exact
-// same fetch/filter functions below server-side (see
-// scripts/build-politics-data.mjs) — this page just loads the result.
-// Bills to Watch stays separate (manual-bills.js, hand-curated, no
-// fetch involved either way).
+// Sitting Status, Committee events, AND Bills to Watch — now comes from
+// pre-built static files rather than live client-side fetches (both
+// questions-statements-api/whatson-api and bills-api.parliament.uk took
+// 8-20+ seconds live, and bills-api has no CORS support at all, so it
+// was never fetchable from the browser regardless). Politics data is
+// refreshed by .github/workflows/refresh-politics-data.yml (see
+// scripts/build-politics-data.mjs); Bills data by the separate
+// refresh-bills-data.yml (see scripts/build-bills-data.mjs) — two
+// independent files, two independent freshness labels, fetched here in
+// parallel rather than one blocking the other.
 const POLITICS_DATA_URL = 'data/politics-data.json';
 
 async function init() {
-  renderBillsToWatch();
+  const billsPromise = renderBillsToWatch();
 
   const container = document.getElementById('feed-container');
   container.innerHTML = '<p class="no-results">Loading…</p>';
@@ -195,6 +292,8 @@ async function init() {
   document.getElementById('committee-events').innerHTML = events.length === 0
     ? '<p class="no-results">No telecoms-relevant committee sessions scheduled in the next 30 days.</p>'
     : events.map(renderCommitteeEventHtml).join('');
+
+  await billsPromise;
 }
 
 init();

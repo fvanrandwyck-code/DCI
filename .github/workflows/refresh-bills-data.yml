@@ -1,0 +1,54 @@
+name: Refresh Bills data
+
+on:
+  schedule:
+    - cron: '30 1-21/4 * * *'  # every 4 hours, offset +90min from refresh-politics-data.yml
+  workflow_dispatch: {}         # manual "Run workflow" button, for on-demand refresh/testing
+
+permissions:
+  contents: write               # needed to commit the refreshed data file back to the repo
+
+concurrency:
+  group: parliament-data-refresh  # shared with refresh-politics-data.yml so the two
+                                   # queue rather than race when pushing to main
+  cancel-in-progress: false  # let an in-flight run finish rather than racing a new one
+
+jobs:
+  refresh:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build Bills data
+        id: build
+        run: node scripts/build-bills-data.mjs
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/bills-data.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: refresh Bills data [skip ci]"
+            git fetch origin main
+            git rebase origin/main
+            git push
+          fi
+
+      # Runs AFTER the commit/push above, so a held-back bill's
+      # ::warning:: still reaches main alongside the other, successfully
+      # updated bills — this step only makes the job's overall result
+      # red (GitHub's failure notification) without blocking that push.
+      - name: Fail job if any bill was held back this run
+        if: steps.build.outputs.held_back == 'true'
+        run: |
+          echo "One or more bills were held back this run — see the ::warning:: annotations above."
+          exit 1
