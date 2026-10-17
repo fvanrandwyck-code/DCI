@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T08:19:43.172Z",
+  "generatedAt": "2026-10-17T15:06:00.857Z",
   "items": [
     {
       "id": "WS:HLWS368",
@@ -65,19 +65,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30165"
     },
     {
-      "id": "PQ:30043",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Shivani Raja",
-      "memberParty": "Con",
-      "title": "Mobile Phones: Pornography",
-      "date": "2026-09-15",
-      "dateAnswered": "2026-10-15",
-      "context": "Culture, Media and Sport, what legislative enforcement action her Department plans to take against major technology companies following the expiry of the Government deadline for…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30043"
-    },
-    {
       "id": "PQ:30113",
       "contentType": "question",
       "house": "Commons",
@@ -89,6 +76,19 @@
       "dateAnswered": "2026-10-14",
       "context": "What steps she is taking to improve regional public transport connectivity.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30113"
+    },
+    {
+      "id": "PQ:30043",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Shivani Raja",
+      "memberParty": "Con",
+      "title": "Mobile Phones: Pornography",
+      "date": "2026-09-15",
+      "dateAnswered": "2026-10-15",
+      "context": "Culture, Media and Sport, what legislative enforcement action her Department plans to take against major technology companies following the expiry of the Government deadline for…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30043"
     },
     {
       "id": "PQ:29533",
