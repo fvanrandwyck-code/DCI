@@ -9,7 +9,8 @@ permissions:
   contents: write            # needed to commit the refreshed data file back to the repo
 
 concurrency:
-  group: refresh-politics-data
+  group: parliament-data-refresh  # shared with refresh-bills-data.yml so the two
+                                   # queue rather than race when pushing to main
   cancel-in-progress: false  # let an in-flight run finish rather than racing a new one
 
 jobs:
@@ -36,5 +37,7 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m "chore: refresh Politics data [skip ci]"
+            git fetch origin main
+            git rebase origin/main
             git push
           fi
