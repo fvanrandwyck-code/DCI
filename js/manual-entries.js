@@ -166,4 +166,20 @@ const MANUAL_ENTRIES = [
     context: 'Investigations into Vonage Business Limited and Voxbone SA under General Condition B1 (effective use of numbers and oversight of how they are used), part of Ofcom\'s enforcement programme on phone and text scams.',
     url:     'https://www.ofcom.org.uk/phones-and-broadband/phone-numbers/ofcom-launches-investigations-into-whether-two-telecoms-companies-failed-to-prevent-misuse-of-their-phone-numbers-by-scammers',
   },
+  {
+    source:  'Ofcom',
+    type:    'Report',
+    date:    '2026-09-25',
+    title:   'Consumers using AI to help manage their telecoms services, but human contact still valued',
+    context: 'Ofcom research on how AI is changing customer experiences for phone, broadband and pay TV users: 53% of online adults used a generative AI tool or chatbot in the past year, but only 8% use AI for their telecoms services, and many still want access to a human.',
+    url:     'https://www.ofcom.org.uk/phones-and-broadband/telecoms-infrastructure/consumers-using-ai-to-help-manage-their-telecoms-services-but-human-contact-still-valued',
+  },
+  {
+    source:  'Ofcom',
+    type:    'Press release',
+    date:    '2026-10-02',
+    title:   'Beware of \'job offer\' and missed call scams',
+    context: 'Ofcom warns about automated \'job offer\' calls and missed-call scams, and notes it is investigating four telecoms providers over scam calls and messages and has made it harder to spoof UK landline numbers.',
+    url:     'https://www.ofcom.org.uk/phones-and-broadband/scam-calls-and-messages/beware-of-job-offer-and-missed-call-scams',
+  },
 ];
