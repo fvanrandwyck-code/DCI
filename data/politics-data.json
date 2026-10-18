@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T18:29:34.543Z",
+  "generatedAt": "2026-10-18T22:16:16.670Z",
   "items": [
     {
       "id": "WS:HLWS368",
@@ -39,19 +39,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/30418"
     },
     {
-      "id": "PQ:30172",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Daniel Francis",
-      "memberParty": "Lab",
-      "title": "Broadband: Bexleyheath and Crayford",
-      "date": "2026-09-15",
-      "dateAnswered": "2026-10-15",
-      "context": "Culture, Media and Sport, what steps her Department is taking to help increase levels of low-cost broadband options in Bexleyheath and Crayford.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30172"
-    },
-    {
       "id": "PQ:30165",
       "contentType": "question",
       "house": "Commons",
@@ -63,6 +50,19 @@
       "dateAnswered": "2026-10-12",
       "context": "Culture, Media and Sport, what estimate she has made of the number of (a) households and (b) businesses in Hamilton and Clyde Valley constituency that will receive gigabit-capable…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30165"
+    },
+    {
+      "id": "PQ:30172",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Daniel Francis",
+      "memberParty": "Lab",
+      "title": "Broadband: Bexleyheath and Crayford",
+      "date": "2026-09-15",
+      "dateAnswered": "2026-10-15",
+      "context": "Culture, Media and Sport, what steps her Department is taking to help increase levels of low-cost broadband options in Bexleyheath and Crayford.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30172"
     },
     {
       "id": "PQ:30043",
@@ -102,19 +102,6 @@
       "dateAnswered": "2026-10-15",
       "context": "Culture, Media and Sport, what assessment she has made of the potential effectiveness of the commercial rollout in filling remaining coverage gaps once the Shared Rural Network…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-14/29533"
-    },
-    {
-      "id": "PQ:29534",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "James Wild",
-      "memberParty": "Con",
-      "title": "Project Gigabit: Contracts",
-      "date": "2026-09-14",
-      "dateAnswered": "2026-10-15",
-      "context": "Culture, Media and Sport, if she will list for each regional Project Gigabit contract agreed the (i) value (ii) date signed (iii) the number of premises to be connected and…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-14/29534"
     },
     {
       "id": "PQ:29531",
@@ -195,6 +182,71 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-14/29809"
     },
     {
+      "id": "PQ:29534",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "James Wild",
+      "memberParty": "Con",
+      "title": "Project Gigabit: Contracts",
+      "date": "2026-09-14",
+      "dateAnswered": "2026-10-15",
+      "context": "Culture, Media and Sport, if she will list for each regional Project Gigabit contract agreed the (i) value (ii) date signed (iii) the number of premises to be connected and…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-14/29534"
+    },
+    {
+      "id": "PQ:29081",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Graeme Downie",
+      "memberParty": "Lab",
+      "title": "Broadband: Rural Areas",
+      "date": "2026-09-10",
+      "dateAnswered": "2026-09-15",
+      "context": "Culture, Media and Sport, what assessment her Department has made of the potential merits of updating equivalent power flux density limits on (a) satellite broadband connectivity…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29081"
+    },
+    {
+      "id": "PQ:29080",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Graeme Downie",
+      "memberParty": "Lab",
+      "title": "Satellites: Radio Frequencies",
+      "date": "2026-09-10",
+      "dateAnswered": "2026-09-15",
+      "context": "Culture, Media and Sport, what discussions her Department has had with Ofcom about the UK's position on satellite spectrum rules prior to the International Telecommunication Union…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29080"
+    },
+    {
+      "id": "PQ:28902",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "MoD",
+      "memberName": "Ben Obese-Jecty",
+      "memberParty": "Con",
+      "title": "Telecommunications Cables: Seas and Oceans",
+      "date": "2026-09-10",
+      "dateAnswered": "2026-10-06",
+      "context": "Pursuant to the Answer of 8 September 2026 to Question 23084 on Telecommunications Cables: Seas and Oceans, by what date does he expect each element of the new capability outlined…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/28902"
+    },
+    {
+      "id": "PQ:29008",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Cabinet Office",
+      "memberName": "Cat Eccles",
+      "memberParty": "Lab",
+      "title": "Emergencies: Mobile Phones",
+      "date": "2026-09-10",
+      "dateAnswered": "2026-09-30",
+      "context": "What her Department's policy is on choosing whether to issue an Emergency Alert nationally or to target a specific geographical location; and whether she plans to enhance the…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29008"
+    },
+    {
       "id": "PQ:29069",
       "contentType": "question",
       "house": "Commons",
@@ -258,58 +310,6 @@
       "dateAnswered": "2026-09-17",
       "context": "Culture, Media and Sport, what assessment she has made of the adequacy of protections for micro and small businesses entering into long-term telecommunications contracts.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29064"
-    },
-    {
-      "id": "PQ:29081",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Graeme Downie",
-      "memberParty": "Lab",
-      "title": "Broadband: Rural Areas",
-      "date": "2026-09-10",
-      "dateAnswered": "2026-09-15",
-      "context": "Culture, Media and Sport, what assessment her Department has made of the potential merits of updating equivalent power flux density limits on (a) satellite broadband connectivity…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29081"
-    },
-    {
-      "id": "PQ:29080",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Graeme Downie",
-      "memberParty": "Lab",
-      "title": "Satellites: Radio Frequencies",
-      "date": "2026-09-10",
-      "dateAnswered": "2026-09-15",
-      "context": "Culture, Media and Sport, what discussions her Department has had with Ofcom about the UK's position on satellite spectrum rules prior to the International Telecommunication Union…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29080"
-    },
-    {
-      "id": "PQ:28902",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "MoD",
-      "memberName": "Ben Obese-Jecty",
-      "memberParty": "Con",
-      "title": "Telecommunications Cables: Seas and Oceans",
-      "date": "2026-09-10",
-      "dateAnswered": "2026-10-06",
-      "context": "Pursuant to the Answer of 8 September 2026 to Question 23084 on Telecommunications Cables: Seas and Oceans, by what date does he expect each element of the new capability outlined…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/28902"
-    },
-    {
-      "id": "PQ:29008",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Cat Eccles",
-      "memberParty": "Lab",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-09-10",
-      "dateAnswered": "2026-09-30",
-      "context": "What her Department's policy is on choosing whether to issue an Emergency Alert nationally or to target a specific geographical location; and whether she plans to enhance the…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29008"
     },
     {
       "id": "PQ:28544",
@@ -416,32 +416,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/22122"
     },
     {
-      "id": "PQ:24950",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Zöe Franklin",
-      "memberParty": "LD",
-      "title": "Mobile Phones: Standards",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-21",
-      "context": "Culture, Media and Sport, what assessment she has made of the potential merits of introducing strengthened service standards and automatic compensation for mobile network…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/24950"
-    },
-    {
-      "id": "PQ:24949",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Zöe Franklin",
-      "memberParty": "LD",
-      "title": "Mobile Phones: Complaints",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-21",
-      "context": "Culture, Media and Sport, what assessment she has made of the adequacy of the eight-week complaint resolution timeframe for mobile network providers.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/24949"
-    },
-    {
       "id": "PQ:25866",
       "contentType": "question",
       "house": "Commons",
@@ -466,32 +440,6 @@
       "dateAnswered": "2026-09-17",
       "context": "Culture, Media and Sport, what assessment she has made of whether rural broadband and mobile connectivity are sufficient to support the deployment of agricultural robotics in…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/24345"
-    },
-    {
-      "id": "PQ:25865",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "James McMurdock",
-      "memberParty": "Ind",
-      "title": "Mobile Phones",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-11",
-      "context": "Culture, Media and Sport, what steps she is taking to address persistent mobile signal blackspots.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/25865"
-    },
-    {
-      "id": "PQ:25864",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "James McMurdock",
-      "memberParty": "Ind",
-      "title": "Mobile Phones: Rural Areas",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-11",
-      "context": "Culture, Media and Sport, what assessment she has made of the adequacy of mobile phone coverage in rural villages.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/25864"
     },
     {
       "id": "PQ:22640",
@@ -622,6 +570,58 @@
       "dateAnswered": "2026-09-21",
       "context": "Whether any assessment has been made of the number of mobile phones where the users have turned off government and emergency alerts in their phone settings.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21326"
+    },
+    {
+      "id": "PQ:24950",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Zöe Franklin",
+      "memberParty": "LD",
+      "title": "Mobile Phones: Standards",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-21",
+      "context": "Culture, Media and Sport, what assessment she has made of the potential merits of introducing strengthened service standards and automatic compensation for mobile network…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/24950"
+    },
+    {
+      "id": "PQ:24949",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Zöe Franklin",
+      "memberParty": "LD",
+      "title": "Mobile Phones: Complaints",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-21",
+      "context": "Culture, Media and Sport, what assessment she has made of the adequacy of the eight-week complaint resolution timeframe for mobile network providers.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/24949"
+    },
+    {
+      "id": "PQ:25865",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "James McMurdock",
+      "memberParty": "Ind",
+      "title": "Mobile Phones",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-11",
+      "context": "Culture, Media and Sport, what steps she is taking to address persistent mobile signal blackspots.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/25865"
+    },
+    {
+      "id": "PQ:25864",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "James McMurdock",
+      "memberParty": "Ind",
+      "title": "Mobile Phones: Rural Areas",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-11",
+      "context": "Culture, Media and Sport, what assessment she has made of the adequacy of mobile phone coverage in rural villages.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/25864"
     },
     {
       "id": "PQ:19640",
