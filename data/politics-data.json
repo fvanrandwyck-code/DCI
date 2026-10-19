@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-19T03:33:52.458Z",
+  "generatedAt": "2026-10-19T09:39:41.899Z",
   "items": [
     {
       "id": "WS:HLWS368",
@@ -26,6 +26,19 @@
       "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-10-12/HCWS358"
     },
     {
+      "id": "PQ:32278",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Gideon Amos",
+      "memberParty": "LD",
+      "title": "Autism: Social Services",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-19",
+      "context": "What training provision or guidance is given to Social Services staff regarding assessment of the welfare and needs of individuals with Autism Spectrum Disorder, given the rise in…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32278"
+    },
+    {
       "id": "PQ:30418",
       "contentType": "question",
       "house": "Commons",
@@ -37,6 +50,19 @@
       "dateAnswered": "2026-10-15",
       "context": "What assessment she has made of the potential use of geographically targeted Emergency Alerts to assist police in cases involving missing children and vulnerable adults who are…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/30418"
+    },
+    {
+      "id": "PQ:33041",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Ian Sollom",
+      "memberParty": "LD",
+      "title": "Fractures: Health Services",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-19",
+      "context": "What steps her department has taken to develop and publish a national implementation plan for the full rollout of Fracture Liaison Services across England by 2030.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33041"
     },
     {
       "id": "PQ:30172",
@@ -76,19 +102,6 @@
       "dateAnswered": "2026-10-15",
       "context": "Culture, Media and Sport, what legislative enforcement action her Department plans to take against major technology companies following the expiry of the Government deadline for…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30043"
-    },
-    {
-      "id": "PQ:30113",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DfT",
-      "memberName": "Lee Anderson",
-      "memberParty": "RUK",
-      "title": "Public Transport",
-      "date": "2026-09-15",
-      "dateAnswered": "2026-10-14",
-      "context": "What steps she is taking to improve regional public transport connectivity.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30113"
     },
     {
       "id": "PQ:29533",
@@ -494,6 +507,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/25864"
     },
     {
+      "id": "PQ:22640",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department for Business, Innovation, Science and Trade ",
+      "memberName": "Mr Andrew Snowden",
+      "memberParty": "Con",
+      "title": "Satellite Communications: Finance",
+      "date": "2026-08-28",
+      "dateAnswered": "2026-09-08",
+      "context": "Innovation, Science and Trade, with reference to his Department's press notice entitled UK invests in homegrown space tech to boost national resilience, published on 20 July 2026,…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/22640"
+    },
+    {
       "id": "PQ:20673",
       "contentType": "question",
       "house": "Commons",
@@ -596,32 +622,6 @@
       "dateAnswered": "2026-09-29",
       "context": "What role does the Cabinet Office play in deciding whether the Emergency Alerts system should be used during periods of extreme heat.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/22722"
-    },
-    {
-      "id": "PQ:21326",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Alex Burghart",
-      "memberParty": "Con",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-21",
-      "context": "Whether any assessment has been made of the number of mobile phones where the users have turned off government and emergency alerts in their phone settings.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/21326"
-    },
-    {
-      "id": "PQ:22640",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department for Business, Innovation, Science and Trade ",
-      "memberName": "Mr Andrew Snowden",
-      "memberParty": "Con",
-      "title": "Satellite Communications: Finance",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-08",
-      "context": "Innovation, Science and Trade, with reference to his Department's press notice entitled UK invests in homegrown space tech to boost national resilience, published on 20 July 2026,…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/22640"
     },
     {
       "id": "PQ:19640",
