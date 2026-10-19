@@ -1,19 +1,6 @@
 {
-  "generatedAt": "2026-10-19T18:26:05.558Z",
+  "generatedAt": "2026-10-19T23:22:51.049Z",
   "items": [
-    {
-      "id": "PQ:34158",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DfT",
-      "memberName": "Alison Griffiths",
-      "memberParty": "Con",
-      "title": "Transpennine Express: WiFi",
-      "date": "2026-10-13",
-      "dateAnswered": "2026-10-19",
-      "context": "Pursuant to the Answer of 8 June 2026 to Question 4286 on TransPennine Express, whether the business case for low earth orbit satellite connectivity on mainline trains has been…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34158"
-    },
     {
       "id": "PQ:34517",
       "contentType": "question",
@@ -52,6 +39,19 @@
       "dateAnswered": "2026-10-19",
       "context": "What assessment she has made of the adequacy of NHS services for people with hypermobility spectrum disorders.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34515"
+    },
+    {
+      "id": "PQ:34158",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DfT",
+      "memberName": "Alison Griffiths",
+      "memberParty": "Con",
+      "title": "Transpennine Express: WiFi",
+      "date": "2026-10-13",
+      "dateAnswered": "2026-10-19",
+      "context": "Pursuant to the Answer of 8 June 2026 to Question 4286 on TransPennine Express, whether the business case for low earth orbit satellite connectivity on mainline trains has been…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34158"
     },
     {
       "id": "WS:HLWS368",
@@ -260,6 +260,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31902"
     },
     {
+      "id": "PQ:33581",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Gregory Stafford",
+      "memberParty": "Con",
+      "title": "Broadband: Fees and Charges",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-19",
+      "context": "Culture, Media and Sport, whether she has made an estimate of the number households and individuals that could be liable for a monthly internet charge.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33581"
+    },
+    {
       "id": "PQ:32278",
       "contentType": "question",
       "house": "Commons",
@@ -271,6 +284,32 @@
       "dateAnswered": "2026-10-19",
       "context": "What training provision or guidance is given to Social Services staff regarding assessment of the welfare and needs of individuals with Autism Spectrum Disorder, given the rise in…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32278"
+    },
+    {
+      "id": "PQ:32593",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "MoD",
+      "memberName": "Ben Obese-Jecty",
+      "memberParty": "Con",
+      "title": "Defence: Telecommunications",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-16",
+      "context": "Pursuant to the Answer of 14 September 2026 to Question 23210 on Defence: Procurement, if he will set out the period covered by the Defence Investment Plan funding allocation for…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32593"
+    },
+    {
+      "id": "PQ:31772",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "MoD",
+      "memberName": "Ben Obese-Jecty",
+      "memberParty": "Con",
+      "title": "Defence: Telecommunications",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-16",
+      "context": "Pursuant to the answer of 8 September 2026 to question 23265 on Defence: Telecommunications, what is the latest schedule which corresponds to adequate funding having been…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31772"
     },
     {
       "id": "PQ:32081",
@@ -286,19 +325,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32081"
     },
     {
-      "id": "PQ:33581",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Gregory Stafford",
-      "memberParty": "Con",
-      "title": "Broadband: Fees and Charges",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-19",
-      "context": "Culture, Media and Sport, whether she has made an estimate of the number households and individuals that could be liable for a monthly internet charge.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33581"
-    },
-    {
       "id": "PQ:30418",
       "contentType": "question",
       "house": "Commons",
@@ -310,32 +336,6 @@
       "dateAnswered": "2026-10-15",
       "context": "What assessment she has made of the potential use of geographically targeted Emergency Alerts to assist police in cases involving missing children and vulnerable adults who are…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/30418"
-    },
-    {
-      "id": "PQ:33390",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DfT",
-      "memberName": "Pippa Heylings",
-      "memberParty": "LD",
-      "title": "Railways: Standards",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-19",
-      "context": "What steps her Department is taking to improve journey times, reliability and connectivity on cross-country rail routes between major regional centres.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33390"
-    },
-    {
-      "id": "PQ:31916",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DfT",
-      "memberName": "Harriet Cross",
-      "memberParty": "Con",
-      "title": "Air Traffic Control: Scotland",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-19",
-      "context": "What estimate she has made of the potential impact of NATS systems failures in 2026 on the economy in Scotland including tourism, businesses connectivity and the Highland and…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31916"
     },
     {
       "id": "PQ:HL3751",
@@ -492,45 +492,6 @@
       "dateAnswered": "2026-09-21",
       "context": "Culture, Media and Sport, what assessment she has made of the adequacy of the eight-week complaint resolution timeframe for mobile network providers.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/24949"
-    },
-    {
-      "id": "PQ:25866",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "James McMurdock",
-      "memberParty": "Ind",
-      "title": "Telecommunications: Rural Areas",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-18",
-      "context": "Culture, Media and Sport, what steps she is taking to ensure that residents in rural communities can access emergency communications where there is a) limited or b) no reliable…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/25866"
-    },
-    {
-      "id": "PQ:24345",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Callum Anderson",
-      "memberParty": "Lab",
-      "title": "Agriculture: Robotics",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-17",
-      "context": "Culture, Media and Sport, what assessment she has made of whether rural broadband and mobile connectivity are sufficient to support the deployment of agricultural robotics in…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/24345"
-    },
-    {
-      "id": "PQ:25864",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "James McMurdock",
-      "memberParty": "Ind",
-      "title": "Mobile Phones: Rural Areas",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-10-19",
-      "context": "Culture, Media and Sport, what assessment she has made of the adequacy of mobile phone coverage in rural villages.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/25864"
     },
     {
       "id": "PQ:19640",
