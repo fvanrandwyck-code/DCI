@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-20T16:27:40.045Z",
+  "generatedAt": "2026-10-20T22:58:25.369Z",
   "items": [
     {
       "id": "PQ:35445",
@@ -377,19 +377,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31772"
     },
     {
-      "id": "PQ:30418",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Home Office",
-      "memberName": "Melanie Onn",
-      "memberParty": "Lab",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-15",
-      "context": "What assessment she has made of the potential use of geographically targeted Emergency Alerts to assist police in cases involving missing children and vulnerable adults who are…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/30418"
-    },
-    {
       "id": "PQ:32090",
       "contentType": "question",
       "house": "Commons",
@@ -416,19 +403,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30172"
     },
     {
-      "id": "PQ:30165",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Imogen Walker",
-      "memberParty": "Lab",
-      "title": "Project Gigabit: Hamilton and Clyde Valley",
-      "date": "2026-09-15",
-      "dateAnswered": "2026-10-12",
-      "context": "Culture, Media and Sport, what estimate she has made of the number of (a) households and (b) businesses in Hamilton and Clyde Valley constituency that will receive gigabit-capable…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30165"
-    },
-    {
       "id": "PQ:30043",
       "contentType": "question",
       "house": "Commons",
@@ -442,6 +416,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30043"
     },
     {
+      "id": "PQ:30165",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Imogen Walker",
+      "memberParty": "Lab",
+      "title": "Project Gigabit: Hamilton and Clyde Valley",
+      "date": "2026-09-15",
+      "dateAnswered": "2026-10-12",
+      "context": "Culture, Media and Sport, what estimate she has made of the number of (a) households and (b) businesses in Hamilton and Clyde Valley constituency that will receive gigabit-capable…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30165"
+    },
+    {
       "id": "PQ:29533",
       "contentType": "question",
       "house": "Commons",
@@ -453,19 +440,6 @@
       "dateAnswered": "2026-10-15",
       "context": "Culture, Media and Sport, what assessment she has made of the potential effectiveness of the commercial rollout in filling remaining coverage gaps once the Shared Rural Network…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-14/29533"
-    },
-    {
-      "id": "PQ:29534",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "James Wild",
-      "memberParty": "Con",
-      "title": "Project Gigabit: Contracts",
-      "date": "2026-09-14",
-      "dateAnswered": "2026-10-15",
-      "context": "Culture, Media and Sport, if she will list for each regional Project Gigabit contract agreed the (i) value (ii) date signed (iii) the number of premises to be connected and…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-14/29534"
     },
     {
       "id": "PQ:29531",
@@ -492,6 +466,19 @@
       "dateAnswered": "2026-10-15",
       "context": "Culture, Media and Sport, what legislative steps her Department plans to take against major technology companies following the expiry of the deadline for tech firms to introduce…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-14/29624"
+    },
+    {
+      "id": "PQ:29534",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "James Wild",
+      "memberParty": "Con",
+      "title": "Project Gigabit: Contracts",
+      "date": "2026-09-14",
+      "dateAnswered": "2026-10-15",
+      "context": "Culture, Media and Sport, if she will list for each regional Project Gigabit contract agreed the (i) value (ii) date signed (iii) the number of premises to be connected and…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-14/29534"
     },
     {
       "id": "PQ:22121",
