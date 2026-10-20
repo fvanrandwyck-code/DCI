@@ -1,6 +1,19 @@
 {
-  "generatedAt": "2026-10-20T03:44:16.105Z",
+  "generatedAt": "2026-10-20T09:13:02.096Z",
   "items": [
+    {
+      "id": "PQ:34158",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DfT",
+      "memberName": "Alison Griffiths",
+      "memberParty": "Con",
+      "title": "Transpennine Express: WiFi",
+      "date": "2026-10-13",
+      "dateAnswered": "2026-10-19",
+      "context": "Pursuant to the Answer of 8 June 2026 to Question 4286 on TransPennine Express, whether the business case for low earth orbit satellite connectivity on mainline trains has been…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34158"
+    },
     {
       "id": "PQ:34517",
       "contentType": "question",
@@ -39,19 +52,6 @@
       "dateAnswered": "2026-10-19",
       "context": "What assessment she has made of the adequacy of NHS services for people with hypermobility spectrum disorders.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34515"
-    },
-    {
-      "id": "PQ:34158",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DfT",
-      "memberName": "Alison Griffiths",
-      "memberParty": "Con",
-      "title": "Transpennine Express: WiFi",
-      "date": "2026-10-13",
-      "dateAnswered": "2026-10-19",
-      "context": "Pursuant to the Answer of 8 June 2026 to Question 4286 on TransPennine Express, whether the business case for low earth orbit satellite connectivity on mainline trains has been…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34158"
     },
     {
       "id": "WS:HLWS368",
@@ -260,19 +260,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31902"
     },
     {
-      "id": "PQ:33581",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Gregory Stafford",
-      "memberParty": "Con",
-      "title": "Broadband: Fees and Charges",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-19",
-      "context": "Culture, Media and Sport, whether she has made an estimate of the number households and individuals that could be liable for a monthly internet charge.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33581"
-    },
-    {
       "id": "PQ:32278",
       "contentType": "question",
       "house": "Commons",
@@ -284,6 +271,32 @@
       "dateAnswered": "2026-10-19",
       "context": "What training provision or guidance is given to Social Services staff regarding assessment of the welfare and needs of individuals with Autism Spectrum Disorder, given the rise in…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32278"
+    },
+    {
+      "id": "PQ:32081",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department for Education",
+      "memberName": "Munira Wilson",
+      "memberParty": "LD",
+      "title": "Special Educational Needs: Malvern",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-16",
+      "context": "What progress has been made on the delivery of Enterprise Academy, the proposed new Autism Spectrum Disorder Free School in Malvern, Worcestershire, following the letter sent by…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32081"
+    },
+    {
+      "id": "PQ:33581",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Gregory Stafford",
+      "memberParty": "Con",
+      "title": "Broadband: Fees and Charges",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-19",
+      "context": "Culture, Media and Sport, whether she has made an estimate of the number households and individuals that could be liable for a monthly internet charge.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33581"
     },
     {
       "id": "PQ:32593",
@@ -310,19 +323,6 @@
       "dateAnswered": "2026-10-16",
       "context": "Pursuant to the answer of 8 September 2026 to question 23265 on Defence: Telecommunications, what is the latest schedule which corresponds to adequate funding having been…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31772"
-    },
-    {
-      "id": "PQ:32081",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department for Education",
-      "memberName": "Munira Wilson",
-      "memberParty": "LD",
-      "title": "Special Educational Needs: Malvern",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-16",
-      "context": "What progress has been made on the delivery of Enterprise Academy, the proposed new Autism Spectrum Disorder Free School in Malvern, Worcestershire, following the letter sent by…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32081"
     },
     {
       "id": "PQ:30418",
