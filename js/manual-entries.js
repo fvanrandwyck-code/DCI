@@ -182,4 +182,20 @@ const MANUAL_ENTRIES = [
     context: 'Ofcom warns about automated \'job offer\' calls and missed-call scams, and notes it is investigating four telecoms providers over scam calls and messages and has made it harder to spoof UK landline numbers.',
     url:     'https://www.ofcom.org.uk/phones-and-broadband/scam-calls-and-messages/beware-of-job-offer-and-missed-call-scams',
   },
+  {
+    source:  'Ofcom',
+    type:    'Decision',
+    date:    '2026-10-21',
+    title:   'Telecoms provider fined £437,500 for failing to prevent misuse of its phone numbers by scammers',
+    context: 'Ofcom fined Tismi £437,500 (including a 30% discount for admitting liability) for breaching General Conditions B1.6, B1.8 and B1.9(c); about 366,000 sub-allocated numbers were exposed to potential misuse between at least November 2022 and January 2025. Ofcom also requires Tismi to evidence its due diligence and monitoring processes.',
+    url:     'https://www.ofcom.org.uk/phones-and-broadband/phone-numbers/telecoms-provider-fined-437500-for-failing-to-prevent-misuse-of-its-phone-numbers-by-scammers',
+  },
+  {
+    source:  'Ofcom',
+    type:    'Decision',
+    date:    '2026-10-20',
+    title:   'Statement: Proposal to revoke Code Powers',
+    context: 'Ofcom published its statement and issued 19 final directions revoking Electronic Communications Code powers: 12 companies asked to give up their powers and 7 have closed or been dissolved, so Ofcom considers them no longer providers of an electronic communications network or system.',
+    url:     'https://www.ofcom.org.uk/phones-and-broadband/telecoms-infrastructure/consultation-proposal-to-revoke-code-powers',
+  },
 ];
