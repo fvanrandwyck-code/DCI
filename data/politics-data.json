@@ -1,19 +1,6 @@
 {
-  "generatedAt": "2026-10-22T16:45:27.385Z",
+  "generatedAt": "2026-10-22T23:00:17.532Z",
   "items": [
-    {
-      "id": "PQ:35171",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Perran Moon",
-      "memberParty": "Lab",
-      "title": "Foetal Alcohol Spectrum Disorder: Mental Health Services",
-      "date": "2026-10-15",
-      "dateAnswered": "2026-10-22",
-      "context": "What estimate her Department has made of the number of people with foetal alcohol spectrum disorder in Camborne, Redruth and Hayle; and whether the forthcoming Mental Health…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-15/35171"
-    },
     {
       "id": "PQ:35189",
       "contentType": "question",
@@ -26,6 +13,19 @@
       "dateAnswered": "2026-10-22",
       "context": "Culture, Media and Sport, what assessment her department has made of the potential impact of homecare telecommunications in the event of a power cut.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-15/35189"
+    },
+    {
+      "id": "PQ:35171",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Perran Moon",
+      "memberParty": "Lab",
+      "title": "Foetal Alcohol Spectrum Disorder: Mental Health Services",
+      "date": "2026-10-15",
+      "dateAnswered": "2026-10-22",
+      "context": "What estimate her Department has made of the number of people with foetal alcohol spectrum disorder in Camborne, Redruth and Hayle; and whether the forthcoming Mental Health…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-15/35171"
     },
     {
       "id": "PQ:35445",
@@ -52,19 +52,6 @@
       "dateAnswered": "2026-10-22",
       "context": "Whether the impact evaluation of Transformed Decision Making in Personal Independence Payment will be published before a decision is taken on wider rollout.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-14/34983"
-    },
-    {
-      "id": "PQ:34158",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DfT",
-      "memberName": "Alison Griffiths",
-      "memberParty": "Con",
-      "title": "Transpennine Express: WiFi",
-      "date": "2026-10-13",
-      "dateAnswered": "2026-10-19",
-      "context": "Pursuant to the Answer of 8 June 2026 to Question 4286 on TransPennine Express, whether the business case for low earth orbit satellite connectivity on mainline trains has been…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34158"
     },
     {
       "id": "PQ:34517",
@@ -104,6 +91,19 @@
       "dateAnswered": "2026-10-19",
       "context": "What assessment she has made of the adequacy of NHS services for people with hypermobility spectrum disorders.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34515"
+    },
+    {
+      "id": "PQ:34158",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DfT",
+      "memberName": "Alison Griffiths",
+      "memberParty": "Con",
+      "title": "Transpennine Express: WiFi",
+      "date": "2026-10-13",
+      "dateAnswered": "2026-10-19",
+      "context": "Pursuant to the Answer of 8 June 2026 to Question 4286 on TransPennine Express, whether the business case for low earth orbit satellite connectivity on mainline trains has been…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34158"
     },
     {
       "id": "WS:HLWS368",
@@ -364,19 +364,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31902"
     },
     {
-      "id": "PQ:32278",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Gideon Amos",
-      "memberParty": "LD",
-      "title": "Autism: Social Services",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-19",
-      "context": "What training provision or guidance is given to Social Services staff regarding assessment of the welfare and needs of individuals with Autism Spectrum Disorder, given the rise in…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32278"
-    },
-    {
       "id": "PQ:33581",
       "contentType": "question",
       "house": "Commons",
@@ -388,6 +375,19 @@
       "dateAnswered": "2026-10-19",
       "context": "Culture, Media and Sport, whether she has made an estimate of the number households and individuals that could be liable for a monthly internet charge.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33581"
+    },
+    {
+      "id": "PQ:32278",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Gideon Amos",
+      "memberParty": "LD",
+      "title": "Autism: Social Services",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-19",
+      "context": "What training provision or guidance is given to Social Services staff regarding assessment of the welfare and needs of individuals with Autism Spectrum Disorder, given the rise in…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32278"
     },
     {
       "id": "PQ:32593",
