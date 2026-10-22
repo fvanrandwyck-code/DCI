@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T09:12:55.260Z",
+  "generatedAt": "2026-10-22T16:45:27.385Z",
   "items": [
     {
       "id": "PQ:35171",
@@ -15,6 +15,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-15/35171"
     },
     {
+      "id": "PQ:35189",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "James MacCleary",
+      "memberParty": "LD",
+      "title": "Telecommunications: Supported Housing",
+      "date": "2026-10-15",
+      "dateAnswered": "2026-10-22",
+      "context": "Culture, Media and Sport, what assessment her department has made of the potential impact of homecare telecommunications in the event of a power cut.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-15/35189"
+    },
+    {
       "id": "PQ:35445",
       "contentType": "question",
       "house": "Commons",
@@ -26,6 +39,19 @@
       "dateAnswered": "2026-10-20",
       "context": "Culture, Media and Sport, when the Government will publish the Mobile Market Review.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-15/35445"
+    },
+    {
+      "id": "PQ:34983",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department for Work and Pensions",
+      "memberName": "Daniel Zeichner",
+      "memberParty": "Lab",
+      "title": "Personal Independence Payment: Medical Examinations",
+      "date": "2026-10-14",
+      "dateAnswered": "2026-10-22",
+      "context": "Whether the impact evaluation of Transformed Decision Making in Personal Independence Payment will be published before a decision is taken on wider rollout.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-14/34983"
     },
     {
       "id": "PQ:34158",
@@ -130,19 +156,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/33746"
     },
     {
-      "id": "PQ:34093",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Dame Chi Onwurah",
-      "memberParty": "Lab",
-      "title": "Mobile Broadband: Newcastle upon Tyne Central and West",
-      "date": "2026-10-12",
-      "dateAnswered": "2026-10-19",
-      "context": "Culture, Media and Sport, what assessment she has made of the quality of (i) 4G and (ii) 5G coverage across Newcastle Central and West constituency.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/34093"
-    },
-    {
       "id": "PQ:33813",
       "contentType": "question",
       "house": "Commons",
@@ -154,6 +167,19 @@
       "dateAnswered": "2026-10-20",
       "context": "Culture, Media and Sport, what assessment she has made of the potential for existing fibre infrastructure installed by third-party operators to be utilised by other broadband…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/33813"
+    },
+    {
+      "id": "PQ:34093",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Dame Chi Onwurah",
+      "memberParty": "Lab",
+      "title": "Mobile Broadband: Newcastle upon Tyne Central and West",
+      "date": "2026-10-12",
+      "dateAnswered": "2026-10-19",
+      "context": "Culture, Media and Sport, what assessment she has made of the quality of (i) 4G and (ii) 5G coverage across Newcastle Central and West constituency.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/34093"
     },
     {
       "id": "PQ:33724",
@@ -169,108 +195,17 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/33724"
     },
     {
-      "id": "PQ:30440",
+      "id": "PQ:32363",
       "contentType": "question",
       "house": "Commons",
       "label": "DCMS",
-      "memberName": "Anneliese Dodds",
-      "memberParty": "Lab",
-      "title": "Broadband: Infrastructure",
+      "memberName": "Dan Norris",
+      "memberParty": "Ind",
+      "title": "Broadband: North East Somerset and Hanham",
       "date": "2026-10-09",
-      "dateAnswered": "2026-10-19",
-      "context": "Culture, Media and Sport, what assessment she has made of whether existing legislation enables broadband providers to upgrade all existing infrastructure in multi-dwelling units…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/30440"
-    },
-    {
-      "id": "PQ:32061",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Anneliese Dodds",
-      "memberParty": "Lab",
-      "title": "Broadband: Rented Housing",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-19",
-      "context": "Culture, Media and Sport, what assessment she has made of the potential impact of renters being excluded from proposed measures to facilitate access to full fibre broadband on the…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32061"
-    },
-    {
-      "id": "PQ:31902",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Seamus Logan",
-      "memberParty": "SNP",
-      "title": "Project Gigabit and Shared Rural Network",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-19",
-      "context": "Culture, Media and Sport, whether Project Gigabit is on track for 99% of UK premises to have access to gigabit-capable broadband by 2032; and whether Government-funded elements of…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31902"
-    },
-    {
-      "id": "PQ:33078",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Callum Anderson",
-      "memberParty": "Lab",
-      "title": "Broadband: Buckinghamshire ",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-19",
-      "context": "Culture, Media and Sport, what steps she is taking to ensure that rural communities in Buckinghamshire receive timely improvements in broadband and mobile connectivity.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33078"
-    },
-    {
-      "id": "PQ:31016",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Imogen Walker",
-      "memberParty": "Lab",
-      "title": "Mobile Phones: Rural Areas",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-19",
-      "context": "Culture, Media and Sport, what steps she is taking to improve mobile coverage in the rural parts of Hamilton and Clyde Valley covered by the Shared Rural Network.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31016"
-    },
-    {
-      "id": "PQ:32278",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Gideon Amos",
-      "memberParty": "LD",
-      "title": "Autism: Social Services",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-19",
-      "context": "What training provision or guidance is given to Social Services staff regarding assessment of the welfare and needs of individuals with Autism Spectrum Disorder, given the rise in…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32278"
-    },
-    {
-      "id": "PQ:32081",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department for Education",
-      "memberName": "Munira Wilson",
-      "memberParty": "LD",
-      "title": "Special Educational Needs: Malvern",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-16",
-      "context": "What progress has been made on the delivery of Enterprise Academy, the proposed new Autism Spectrum Disorder Free School in Malvern, Worcestershire, following the letter sent by…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32081"
-    },
-    {
-      "id": "PQ:30530",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "James Naish",
-      "memberParty": "Lab",
-      "title": "Fluoride: Water Supply",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-21",
-      "context": "What criteria her Department will use to assess the further rollout of community water fluoridation in areas where oral health outcomes are poorest, whether Nottinghamshire and…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/30530"
+      "dateAnswered": "2026-10-22",
+      "context": "Culture, Media and Sport, what progress his Department has made on extending gigabit capable broadband coverage in North East Somerset and Hanham constituency.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32363"
     },
     {
       "id": "PQ:32908",
@@ -284,6 +219,19 @@
       "dateAnswered": "2026-10-19",
       "context": "Culture, Media and Sport, what assessment she has made of the potential merits of applying the principles of the (a) home and (b) motor insurance markets to tackling loyalty…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32908"
+    },
+    {
+      "id": "PQ:30440",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Anneliese Dodds",
+      "memberParty": "Lab",
+      "title": "Broadband: Infrastructure",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-19",
+      "context": "Culture, Media and Sport, what assessment she has made of whether existing legislation enables broadband providers to upgrade all existing infrastructure in multi-dwelling units…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/30440"
     },
     {
       "id": "PQ:31879",
@@ -325,6 +273,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/30692"
     },
     {
+      "id": "PQ:32061",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Anneliese Dodds",
+      "memberParty": "Lab",
+      "title": "Broadband: Rented Housing",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-19",
+      "context": "Culture, Media and Sport, what assessment she has made of the potential impact of renters being excluded from proposed measures to facilitate access to full fibre broadband on the…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32061"
+    },
+    {
       "id": "PQ:31048",
       "contentType": "question",
       "house": "Commons",
@@ -364,6 +325,58 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32888"
     },
     {
+      "id": "PQ:33078",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Callum Anderson",
+      "memberParty": "Lab",
+      "title": "Broadband: Buckinghamshire ",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-19",
+      "context": "Culture, Media and Sport, what steps she is taking to ensure that rural communities in Buckinghamshire receive timely improvements in broadband and mobile connectivity.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33078"
+    },
+    {
+      "id": "PQ:31016",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Imogen Walker",
+      "memberParty": "Lab",
+      "title": "Mobile Phones: Rural Areas",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-19",
+      "context": "Culture, Media and Sport, what steps she is taking to improve mobile coverage in the rural parts of Hamilton and Clyde Valley covered by the Shared Rural Network.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31016"
+    },
+    {
+      "id": "PQ:31902",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Seamus Logan",
+      "memberParty": "SNP",
+      "title": "Project Gigabit and Shared Rural Network",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-19",
+      "context": "Culture, Media and Sport, whether Project Gigabit is on track for 99% of UK premises to have access to gigabit-capable broadband by 2032; and whether Government-funded elements of…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31902"
+    },
+    {
+      "id": "PQ:32278",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Gideon Amos",
+      "memberParty": "LD",
+      "title": "Autism: Social Services",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-19",
+      "context": "What training provision or guidance is given to Social Services staff regarding assessment of the welfare and needs of individuals with Autism Spectrum Disorder, given the rise in…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32278"
+    },
+    {
       "id": "PQ:33581",
       "contentType": "question",
       "house": "Commons",
@@ -401,6 +414,19 @@
       "dateAnswered": "2026-10-16",
       "context": "Pursuant to the answer of 8 September 2026 to question 23265 on Defence: Telecommunications, what is the latest schedule which corresponds to adequate funding having been…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31772"
+    },
+    {
+      "id": "PQ:30530",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "James Naish",
+      "memberParty": "Lab",
+      "title": "Fluoride: Water Supply",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-21",
+      "context": "What criteria her Department will use to assess the further rollout of community water fluoridation in areas where oral health outcomes are poorest, whether Nottinghamshire and…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/30530"
     },
     {
       "id": "PQ:30172",
@@ -468,43 +494,17 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-14/29531"
     },
     {
-      "id": "PQ:29624",
+      "id": "PQ:27307",
       "contentType": "question",
       "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Shivani Raja",
+      "label": "MoD",
+      "memberName": "Ben Obese-Jecty",
       "memberParty": "Con",
-      "title": "Mobile Phones: Pornography",
-      "date": "2026-09-14",
-      "dateAnswered": "2026-10-15",
-      "context": "Culture, Media and Sport, what legislative steps her Department plans to take against major technology companies following the expiry of the deadline for tech firms to introduce…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-14/29624"
-    },
-    {
-      "id": "PQ:22121",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Helen Morgan",
-      "memberParty": "LD",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-30",
-      "context": "",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/22121"
-    },
-    {
-      "id": "PQ:22122",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Helen Morgan",
-      "memberParty": "LD",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-08-28",
-      "dateAnswered": "2026-09-30",
-      "context": "What assessment has been made of the impact of being unable to receive emergency alerts due to lack of phone signal.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-08-28/22122"
+      "title": "Defence: Telecommunications",
+      "date": "2026-09-04",
+      "dateAnswered": "2026-10-22",
+      "context": "What progress has he made in securing sovereign UK capability to develop high-bandwidth, platform-to-platform and ground-to-space links.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-04/27307"
     },
     {
       "id": "WS:HLWS254",
