@@ -1,18 +1,57 @@
 {
-  "generatedAt": "2026-10-23T09:10:24.495Z",
+  "generatedAt": "2026-10-23T16:37:05.933Z",
   "items": [
     {
-      "id": "PQ:35189",
+      "id": "PQ:35951",
       "contentType": "question",
       "house": "Commons",
-      "label": "DCMS",
-      "memberName": "James MacCleary",
+      "label": "Home Office",
+      "memberName": "Martin Wrigley",
       "memberParty": "LD",
-      "title": "Telecommunications: Supported Housing",
-      "date": "2026-10-15",
-      "dateAnswered": "2026-10-22",
-      "context": "Culture, Media and Sport, what assessment her department has made of the potential impact of homecare telecommunications in the event of a power cut.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-15/35189"
+      "title": "Mobile Phones: Theft",
+      "date": "2026-10-19",
+      "dateAnswered": "2026-10-23",
+      "context": "With reference to op Reckoning, how the department plans to work with Apple and major Android developers to implement tactics to reduce phone theft.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/35951"
+    },
+    {
+      "id": "PQ:35950",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Home Office",
+      "memberName": "Martin Wrigley",
+      "memberParty": "LD",
+      "title": "Mobile Phones: Theft",
+      "date": "2026-10-19",
+      "dateAnswered": "2026-10-23",
+      "context": "What information the department plans to share with forces outside of the metropolitan police area as a result of Op Reckoning.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/35950"
+    },
+    {
+      "id": "PQ:35949",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Home Office",
+      "memberName": "Martin Wrigley",
+      "memberParty": "LD",
+      "title": "Mobile Phones: Theft",
+      "date": "2026-10-19",
+      "dateAnswered": "2026-10-23",
+      "context": "What number of phone thefts have been reported in Devon & Cornwall in 2026 compared to a) The Met Force area and b) the rest of the country.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/35949"
+    },
+    {
+      "id": "PQ:35948",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Home Office",
+      "memberName": "Martin Wrigley",
+      "memberParty": "LD",
+      "title": "Mobile Phones: Theft",
+      "date": "2026-10-19",
+      "dateAnswered": "2026-10-23",
+      "context": "Whether other forces are conduction similar tasks like the metropolitan police is under Op Reckoning, and what outcomes have come from these.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/35948"
     },
     {
       "id": "PQ:35171",
@@ -26,6 +65,19 @@
       "dateAnswered": "2026-10-22",
       "context": "What estimate her Department has made of the number of people with foetal alcohol spectrum disorder in Camborne, Redruth and Hayle; and whether the forthcoming Mental Health…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-15/35171"
+    },
+    {
+      "id": "PQ:35189",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "James MacCleary",
+      "memberParty": "LD",
+      "title": "Telecommunications: Supported Housing",
+      "date": "2026-10-15",
+      "dateAnswered": "2026-10-22",
+      "context": "Culture, Media and Sport, what assessment her department has made of the potential impact of homecare telecommunications in the event of a power cut.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-15/35189"
     },
     {
       "id": "PQ:35445",
@@ -52,6 +104,19 @@
       "dateAnswered": "2026-10-22",
       "context": "Whether the impact evaluation of Transformed Decision Making in Personal Independence Payment will be published before a decision is taken on wider rollout.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-14/34983"
+    },
+    {
+      "id": "PQ:34158",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DfT",
+      "memberName": "Alison Griffiths",
+      "memberParty": "Con",
+      "title": "Transpennine Express: WiFi",
+      "date": "2026-10-13",
+      "dateAnswered": "2026-10-19",
+      "context": "Pursuant to the Answer of 8 June 2026 to Question 4286 on TransPennine Express, whether the business case for low earth orbit satellite connectivity on mainline trains has been…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34158"
     },
     {
       "id": "PQ:34517",
@@ -93,17 +158,17 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34515"
     },
     {
-      "id": "PQ:34158",
+      "id": "PQ:34341",
       "contentType": "question",
       "house": "Commons",
-      "label": "DfT",
-      "memberName": "Alison Griffiths",
+      "label": "MoD",
+      "memberName": "Stuart Anderson",
       "memberParty": "Con",
-      "title": "Transpennine Express: WiFi",
+      "title": "Telecommunications Cables: Seas and Oceans",
       "date": "2026-10-13",
-      "dateAnswered": "2026-10-19",
-      "context": "Pursuant to the Answer of 8 June 2026 to Question 4286 on TransPennine Express, whether the business case for low earth orbit satellite connectivity on mainline trains has been…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34158"
+      "dateAnswered": "2026-10-23",
+      "context": "What assessment his Department has made of the security of undersea cables and maritime choke points.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34341"
     },
     {
       "id": "WS:HLWS368",
@@ -351,19 +416,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31016"
     },
     {
-      "id": "PQ:30530",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "James Naish",
-      "memberParty": "Lab",
-      "title": "Fluoride: Water Supply",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-21",
-      "context": "What criteria her Department will use to assess the further rollout of community water fluoridation in areas where oral health outcomes are poorest, whether Nottinghamshire and…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/30530"
-    },
-    {
       "id": "PQ:31902",
       "contentType": "question",
       "house": "Commons",
@@ -390,43 +442,17 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33581"
     },
     {
-      "id": "PQ:32278",
+      "id": "PQ:30530",
       "contentType": "question",
       "house": "Commons",
       "label": "Department of Health and Social Care",
-      "memberName": "Gideon Amos",
-      "memberParty": "LD",
-      "title": "Autism: Social Services",
+      "memberName": "James Naish",
+      "memberParty": "Lab",
+      "title": "Fluoride: Water Supply",
       "date": "2026-10-09",
-      "dateAnswered": "2026-10-19",
-      "context": "What training provision or guidance is given to Social Services staff regarding assessment of the welfare and needs of individuals with Autism Spectrum Disorder, given the rise in…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32278"
-    },
-    {
-      "id": "PQ:32593",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "MoD",
-      "memberName": "Ben Obese-Jecty",
-      "memberParty": "Con",
-      "title": "Defence: Telecommunications",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-16",
-      "context": "Pursuant to the Answer of 14 September 2026 to Question 23210 on Defence: Procurement, if he will set out the period covered by the Defence Investment Plan funding allocation for…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32593"
-    },
-    {
-      "id": "PQ:31772",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "MoD",
-      "memberName": "Ben Obese-Jecty",
-      "memberParty": "Con",
-      "title": "Defence: Telecommunications",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-16",
-      "context": "Pursuant to the answer of 8 September 2026 to question 23265 on Defence: Telecommunications, what is the latest schedule which corresponds to adequate funding having been…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31772"
+      "dateAnswered": "2026-10-21",
+      "context": "What criteria her Department will use to assess the further rollout of community water fluoridation in areas where oral health outcomes are poorest, whether Nottinghamshire and…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/30530"
     },
     {
       "id": "PQ:30172",
@@ -440,19 +466,6 @@
       "dateAnswered": "2026-10-15",
       "context": "Culture, Media and Sport, what steps her Department is taking to help increase levels of low-cost broadband options in Bexleyheath and Crayford.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30172"
-    },
-    {
-      "id": "PQ:30165",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Imogen Walker",
-      "memberParty": "Lab",
-      "title": "Project Gigabit: Hamilton and Clyde Valley",
-      "date": "2026-09-15",
-      "dateAnswered": "2026-10-12",
-      "context": "Culture, Media and Sport, what estimate she has made of the number of (a) households and (b) businesses in Hamilton and Clyde Valley constituency that will receive gigabit-capable…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-15/30165"
     },
     {
       "id": "PQ:29533",
