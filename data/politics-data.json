@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T18:37:23.829Z",
+  "generatedAt": "2026-10-24T22:17:11.754Z",
   "items": [
     {
       "id": "PQ:35951",
@@ -158,6 +158,30 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34158"
     },
     {
+      "id": "WS:HLWS368",
+      "contentType": "statement",
+      "house": "Lords",
+      "label": "DCMS",
+      "memberName": "Baroness Mackenzie of Sherwood",
+      "memberParty": "Lab",
+      "title": "Continuity of supply of telecommunications services",
+      "date": "2026-10-12",
+      "context": "I am repeating the following Written Ministerial Statement made today in the other place by my Right Honourable Friend the Secretary of State for the Department for Digital,…",
+      "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-10-12/HLWS368"
+    },
+    {
+      "id": "WS:HCWS358",
+      "contentType": "statement",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Lisa Nandy",
+      "memberParty": "Lab",
+      "title": "Continuity of supply of telecommunications services",
+      "date": "2026-10-12",
+      "context": "On Monday 5 October 2026, BT Group PLC announced it had acquired TalkTalk Telecom Group out of administration in a rescue deal. As has been widely reported, TalkTalk had been…",
+      "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-10-12/HCWS358"
+    },
+    {
       "id": "PQ:33748",
       "contentType": "question",
       "house": "Commons",
@@ -208,30 +232,6 @@
       "dateAnswered": "2026-10-19",
       "context": "Culture, Media and Sport, what assessment she has made of the quality of (i) 4G and (ii) 5G coverage across Newcastle Central and West constituency.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/34093"
-    },
-    {
-      "id": "WS:HLWS368",
-      "contentType": "statement",
-      "house": "Lords",
-      "label": "DCMS",
-      "memberName": "Baroness Mackenzie of Sherwood",
-      "memberParty": "Lab",
-      "title": "Continuity of supply of telecommunications services",
-      "date": "2026-10-12",
-      "context": "I am repeating the following Written Ministerial Statement made today in the other place by my Right Honourable Friend the Secretary of State for the Department for Digital,…",
-      "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-10-12/HLWS368"
-    },
-    {
-      "id": "WS:HCWS358",
-      "contentType": "statement",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Lisa Nandy",
-      "memberParty": "Lab",
-      "title": "Continuity of supply of telecommunications services",
-      "date": "2026-10-12",
-      "context": "On Monday 5 October 2026, BT Group PLC announced it had acquired TalkTalk Telecom Group out of administration in a rescue deal. As has been widely reported, TalkTalk had been…",
-      "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-10-12/HCWS358"
     },
     {
       "id": "PQ:33724",
