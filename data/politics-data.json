@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-24T22:17:11.754Z",
+  "generatedAt": "2026-10-25T03:31:23.014Z",
   "items": [
     {
       "id": "PQ:35951",
@@ -54,19 +54,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/35948"
     },
     {
-      "id": "PQ:35189",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "James MacCleary",
-      "memberParty": "LD",
-      "title": "Telecommunications: Supported Housing",
-      "date": "2026-10-15",
-      "dateAnswered": "2026-10-22",
-      "context": "Culture, Media and Sport, what assessment her department has made of the potential impact of homecare telecommunications in the event of a power cut.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-15/35189"
-    },
-    {
       "id": "PQ:35171",
       "contentType": "question",
       "house": "Commons",
@@ -78,6 +65,19 @@
       "dateAnswered": "2026-10-22",
       "context": "What estimate her Department has made of the number of people with foetal alcohol spectrum disorder in Camborne, Redruth and Hayle; and whether the forthcoming Mental Health…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-15/35171"
+    },
+    {
+      "id": "PQ:35189",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "James MacCleary",
+      "memberParty": "LD",
+      "title": "Telecommunications: Supported Housing",
+      "date": "2026-10-15",
+      "dateAnswered": "2026-10-22",
+      "context": "Culture, Media and Sport, what assessment her department has made of the potential impact of homecare telecommunications in the event of a power cut.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-15/35189"
     },
     {
       "id": "PQ:35445",
@@ -93,17 +93,17 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-15/35445"
     },
     {
-      "id": "PQ:34341",
+      "id": "PQ:34158",
       "contentType": "question",
       "house": "Commons",
-      "label": "MoD",
-      "memberName": "Stuart Anderson",
+      "label": "DfT",
+      "memberName": "Alison Griffiths",
       "memberParty": "Con",
-      "title": "Telecommunications Cables: Seas and Oceans",
+      "title": "Transpennine Express: WiFi",
       "date": "2026-10-13",
-      "dateAnswered": "2026-10-23",
-      "context": "What assessment his Department has made of the security of undersea cables and maritime choke points.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34341"
+      "dateAnswered": "2026-10-19",
+      "context": "Pursuant to the Answer of 8 June 2026 to Question 4286 on TransPennine Express, whether the business case for low earth orbit satellite connectivity on mainline trains has been…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34158"
     },
     {
       "id": "PQ:34517",
@@ -145,17 +145,17 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34515"
     },
     {
-      "id": "PQ:34158",
+      "id": "PQ:34341",
       "contentType": "question",
       "house": "Commons",
-      "label": "DfT",
-      "memberName": "Alison Griffiths",
+      "label": "MoD",
+      "memberName": "Stuart Anderson",
       "memberParty": "Con",
-      "title": "Transpennine Express: WiFi",
+      "title": "Telecommunications Cables: Seas and Oceans",
       "date": "2026-10-13",
-      "dateAnswered": "2026-10-19",
-      "context": "Pursuant to the Answer of 8 June 2026 to Question 4286 on TransPennine Express, whether the business case for low earth orbit satellite connectivity on mainline trains has been…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34158"
+      "dateAnswered": "2026-10-23",
+      "context": "What assessment his Department has made of the security of undersea cables and maritime choke points.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34341"
     },
     {
       "id": "WS:HLWS368",
