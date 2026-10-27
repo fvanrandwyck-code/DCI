@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T03:59:17.227Z",
+  "generatedAt": "2026-10-27T09:45:25.441Z",
   "items": [
     {
       "id": "PQ:35951",
@@ -208,19 +208,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/33746"
     },
     {
-      "id": "PQ:33813",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Connor Naismith",
-      "memberParty": "Lab",
-      "title": "Broadband: Optical Fibres",
-      "date": "2026-10-12",
-      "dateAnswered": "2026-10-20",
-      "context": "Culture, Media and Sport, what assessment she has made of the potential for existing fibre infrastructure installed by third-party operators to be utilised by other broadband…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/33813"
-    },
-    {
       "id": "PQ:34093",
       "contentType": "question",
       "house": "Commons",
@@ -232,6 +219,19 @@
       "dateAnswered": "2026-10-19",
       "context": "Culture, Media and Sport, what assessment she has made of the quality of (i) 4G and (ii) 5G coverage across Newcastle Central and West constituency.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/34093"
+    },
+    {
+      "id": "PQ:33813",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Connor Naismith",
+      "memberParty": "Lab",
+      "title": "Broadband: Optical Fibres",
+      "date": "2026-10-12",
+      "dateAnswered": "2026-10-20",
+      "context": "Culture, Media and Sport, what assessment she has made of the potential for existing fibre infrastructure installed by third-party operators to be utilised by other broadband…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/33813"
     },
     {
       "id": "PQ:33724",
@@ -247,6 +247,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/33724"
     },
     {
+      "id": "PQ:31745",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "James Naish",
+      "memberParty": "Lab",
+      "title": "Foetal Alcohol Spectrum Disorder: Health Services",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-26",
+      "context": "What assessment her Department has made of the potential merits of establishing a UK-wide Fetal Alcohol Spectrum Disorder Prevention and Response Programme to support prevention,…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31745"
+    },
+    {
       "id": "PQ:32363",
       "contentType": "question",
       "house": "Commons",
@@ -260,19 +273,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32363"
     },
     {
-      "id": "PQ:32908",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Daisy Cooper",
-      "memberParty": "LD",
-      "title": "Broadband and Pay Television: Fees and Charges",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-19",
-      "context": "Culture, Media and Sport, what assessment she has made of the potential merits of applying the principles of the (a) home and (b) motor insurance markets to tackling loyalty…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32908"
-    },
-    {
       "id": "PQ:30440",
       "contentType": "question",
       "house": "Commons",
@@ -284,6 +284,32 @@
       "dateAnswered": "2026-10-19",
       "context": "Culture, Media and Sport, what assessment she has made of whether existing legislation enables broadband providers to upgrade all existing infrastructure in multi-dwelling units…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/30440"
+    },
+    {
+      "id": "PQ:32061",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Anneliese Dodds",
+      "memberParty": "Lab",
+      "title": "Broadband: Rented Housing",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-19",
+      "context": "Culture, Media and Sport, what assessment she has made of the potential impact of renters being excluded from proposed measures to facilitate access to full fibre broadband on the…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32061"
+    },
+    {
+      "id": "PQ:32908",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Daisy Cooper",
+      "memberParty": "LD",
+      "title": "Broadband and Pay Television: Fees and Charges",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-19",
+      "context": "Culture, Media and Sport, what assessment she has made of the potential merits of applying the principles of the (a) home and (b) motor insurance markets to tackling loyalty…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32908"
     },
     {
       "id": "PQ:31879",
@@ -323,19 +349,6 @@
       "dateAnswered": "2026-10-19",
       "context": "Culture, Media and Sport, whether the migration of the analogue Public Switched Telephone Network to digital Voice over Internet Protocol is on track to be completed by January…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/30692"
-    },
-    {
-      "id": "PQ:32061",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Anneliese Dodds",
-      "memberParty": "Lab",
-      "title": "Broadband: Rented Housing",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-19",
-      "context": "Culture, Media and Sport, what assessment she has made of the potential impact of renters being excluded from proposed measures to facilitate access to full fibre broadband on the…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32061"
     },
     {
       "id": "PQ:31048",
@@ -401,19 +414,6 @@
       "dateAnswered": "2026-10-19",
       "context": "Culture, Media and Sport, what steps she is taking to improve mobile coverage in the rural parts of Hamilton and Clyde Valley covered by the Shared Rural Network.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31016"
-    },
-    {
-      "id": "PQ:31745",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "James Naish",
-      "memberParty": "Lab",
-      "title": "Foetal Alcohol Spectrum Disorder: Health Services",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-26",
-      "context": "What assessment her Department has made of the potential merits of establishing a UK-wide Fetal Alcohol Spectrum Disorder Prevention and Response Programme to support prevention,…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31745"
     },
     {
       "id": "PQ:30172",
