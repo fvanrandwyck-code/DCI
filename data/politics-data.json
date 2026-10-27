@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-27T17:35:51.172Z",
+  "generatedAt": "2026-10-27T23:33:59.843Z",
   "items": [
     {
       "id": "PQ:37349",
@@ -52,6 +52,19 @@
       "dateAnswered": "2026-10-27",
       "context": "Culture, Media and Sport, what assessment has been made of the impact on residents of existing multi-dwelling developments where telecommunications operators have determined that…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/36229"
+    },
+    {
+      "id": "PQ:36036",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department for Environment, Food and Rural Affairs",
+      "memberName": "Fleur Anderson",
+      "memberParty": "Lab",
+      "title": "Mobile Phones: Environment Protection",
+      "date": "2026-10-19",
+      "dateAnswered": "2026-10-27",
+      "context": "Food and Rural Affairs, whether she has considered setting targets or introducing other measures to extend the average lifespan of smartphones in the UK and reduce the…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/36036"
     },
     {
       "id": "PQ:35951",
@@ -145,32 +158,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-15/35189"
     },
     {
-      "id": "PQ:35445",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Steff Aquarone",
-      "memberParty": "LD",
-      "title": "Mobile Market Review",
-      "date": "2026-10-15",
-      "dateAnswered": "2026-10-20",
-      "context": "Culture, Media and Sport, when the Government will publish the Mobile Market Review.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-15/35445"
-    },
-    {
-      "id": "PQ:34341",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "MoD",
-      "memberName": "Stuart Anderson",
-      "memberParty": "Con",
-      "title": "Telecommunications Cables: Seas and Oceans",
-      "date": "2026-10-13",
-      "dateAnswered": "2026-10-23",
-      "context": "What assessment his Department has made of the security of undersea cables and maritime choke points.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34341"
-    },
-    {
       "id": "PQ:34158",
       "contentType": "question",
       "house": "Commons",
@@ -184,30 +171,17 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34158"
     },
     {
-      "id": "PQ:34517",
+      "id": "PQ:34341",
       "contentType": "question",
       "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "James McMurdock",
-      "memberParty": "Ind",
-      "title": "Hypermobility: Health Services",
+      "label": "MoD",
+      "memberName": "Stuart Anderson",
+      "memberParty": "Con",
+      "title": "Telecommunications Cables: Seas and Oceans",
       "date": "2026-10-13",
-      "dateAnswered": "2026-10-19",
-      "context": "What assessment she has made of whether patients with hypermobility spectrum disorders have equitable access to a) specialist physiotherapy, b) occupational therapy and c) pain…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34517"
-    },
-    {
-      "id": "PQ:34516",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "James McMurdock",
-      "memberParty": "Ind",
-      "title": "Hypermobility: General Practitioners",
-      "date": "2026-10-13",
-      "dateAnswered": "2026-10-19",
-      "context": "What steps she is taking to help improve awareness among GPs of the a) symptoms and b) clinical presentation of hypermobility spectrum disorders.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34516"
+      "dateAnswered": "2026-10-23",
+      "context": "What assessment his Department has made of the security of undersea cables and maritime choke points.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34341"
     },
     {
       "id": "WS:HLWS368",
@@ -232,6 +206,58 @@
       "date": "2026-10-12",
       "context": "On Monday 5 October 2026, BT Group PLC announced it had acquired TalkTalk Telecom Group out of administration in a rescue deal. As has been widely reported, TalkTalk had been…",
       "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-10-12/HCWS358"
+    },
+    {
+      "id": "PQ:33748",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Alex Brewer",
+      "memberParty": "LD",
+      "title": "Broadband",
+      "date": "2026-10-12",
+      "dateAnswered": "2026-10-20",
+      "context": "Culture, Media and Sport, what support her Department makes available to communities seeking to contribute financially towards the delivery of Fibre to the Premises broadband…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/33748"
+    },
+    {
+      "id": "PQ:33746",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Alex Brewer",
+      "memberParty": "LD",
+      "title": "Broadband",
+      "date": "2026-10-12",
+      "dateAnswered": "2026-10-20",
+      "context": "Culture, Media and Sport, what support her Department provides to communities that are not included in suppliers' planned full fibre broadband rollout programmes.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/33746"
+    },
+    {
+      "id": "PQ:33813",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Connor Naismith",
+      "memberParty": "Lab",
+      "title": "Broadband: Optical Fibres",
+      "date": "2026-10-12",
+      "dateAnswered": "2026-10-20",
+      "context": "Culture, Media and Sport, what assessment she has made of the potential for existing fibre infrastructure installed by third-party operators to be utilised by other broadband…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/33813"
+    },
+    {
+      "id": "PQ:34093",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Dame Chi Onwurah",
+      "memberParty": "Lab",
+      "title": "Mobile Broadband: Newcastle upon Tyne Central and West",
+      "date": "2026-10-12",
+      "dateAnswered": "2026-10-19",
+      "context": "Culture, Media and Sport, what assessment she has made of the quality of (i) 4G and (ii) 5G coverage across Newcastle Central and West constituency.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/34093"
     },
     {
       "id": "PQ:HL3937",
@@ -312,58 +338,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/HL3932"
     },
     {
-      "id": "PQ:33748",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Alex Brewer",
-      "memberParty": "LD",
-      "title": "Broadband",
-      "date": "2026-10-12",
-      "dateAnswered": "2026-10-20",
-      "context": "Culture, Media and Sport, what support her Department makes available to communities seeking to contribute financially towards the delivery of Fibre to the Premises broadband…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/33748"
-    },
-    {
-      "id": "PQ:33746",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Alex Brewer",
-      "memberParty": "LD",
-      "title": "Broadband",
-      "date": "2026-10-12",
-      "dateAnswered": "2026-10-20",
-      "context": "Culture, Media and Sport, what support her Department provides to communities that are not included in suppliers' planned full fibre broadband rollout programmes.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/33746"
-    },
-    {
-      "id": "PQ:33813",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Connor Naismith",
-      "memberParty": "Lab",
-      "title": "Broadband: Optical Fibres",
-      "date": "2026-10-12",
-      "dateAnswered": "2026-10-20",
-      "context": "Culture, Media and Sport, what assessment she has made of the potential for existing fibre infrastructure installed by third-party operators to be utilised by other broadband…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/33813"
-    },
-    {
-      "id": "PQ:34093",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Dame Chi Onwurah",
-      "memberParty": "Lab",
-      "title": "Mobile Broadband: Newcastle upon Tyne Central and West",
-      "date": "2026-10-12",
-      "dateAnswered": "2026-10-19",
-      "context": "Culture, Media and Sport, what assessment she has made of the quality of (i) 4G and (ii) 5G coverage across Newcastle Central and West constituency.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/34093"
-    },
-    {
       "id": "PQ:31681",
       "contentType": "question",
       "house": "Commons",
@@ -375,19 +349,6 @@
       "dateAnswered": "2026-10-27",
       "context": "Culture, Media and Sport, what discussions she has had with [i] BT Openreach and [ii] other full fibre providers on ensuring the swift roll out of FTTP broadband to households in…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31681"
-    },
-    {
-      "id": "PQ:31745",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "James Naish",
-      "memberParty": "Lab",
-      "title": "Foetal Alcohol Spectrum Disorder: Health Services",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-26",
-      "context": "What assessment her Department has made of the potential merits of establishing a UK-wide Fetal Alcohol Spectrum Disorder Prevention and Response Programme to support prevention,…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31745"
     },
     {
       "id": "PQ:32363",
@@ -544,6 +505,32 @@
       "dateAnswered": "2026-10-19",
       "context": "Culture, Media and Sport, what steps she is taking to improve mobile coverage in the rural parts of Hamilton and Clyde Valley covered by the Shared Rural Network.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31016"
+    },
+    {
+      "id": "PQ:31745",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "James Naish",
+      "memberParty": "Lab",
+      "title": "Foetal Alcohol Spectrum Disorder: Health Services",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-26",
+      "context": "What assessment her Department has made of the potential merits of establishing a UK-wide Fetal Alcohol Spectrum Disorder Prevention and Response Programme to support prevention,…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31745"
+    },
+    {
+      "id": "PQ:29533",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "James Wild",
+      "memberParty": "Con",
+      "title": "Mobile Broadband: Rural Areas",
+      "date": "2026-09-14",
+      "dateAnswered": "2026-10-15",
+      "context": "Culture, Media and Sport, what assessment she has made of the potential effectiveness of the commercial rollout in filling remaining coverage gaps once the Shared Rural Network…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-14/29533"
     },
     {
       "id": "PQ:27307",
