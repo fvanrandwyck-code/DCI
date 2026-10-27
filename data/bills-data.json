@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T21:42:59.400Z",
+  "generatedAt": "2026-10-27T06:27:47.819Z",
   "bills": [
     {
       "billId": 4035,
@@ -7,12 +7,12 @@
       "url": "https://bills.parliament.uk/bills/4035",
       "status": "active",
       "currentHouse": "Lords",
-      "currentStageName": "Report stage",
+      "currentStageName": "3rd reading",
       "currentStageHouse": "Lords",
-      "currentStageIndex": 8,
-      "nextMilestone": "No sitting date scheduled yet.",
+      "currentStageIndex": 9,
+      "nextMilestone": "Sitting scheduled for 2 November 2026.",
       "lastStageActivityDate": "2026-10-26",
-      "lastConfirmedAt": "2026-10-26T21:42:59.400Z",
+      "lastConfirmedAt": "2026-10-27T06:27:47.819Z",
       "stages": [
         {
           "index": 0,
@@ -73,14 +73,14 @@
         {
           "index": 8,
           "reached": true,
-          "current": true,
+          "current": false,
           "house": "Lords",
           "name": "Report stage"
         },
         {
           "index": 9,
-          "reached": false,
-          "current": false,
+          "reached": true,
+          "current": true,
           "house": "Lords",
           "name": "3rd reading"
         },
