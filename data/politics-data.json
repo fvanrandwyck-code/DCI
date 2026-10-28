@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T04:23:02.008Z",
+  "generatedAt": "2026-10-28T14:54:44.651Z",
   "items": [
     {
       "id": "PQ:37349",
@@ -119,19 +119,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/35948"
     },
     {
-      "id": "PQ:36186",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DfT",
-      "memberName": "Shivani Raja",
-      "memberParty": "Con",
-      "title": "Heathrow Airport: Reorganisation",
-      "date": "2026-10-19",
-      "dateAnswered": "2026-10-27",
-      "context": "What discussions her Department has had with Heathrow Airport on its Terminal Occupancy Review and the potential implications for the UK's international connectivity and…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/36186"
-    },
-    {
       "id": "PQ:35171",
       "contentType": "question",
       "house": "Commons",
@@ -171,19 +158,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34341"
     },
     {
-      "id": "PQ:34158",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DfT",
-      "memberName": "Alison Griffiths",
-      "memberParty": "Con",
-      "title": "Transpennine Express: WiFi",
-      "date": "2026-10-13",
-      "dateAnswered": "2026-10-19",
-      "context": "Pursuant to the Answer of 8 June 2026 to Question 4286 on TransPennine Express, whether the business case for low earth orbit satellite connectivity on mainline trains has been…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34158"
-    },
-    {
       "id": "WS:HLWS368",
       "contentType": "statement",
       "house": "Lords",
@@ -206,6 +180,45 @@
       "date": "2026-10-12",
       "context": "On Monday 5 October 2026, BT Group PLC announced it had acquired TalkTalk Telecom Group out of administration in a rescue deal. As has been widely reported, TalkTalk had been…",
       "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-10-12/HCWS358"
+    },
+    {
+      "id": "PQ:33747",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Alex Brewer",
+      "memberParty": "LD",
+      "title": "Broadband: Rural Areas",
+      "date": "2026-10-12",
+      "dateAnswered": "2026-10-28",
+      "context": "Culture, Media and Sport, what assessment her Department has made of the potential impact on rural communities of continued reliance on Fibre to the Cabinet broadband where Fibre…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/33747"
+    },
+    {
+      "id": "PQ:34095",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Dame Chi Onwurah",
+      "memberParty": "Lab",
+      "title": "Telecommunications",
+      "date": "2026-10-12",
+      "dateAnswered": "2026-10-28",
+      "context": "Culture, Media and Sport, what discussions she has had with Ofcom on the delivery of strategic priorities for the telecoms sector, the promotion of investment and infrastructure…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/34095"
+    },
+    {
+      "id": "PQ:34094",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Dame Chi Onwurah",
+      "memberParty": "Lab",
+      "title": "Broadband: Infrastructure",
+      "date": "2026-10-12",
+      "dateAnswered": "2026-10-28",
+      "context": "Culture, Media and Sport, whether she has made an assessment of the potential risk that targeted wholesale discounts by Openreach could reduce incentives for alternative network…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/34094"
     },
     {
       "id": "PQ:33748",
@@ -507,6 +520,45 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31016"
     },
     {
+      "id": "PQ:33142",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Anna Sabine",
+      "memberParty": "LD",
+      "title": "Foetal Alcohol Spectrum Disorder",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-28",
+      "context": "How much of the £3.4 billion Public Health Grant ring-fenced for drug and alcohol treatment over 2026-27 has been commissioned for prenatal alcohol exposure and FASD services in…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33142"
+    },
+    {
+      "id": "PQ:31104",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Anna Sabine",
+      "memberParty": "LD",
+      "title": "Foetal Alcohol Spectrum Disorder: Diagnosis",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-28",
+      "context": "What training is provided to health, education and social care professionals to distinguish presentations of Fetal Alcohol Spectrum Disorder from trauma or behavioural…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31104"
+    },
+    {
+      "id": "PQ:31103",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Anna Sabine",
+      "memberParty": "LD",
+      "title": "Foetal Alcohol Spectrum Disorder: Young People",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-28",
+      "context": "What guidance her Department issues to health and social care professionals on conducting decision-specific Mental Capacity Act 2005 assessments for young people with Fetal…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31103"
+    },
+    {
       "id": "PQ:31745",
       "contentType": "question",
       "house": "Commons",
@@ -520,17 +572,17 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31745"
     },
     {
-      "id": "PQ:29533",
+      "id": "PQ:33303",
       "contentType": "question",
       "house": "Commons",
-      "label": "DCMS",
-      "memberName": "James Wild",
+      "label": "Cabinet Office",
+      "memberName": "Stuart Anderson",
       "memberParty": "Con",
-      "title": "Mobile Broadband: Rural Areas",
-      "date": "2026-09-14",
-      "dateAnswered": "2026-10-15",
-      "context": "Culture, Media and Sport, what assessment she has made of the potential effectiveness of the commercial rollout in filling remaining coverage gaps once the Shared Rural Network…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-14/29533"
+      "title": "Emergencies: Mobile Phones",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-28",
+      "context": "What funding has been allocated to enhance public emergency alert systems in order to improve domestic resilience.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33303"
     },
     {
       "id": "PQ:27307",
