@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T04:42:31.085Z",
+  "generatedAt": "2026-10-29T14:59:27.799Z",
   "items": [
     {
       "id": "PQ:37349",
@@ -54,6 +54,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/36229"
     },
     {
+      "id": "PQ:HL4202",
+      "contentType": "question",
+      "house": "Lords",
+      "label": "Department for Environment, Food and Rural Affairs",
+      "memberName": "Lord Bridges of Headley",
+      "memberParty": "Con",
+      "title": "Emergencies and National Security",
+      "date": "2026-10-19",
+      "dateAnswered": "2026-10-29",
+      "context": "Which public authority would have lead responsibility for ensuring that vulnerable households continued to receive food during a nationwide electricity and telecommunications…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/HL4202"
+    },
+    {
       "id": "PQ:36036",
       "contentType": "question",
       "house": "Commons",
@@ -78,45 +91,6 @@
       "dateAnswered": "2026-10-23",
       "context": "With reference to op Reckoning, how the department plans to work with Apple and major Android developers to implement tactics to reduce phone theft.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/35951"
-    },
-    {
-      "id": "PQ:35950",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Home Office",
-      "memberName": "Martin Wrigley",
-      "memberParty": "LD",
-      "title": "Mobile Phones: Theft",
-      "date": "2026-10-19",
-      "dateAnswered": "2026-10-23",
-      "context": "What information the department plans to share with forces outside of the metropolitan police area as a result of Op Reckoning.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/35950"
-    },
-    {
-      "id": "PQ:35949",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Home Office",
-      "memberName": "Martin Wrigley",
-      "memberParty": "LD",
-      "title": "Mobile Phones: Theft",
-      "date": "2026-10-19",
-      "dateAnswered": "2026-10-23",
-      "context": "What number of phone thefts have been reported in Devon & Cornwall in 2026 compared to a) The Met Force area and b) the rest of the country.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/35949"
-    },
-    {
-      "id": "PQ:35948",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Home Office",
-      "memberName": "Martin Wrigley",
-      "memberParty": "LD",
-      "title": "Mobile Phones: Theft",
-      "date": "2026-10-19",
-      "dateAnswered": "2026-10-23",
-      "context": "Whether other forces are conduction similar tasks like the metropolitan police is under Op Reckoning, and what outcomes have come from these.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/35948"
     },
     {
       "id": "PQ:35171",
@@ -598,19 +572,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31103"
     },
     {
-      "id": "PQ:31745",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "James Naish",
-      "memberParty": "Lab",
-      "title": "Foetal Alcohol Spectrum Disorder: Health Services",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-26",
-      "context": "What assessment her Department has made of the potential merits of establishing a UK-wide Fetal Alcohol Spectrum Disorder Prevention and Response Programme to support prevention,…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31745"
-    },
-    {
       "id": "PQ:33303",
       "contentType": "question",
       "house": "Commons",
@@ -622,6 +583,19 @@
       "dateAnswered": "2026-10-28",
       "context": "What funding has been allocated to enhance public emergency alert systems in order to improve domestic resilience.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33303"
+    },
+    {
+      "id": "PQ:31745",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "James Naish",
+      "memberParty": "Lab",
+      "title": "Foetal Alcohol Spectrum Disorder: Health Services",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-26",
+      "context": "What assessment her Department has made of the potential merits of establishing a UK-wide Fetal Alcohol Spectrum Disorder Prevention and Response Programme to support prevention,…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31745"
     },
     {
       "id": "PQ:27307",
