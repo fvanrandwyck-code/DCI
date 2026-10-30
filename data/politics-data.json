@@ -1,6 +1,19 @@
 {
-  "generatedAt": "2026-10-30T04:42:14.472Z",
+  "generatedAt": "2026-10-30T14:53:21.179Z",
   "items": [
+    {
+      "id": "PQ:37427",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Richard Tice",
+      "memberParty": "RUK",
+      "title": "Broadband: Rural Areas",
+      "date": "2026-10-22",
+      "dateAnswered": "2026-10-30",
+      "context": "Culture, Media and Sport, what plans her Department has to support the provision of affordable, reliable broadband to households in rural constituencies that remain outside…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-22/37427"
+    },
     {
       "id": "PQ:37349",
       "contentType": "question",
@@ -39,6 +52,32 @@
       "dateAnswered": "2026-10-27",
       "context": "Culture, Media and Sport, what steps she is taking to ensure that people can make emergency phone calls where they have (a) limited and (b) no mobile phone signal in Bolsover…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-22/37362"
+    },
+    {
+      "id": "PQ:37301",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "MoD",
+      "memberName": "Ben Obese-Jecty",
+      "memberParty": "Con",
+      "title": "Russia: Telecommunications Cables",
+      "date": "2026-10-22",
+      "dateAnswered": "2026-10-30",
+      "context": "Pursuant to the answer of 19 October 2026 to question 33724 on Russia: Telecommunications cables, what progress he has made on increasing the testing of uncrewed underwater…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-22/37301"
+    },
+    {
+      "id": "PQ:37299",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "MoD",
+      "memberName": "Ben Obese-Jecty",
+      "memberParty": "Con",
+      "title": "Russia: Telecommunications Cables",
+      "date": "2026-10-22",
+      "dateAnswered": "2026-10-30",
+      "context": "Pursuant to the answer of 19 October 2026 to question 33724 on Russia: Telecommunications cables, what assessment he has made of the potential merits of the deployment of uncrewed…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-22/37299"
     },
     {
       "id": "PQ:36821",
@@ -104,32 +143,6 @@
       "dateAnswered": "2026-10-27",
       "context": "Food and Rural Affairs, whether she has considered setting targets or introducing other measures to extend the average lifespan of smartphones in the UK and reduce the…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/36036"
-    },
-    {
-      "id": "PQ:35171",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Perran Moon",
-      "memberParty": "Lab",
-      "title": "Foetal Alcohol Spectrum Disorder: Mental Health Services",
-      "date": "2026-10-15",
-      "dateAnswered": "2026-10-26",
-      "context": "What estimate her Department has made of the number of people with foetal alcohol spectrum disorder in Camborne, Redruth and Hayle; and whether the forthcoming Mental Health…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-15/35171"
-    },
-    {
-      "id": "PQ:HL4180",
-      "contentType": "question",
-      "house": "Lords",
-      "label": "DESNZ",
-      "memberName": "Lord Spellar",
-      "memberParty": "Lab",
-      "title": "National Grid: Technology",
-      "date": "2026-10-15",
-      "dateAnswered": "2026-10-29",
-      "context": "What steps they are taking to ensure that electricity networks are adopting new technologies to more effectively utilise existing network infrastructure.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-15/HL4180"
     },
     {
       "id": "PQ:HL4126",
@@ -492,45 +505,6 @@
       "dateAnswered": "2026-10-19",
       "context": "Culture, Media and Sport, whether her Department has made an assessment of the adequacy of the current regulatory framework for protecting vulnerable customers in the…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31048"
-    },
-    {
-      "id": "PQ:31466",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Dr Neil Shastri-Hurst",
-      "memberParty": "Con",
-      "title": "Broadband: Universal Service Obligation",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-19",
-      "context": "Culture, Media and Sport, when the Government plans to publish its response to the consultation on reviewing the broadband Universal Service Obligation, which closed on 27…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31466"
-    },
-    {
-      "id": "PQ:32888",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Anneliese Dodds",
-      "memberParty": "Lab",
-      "title": "Leasehold: Broadband",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-19",
-      "context": "Culture, Media and Sport, what steps her Department is taking to ensure that leaseholders can request a full fibre broadband connection.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32888"
-    },
-    {
-      "id": "PQ:33078",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Callum Anderson",
-      "memberParty": "Lab",
-      "title": "Broadband: Buckinghamshire ",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-19",
-      "context": "Culture, Media and Sport, what steps she is taking to ensure that rural communities in Buckinghamshire receive timely improvements in broadband and mobile connectivity.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33078"
     },
     {
       "id": "PQ:33142",
