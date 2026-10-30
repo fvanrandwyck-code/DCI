@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T14:53:21.179Z",
+  "generatedAt": "2026-10-30T20:28:21.023Z",
   "items": [
     {
       "id": "PQ:37427",
@@ -143,6 +143,19 @@
       "dateAnswered": "2026-10-27",
       "context": "Food and Rural Affairs, whether she has considered setting targets or introducing other measures to extend the average lifespan of smartphones in the UK and reduce the…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/36036"
+    },
+    {
+      "id": "PQ:35667",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Cabinet Office",
+      "memberName": "Stuart Anderson",
+      "memberParty": "Con",
+      "title": "Emergencies: Mobile Phones",
+      "date": "2026-10-16",
+      "dateAnswered": "2026-10-30",
+      "context": "What plans she has for future UK Emergency Alerts system tests.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-16/35667"
     },
     {
       "id": "PQ:HL4126",
