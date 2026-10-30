@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-29T20:54:55.586Z",
+  "generatedAt": "2026-10-30T04:42:14.472Z",
   "items": [
     {
       "id": "PQ:37349",
@@ -41,6 +41,32 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-22/37362"
     },
     {
+      "id": "PQ:36821",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Home Office",
+      "memberName": "Pippa Heylings",
+      "memberParty": "LD",
+      "title": "Mobile Phones: Fraud",
+      "date": "2026-10-21",
+      "dateAnswered": "2026-10-29",
+      "context": "What discussions she has had with (a) Ofcom and (b) mobile network operators on establishing a national protocol to immediately suspend or block mobile telephone numbers that have…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-21/36821"
+    },
+    {
+      "id": "PQ:36727",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Jim Shannon",
+      "memberParty": "DUP",
+      "title": "Autism: Diagnosis",
+      "date": "2026-10-21",
+      "dateAnswered": "2026-10-29",
+      "context": "What steps she is taking to reduce waiting times for diagnosis of autism spectrum disorder.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-21/36727"
+    },
+    {
       "id": "PQ:36229",
       "contentType": "question",
       "house": "Commons",
@@ -80,19 +106,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/36036"
     },
     {
-      "id": "PQ:35951",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Home Office",
-      "memberName": "Martin Wrigley",
-      "memberParty": "LD",
-      "title": "Mobile Phones: Theft",
-      "date": "2026-10-19",
-      "dateAnswered": "2026-10-23",
-      "context": "With reference to op Reckoning, how the department plans to work with Apple and major Android developers to implement tactics to reduce phone theft.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/35951"
-    },
-    {
       "id": "PQ:35171",
       "contentType": "question",
       "house": "Commons",
@@ -106,6 +119,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-15/35171"
     },
     {
+      "id": "PQ:HL4180",
+      "contentType": "question",
+      "house": "Lords",
+      "label": "DESNZ",
+      "memberName": "Lord Spellar",
+      "memberParty": "Lab",
+      "title": "National Grid: Technology",
+      "date": "2026-10-15",
+      "dateAnswered": "2026-10-29",
+      "context": "What steps they are taking to ensure that electricity networks are adopting new technologies to more effectively utilise existing network infrastructure.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-15/HL4180"
+    },
+    {
       "id": "PQ:HL4126",
       "contentType": "question",
       "house": "Lords",
@@ -117,19 +143,6 @@
       "dateAnswered": "2026-10-28",
       "context": "What steps they are taking to ensure that access to critical broadband infrastructure is protected in rural areas.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-14/HL4126"
-    },
-    {
-      "id": "PQ:34341",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "MoD",
-      "memberName": "Stuart Anderson",
-      "memberParty": "Con",
-      "title": "Telecommunications Cables: Seas and Oceans",
-      "date": "2026-10-13",
-      "dateAnswered": "2026-10-23",
-      "context": "What assessment his Department has made of the security of undersea cables and maritime choke points.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34341"
     },
     {
       "id": "WS:HLWS368",
@@ -167,84 +180,6 @@
       "dateAnswered": "2026-10-28",
       "context": "Culture, Media and Sport, what assessment her Department has made of the potential impact on rural communities of continued reliance on Fibre to the Cabinet broadband where Fibre…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/33747"
-    },
-    {
-      "id": "PQ:HL3937",
-      "contentType": "question",
-      "house": "Lords",
-      "label": "Department of Health and Social Care",
-      "memberName": "Lord Campbell-Savours",
-      "memberParty": "Lab",
-      "title": "Foetal Alcohol Spectrum Disorder: Health Services",
-      "date": "2026-10-12",
-      "dateAnswered": "2026-10-27",
-      "context": "What NHS services are available for the treatment of people who suffer from fetal alcohol spectrum disorder.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/HL3937"
-    },
-    {
-      "id": "PQ:HL3936",
-      "contentType": "question",
-      "house": "Lords",
-      "label": "Department of Health and Social Care",
-      "memberName": "Lord Campbell-Savours",
-      "memberParty": "Lab",
-      "title": "Foetal Alcohol Spectrum Disorder: Health Services",
-      "date": "2026-10-12",
-      "dateAnswered": "2026-10-27",
-      "context": "What estimate they have made of the cost to the taxpayer of support for people suffering from fetal alcohol spectrum disorder.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/HL3936"
-    },
-    {
-      "id": "PQ:HL3935",
-      "contentType": "question",
-      "house": "Lords",
-      "label": "Department of Health and Social Care",
-      "memberName": "Lord Campbell-Savours",
-      "memberParty": "Lab",
-      "title": "Foetal Alcohol Spectrum Disorder",
-      "date": "2026-10-12",
-      "dateAnswered": "2026-10-27",
-      "context": "What working groups, if any, exist within the Department of Health and Social Care for the consideration of fetal alcohol spectrum disorder.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/HL3935"
-    },
-    {
-      "id": "PQ:HL3934",
-      "contentType": "question",
-      "house": "Lords",
-      "label": "Department of Health and Social Care",
-      "memberName": "Lord Campbell-Savours",
-      "memberParty": "Lab",
-      "title": "Foetal Alcohol Spectrum Disorder",
-      "date": "2026-10-12",
-      "dateAnswered": "2026-10-27",
-      "context": "What estimate they have made of the incidence of fetal alcohol spectrum disorder.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/HL3934"
-    },
-    {
-      "id": "PQ:HL3933",
-      "contentType": "question",
-      "house": "Lords",
-      "label": "Department of Health and Social Care",
-      "memberName": "Lord Campbell-Savours",
-      "memberParty": "Lab",
-      "title": "Foetal Alcohol Spectrum Disorder",
-      "date": "2026-10-12",
-      "dateAnswered": "2026-10-27",
-      "context": "To what extent they recognise alcohol abuse as a contributory factor in the incidence of fetal alcohol spectrum disorder.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/HL3933"
-    },
-    {
-      "id": "PQ:HL3932",
-      "contentType": "question",
-      "house": "Lords",
-      "label": "Department of Health and Social Care",
-      "memberName": "Lord Campbell-Savours",
-      "memberParty": "Lab",
-      "title": "Foetal Alcohol Spectrum Disorder: Mental Health Services",
-      "date": "2026-10-12",
-      "dateAnswered": "2026-10-27",
-      "context": "To what extent fetal alcohol spectrum disorder will be considered as part of the creation of the new mental health strategy.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/HL3932"
     },
     {
       "id": "PQ:34095",
@@ -325,6 +260,97 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/34093"
     },
     {
+      "id": "PQ:HL3937",
+      "contentType": "question",
+      "house": "Lords",
+      "label": "Department of Health and Social Care",
+      "memberName": "Lord Campbell-Savours",
+      "memberParty": "Lab",
+      "title": "Foetal Alcohol Spectrum Disorder: Health Services",
+      "date": "2026-10-12",
+      "dateAnswered": "2026-10-27",
+      "context": "What NHS services are available for the treatment of people who suffer from fetal alcohol spectrum disorder.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/HL3937"
+    },
+    {
+      "id": "PQ:HL3936",
+      "contentType": "question",
+      "house": "Lords",
+      "label": "Department of Health and Social Care",
+      "memberName": "Lord Campbell-Savours",
+      "memberParty": "Lab",
+      "title": "Foetal Alcohol Spectrum Disorder: Health Services",
+      "date": "2026-10-12",
+      "dateAnswered": "2026-10-27",
+      "context": "What estimate they have made of the cost to the taxpayer of support for people suffering from fetal alcohol spectrum disorder.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/HL3936"
+    },
+    {
+      "id": "PQ:HL3935",
+      "contentType": "question",
+      "house": "Lords",
+      "label": "Department of Health and Social Care",
+      "memberName": "Lord Campbell-Savours",
+      "memberParty": "Lab",
+      "title": "Foetal Alcohol Spectrum Disorder",
+      "date": "2026-10-12",
+      "dateAnswered": "2026-10-27",
+      "context": "What working groups, if any, exist within the Department of Health and Social Care for the consideration of fetal alcohol spectrum disorder.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/HL3935"
+    },
+    {
+      "id": "PQ:HL3934",
+      "contentType": "question",
+      "house": "Lords",
+      "label": "Department of Health and Social Care",
+      "memberName": "Lord Campbell-Savours",
+      "memberParty": "Lab",
+      "title": "Foetal Alcohol Spectrum Disorder",
+      "date": "2026-10-12",
+      "dateAnswered": "2026-10-27",
+      "context": "What estimate they have made of the incidence of fetal alcohol spectrum disorder.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/HL3934"
+    },
+    {
+      "id": "PQ:HL3933",
+      "contentType": "question",
+      "house": "Lords",
+      "label": "Department of Health and Social Care",
+      "memberName": "Lord Campbell-Savours",
+      "memberParty": "Lab",
+      "title": "Foetal Alcohol Spectrum Disorder",
+      "date": "2026-10-12",
+      "dateAnswered": "2026-10-27",
+      "context": "To what extent they recognise alcohol abuse as a contributory factor in the incidence of fetal alcohol spectrum disorder.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/HL3933"
+    },
+    {
+      "id": "PQ:HL3932",
+      "contentType": "question",
+      "house": "Lords",
+      "label": "Department of Health and Social Care",
+      "memberName": "Lord Campbell-Savours",
+      "memberParty": "Lab",
+      "title": "Foetal Alcohol Spectrum Disorder: Mental Health Services",
+      "date": "2026-10-12",
+      "dateAnswered": "2026-10-27",
+      "context": "To what extent fetal alcohol spectrum disorder will be considered as part of the creation of the new mental health strategy.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/HL3932"
+    },
+    {
+      "id": "PQ:31675",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Stuart Anderson",
+      "memberParty": "Con",
+      "title": "Telecommunications: Cybersecurity",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-28",
+      "context": "Culture, Media and Sport, what steps her Department is taking to help protect foundational telecommunications infrastructure from state-sponsored cyber espionage.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31675"
+    },
+    {
       "id": "PQ:33053",
       "contentType": "question",
       "house": "Commons",
@@ -351,56 +377,17 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/30483"
     },
     {
-      "id": "PQ:33142",
+      "id": "PQ:31681",
       "contentType": "question",
       "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Anna Sabine",
-      "memberParty": "LD",
-      "title": "Foetal Alcohol Spectrum Disorder",
+      "label": "DCMS",
+      "memberName": "Dr Luke Evans",
+      "memberParty": "Con",
+      "title": "Broadband: Hinckley",
       "date": "2026-10-09",
-      "dateAnswered": "2026-10-28",
-      "context": "How much of the £3.4 billion Public Health Grant ring-fenced for drug and alcohol treatment over 2026-27 has been commissioned for prenatal alcohol exposure and FASD services in…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33142"
-    },
-    {
-      "id": "PQ:31104",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Anna Sabine",
-      "memberParty": "LD",
-      "title": "Foetal Alcohol Spectrum Disorder: Diagnosis",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-28",
-      "context": "What training is provided to health, education and social care professionals to distinguish presentations of Fetal Alcohol Spectrum Disorder from trauma or behavioural…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31104"
-    },
-    {
-      "id": "PQ:31103",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Anna Sabine",
-      "memberParty": "LD",
-      "title": "Foetal Alcohol Spectrum Disorder: Young People",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-28",
-      "context": "What guidance her Department issues to health and social care professionals on conducting decision-specific Mental Capacity Act 2005 assessments for young people with Fetal…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31103"
-    },
-    {
-      "id": "PQ:31745",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "James Naish",
-      "memberParty": "Lab",
-      "title": "Foetal Alcohol Spectrum Disorder: Health Services",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-26",
-      "context": "What assessment her Department has made of the potential merits of establishing a UK-wide Fetal Alcohol Spectrum Disorder Prevention and Response Programme to support prevention,…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31745"
+      "dateAnswered": "2026-10-27",
+      "context": "Culture, Media and Sport, what discussions she has had with [i] BT Openreach and [ii] other full fibre providers on ensuring the swift roll out of FTTP broadband to households in…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31681"
     },
     {
       "id": "PQ:32363",
@@ -414,32 +401,6 @@
       "dateAnswered": "2026-10-22",
       "context": "Culture, Media and Sport, what progress his Department has made on extending gigabit capable broadband coverage in North East Somerset and Hanham constituency.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32363"
-    },
-    {
-      "id": "PQ:31675",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Stuart Anderson",
-      "memberParty": "Con",
-      "title": "Telecommunications: Cybersecurity",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-28",
-      "context": "Culture, Media and Sport, what steps her Department is taking to help protect foundational telecommunications infrastructure from state-sponsored cyber espionage.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31675"
-    },
-    {
-      "id": "PQ:31681",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Dr Luke Evans",
-      "memberParty": "Con",
-      "title": "Broadband: Hinckley",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-27",
-      "context": "Culture, Media and Sport, what discussions she has had with [i] BT Openreach and [ii] other full fibre providers on ensuring the swift roll out of FTTP broadband to households in…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31681"
     },
     {
       "id": "PQ:32908",
@@ -572,17 +533,43 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33078"
     },
     {
-      "id": "PQ:31016",
+      "id": "PQ:33142",
       "contentType": "question",
       "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Imogen Walker",
-      "memberParty": "Lab",
-      "title": "Mobile Phones: Rural Areas",
+      "label": "Department of Health and Social Care",
+      "memberName": "Anna Sabine",
+      "memberParty": "LD",
+      "title": "Foetal Alcohol Spectrum Disorder",
       "date": "2026-10-09",
-      "dateAnswered": "2026-10-19",
-      "context": "Culture, Media and Sport, what steps she is taking to improve mobile coverage in the rural parts of Hamilton and Clyde Valley covered by the Shared Rural Network.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31016"
+      "dateAnswered": "2026-10-28",
+      "context": "How much of the £3.4 billion Public Health Grant ring-fenced for drug and alcohol treatment over 2026-27 has been commissioned for prenatal alcohol exposure and FASD services in…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33142"
+    },
+    {
+      "id": "PQ:31104",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Anna Sabine",
+      "memberParty": "LD",
+      "title": "Foetal Alcohol Spectrum Disorder: Diagnosis",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-28",
+      "context": "What training is provided to health, education and social care professionals to distinguish presentations of Fetal Alcohol Spectrum Disorder from trauma or behavioural…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31104"
+    },
+    {
+      "id": "PQ:31103",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Anna Sabine",
+      "memberParty": "LD",
+      "title": "Foetal Alcohol Spectrum Disorder: Young People",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-28",
+      "context": "What guidance her Department issues to health and social care professionals on conducting decision-specific Mental Capacity Act 2005 assessments for young people with Fetal…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31103"
     },
     {
       "id": "PQ:33303",
@@ -598,17 +585,17 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33303"
     },
     {
-      "id": "PQ:27307",
+      "id": "PQ:31745",
       "contentType": "question",
       "house": "Commons",
-      "label": "MoD",
-      "memberName": "Ben Obese-Jecty",
-      "memberParty": "Con",
-      "title": "Defence: Telecommunications",
-      "date": "2026-09-04",
-      "dateAnswered": "2026-10-22",
-      "context": "What progress has he made in securing sovereign UK capability to develop high-bandwidth, platform-to-platform and ground-to-space links.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-04/27307"
+      "label": "Department of Health and Social Care",
+      "memberName": "James Naish",
+      "memberParty": "Lab",
+      "title": "Foetal Alcohol Spectrum Disorder: Health Services",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-26",
+      "context": "What assessment her Department has made of the potential merits of establishing a UK-wide Fetal Alcohol Spectrum Disorder Prevention and Response Programme to support prevention,…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31745"
     },
     {
       "id": "WS:HLWS254",
