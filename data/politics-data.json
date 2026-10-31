@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T20:28:21.023Z",
+  "generatedAt": "2026-10-31T04:27:03.217Z",
   "items": [
     {
       "id": "PQ:37427",
@@ -559,19 +559,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31103"
     },
     {
-      "id": "PQ:33303",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Stuart Anderson",
-      "memberParty": "Con",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-28",
-      "context": "What funding has been allocated to enhance public emergency alert systems in order to improve domestic resilience.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33303"
-    },
-    {
       "id": "PQ:31745",
       "contentType": "question",
       "house": "Commons",
@@ -583,6 +570,19 @@
       "dateAnswered": "2026-10-26",
       "context": "What assessment her Department has made of the potential merits of establishing a UK-wide Fetal Alcohol Spectrum Disorder Prevention and Response Programme to support prevention,…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31745"
+    },
+    {
+      "id": "PQ:33303",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Cabinet Office",
+      "memberName": "Stuart Anderson",
+      "memberParty": "Con",
+      "title": "Emergencies: Mobile Phones",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-28",
+      "context": "What funding has been allocated to enhance public emergency alert systems in order to improve domestic resilience.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33303"
     },
     {
       "id": "WS:HLWS254",
