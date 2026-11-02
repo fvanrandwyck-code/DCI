@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-02T04:46:22.995Z",
+  "generatedAt": "2026-11-02T17:54:32.332Z",
   "items": [
     {
       "id": "PQ:37427",
@@ -507,19 +507,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32061"
     },
     {
-      "id": "PQ:31048",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Victoria Collins",
-      "memberParty": "LD",
-      "title": "Telecommunications: Misrepresentation",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-19",
-      "context": "Culture, Media and Sport, whether her Department has made an assessment of the adequacy of the current regulatory framework for protecting vulnerable customers in the…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31048"
-    },
-    {
       "id": "PQ:33142",
       "contentType": "question",
       "house": "Commons",
@@ -570,19 +557,6 @@
       "dateAnswered": "2026-10-28",
       "context": "What funding has been allocated to enhance public emergency alert systems in order to improve domestic resilience.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33303"
-    },
-    {
-      "id": "PQ:31745",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "James Naish",
-      "memberParty": "Lab",
-      "title": "Foetal Alcohol Spectrum Disorder: Health Services",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-26",
-      "context": "What assessment her Department has made of the potential merits of establishing a UK-wide Fetal Alcohol Spectrum Disorder Prevention and Response Programme to support prevention,…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31745"
     },
     {
       "id": "WS:HLWS254",
