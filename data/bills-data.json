@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-01T21:17:17.046Z",
+  "generatedAt": "2026-11-02T00:54:44.202Z",
   "bills": [
     {
       "billId": 4035,
@@ -10,9 +10,9 @@
       "currentStageName": "3rd reading",
       "currentStageHouse": "Lords",
       "currentStageIndex": 9,
-      "nextMilestone": "Sitting scheduled for 2 November 2026.",
-      "lastStageActivityDate": "2026-10-26",
-      "lastConfirmedAt": "2026-11-01T21:17:17.046Z",
+      "nextMilestone": "No sitting date scheduled yet.",
+      "lastStageActivityDate": "2026-11-02",
+      "lastConfirmedAt": "2026-11-02T00:54:44.202Z",
       "stages": [
         {
           "index": 0,
