@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-11-03T12:54:18.748Z",
+  "generatedAt": "2026-11-03T20:10:59.522Z",
   "bills": [
     {
       "billId": 4035,
       "title": "Cyber Security and Resilience (Network and Information Systems) Bill",
       "url": "https://bills.parliament.uk/bills/4035",
       "status": "active",
-      "currentHouse": "Lords",
-      "currentStageName": "3rd reading",
-      "currentStageHouse": "Lords",
-      "currentStageIndex": 9,
+      "currentHouse": "Commons",
+      "currentStageName": "Consideration of Lords amendments",
+      "currentStageHouse": "Commons",
+      "currentStageIndex": 10,
       "nextMilestone": "No sitting date scheduled yet.",
       "lastStageActivityDate": "2026-11-02",
-      "lastConfirmedAt": "2026-11-03T12:54:18.748Z",
+      "lastConfirmedAt": "2026-11-03T20:10:59.522Z",
       "stages": [
         {
           "index": 0,
@@ -80,12 +80,19 @@
         {
           "index": 9,
           "reached": true,
-          "current": true,
+          "current": false,
           "house": "Lords",
           "name": "3rd reading"
         },
         {
           "index": 10,
+          "reached": true,
+          "current": true,
+          "house": "Commons",
+          "name": "Consideration of Lords amendments"
+        },
+        {
+          "index": 11,
           "reached": false,
           "current": false,
           "house": null,
