@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T02:02:15.869Z",
+  "generatedAt": "2026-11-03T11:40:54.621Z",
   "items": [
     {
       "id": "PQ:37427",
@@ -171,6 +171,30 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-14/HL4126"
     },
     {
+      "id": "WS:HLWS368",
+      "contentType": "statement",
+      "house": "Lords",
+      "label": "DCMS",
+      "memberName": "Baroness Mackenzie of Sherwood",
+      "memberParty": "Lab",
+      "title": "Continuity of supply of telecommunications services",
+      "date": "2026-10-12",
+      "context": "I am repeating the following Written Ministerial Statement made today in the other place by my Right Honourable Friend the Secretary of State for the Department for Digital,…",
+      "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-10-12/HLWS368"
+    },
+    {
+      "id": "WS:HCWS358",
+      "contentType": "statement",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Lisa Nandy",
+      "memberParty": "Lab",
+      "title": "Continuity of supply of telecommunications services",
+      "date": "2026-10-12",
+      "context": "On Monday 5 October 2026, BT Group PLC announced it had acquired TalkTalk Telecom Group out of administration in a rescue deal. As has been widely reported, TalkTalk had been…",
+      "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-10-12/HCWS358"
+    },
+    {
       "id": "PQ:33747",
       "contentType": "question",
       "house": "Commons",
@@ -247,30 +271,6 @@
       "dateAnswered": "2026-10-20",
       "context": "Culture, Media and Sport, what assessment she has made of the potential for existing fibre infrastructure installed by third-party operators to be utilised by other broadband…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/33813"
-    },
-    {
-      "id": "WS:HLWS368",
-      "contentType": "statement",
-      "house": "Lords",
-      "label": "DCMS",
-      "memberName": "Baroness Mackenzie of Sherwood",
-      "memberParty": "Lab",
-      "title": "Continuity of supply of telecommunications services",
-      "date": "2026-10-12",
-      "context": "I am repeating the following Written Ministerial Statement made today in the other place by my Right Honourable Friend the Secretary of State for the Department for Digital,…",
-      "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-10-12/HLWS368"
-    },
-    {
-      "id": "WS:HCWS358",
-      "contentType": "statement",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Lisa Nandy",
-      "memberParty": "Lab",
-      "title": "Continuity of supply of telecommunications services",
-      "date": "2026-10-12",
-      "context": "On Monday 5 October 2026, BT Group PLC announced it had acquired TalkTalk Telecom Group out of administration in a rescue deal. As has been widely reported, TalkTalk had been…",
-      "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-10-12/HCWS358"
     },
     {
       "id": "PQ:HL3937",
@@ -711,6 +711,18 @@
       "date": "2026-01-14",
       "context": "The Seventh Contracts for Difference (CfD) auction results have been published today, unlocking a record 8.4GW of offshore wind projects. We’ve taken a significant step forward in…",
       "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-01-14/HCWS1239"
+    },
+    {
+      "id": "WS:HCWS938",
+      "contentType": "statement",
+      "house": "Commons",
+      "label": "DSIT",
+      "memberName": "Ian Murray",
+      "memberParty": "Lab",
+      "title": "The integration of Building Digital UK into the Department for Science, Innovation and Technology",
+      "date": "2025-10-13",
+      "context": "Today I am announcing that Building Digital UK (BDUK) will be integrated into the Department for Science, Innovation and Technology (DSIT) from 1 November 2025. BDUK is currently…",
+      "url": "https://questions-statements.parliament.uk/written-statements/detail/2025-10-13/HCWS938"
     }
   ],
   "sittingStatus": [
