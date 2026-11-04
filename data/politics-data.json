@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T11:54:18.115Z",
+  "generatedAt": "2026-11-04T19:27:40.749Z",
   "items": [
     {
       "id": "PQ:38932",
@@ -158,6 +158,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-22/37299"
     },
     {
+      "id": "PQ:37165",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Stuart Anderson",
+      "memberParty": "Con",
+      "title": "Telecommunications: Outages",
+      "date": "2026-10-21",
+      "dateAnswered": "2026-11-04",
+      "context": "Culture, Media and Sport, what responsibility telecommunications providers have under the plan to maintain consumer access during localised infrastructure failures.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-21/37165"
+    },
+    {
       "id": "PQ:36821",
       "contentType": "question",
       "house": "Commons",
@@ -208,19 +221,6 @@
       "dateAnswered": "2026-11-02",
       "context": "Whether the planned 2027 homeland defence exercise will test the ability of essential services, including electricity, telecommunications, banking and payments, food distribution,…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/HL4200"
-    },
-    {
-      "id": "PQ:HL4202",
-      "contentType": "question",
-      "house": "Lords",
-      "label": "Department for Environment, Food and Rural Affairs",
-      "memberName": "Lord Bridges of Headley",
-      "memberParty": "Con",
-      "title": "Emergencies and National Security",
-      "date": "2026-10-19",
-      "dateAnswered": "2026-10-29",
-      "context": "Which public authority would have lead responsibility for ensuring that vulnerable households continued to receive food during a nationwide electricity and telecommunications…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/HL4202"
     },
     {
       "id": "PQ:35667",
@@ -414,58 +414,6 @@
       "dateAnswered": "2026-10-22",
       "context": "Culture, Media and Sport, what progress his Department has made on extending gigabit capable broadband coverage in North East Somerset and Hanham constituency.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32363"
-    },
-    {
-      "id": "PQ:32908",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Daisy Cooper",
-      "memberParty": "LD",
-      "title": "Broadband and Pay Television: Fees and Charges",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-19",
-      "context": "Culture, Media and Sport, what assessment she has made of the potential merits of applying the principles of the (a) home and (b) motor insurance markets to tackling loyalty…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32908"
-    },
-    {
-      "id": "PQ:30440",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Anneliese Dodds",
-      "memberParty": "Lab",
-      "title": "Broadband: Infrastructure",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-19",
-      "context": "Culture, Media and Sport, what assessment she has made of whether existing legislation enables broadband providers to upgrade all existing infrastructure in multi-dwelling units…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/30440"
-    },
-    {
-      "id": "PQ:31879",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "David Smith",
-      "memberParty": "Lab",
-      "title": "Broadband: Flats",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-19",
-      "context": "Culture, Media and Sport, what assessment her Department has made of the potential merits of taking steps to reduce delays and administrative burdens associated with Part 4A of…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31879"
-    },
-    {
-      "id": "PQ:31878",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "David Smith",
-      "memberParty": "Lab",
-      "title": "Broadband: Flats",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-19",
-      "context": "Culture, Media and Sport, what assessment her Department has made of the effectiveness of Part 4A of the Electronic Communications Code within the Telecommunications…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31878"
     },
     {
       "id": "PQ:33142",
@@ -685,18 +633,6 @@
       "date": "2026-01-14",
       "context": "The Seventh Contracts for Difference (CfD) auction results have been published today, unlocking a record 8.4GW of offshore wind projects. We’ve taken a significant step forward in…",
       "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-01-14/HCWS1239"
-    },
-    {
-      "id": "WS:HCWS938",
-      "contentType": "statement",
-      "house": "Commons",
-      "label": "DSIT",
-      "memberName": "Ian Murray",
-      "memberParty": "Lab",
-      "title": "The integration of Building Digital UK into the Department for Science, Innovation and Technology",
-      "date": "2025-10-13",
-      "context": "Today I am announcing that Building Digital UK (BDUK) will be integrated into the Department for Science, Innovation and Technology (DSIT) from 1 November 2025. BDUK is currently…",
-      "url": "https://questions-statements.parliament.uk/written-statements/detail/2025-10-13/HCWS938"
     }
   ],
   "sittingStatus": [
