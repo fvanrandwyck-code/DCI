@@ -1,6 +1,32 @@
 {
-  "generatedAt": "2026-11-03T19:10:47.451Z",
+  "generatedAt": "2026-11-04T00:26:13.695Z",
   "items": [
+    {
+      "id": "PQ:38932",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "MoD",
+      "memberName": "Ben Obese-Jecty",
+      "memberParty": "Con",
+      "title": "Russia: Telecommunications Cables",
+      "date": "2026-10-28",
+      "dateAnswered": "2026-11-03",
+      "context": "Pursuant to the answer of 19 October 2026 to question 33724 on Russia: Telecommunications Cables, whether all undersea infrastructure can be monitored for potential interference.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-28/38932"
+    },
+    {
+      "id": "PQ:38930",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "MoD",
+      "memberName": "Ben Obese-Jecty",
+      "memberParty": "Con",
+      "title": "Russia: Telecommunications Cables",
+      "date": "2026-10-28",
+      "dateAnswered": "2026-11-03",
+      "context": "Pursuant to the answer of 19 October 2026 to question 33724 on Russia: Telecommunications Cables, on what date a 100% survey of undersea infrastructure was last conducted to…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-28/38930"
+    },
     {
       "id": "PQ:37777",
       "contentType": "question",
@@ -26,6 +52,19 @@
       "dateAnswered": "2026-11-03",
       "context": "Culture, Media and Sport, what steps her Department is taking to secure the delivery of gigabit-capable broadband to premises that are not included within a commercial rollout…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-26/38054"
+    },
+    {
+      "id": "PQ:37905",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "MoD",
+      "memberName": "Alison Taylor",
+      "memberParty": "Lab",
+      "title": "Infrastructure: Security",
+      "date": "2026-10-26",
+      "dateAnswered": "2026-11-03",
+      "context": "What steps he is taking to protect the integrity of energy and telecommunications apparatus on the land and sea beds of Scotland.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-26/37905"
     },
     {
       "id": "PQ:37798",
@@ -169,6 +208,19 @@
       "dateAnswered": "2026-11-02",
       "context": "Whether the planned 2027 homeland defence exercise will test the ability of essential services, including electricity, telecommunications, banking and payments, food distribution,…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/HL4200"
+    },
+    {
+      "id": "PQ:HL4202",
+      "contentType": "question",
+      "house": "Lords",
+      "label": "Department for Environment, Food and Rural Affairs",
+      "memberName": "Lord Bridges of Headley",
+      "memberParty": "Con",
+      "title": "Emergencies and National Security",
+      "date": "2026-10-19",
+      "dateAnswered": "2026-10-29",
+      "context": "Which public authority would have lead responsibility for ensuring that vulnerable households continued to receive food during a nationwide electricity and telecommunications…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/HL4202"
     },
     {
       "id": "PQ:35667",
@@ -390,6 +442,32 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/30440"
     },
     {
+      "id": "PQ:31879",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "David Smith",
+      "memberParty": "Lab",
+      "title": "Broadband: Flats",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-19",
+      "context": "Culture, Media and Sport, what assessment her Department has made of the potential merits of taking steps to reduce delays and administrative burdens associated with Part 4A of…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31879"
+    },
+    {
+      "id": "PQ:31878",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "David Smith",
+      "memberParty": "Lab",
+      "title": "Broadband: Flats",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-19",
+      "context": "Culture, Media and Sport, what assessment her Department has made of the effectiveness of Part 4A of the Electronic Communications Code within the Telecommunications…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31878"
+    },
+    {
       "id": "PQ:33142",
       "contentType": "question",
       "house": "Commons",
@@ -427,58 +505,6 @@
       "dateAnswered": "2026-10-28",
       "context": "What guidance her Department issues to health and social care professionals on conducting decision-specific Mental Capacity Act 2005 assessments for young people with Fetal…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31103"
-    },
-    {
-      "id": "PQ:29080",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Graeme Downie",
-      "memberParty": "Lab",
-      "title": "Satellites: Radio Frequencies",
-      "date": "2026-09-10",
-      "dateAnswered": "2026-11-03",
-      "context": "Culture, Media and Sport, what discussions her Department has had with Ofcom about the UK's position on satellite spectrum rules prior to the International Telecommunication Union…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29080"
-    },
-    {
-      "id": "PQ:29066",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Joe Robertson",
-      "memberParty": "Con",
-      "title": "Telecommunications: Misrepresentation",
-      "date": "2026-09-10",
-      "dateAnswered": "2026-11-03",
-      "context": "Culture, Media and Sport, whether her Department has had discussions with Ofcom on the number of complaints it has received from micro and small businesses relating to the…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29066"
-    },
-    {
-      "id": "PQ:29064",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Joe Robertson",
-      "memberParty": "Con",
-      "title": "Small Businesses: Telecommunications",
-      "date": "2026-09-10",
-      "dateAnswered": "2026-11-03",
-      "context": "Culture, Media and Sport, what assessment she has made of the adequacy of protections for micro and small businesses entering into long-term telecommunications contracts.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29064"
-    },
-    {
-      "id": "PQ:29065",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Joe Robertson",
-      "memberParty": "Con",
-      "title": "Telecommunications: Misrepresentation",
-      "date": "2026-09-10",
-      "dateAnswered": "2026-11-03",
-      "context": "Culture, Media and Sport, what assessment she has made of the prevalence of mis-selling of telecommunications contracts to micro and small businesses.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-10/29065"
     },
     {
       "id": "WS:HLWS254",
