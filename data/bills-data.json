@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T13:07:47.083Z",
+  "generatedAt": "2026-11-04T20:28:31.069Z",
   "bills": [
     {
       "billId": 4035,
@@ -12,7 +12,7 @@
       "currentStageIndex": 10,
       "nextMilestone": "No sitting date scheduled yet.",
       "lastStageActivityDate": "2026-11-02",
-      "lastConfirmedAt": "2026-11-04T13:07:47.083Z",
+      "lastConfirmedAt": "2026-11-04T20:28:31.069Z",
       "stages": [
         {
           "index": 0,
