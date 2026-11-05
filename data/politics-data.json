@@ -1,6 +1,19 @@
 {
-  "generatedAt": "2026-11-05T00:46:06.998Z",
+  "generatedAt": "2026-11-05T11:56:11.892Z",
   "items": [
+    {
+      "id": "PQ:HL4777",
+      "contentType": "question",
+      "house": "Lords",
+      "label": "Department for Business, Innovation, Science and Trade ",
+      "memberName": "Lord Cameron of Lochiel",
+      "memberParty": "Con",
+      "title": "Satellite Communications: Shetland",
+      "date": "2026-11-02",
+      "dateAnswered": "2026-11-05",
+      "context": "How much of the £1 million allocated to the hybrid connectivity project in Papa Stour, Shetland, announced on 27 November 2024 has been spent; and what the outcome of that project…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/HL4777"
+    },
     {
       "id": "PQ:38932",
       "contentType": "question",
