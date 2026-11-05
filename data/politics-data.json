@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T19:27:40.749Z",
+  "generatedAt": "2026-11-05T00:46:06.998Z",
   "items": [
     {
       "id": "PQ:38932",
@@ -638,13 +638,13 @@
   "sittingStatus": [
     {
       "house": "Commons",
-      "sitting": true,
-      "date": "2026-11-05"
+      "sitting": false,
+      "date": "2026-11-09"
     },
     {
       "house": "Lords",
-      "sitting": true,
-      "date": "2026-11-05"
+      "sitting": false,
+      "date": "2026-11-06"
     }
   ],
   "committeeEvents": []
