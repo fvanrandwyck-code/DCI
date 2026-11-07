@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T23:58:57.412Z",
+  "generatedAt": "2026-11-07T05:45:44.544Z",
   "items": [
     {
       "id": "PQ:HL4777",
@@ -643,8 +643,8 @@
     },
     {
       "house": "Lords",
-      "sitting": false,
-      "date": "2026-11-06"
+      "sitting": true,
+      "date": "2026-12-18"
     }
   ],
   "committeeEvents": []
