@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-07T05:45:44.544Z",
+  "generatedAt": "2026-11-07T14:43:15.645Z",
   "items": [
     {
       "id": "PQ:HL4777",
@@ -197,6 +197,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-22/37299"
     },
     {
+      "id": "PQ:36727",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Jim Shannon",
+      "memberParty": "DUP",
+      "title": "Autism: Diagnosis",
+      "date": "2026-10-21",
+      "dateAnswered": "2026-10-29",
+      "context": "What steps she is taking to reduce waiting times for diagnosis of autism spectrum disorder.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-21/36727"
+    },
+    {
       "id": "PQ:37165",
       "contentType": "question",
       "house": "Commons",
@@ -221,19 +234,6 @@
       "dateAnswered": "2026-10-29",
       "context": "What discussions she has had with (a) Ofcom and (b) mobile network operators on establishing a national protocol to immediately suspend or block mobile telephone numbers that have…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-21/36821"
-    },
-    {
-      "id": "PQ:36727",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Jim Shannon",
-      "memberParty": "DUP",
-      "title": "Autism: Diagnosis",
-      "date": "2026-10-21",
-      "dateAnswered": "2026-10-29",
-      "context": "What steps she is taking to reduce waiting times for diagnosis of autism spectrum disorder.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-21/36727"
     },
     {
       "id": "PQ:36229",
@@ -351,19 +351,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-12/34094"
     },
     {
-      "id": "PQ:31675",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Stuart Anderson",
-      "memberParty": "Con",
-      "title": "Telecommunications: Cybersecurity",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-28",
-      "context": "Culture, Media and Sport, what steps her Department is taking to help protect foundational telecommunications infrastructure from state-sponsored cyber espionage.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31675"
-    },
-    {
       "id": "PQ:33053",
       "contentType": "question",
       "house": "Commons",
@@ -388,32 +375,6 @@
       "dateAnswered": "2026-10-28",
       "context": "Culture, Media and Sport, whether she has made an assessment of the effectiveness of mobile network performance and coverage projections supplied by mobile network operators used…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/30483"
-    },
-    {
-      "id": "PQ:31681",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Dr Luke Evans",
-      "memberParty": "Con",
-      "title": "Broadband: Hinckley",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-27",
-      "context": "Culture, Media and Sport, what discussions she has had with [i] BT Openreach and [ii] other full fibre providers on ensuring the swift roll out of FTTP broadband to households in…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31681"
-    },
-    {
-      "id": "PQ:32363",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Dan Norris",
-      "memberParty": "Ind",
-      "title": "Broadband: North East Somerset and Hanham",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-22",
-      "context": "Culture, Media and Sport, what progress his Department has made on extending gigabit capable broadband coverage in North East Somerset and Hanham constituency.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32363"
     },
     {
       "id": "PQ:33142",
@@ -453,6 +414,45 @@
       "dateAnswered": "2026-10-28",
       "context": "What guidance her Department issues to health and social care professionals on conducting decision-specific Mental Capacity Act 2005 assessments for young people with Fetal…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31103"
+    },
+    {
+      "id": "PQ:31675",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Stuart Anderson",
+      "memberParty": "Con",
+      "title": "Telecommunications: Cybersecurity",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-28",
+      "context": "Culture, Media and Sport, what steps her Department is taking to help protect foundational telecommunications infrastructure from state-sponsored cyber espionage.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31675"
+    },
+    {
+      "id": "PQ:31681",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Dr Luke Evans",
+      "memberParty": "Con",
+      "title": "Broadband: Hinckley",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-27",
+      "context": "Culture, Media and Sport, what discussions she has had with [i] BT Openreach and [ii] other full fibre providers on ensuring the swift roll out of FTTP broadband to households in…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31681"
+    },
+    {
+      "id": "PQ:32363",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Dan Norris",
+      "memberParty": "Ind",
+      "title": "Broadband: North East Somerset and Hanham",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-10-22",
+      "context": "Culture, Media and Sport, what progress his Department has made on extending gigabit capable broadband coverage in North East Somerset and Hanham constituency.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32363"
     },
     {
       "id": "WS:HLWS254",
