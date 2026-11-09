@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T04:57:31.812Z",
+  "generatedAt": "2026-11-09T18:25:16.988Z",
   "items": [
     {
       "id": "PQ:HL4777",
@@ -13,6 +13,19 @@
       "dateAnswered": "2026-11-05",
       "context": "How much of the £1 million allocated to the hybrid connectivity project in Papa Stour, Shetland, announced on 27 November 2024 has been spent; and what the outcome of that project…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/HL4777"
+    },
+    {
+      "id": "PQ:39539",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DfT",
+      "memberName": "Shivani Raja",
+      "memberParty": "Con",
+      "title": "Transport: Infrastructure",
+      "date": "2026-10-30",
+      "dateAnswered": "2026-11-09",
+      "context": "What steps her Department is taking to accelerate the rollout and reliability of chargepoint infrastructure; and what measures are being taken to protect consumer confidence in…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-30/39539"
     },
     {
       "id": "PQ:38807",
@@ -440,19 +453,6 @@
       "dateAnswered": "2026-10-28",
       "context": "What training is provided to health, education and social care professionals to distinguish presentations of Fetal Alcohol Spectrum Disorder from trauma or behavioural…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31104"
-    },
-    {
-      "id": "PQ:31103",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Anna Sabine",
-      "memberParty": "LD",
-      "title": "Foetal Alcohol Spectrum Disorder: Young People",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-28",
-      "context": "What guidance her Department issues to health and social care professionals on conducting decision-specific Mental Capacity Act 2005 assessments for young people with Fetal…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31103"
     },
     {
       "id": "WS:HLWS254",
