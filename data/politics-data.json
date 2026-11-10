@@ -1,6 +1,19 @@
 {
-  "generatedAt": "2026-11-10T12:13:01.250Z",
+  "generatedAt": "2026-11-10T21:41:02.081Z",
   "items": [
+    {
+      "id": "PQ:40500",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Jamie Stone",
+      "memberParty": "LD",
+      "title": "Broadband",
+      "date": "2026-11-03",
+      "dateAnswered": "2026-11-10",
+      "context": "Culture, Media and Sport, what assessment she has made of whether Ofcom's revised copper retirement threshold is consistent with the Government's objective of achieving nationwide…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40500"
+    },
     {
       "id": "PQ:40322",
       "contentType": "question",
@@ -15,6 +28,32 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40322"
     },
     {
+      "id": "PQ:HL4778",
+      "contentType": "question",
+      "house": "Lords",
+      "label": "DCMS",
+      "memberName": "Lord Cameron of Lochiel",
+      "memberParty": "Con",
+      "title": "Satellite Communications: Scotland",
+      "date": "2026-11-02",
+      "dateAnswered": "2026-11-10",
+      "context": "In light of their decision to support a hybrid connectivity project in Papa Stour, Shetland, announced on 27 November 2024, what plans they have, if any, to support further hybrid…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/HL4778"
+    },
+    {
+      "id": "PQ:39816",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Alison Bennett",
+      "memberParty": "LD",
+      "title": "Broadband",
+      "date": "2026-11-02",
+      "dateAnswered": "2026-11-10",
+      "context": "Culture, Media and Sport, what steps her Department is taking to require Openreach to publish firm delivery dates for Full Fibre and reasons for delays where work has already…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/39816"
+    },
+    {
       "id": "PQ:HL4777",
       "contentType": "question",
       "house": "Lords",
@@ -26,19 +65,6 @@
       "dateAnswered": "2026-11-05",
       "context": "How much of the £1 million allocated to the hybrid connectivity project in Papa Stour, Shetland, announced on 27 November 2024 has been spent; and what the outcome of that project…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/HL4777"
-    },
-    {
-      "id": "PQ:39539",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DfT",
-      "memberName": "Shivani Raja",
-      "memberParty": "Con",
-      "title": "Transport: Infrastructure",
-      "date": "2026-10-30",
-      "dateAnswered": "2026-11-09",
-      "context": "What steps her Department is taking to accelerate the rollout and reliability of chargepoint infrastructure; and what measures are being taken to protect consumer confidence in…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-30/39539"
     },
     {
       "id": "PQ:38807",
@@ -80,32 +106,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-28/38930"
     },
     {
-      "id": "PQ:37777",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Charlotte Cane",
-      "memberParty": "LD",
-      "title": "Mobile Broadband: Rural Areas",
-      "date": "2026-10-26",
-      "dateAnswered": "2026-11-03",
-      "context": "Culture, Media and Sport, what assessment her Department has made of the effectiveness of incentives to build mobile network infrastructure in rural areas.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-26/37777"
-    },
-    {
-      "id": "PQ:38054",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Gideon Amos",
-      "memberParty": "LD",
-      "title": "Broadband: Business Premises",
-      "date": "2026-10-26",
-      "dateAnswered": "2026-11-03",
-      "context": "Culture, Media and Sport, what steps her Department is taking to secure the delivery of gigabit-capable broadband to premises that are not included within a commercial rollout…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-26/38054"
-    },
-    {
       "id": "PQ:37905",
       "contentType": "question",
       "house": "Commons",
@@ -117,6 +117,19 @@
       "dateAnswered": "2026-11-03",
       "context": "What steps he is taking to protect the integrity of energy and telecommunications apparatus on the land and sea beds of Scotland.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-26/37905"
+    },
+    {
+      "id": "PQ:37777",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Charlotte Cane",
+      "memberParty": "LD",
+      "title": "Mobile Broadband: Rural Areas",
+      "date": "2026-10-26",
+      "dateAnswered": "2026-11-03",
+      "context": "Culture, Media and Sport, what assessment her Department has made of the effectiveness of incentives to build mobile network infrastructure in rural areas.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-26/37777"
     },
     {
       "id": "PQ:37798",
@@ -132,6 +145,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-26/37798"
     },
     {
+      "id": "PQ:38054",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Gideon Amos",
+      "memberParty": "LD",
+      "title": "Broadband: Business Premises",
+      "date": "2026-10-26",
+      "dateAnswered": "2026-11-03",
+      "context": "Culture, Media and Sport, what steps her Department is taking to secure the delivery of gigabit-capable broadband to premises that are not included within a commercial rollout…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-26/38054"
+    },
+    {
       "id": "PQ:37427",
       "contentType": "question",
       "house": "Commons",
@@ -143,6 +169,19 @@
       "dateAnswered": "2026-10-30",
       "context": "Culture, Media and Sport, what plans her Department has to support the provision of affordable, reliable broadband to households in rural constituencies that remain outside…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-22/37427"
+    },
+    {
+      "id": "PQ:37301",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "MoD",
+      "memberName": "Ben Obese-Jecty",
+      "memberParty": "Con",
+      "title": "Russia: Telecommunications Cables",
+      "date": "2026-10-22",
+      "dateAnswered": "2026-10-30",
+      "context": "Pursuant to the answer of 19 October 2026 to question 33724 on Russia: Telecommunications cables, what progress he has made on increasing the testing of uncrewed underwater…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-22/37301"
     },
     {
       "id": "PQ:37349",
@@ -184,32 +223,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-22/37362"
     },
     {
-      "id": "PQ:37301",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "MoD",
-      "memberName": "Ben Obese-Jecty",
-      "memberParty": "Con",
-      "title": "Russia: Telecommunications Cables",
-      "date": "2026-10-22",
-      "dateAnswered": "2026-10-30",
-      "context": "Pursuant to the answer of 19 October 2026 to question 33724 on Russia: Telecommunications cables, what progress he has made on increasing the testing of uncrewed underwater…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-22/37301"
-    },
-    {
-      "id": "PQ:37299",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "MoD",
-      "memberName": "Ben Obese-Jecty",
-      "memberParty": "Con",
-      "title": "Russia: Telecommunications Cables",
-      "date": "2026-10-22",
-      "dateAnswered": "2026-10-30",
-      "context": "Pursuant to the answer of 19 October 2026 to question 33724 on Russia: Telecommunications cables, what assessment he has made of the potential merits of the deployment of uncrewed…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-22/37299"
-    },
-    {
       "id": "PQ:37165",
       "contentType": "question",
       "house": "Commons",
@@ -249,19 +262,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-21/36727"
     },
     {
-      "id": "PQ:36229",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "John Milne",
-      "memberParty": "LD",
-      "title": "Broadband: Multiple Occupation",
-      "date": "2026-10-19",
-      "dateAnswered": "2026-10-27",
-      "context": "Culture, Media and Sport, what assessment has been made of the impact on residents of existing multi-dwelling developments where telecommunications operators have determined that…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/36229"
-    },
-    {
       "id": "PQ:HL4200",
       "contentType": "question",
       "house": "Lords",
@@ -273,6 +273,19 @@
       "dateAnswered": "2026-11-02",
       "context": "Whether the planned 2027 homeland defence exercise will test the ability of essential services, including electricity, telecommunications, banking and payments, food distribution,…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/HL4200"
+    },
+    {
+      "id": "PQ:36229",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "John Milne",
+      "memberParty": "LD",
+      "title": "Broadband: Multiple Occupation",
+      "date": "2026-10-19",
+      "dateAnswered": "2026-10-27",
+      "context": "Culture, Media and Sport, what assessment has been made of the impact on residents of existing multi-dwelling developments where telecommunications operators have determined that…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/36229"
     },
     {
       "id": "PQ:35667",
@@ -414,32 +427,6 @@
       "dateAnswered": "2026-10-27",
       "context": "Culture, Media and Sport, what discussions she has had with [i] BT Openreach and [ii] other full fibre providers on ensuring the swift roll out of FTTP broadband to households in…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31681"
-    },
-    {
-      "id": "PQ:32363",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Dan Norris",
-      "memberParty": "Ind",
-      "title": "Broadband: North East Somerset and Hanham",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-22",
-      "context": "Culture, Media and Sport, what progress his Department has made on extending gigabit capable broadband coverage in North East Somerset and Hanham constituency.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32363"
-    },
-    {
-      "id": "PQ:33142",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Anna Sabine",
-      "memberParty": "LD",
-      "title": "Foetal Alcohol Spectrum Disorder",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-28",
-      "context": "How much of the £3.4 billion Public Health Grant ring-fenced for drug and alcohol treatment over 2026-27 has been commissioned for prenatal alcohol exposure and FASD services in…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33142"
     },
     {
       "id": "WS:HLWS254",
