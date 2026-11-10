@@ -1,6 +1,19 @@
 {
-  "generatedAt": "2026-11-10T02:34:45.003Z",
+  "generatedAt": "2026-11-10T12:13:01.250Z",
   "items": [
+    {
+      "id": "PQ:40322",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Dr Roz Savage",
+      "memberParty": "LD",
+      "title": "General Practitioners: Digital Technology",
+      "date": "2026-11-03",
+      "dateAnswered": "2026-11-10",
+      "context": "What steps her Department is taking with NHS England and primary care providers to review the resilience of NHS digital infrastructure following recent service disruptions;…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40322"
+    },
     {
       "id": "PQ:HL4777",
       "contentType": "question",
@@ -65,19 +78,6 @@
       "dateAnswered": "2026-11-03",
       "context": "Pursuant to the answer of 19 October 2026 to question 33724 on Russia: Telecommunications Cables, on what date a 100% survey of undersea infrastructure was last conducted to…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-28/38930"
-    },
-    {
-      "id": "PQ:38973",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DfT",
-      "memberName": "Sir John Hayes",
-      "memberParty": "Con",
-      "title": "Railways: Peterborough and Spalding",
-      "date": "2026-10-28",
-      "dateAnswered": "2026-11-06",
-      "context": "What steps her Department is taking to improve rail connectivity on Sundays between Peterborough and Spalding.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-28/38973"
     },
     {
       "id": "PQ:37777",
@@ -440,19 +440,6 @@
       "dateAnswered": "2026-10-28",
       "context": "How much of the £3.4 billion Public Health Grant ring-fenced for drug and alcohol treatment over 2026-27 has been commissioned for prenatal alcohol exposure and FASD services in…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/33142"
-    },
-    {
-      "id": "PQ:31104",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Anna Sabine",
-      "memberParty": "LD",
-      "title": "Foetal Alcohol Spectrum Disorder: Diagnosis",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-28",
-      "context": "What training is provided to health, education and social care professionals to distinguish presentations of Fetal Alcohol Spectrum Disorder from trauma or behavioural…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31104"
     },
     {
       "id": "WS:HLWS254",
