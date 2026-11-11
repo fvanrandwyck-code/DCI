@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T21:41:02.081Z",
+  "generatedAt": "2026-11-11T04:58:54.101Z",
   "items": [
     {
       "id": "PQ:40500",
@@ -41,19 +41,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/HL4778"
     },
     {
-      "id": "PQ:39816",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Alison Bennett",
-      "memberParty": "LD",
-      "title": "Broadband",
-      "date": "2026-11-02",
-      "dateAnswered": "2026-11-10",
-      "context": "Culture, Media and Sport, what steps her Department is taking to require Openreach to publish firm delivery dates for Full Fibre and reasons for delays where work has already…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/39816"
-    },
-    {
       "id": "PQ:HL4777",
       "contentType": "question",
       "house": "Lords",
@@ -65,6 +52,19 @@
       "dateAnswered": "2026-11-05",
       "context": "How much of the £1 million allocated to the hybrid connectivity project in Papa Stour, Shetland, announced on 27 November 2024 has been spent; and what the outcome of that project…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/HL4777"
+    },
+    {
+      "id": "PQ:39816",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Alison Bennett",
+      "memberParty": "LD",
+      "title": "Broadband",
+      "date": "2026-11-02",
+      "dateAnswered": "2026-11-10",
+      "context": "Culture, Media and Sport, what steps her Department is taking to require Openreach to publish firm delivery dates for Full Fibre and reasons for delays where work has already…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/39816"
     },
     {
       "id": "PQ:38807",
@@ -106,19 +106,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-28/38930"
     },
     {
-      "id": "PQ:37905",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "MoD",
-      "memberName": "Alison Taylor",
-      "memberParty": "Lab",
-      "title": "Infrastructure: Security",
-      "date": "2026-10-26",
-      "dateAnswered": "2026-11-03",
-      "context": "What steps he is taking to protect the integrity of energy and telecommunications apparatus on the land and sea beds of Scotland.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-26/37905"
-    },
-    {
       "id": "PQ:37777",
       "contentType": "question",
       "house": "Commons",
@@ -130,19 +117,6 @@
       "dateAnswered": "2026-11-03",
       "context": "Culture, Media and Sport, what assessment her Department has made of the effectiveness of incentives to build mobile network infrastructure in rural areas.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-26/37777"
-    },
-    {
-      "id": "PQ:37798",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Stuart Anderson",
-      "memberParty": "Con",
-      "title": "Broadband: South Shropshire",
-      "date": "2026-10-26",
-      "dateAnswered": "2026-11-03",
-      "context": "Culture, Media and Sport, how many new homes have achieved gigabit-capable broadband in South Shropshire constituency in the last two years.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-26/37798"
     },
     {
       "id": "PQ:38054",
@@ -158,6 +132,32 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-26/38054"
     },
     {
+      "id": "PQ:37905",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "MoD",
+      "memberName": "Alison Taylor",
+      "memberParty": "Lab",
+      "title": "Infrastructure: Security",
+      "date": "2026-10-26",
+      "dateAnswered": "2026-11-03",
+      "context": "What steps he is taking to protect the integrity of energy and telecommunications apparatus on the land and sea beds of Scotland.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-26/37905"
+    },
+    {
+      "id": "PQ:37798",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Stuart Anderson",
+      "memberParty": "Con",
+      "title": "Broadband: South Shropshire",
+      "date": "2026-10-26",
+      "dateAnswered": "2026-11-03",
+      "context": "Culture, Media and Sport, how many new homes have achieved gigabit-capable broadband in South Shropshire constituency in the last two years.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-26/37798"
+    },
+    {
       "id": "PQ:37427",
       "contentType": "question",
       "house": "Commons",
@@ -169,19 +169,6 @@
       "dateAnswered": "2026-10-30",
       "context": "Culture, Media and Sport, what plans her Department has to support the provision of affordable, reliable broadband to households in rural constituencies that remain outside…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-22/37427"
-    },
-    {
-      "id": "PQ:37301",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "MoD",
-      "memberName": "Ben Obese-Jecty",
-      "memberParty": "Con",
-      "title": "Russia: Telecommunications Cables",
-      "date": "2026-10-22",
-      "dateAnswered": "2026-10-30",
-      "context": "Pursuant to the answer of 19 October 2026 to question 33724 on Russia: Telecommunications cables, what progress he has made on increasing the testing of uncrewed underwater…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-22/37301"
     },
     {
       "id": "PQ:37349",
@@ -223,6 +210,32 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-22/37362"
     },
     {
+      "id": "PQ:37301",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "MoD",
+      "memberName": "Ben Obese-Jecty",
+      "memberParty": "Con",
+      "title": "Russia: Telecommunications Cables",
+      "date": "2026-10-22",
+      "dateAnswered": "2026-10-30",
+      "context": "Pursuant to the answer of 19 October 2026 to question 33724 on Russia: Telecommunications cables, what progress he has made on increasing the testing of uncrewed underwater…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-22/37301"
+    },
+    {
+      "id": "PQ:36727",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Jim Shannon",
+      "memberParty": "DUP",
+      "title": "Autism: Diagnosis",
+      "date": "2026-10-21",
+      "dateAnswered": "2026-10-29",
+      "context": "What steps she is taking to reduce waiting times for diagnosis of autism spectrum disorder.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-21/36727"
+    },
+    {
       "id": "PQ:37165",
       "contentType": "question",
       "house": "Commons",
@@ -249,17 +262,17 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-21/36821"
     },
     {
-      "id": "PQ:36727",
+      "id": "PQ:36229",
       "contentType": "question",
       "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Jim Shannon",
-      "memberParty": "DUP",
-      "title": "Autism: Diagnosis",
-      "date": "2026-10-21",
-      "dateAnswered": "2026-10-29",
-      "context": "What steps she is taking to reduce waiting times for diagnosis of autism spectrum disorder.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-21/36727"
+      "label": "DCMS",
+      "memberName": "John Milne",
+      "memberParty": "LD",
+      "title": "Broadband: Multiple Occupation",
+      "date": "2026-10-19",
+      "dateAnswered": "2026-10-27",
+      "context": "Culture, Media and Sport, what assessment has been made of the impact on residents of existing multi-dwelling developments where telecommunications operators have determined that…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/36229"
     },
     {
       "id": "PQ:HL4200",
@@ -273,19 +286,6 @@
       "dateAnswered": "2026-11-02",
       "context": "Whether the planned 2027 homeland defence exercise will test the ability of essential services, including electricity, telecommunications, banking and payments, food distribution,…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/HL4200"
-    },
-    {
-      "id": "PQ:36229",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "John Milne",
-      "memberParty": "LD",
-      "title": "Broadband: Multiple Occupation",
-      "date": "2026-10-19",
-      "dateAnswered": "2026-10-27",
-      "context": "Culture, Media and Sport, what assessment has been made of the impact on residents of existing multi-dwelling developments where telecommunications operators have determined that…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/36229"
     },
     {
       "id": "PQ:35667",
