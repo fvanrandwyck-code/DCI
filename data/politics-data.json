@@ -1,6 +1,19 @@
 {
-  "generatedAt": "2026-11-11T04:58:54.101Z",
+  "generatedAt": "2026-11-11T15:55:13.992Z",
   "items": [
+    {
+      "id": "PQ:40979",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Hilary Benn",
+      "memberParty": "Lab",
+      "title": "Foetal Alcohol Spectrum Disorder",
+      "date": "2026-11-04",
+      "dateAnswered": "2026-11-11",
+      "context": "What plans she has to tackle Foetal Alcoholic Spectrum Disorder through a) funding, b) research and c) raising awareness amongst health practitioners and the public.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-04/40979"
+    },
     {
       "id": "PQ:40500",
       "contentType": "question",
@@ -15,17 +28,17 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40500"
     },
     {
-      "id": "PQ:40322",
+      "id": "PQ:39816",
       "contentType": "question",
       "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Dr Roz Savage",
+      "label": "DCMS",
+      "memberName": "Alison Bennett",
       "memberParty": "LD",
-      "title": "General Practitioners: Digital Technology",
-      "date": "2026-11-03",
+      "title": "Broadband",
+      "date": "2026-11-02",
       "dateAnswered": "2026-11-10",
-      "context": "What steps her Department is taking with NHS England and primary care providers to review the resilience of NHS digital infrastructure following recent service disruptions;…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40322"
+      "context": "Culture, Media and Sport, what steps her Department is taking to require Openreach to publish firm delivery dates for Full Fibre and reasons for delays where work has already…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/39816"
     },
     {
       "id": "PQ:HL4778",
@@ -52,19 +65,6 @@
       "dateAnswered": "2026-11-05",
       "context": "How much of the £1 million allocated to the hybrid connectivity project in Papa Stour, Shetland, announced on 27 November 2024 has been spent; and what the outcome of that project…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/HL4777"
-    },
-    {
-      "id": "PQ:39816",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Alison Bennett",
-      "memberParty": "LD",
-      "title": "Broadband",
-      "date": "2026-11-02",
-      "dateAnswered": "2026-11-10",
-      "context": "Culture, Media and Sport, what steps her Department is taking to require Openreach to publish firm delivery dates for Full Fibre and reasons for delays where work has already…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/39816"
     },
     {
       "id": "PQ:38807",
@@ -210,32 +210,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-22/37362"
     },
     {
-      "id": "PQ:37301",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "MoD",
-      "memberName": "Ben Obese-Jecty",
-      "memberParty": "Con",
-      "title": "Russia: Telecommunications Cables",
-      "date": "2026-10-22",
-      "dateAnswered": "2026-10-30",
-      "context": "Pursuant to the answer of 19 October 2026 to question 33724 on Russia: Telecommunications cables, what progress he has made on increasing the testing of uncrewed underwater…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-22/37301"
-    },
-    {
-      "id": "PQ:36727",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Jim Shannon",
-      "memberParty": "DUP",
-      "title": "Autism: Diagnosis",
-      "date": "2026-10-21",
-      "dateAnswered": "2026-10-29",
-      "context": "What steps she is taking to reduce waiting times for diagnosis of autism spectrum disorder.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-21/36727"
-    },
-    {
       "id": "PQ:37165",
       "contentType": "question",
       "house": "Commons",
@@ -262,6 +236,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-21/36821"
     },
     {
+      "id": "PQ:36727",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Jim Shannon",
+      "memberParty": "DUP",
+      "title": "Autism: Diagnosis",
+      "date": "2026-10-21",
+      "dateAnswered": "2026-10-29",
+      "context": "What steps she is taking to reduce waiting times for diagnosis of autism spectrum disorder.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-21/36727"
+    },
+    {
       "id": "PQ:36229",
       "contentType": "question",
       "house": "Commons",
@@ -286,19 +273,6 @@
       "dateAnswered": "2026-11-02",
       "context": "Whether the planned 2027 homeland defence exercise will test the ability of essential services, including electricity, telecommunications, banking and payments, food distribution,…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-19/HL4200"
-    },
-    {
-      "id": "PQ:35667",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Stuart Anderson",
-      "memberParty": "Con",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-10-16",
-      "dateAnswered": "2026-10-30",
-      "context": "What plans she has for future UK Emergency Alerts system tests.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-16/35667"
     },
     {
       "id": "PQ:HL4126",
