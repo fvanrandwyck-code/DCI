@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T08:29:07.440Z",
+  "generatedAt": "2026-11-12T17:39:40.946Z",
   "bills": [
     {
       "billId": 4035,
@@ -10,9 +10,9 @@
       "currentStageName": "Consideration of Lords amendments",
       "currentStageHouse": "Commons",
       "currentStageIndex": 10,
-      "nextMilestone": "No sitting date scheduled yet.",
+      "nextMilestone": "Sitting scheduled for 24 November 2026.",
       "lastStageActivityDate": "2026-11-04",
-      "lastConfirmedAt": "2026-11-12T08:29:07.440Z",
+      "lastConfirmedAt": "2026-11-12T17:39:40.946Z",
       "stages": [
         {
           "index": 0,
