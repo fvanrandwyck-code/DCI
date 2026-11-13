@@ -1,6 +1,45 @@
 {
-  "generatedAt": "2026-11-13T11:55:18.593Z",
+  "generatedAt": "2026-11-13T19:18:22.930Z",
   "items": [
+    {
+      "id": "PQ:41647",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Vikki Slade",
+      "memberParty": "LD",
+      "title": "Foetal Alcohol Spectrum Disorder: Diagnosis",
+      "date": "2026-11-10",
+      "dateAnswered": "2026-11-13",
+      "context": "What assessment her Department has made of the potential merits that improving the early identification of Foetal Alcohol Spectrum Disorder could have for the annual cost of FASD…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41647"
+    },
+    {
+      "id": "PQ:41646",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Vikki Slade",
+      "memberParty": "LD",
+      "title": "Foetal Alcohol Spectrum Disorder: Diagnosis",
+      "date": "2026-11-10",
+      "dateAnswered": "2026-11-13",
+      "context": "What steps her Department is taking to help improve the early identification of Foetal Alcohol Spectrum Disorder.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41646"
+    },
+    {
+      "id": "PQ:41593",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Ministry of Justice",
+      "memberName": "Samantha Niblett",
+      "memberParty": "Lab",
+      "title": "Courts: Sexual Offences",
+      "date": "2026-11-10",
+      "dateAnswered": "2026-11-13",
+      "context": "What the timetable is for the rollout of specialist courtrooms for rape and serious sexual offence cases to each Crown Court in England and Wales; which courts will receive those…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41593"
+    },
     {
       "id": "PQ:40979",
       "contentType": "question",
@@ -221,19 +260,6 @@
       "dateAnswered": "2026-11-03",
       "context": "What steps he is taking to protect the integrity of energy and telecommunications apparatus on the land and sea beds of Scotland.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-26/37905"
-    },
-    {
-      "id": "PQ:37798",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Stuart Anderson",
-      "memberParty": "Con",
-      "title": "Broadband: South Shropshire",
-      "date": "2026-10-26",
-      "dateAnswered": "2026-11-03",
-      "context": "Culture, Media and Sport, how many new homes have achieved gigabit-capable broadband in South Shropshire constituency in the last two years.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-26/37798"
     },
     {
       "id": "PQ:37427",
