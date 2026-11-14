@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T19:18:22.930Z",
+  "generatedAt": "2026-11-14T00:42:52.124Z",
   "items": [
     {
       "id": "PQ:41647",
@@ -80,19 +80,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40500"
     },
     {
-      "id": "PQ:39816",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Alison Bennett",
-      "memberParty": "LD",
-      "title": "Broadband",
-      "date": "2026-11-02",
-      "dateAnswered": "2026-11-10",
-      "context": "Culture, Media and Sport, what steps her Department is taking to require Openreach to publish firm delivery dates for Full Fibre and reasons for delays where work has already…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/39816"
-    },
-    {
       "id": "PQ:HL4778",
       "contentType": "question",
       "house": "Lords",
@@ -104,6 +91,19 @@
       "dateAnswered": "2026-11-10",
       "context": "In light of their decision to support a hybrid connectivity project in Papa Stour, Shetland, announced on 27 November 2024, what plans they have, if any, to support further hybrid…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/HL4778"
+    },
+    {
+      "id": "PQ:39816",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Alison Bennett",
+      "memberParty": "LD",
+      "title": "Broadband",
+      "date": "2026-11-02",
+      "dateAnswered": "2026-11-10",
+      "context": "Culture, Media and Sport, what steps her Department is taking to require Openreach to publish firm delivery dates for Full Fibre and reasons for delays where work has already…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/39816"
     },
     {
       "id": "PQ:HL4777",
@@ -130,19 +130,6 @@
       "dateAnswered": "2026-11-11",
       "context": "Whether funding has been secured for a rollout of Train Wi-Fi across the Great Western Railway intercity fleet.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-30/39648"
-    },
-    {
-      "id": "PQ:HL4708",
-      "contentType": "question",
-      "house": "Lords",
-      "label": "DCMS",
-      "memberName": "Lord Bridges of Headley",
-      "memberParty": "Con",
-      "title": "Voice over Internet Protocol: Emergencies",
-      "date": "2026-10-29",
-      "dateAnswered": "2026-11-12",
-      "context": "What assessment they have made of the ability of digital landlines and mobile networks to maintain access to emergency services during nationwide power failures lasting (1) 24…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-29/HL4708"
     },
     {
       "id": "PQ:HL4711",
@@ -184,6 +171,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-29/HL4709"
     },
     {
+      "id": "PQ:HL4708",
+      "contentType": "question",
+      "house": "Lords",
+      "label": "DCMS",
+      "memberName": "Lord Bridges of Headley",
+      "memberParty": "Con",
+      "title": "Voice over Internet Protocol: Emergencies",
+      "date": "2026-10-29",
+      "dateAnswered": "2026-11-12",
+      "context": "What assessment they have made of the ability of digital landlines and mobile networks to maintain access to emergency services during nationwide power failures lasting (1) 24…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-29/HL4708"
+    },
+    {
       "id": "PQ:38807",
       "contentType": "question",
       "house": "Commons",
@@ -223,6 +223,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-28/38930"
     },
     {
+      "id": "PQ:37905",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "MoD",
+      "memberName": "Alison Taylor",
+      "memberParty": "Lab",
+      "title": "Infrastructure: Security",
+      "date": "2026-10-26",
+      "dateAnswered": "2026-11-03",
+      "context": "What steps he is taking to protect the integrity of energy and telecommunications apparatus on the land and sea beds of Scotland.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-26/37905"
+    },
+    {
       "id": "PQ:37777",
       "contentType": "question",
       "house": "Commons",
@@ -247,19 +260,6 @@
       "dateAnswered": "2026-11-03",
       "context": "Culture, Media and Sport, what steps her Department is taking to secure the delivery of gigabit-capable broadband to premises that are not included within a commercial rollout…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-26/38054"
-    },
-    {
-      "id": "PQ:37905",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "MoD",
-      "memberName": "Alison Taylor",
-      "memberParty": "Lab",
-      "title": "Infrastructure: Security",
-      "date": "2026-10-26",
-      "dateAnswered": "2026-11-03",
-      "context": "What steps he is taking to protect the integrity of energy and telecommunications apparatus on the land and sea beds of Scotland.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-26/37905"
     },
     {
       "id": "PQ:37427",
