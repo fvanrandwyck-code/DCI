@@ -1,6 +1,30 @@
 {
-  "generatedAt": "2026-11-17T02:48:45.854Z",
+  "generatedAt": "2026-11-17T12:51:44.583Z",
   "items": [
+    {
+      "id": "WS:HLWS487",
+      "contentType": "statement",
+      "house": "Lords",
+      "label": "Home Office",
+      "memberName": "Lord Hanson of Flint",
+      "memberParty": "Lab",
+      "title": "Telecommunications Fraud Charter: One Year On",
+      "date": "2026-11-17",
+      "context": "It has been just over a year since the publication of the second Telecommunications Fraud Charter, a landmark agreement between Government and the telecommunications sector to…",
+      "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-11-17/HLWS487"
+    },
+    {
+      "id": "WS:HCWS478",
+      "contentType": "statement",
+      "house": "Commons",
+      "label": "Home Office",
+      "memberName": "Dan Jarvis",
+      "memberParty": "Lab",
+      "title": "Telecommunications Fraud Charter: One Year On",
+      "date": "2026-11-17",
+      "context": "My Noble Friend the Minister of State, Home Office (Lord Hanson of Flint) has today made the following Written Ministerial Statement:It has been just over a year since the…",
+      "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-11-17/HCWS478"
+    },
     {
       "id": "PQ:41793",
       "contentType": "question",
