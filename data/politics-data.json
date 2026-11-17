@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-17T12:51:44.583Z",
+  "generatedAt": "2026-11-17T23:23:24.677Z",
   "items": [
     {
       "id": "WS:HLWS487",
@@ -65,6 +65,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41646"
     },
     {
+      "id": "PQ:41295",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Mr Joshua Reynolds",
+      "memberParty": "LD",
+      "title": "Digital Technology and Telecommunications: Infrastructure",
+      "date": "2026-11-10",
+      "dateAnswered": "2026-11-17",
+      "context": "Culture, Media and Sport, whether the Government plans to publish a strategy for reducing strategic dependencies on foreign-owned providers of critical digital infrastructure and…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41295"
+    },
+    {
       "id": "PQ:40979",
       "contentType": "question",
       "house": "Commons",
@@ -128,6 +141,19 @@
       "dateAnswered": "2026-11-16",
       "context": "What progress her Department has made on the rollout of hybrid closed loop technology to fulfil the NHS five-year implementation strategy.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40371"
+    },
+    {
+      "id": "PQ:HL4860",
+      "contentType": "question",
+      "house": "Lords",
+      "label": "DCMS",
+      "memberName": "Lord Browne of Belmont",
+      "memberParty": "DUP",
+      "title": "National Security: Telecommunications Cables",
+      "date": "2026-11-03",
+      "dateAnswered": "2026-11-17",
+      "context": "What assessment they have made of the resilience and security of subsea telecommunications cables and energy infrastructure serving Northern Ireland via the Irish Sea; and what…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/HL4860"
     },
     {
       "id": "PQ:HL4785",
@@ -206,19 +232,6 @@
       "dateAnswered": "2026-11-10",
       "context": "In light of their decision to support a hybrid connectivity project in Papa Stour, Shetland, announced on 27 November 2024, what plans they have, if any, to support further hybrid…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/HL4778"
-    },
-    {
-      "id": "PQ:HL4777",
-      "contentType": "question",
-      "house": "Lords",
-      "label": "Department for Business, Innovation, Science and Trade ",
-      "memberName": "Lord Cameron of Lochiel",
-      "memberParty": "Con",
-      "title": "Satellite Communications: Shetland",
-      "date": "2026-11-02",
-      "dateAnswered": "2026-11-05",
-      "context": "How much of the £1 million allocated to the hybrid connectivity project in Papa Stour, Shetland, announced on 27 November 2024 has been spent; and what the outcome of that project…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/HL4777"
     },
     {
       "id": "PQ:HL4708",
@@ -351,17 +364,17 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-21/37165"
     },
     {
-      "id": "PQ:36821",
+      "id": "PQ:37168",
       "contentType": "question",
       "house": "Commons",
-      "label": "Home Office",
-      "memberName": "Pippa Heylings",
-      "memberParty": "LD",
-      "title": "Mobile Phones: Fraud",
+      "label": "Cabinet Office",
+      "memberName": "Stuart Anderson",
+      "memberParty": "Con",
+      "title": "Emergencies: Mobile Phones",
       "date": "2026-10-21",
-      "dateAnswered": "2026-10-29",
-      "context": "What discussions she has had with (a) Ofcom and (b) mobile network operators on establishing a national protocol to immediately suspend or block mobile telephone numbers that have…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-21/36821"
+      "dateAnswered": "2026-11-17",
+      "context": "Whether her Department had made an assessment of the potential impact of emergency alert tests on (a) levels of public trust and (b) response rates.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-21/37168"
     },
     {
       "id": "PQ:35160",
@@ -375,19 +388,6 @@
       "dateAnswered": "2026-11-12",
       "context": "Pursuant to WPQ 21898 answered on 29 September 2026 about Emergencies Mobile Phones, whether her assessment of the effectiveness of the use of the national emergency alerts system…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-15/35160"
-    },
-    {
-      "id": "PQ:HL4126",
-      "contentType": "question",
-      "house": "Lords",
-      "label": "DCMS",
-      "memberName": "Lord Taylor of Warwick",
-      "memberParty": null,
-      "title": "Broadband: Rural Areas",
-      "date": "2026-10-14",
-      "dateAnswered": "2026-10-28",
-      "context": "What steps they are taking to ensure that access to critical broadband infrastructure is protected in rural areas.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-14/HL4126"
     },
     {
       "id": "WS:HLWS368",
@@ -451,19 +451,6 @@
       "dateAnswered": "2026-11-12",
       "context": "Pursuant to the Answer of 30 September 2026 to Question 22121, how people in mobile signal blackspots would receive emergency alerts through other mechanisms such as \"text or…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32129"
-    },
-    {
-      "id": "PQ:31675",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Stuart Anderson",
-      "memberParty": "Con",
-      "title": "Telecommunications: Cybersecurity",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-10-28",
-      "context": "Culture, Media and Sport, what steps her Department is taking to help protect foundational telecommunications infrastructure from state-sponsored cyber espionage.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/31675"
     },
     {
       "id": "WS:HLWS254",
