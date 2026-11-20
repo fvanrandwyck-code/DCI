@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-19T22:56:29.797Z",
+  "generatedAt": "2026-11-20T05:59:50.977Z",
   "items": [
     {
       "id": "WS:HLWS487",
@@ -26,6 +26,32 @@
       "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-11-17/HCWS478"
     },
     {
+      "id": "PQ:43815",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Treasury",
+      "memberName": "Mr Gregory Campbell",
+      "memberParty": "DUP",
+      "title": "Small Businesses: Northern Ireland",
+      "date": "2026-11-16",
+      "dateAnswered": "2026-11-19",
+      "context": "What steps the National Wealth Fund are taking through its investment in Northern Ireland's rural broadband development to assist the expansion of rural based SMEs.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-16/43815"
+    },
+    {
+      "id": "PQ:43552",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Treasury",
+      "memberName": "Mr Richard Holden",
+      "memberParty": "Con",
+      "title": "Fuels: UK Carbon Border Adjustment Mechanism",
+      "date": "2026-11-16",
+      "dateAnswered": "2026-11-19",
+      "context": "What assessment his Department made of the potential impact on (a) airline operating costs, (b) passenger fares, (c) regional and international air connectivity and (d) the…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-16/43552"
+    },
+    {
       "id": "PQ:43178",
       "contentType": "question",
       "house": "Commons",
@@ -39,17 +65,30 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-13/43178"
     },
     {
-      "id": "PQ:41241",
+      "id": "PQ:42861",
       "contentType": "question",
       "house": "Commons",
-      "label": "Department for Business, Innovation, Science and Trade ",
-      "memberName": "Jess Asato",
+      "label": "Department of Health and Social Care",
+      "memberName": "Gill Furniss",
       "memberParty": "Lab",
-      "title": "Toys and Games: Artificial Intelligence",
-      "date": "2026-11-10",
-      "dateAnswered": "2026-11-18",
-      "context": "Innovation, Science and Trade, whether he has made an assessment of the adequacy of (a) the Toys (Safety) Regulations 2011 and (b) the Product Security and Telecommunications…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41241"
+      "title": "Foetal Alcohol Spectrum Disorder",
+      "date": "2026-11-12",
+      "dateAnswered": "2026-11-19",
+      "context": "If she will consider integrating Foetal Alcohol Spectrum Disorder into the new Mental Health Strategy to improve outcomes for those impacted by the condition.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42861"
+    },
+    {
+      "id": "PQ:42860",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Gill Furniss",
+      "memberParty": "Lab",
+      "title": "Foetal Alcohol Spectrum Disorder",
+      "date": "2026-11-12",
+      "dateAnswered": "2026-11-19",
+      "context": "Whether her Department has considered the potential merits of a UK-wide FASD Prevention and Response Programme to mitigate the prevalence of foetal alcohol spectrum disorder…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42860"
     },
     {
       "id": "PQ:41793",
@@ -91,6 +130,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41646"
     },
     {
+      "id": "PQ:41241",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department for Business, Innovation, Science and Trade ",
+      "memberName": "Jess Asato",
+      "memberParty": "Lab",
+      "title": "Toys and Games: Artificial Intelligence",
+      "date": "2026-11-10",
+      "dateAnswered": "2026-11-18",
+      "context": "Innovation, Science and Trade, whether he has made an assessment of the adequacy of (a) the Toys (Safety) Regulations 2011 and (b) the Product Security and Telecommunications…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41241"
+    },
+    {
       "id": "PQ:41295",
       "contentType": "question",
       "house": "Commons",
@@ -117,17 +169,17 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-04/40979"
     },
     {
-      "id": "PQ:40371",
+      "id": "PQ:40573",
       "contentType": "question",
       "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Tom Gordon",
+      "label": "DCMS",
+      "memberName": "Pippa Heylings",
       "memberParty": "LD",
-      "title": "Diabetes: Medical Devices",
+      "title": "Mobile Phones: Contracts",
       "date": "2026-11-03",
       "dateAnswered": "2026-11-16",
-      "context": "What progress her Department has made on the rollout of hybrid closed loop technology to fulfil the NHS five-year implementation strategy.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40371"
+      "context": "Culture, Media and Sport, whether she has had discussions with Ofcom on reports of consumers being entered into long-term mobile phone contracts without a clear understanding of…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40573"
     },
     {
       "id": "PQ:40501",
@@ -143,19 +195,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40501"
     },
     {
-      "id": "PQ:40573",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Pippa Heylings",
-      "memberParty": "LD",
-      "title": "Mobile Phones: Contracts",
-      "date": "2026-11-03",
-      "dateAnswered": "2026-11-16",
-      "context": "Culture, Media and Sport, whether she has had discussions with Ofcom on reports of consumers being entered into long-term mobile phone contracts without a clear understanding of…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40573"
-    },
-    {
       "id": "PQ:40500",
       "contentType": "question",
       "house": "Commons",
@@ -167,6 +206,19 @@
       "dateAnswered": "2026-11-10",
       "context": "Culture, Media and Sport, what assessment she has made of whether Ofcom's revised copper retirement threshold is consistent with the Government's objective of achieving nationwide…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40500"
+    },
+    {
+      "id": "PQ:40371",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Tom Gordon",
+      "memberParty": "LD",
+      "title": "Diabetes: Medical Devices",
+      "date": "2026-11-03",
+      "dateAnswered": "2026-11-16",
+      "context": "What progress her Department has made on the rollout of hybrid closed loop technology to fulfil the NHS five-year implementation strategy.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40371"
     },
     {
       "id": "PQ:HL4860",
@@ -234,19 +286,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/HL4783"
     },
     {
-      "id": "PQ:HL4778",
-      "contentType": "question",
-      "house": "Lords",
-      "label": "DCMS",
-      "memberName": "Lord Cameron of Lochiel",
-      "memberParty": "Con",
-      "title": "Satellite Communications: Scotland",
-      "date": "2026-11-02",
-      "dateAnswered": "2026-11-10",
-      "context": "In light of their decision to support a hybrid connectivity project in Papa Stour, Shetland, announced on 27 November 2024, what plans they have, if any, to support further hybrid…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/HL4778"
-    },
-    {
       "id": "PQ:39816",
       "contentType": "question",
       "house": "Commons",
@@ -258,6 +297,19 @@
       "dateAnswered": "2026-11-10",
       "context": "Culture, Media and Sport, what steps her Department is taking to require Openreach to publish firm delivery dates for Full Fibre and reasons for delays where work has already…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/39816"
+    },
+    {
+      "id": "PQ:HL4708",
+      "contentType": "question",
+      "house": "Lords",
+      "label": "DCMS",
+      "memberName": "Lord Bridges of Headley",
+      "memberParty": "Con",
+      "title": "Voice over Internet Protocol: Emergencies",
+      "date": "2026-10-29",
+      "dateAnswered": "2026-11-12",
+      "context": "What assessment they have made of the ability of digital landlines and mobile networks to maintain access to emergency services during nationwide power failures lasting (1) 24…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-29/HL4708"
     },
     {
       "id": "PQ:HL4711",
@@ -299,17 +351,17 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-29/HL4709"
     },
     {
-      "id": "PQ:HL4708",
+      "id": "PQ:38807",
       "contentType": "question",
-      "house": "Lords",
+      "house": "Commons",
       "label": "DCMS",
-      "memberName": "Lord Bridges of Headley",
+      "memberName": "Stuart Anderson",
       "memberParty": "Con",
-      "title": "Voice over Internet Protocol: Emergencies",
-      "date": "2026-10-29",
-      "dateAnswered": "2026-11-12",
-      "context": "What assessment they have made of the ability of digital landlines and mobile networks to maintain access to emergency services during nationwide power failures lasting (1) 24…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-29/HL4708"
+      "title": "Broadband: South Shropshire",
+      "date": "2026-10-28",
+      "dateAnswered": "2026-11-06",
+      "context": "Culture, Media and Sport, what proportion of businesses in South Shropshire constituency have access to gigabit-capable broadband.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-28/38807"
     },
     {
       "id": "PQ:38784",
@@ -323,19 +375,6 @@
       "dateAnswered": "2026-11-16",
       "context": "Pursuant to the Answer of 19 October 2026 to Question 34158, how much funding was secured for the low earth orbit satellite connectivity on mainline trains programme following the…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-28/38784"
-    },
-    {
-      "id": "PQ:38807",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Stuart Anderson",
-      "memberParty": "Con",
-      "title": "Broadband: South Shropshire",
-      "date": "2026-10-28",
-      "dateAnswered": "2026-11-06",
-      "context": "Culture, Media and Sport, what proportion of businesses in South Shropshire constituency have access to gigabit-capable broadband.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-28/38807"
     },
     {
       "id": "PQ:37777",
@@ -390,19 +429,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-21/37168"
     },
     {
-      "id": "PQ:35160",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Dr Luke Evans",
-      "memberParty": "Con",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-10-15",
-      "dateAnswered": "2026-11-12",
-      "context": "Pursuant to WPQ 21898 answered on 29 September 2026 about Emergencies Mobile Phones, whether her assessment of the effectiveness of the use of the national emergency alerts system…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-15/35160"
-    },
-    {
       "id": "PQ:34309",
       "contentType": "question",
       "house": "Commons",
@@ -440,19 +466,6 @@
       "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-10-12/HCWS358"
     },
     {
-      "id": "PQ:32129",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Helen Morgan",
-      "memberParty": "LD",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-11-12",
-      "context": "Pursuant to the Answer of 30 September 2026 to Question 22121, how people in mobile signal blackspots would receive emergency alerts through other mechanisms such as \"text or…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32129"
-    },
-    {
       "id": "PQ:30475",
       "contentType": "question",
       "house": "Commons",
@@ -477,6 +490,19 @@
       "dateAnswered": "2026-11-11",
       "context": "Culture, Media and Sport, whether she has had discussions with the Scottish Government on the potential merits of extending the proposed right for leaseholders to request a full…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32062"
+    },
+    {
+      "id": "PQ:32129",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Cabinet Office",
+      "memberName": "Helen Morgan",
+      "memberParty": "LD",
+      "title": "Emergencies: Mobile Phones",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-11-12",
+      "context": "Pursuant to the Answer of 30 September 2026 to Question 22121, how people in mobile signal blackspots would receive emergency alerts through other mechanisms such as \"text or…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32129"
     },
     {
       "id": "WS:HLWS254",
