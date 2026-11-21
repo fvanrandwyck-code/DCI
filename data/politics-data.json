@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T16:45:38.525Z",
+  "generatedAt": "2026-11-21T01:08:18.982Z",
   "items": [
     {
       "id": "WS:HLWS487",
@@ -65,6 +65,58 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-13/43178"
     },
     {
+      "id": "PQ:42874",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Sir Gavin Williamson",
+      "memberParty": "Con",
+      "title": "Mobile Phones: Infrastructure",
+      "date": "2026-11-12",
+      "dateAnswered": "2026-11-20",
+      "context": "Culture, Media and Sport, what estimate she has made of the number of new mobile sites required between now and 2030 to achieve the Government’s 5G Standalone ambitions.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42874"
+    },
+    {
+      "id": "PQ:42871",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Sir Gavin Williamson",
+      "memberParty": "Con",
+      "title": "Mobile Phones: Staffordshire",
+      "date": "2026-11-12",
+      "dateAnswered": "2026-11-20",
+      "context": "Culture, Media and Sport, what estimate her Department has made of the (a) change in the number of mobile masts and (b) number of notices to quit served to mobile operators in…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42871"
+    },
+    {
+      "id": "PQ:42873",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Sir Gavin Williamson",
+      "memberParty": "Con",
+      "title": "Mobile Phones: Infrastructure",
+      "date": "2026-11-12",
+      "dateAnswered": "2026-11-20",
+      "context": "Culture, Media and Sport, what comparative assessment she has made of the approach taken in (a) other European countries to valuing payments to landowners for hosting mobile…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42873"
+    },
+    {
+      "id": "PQ:42872",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Sir Gavin Williamson",
+      "memberParty": "Con",
+      "title": "Telecommunications: Infrastructure",
+      "date": "2026-11-12",
+      "dateAnswered": "2026-11-20",
+      "context": "Culture, Media and Sport, what assessment her Department has made of (a) the reasons for telecommunications sites ceasing operation and (b) the potential impact of the Electronic…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42872"
+    },
+    {
       "id": "PQ:42861",
       "contentType": "question",
       "house": "Commons",
@@ -104,32 +156,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41793"
     },
     {
-      "id": "PQ:41647",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Vikki Slade",
-      "memberParty": "LD",
-      "title": "Foetal Alcohol Spectrum Disorder: Diagnosis",
-      "date": "2026-11-10",
-      "dateAnswered": "2026-11-13",
-      "context": "What assessment her Department has made of the potential merits that improving the early identification of Foetal Alcohol Spectrum Disorder could have for the annual cost of FASD…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41647"
-    },
-    {
-      "id": "PQ:41646",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Vikki Slade",
-      "memberParty": "LD",
-      "title": "Foetal Alcohol Spectrum Disorder: Diagnosis",
-      "date": "2026-11-10",
-      "dateAnswered": "2026-11-13",
-      "context": "What steps her Department is taking to help improve the early identification of Foetal Alcohol Spectrum Disorder.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41646"
-    },
-    {
       "id": "PQ:41241",
       "contentType": "question",
       "house": "Commons",
@@ -156,43 +182,30 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41295"
     },
     {
-      "id": "PQ:40979",
+      "id": "PQ:41647",
       "contentType": "question",
       "house": "Commons",
       "label": "Department of Health and Social Care",
-      "memberName": "Hilary Benn",
-      "memberParty": "Lab",
-      "title": "Foetal Alcohol Spectrum Disorder",
-      "date": "2026-11-04",
-      "dateAnswered": "2026-11-11",
-      "context": "What plans she has to tackle Foetal Alcoholic Spectrum Disorder through a) funding, b) research and c) raising awareness amongst health practitioners and the public.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-04/40979"
+      "memberName": "Vikki Slade",
+      "memberParty": "LD",
+      "title": "Foetal Alcohol Spectrum Disorder: Diagnosis",
+      "date": "2026-11-10",
+      "dateAnswered": "2026-11-13",
+      "context": "What assessment her Department has made of the potential merits that improving the early identification of Foetal Alcohol Spectrum Disorder could have for the annual cost of FASD…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41647"
     },
     {
-      "id": "PQ:40371",
+      "id": "PQ:41646",
       "contentType": "question",
       "house": "Commons",
       "label": "Department of Health and Social Care",
-      "memberName": "Tom Gordon",
+      "memberName": "Vikki Slade",
       "memberParty": "LD",
-      "title": "Diabetes: Medical Devices",
-      "date": "2026-11-03",
-      "dateAnswered": "2026-11-16",
-      "context": "What progress her Department has made on the rollout of hybrid closed loop technology to fulfil the NHS five-year implementation strategy.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40371"
-    },
-    {
-      "id": "PQ:40501",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Jamie Stone",
-      "memberParty": "LD",
-      "title": "Broadband",
-      "date": "2026-11-03",
-      "dateAnswered": "2026-11-12",
-      "context": "Culture, Media and Sport, what assessment she has made of the potential impact of premises being excluded from Ofcom's revised second copper retirement threshold on the likelihood…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40501"
+      "title": "Foetal Alcohol Spectrum Disorder: Diagnosis",
+      "date": "2026-11-10",
+      "dateAnswered": "2026-11-13",
+      "context": "What steps her Department is taking to help improve the early identification of Foetal Alcohol Spectrum Disorder.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41646"
     },
     {
       "id": "PQ:40573",
@@ -206,6 +219,19 @@
       "dateAnswered": "2026-11-16",
       "context": "Culture, Media and Sport, whether she has had discussions with Ofcom on reports of consumers being entered into long-term mobile phone contracts without a clear understanding of…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40573"
+    },
+    {
+      "id": "PQ:40501",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Jamie Stone",
+      "memberParty": "LD",
+      "title": "Broadband",
+      "date": "2026-11-03",
+      "dateAnswered": "2026-11-12",
+      "context": "Culture, Media and Sport, what assessment she has made of the potential impact of premises being excluded from Ofcom's revised second copper retirement threshold on the likelihood…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40501"
     },
     {
       "id": "PQ:40500",
@@ -232,6 +258,19 @@
       "dateAnswered": "2026-11-17",
       "context": "What assessment they have made of the resilience and security of subsea telecommunications cables and energy infrastructure serving Northern Ireland via the Irish Sea; and what…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/HL4860"
+    },
+    {
+      "id": "PQ:40371",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Tom Gordon",
+      "memberParty": "LD",
+      "title": "Diabetes: Medical Devices",
+      "date": "2026-11-03",
+      "dateAnswered": "2026-11-16",
+      "context": "What progress her Department has made on the rollout of hybrid closed loop technology to fulfil the NHS five-year implementation strategy.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40371"
     },
     {
       "id": "PQ:HL4785",
@@ -299,6 +338,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/39816"
     },
     {
+      "id": "PQ:HL4708",
+      "contentType": "question",
+      "house": "Lords",
+      "label": "DCMS",
+      "memberName": "Lord Bridges of Headley",
+      "memberParty": "Con",
+      "title": "Voice over Internet Protocol: Emergencies",
+      "date": "2026-10-29",
+      "dateAnswered": "2026-11-12",
+      "context": "What assessment they have made of the ability of digital landlines and mobile networks to maintain access to emergency services during nationwide power failures lasting (1) 24…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-29/HL4708"
+    },
+    {
       "id": "PQ:HL4711",
       "contentType": "question",
       "house": "Lords",
@@ -338,17 +390,17 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-29/HL4709"
     },
     {
-      "id": "PQ:HL4708",
+      "id": "PQ:38807",
       "contentType": "question",
-      "house": "Lords",
+      "house": "Commons",
       "label": "DCMS",
-      "memberName": "Lord Bridges of Headley",
+      "memberName": "Stuart Anderson",
       "memberParty": "Con",
-      "title": "Voice over Internet Protocol: Emergencies",
-      "date": "2026-10-29",
-      "dateAnswered": "2026-11-12",
-      "context": "What assessment they have made of the ability of digital landlines and mobile networks to maintain access to emergency services during nationwide power failures lasting (1) 24…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-29/HL4708"
+      "title": "Broadband: South Shropshire",
+      "date": "2026-10-28",
+      "dateAnswered": "2026-11-06",
+      "context": "Culture, Media and Sport, what proportion of businesses in South Shropshire constituency have access to gigabit-capable broadband.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-28/38807"
     },
     {
       "id": "PQ:38784",
@@ -362,19 +414,6 @@
       "dateAnswered": "2026-11-16",
       "context": "Pursuant to the Answer of 19 October 2026 to Question 34158, how much funding was secured for the low earth orbit satellite connectivity on mainline trains programme following the…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-28/38784"
-    },
-    {
-      "id": "PQ:38807",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Stuart Anderson",
-      "memberParty": "Con",
-      "title": "Broadband: South Shropshire",
-      "date": "2026-10-28",
-      "dateAnswered": "2026-11-06",
-      "context": "Culture, Media and Sport, what proportion of businesses in South Shropshire constituency have access to gigabit-capable broadband.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-28/38807"
     },
     {
       "id": "PQ:37777",
@@ -466,19 +505,6 @@
       "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-10-12/HCWS358"
     },
     {
-      "id": "PQ:32129",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Helen Morgan",
-      "memberParty": "LD",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-11-12",
-      "context": "Pursuant to the Answer of 30 September 2026 to Question 22121, how people in mobile signal blackspots would receive emergency alerts through other mechanisms such as \"text or…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32129"
-    },
-    {
       "id": "PQ:30475",
       "contentType": "question",
       "house": "Commons",
@@ -503,6 +529,19 @@
       "dateAnswered": "2026-11-11",
       "context": "Culture, Media and Sport, whether she has had discussions with the Scottish Government on the potential merits of extending the proposed right for leaseholders to request a full…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32062"
+    },
+    {
+      "id": "PQ:32129",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Cabinet Office",
+      "memberName": "Helen Morgan",
+      "memberParty": "LD",
+      "title": "Emergencies: Mobile Phones",
+      "date": "2026-10-09",
+      "dateAnswered": "2026-11-12",
+      "context": "Pursuant to the Answer of 30 September 2026 to Question 22121, how people in mobile signal blackspots would receive emergency alerts through other mechanisms such as \"text or…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32129"
     },
     {
       "id": "WS:HLWS254",
