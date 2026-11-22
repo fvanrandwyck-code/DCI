@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T15:58:48.482Z",
+  "generatedAt": "2026-11-22T21:41:23.934Z",
   "items": [
     {
       "id": "WS:HLWS487",
@@ -91,32 +91,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42871"
     },
     {
-      "id": "PQ:42861",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Gill Furniss",
-      "memberParty": "Lab",
-      "title": "Foetal Alcohol Spectrum Disorder",
-      "date": "2026-11-12",
-      "dateAnswered": "2026-11-19",
-      "context": "If she will consider integrating Foetal Alcohol Spectrum Disorder into the new Mental Health Strategy to improve outcomes for those impacted by the condition.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42861"
-    },
-    {
-      "id": "PQ:42860",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Gill Furniss",
-      "memberParty": "Lab",
-      "title": "Foetal Alcohol Spectrum Disorder",
-      "date": "2026-11-12",
-      "dateAnswered": "2026-11-19",
-      "context": "Whether her Department has considered the potential merits of a UK-wide FASD Prevention and Response Programme to mitigate the prevalence of foetal alcohol spectrum disorder…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42860"
-    },
-    {
       "id": "PQ:42873",
       "contentType": "question",
       "house": "Commons",
@@ -141,6 +115,32 @@
       "dateAnswered": "2026-11-20",
       "context": "Culture, Media and Sport, what assessment her Department has made of (a) the reasons for telecommunications sites ceasing operation and (b) the potential impact of the Electronic…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42872"
+    },
+    {
+      "id": "PQ:42861",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Gill Furniss",
+      "memberParty": "Lab",
+      "title": "Foetal Alcohol Spectrum Disorder",
+      "date": "2026-11-12",
+      "dateAnswered": "2026-11-19",
+      "context": "If she will consider integrating Foetal Alcohol Spectrum Disorder into the new Mental Health Strategy to improve outcomes for those impacted by the condition.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42861"
+    },
+    {
+      "id": "PQ:42860",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Gill Furniss",
+      "memberParty": "Lab",
+      "title": "Foetal Alcohol Spectrum Disorder",
+      "date": "2026-11-12",
+      "dateAnswered": "2026-11-19",
+      "context": "Whether her Department has considered the potential merits of a UK-wide FASD Prevention and Response Programme to mitigate the prevalence of foetal alcohol spectrum disorder…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42860"
     },
     {
       "id": "PQ:41793",
