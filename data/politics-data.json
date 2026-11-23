@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T21:41:23.934Z",
+  "generatedAt": "2026-11-23T06:06:47.215Z",
   "items": [
     {
       "id": "WS:HLWS487",
@@ -156,32 +156,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41793"
     },
     {
-      "id": "PQ:41647",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Vikki Slade",
-      "memberParty": "LD",
-      "title": "Foetal Alcohol Spectrum Disorder: Diagnosis",
-      "date": "2026-11-10",
-      "dateAnswered": "2026-11-13",
-      "context": "What assessment her Department has made of the potential merits that improving the early identification of Foetal Alcohol Spectrum Disorder could have for the annual cost of FASD…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41647"
-    },
-    {
-      "id": "PQ:41646",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Vikki Slade",
-      "memberParty": "LD",
-      "title": "Foetal Alcohol Spectrum Disorder: Diagnosis",
-      "date": "2026-11-10",
-      "dateAnswered": "2026-11-13",
-      "context": "What steps her Department is taking to help improve the early identification of Foetal Alcohol Spectrum Disorder.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41646"
-    },
-    {
       "id": "PQ:41241",
       "contentType": "question",
       "house": "Commons",
@@ -206,6 +180,32 @@
       "dateAnswered": "2026-11-17",
       "context": "Culture, Media and Sport, whether the Government plans to publish a strategy for reducing strategic dependencies on foreign-owned providers of critical digital infrastructure and…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41295"
+    },
+    {
+      "id": "PQ:41647",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Vikki Slade",
+      "memberParty": "LD",
+      "title": "Foetal Alcohol Spectrum Disorder: Diagnosis",
+      "date": "2026-11-10",
+      "dateAnswered": "2026-11-13",
+      "context": "What assessment her Department has made of the potential merits that improving the early identification of Foetal Alcohol Spectrum Disorder could have for the annual cost of FASD…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41647"
+    },
+    {
+      "id": "PQ:41646",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Vikki Slade",
+      "memberParty": "LD",
+      "title": "Foetal Alcohol Spectrum Disorder: Diagnosis",
+      "date": "2026-11-10",
+      "dateAnswered": "2026-11-13",
+      "context": "What steps her Department is taking to help improve the early identification of Foetal Alcohol Spectrum Disorder.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41646"
     },
     {
       "id": "PQ:40573",
@@ -247,19 +247,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40500"
     },
     {
-      "id": "PQ:40371",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Tom Gordon",
-      "memberParty": "LD",
-      "title": "Diabetes: Medical Devices",
-      "date": "2026-11-03",
-      "dateAnswered": "2026-11-16",
-      "context": "What progress her Department has made on the rollout of hybrid closed loop technology to fulfil the NHS five-year implementation strategy.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40371"
-    },
-    {
       "id": "PQ:HL4860",
       "contentType": "question",
       "house": "Lords",
@@ -271,6 +258,19 @@
       "dateAnswered": "2026-11-17",
       "context": "What assessment they have made of the resilience and security of subsea telecommunications cables and energy infrastructure serving Northern Ireland via the Irish Sea; and what…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/HL4860"
+    },
+    {
+      "id": "PQ:40371",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Tom Gordon",
+      "memberParty": "LD",
+      "title": "Diabetes: Medical Devices",
+      "date": "2026-11-03",
+      "dateAnswered": "2026-11-16",
+      "context": "What progress her Department has made on the rollout of hybrid closed loop technology to fulfil the NHS five-year implementation strategy.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40371"
     },
     {
       "id": "PQ:HL4785",
