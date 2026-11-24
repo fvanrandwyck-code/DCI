@@ -1,6 +1,30 @@
 {
-  "generatedAt": "2026-11-24T04:38:58.404Z",
+  "generatedAt": "2026-11-24T19:24:10.990Z",
   "items": [
+    {
+      "id": "WS:HLWS506",
+      "contentType": "statement",
+      "house": "Lords",
+      "label": "Home Office",
+      "memberName": "Lord Hanson of Flint",
+      "memberParty": "Lab",
+      "title": "Domestic Abuse Protection Notices and Domestic Abuse Protection Orders Rollout  ",
+      "date": "2026-11-24",
+      "context": "My hon. Friend the Parliamentary Under-Secretary of State for Safeguarding and Violence Against Women and Girls (Satvir Kaur) has today made the following Written Ministerial…",
+      "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-11-24/HLWS506"
+    },
+    {
+      "id": "WS:HCWS497",
+      "contentType": "statement",
+      "house": "Commons",
+      "label": "Home Office",
+      "memberName": "Satvir Kaur",
+      "memberParty": "Lab",
+      "title": "Domestic Abuse Protection Notices and Domestic Abuse Protection Orders Rollout  ",
+      "date": "2026-11-24",
+      "context": "My hon. Friend the Parliamentary Under-Secretary of State for Victims, Violence Against Women and Girls and International Justice (Alex Davies-Jones) and I are today pleased to…",
+      "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-11-24/HCWS497"
+    },
     {
       "id": "WS:HLWS487",
       "contentType": "statement",
@@ -26,43 +50,56 @@
       "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-11-17/HCWS478"
     },
     {
-      "id": "PQ:44049",
+      "id": "PQ:43931",
       "contentType": "question",
       "house": "Commons",
       "label": "DfT",
-      "memberName": "Mr Richard Holden",
-      "memberParty": "Con",
-      "title": "Great British Railways",
+      "memberName": "Caroline Voaden",
+      "memberParty": "LD",
+      "title": "Great Western Railway: Satellites",
       "date": "2026-11-17",
-      "dateAnswered": "2026-11-23",
-      "context": "Following the full rollout of GBR, what i.) number ii.) percentage of train services expected to be operated in the United Kingdom will a.) be badged as GBR b.) those of other…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-17/44049"
+      "dateAnswered": "2026-11-24",
+      "context": "What the timeline is for the rollout of satellite connective technology on Great Western Railways.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-17/43931"
     },
     {
-      "id": "PQ:44235",
+      "id": "PQ:43308",
       "contentType": "question",
       "house": "Commons",
-      "label": "DfT",
-      "memberName": "Alison Griffiths",
+      "label": "DCMS",
+      "memberName": "Charlie Dewhirst",
       "memberParty": "Con",
-      "title": "Air Routes: South West",
-      "date": "2026-11-17",
-      "dateAnswered": "2026-11-23",
-      "context": "What assessment her Department has made of the West of England’s international connectivity capability and if direct air connectivity between the South West and (a) North America…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-17/44235"
+      "title": "Telecommunications: Emergencies",
+      "date": "2026-11-16",
+      "dateAnswered": "2026-11-24",
+      "context": "Culture, Media and Sport, what telecommunications backup systems exist.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-16/43308"
     },
     {
-      "id": "PQ:44034",
+      "id": "PQ:43767",
       "contentType": "question",
       "house": "Commons",
-      "label": "DfT",
-      "memberName": "Rebecca Smith",
+      "label": "DCMS",
+      "memberName": "James Wild",
       "memberParty": "Con",
-      "title": "Great Western Railway: WiFi",
-      "date": "2026-11-17",
-      "dateAnswered": "2026-11-23",
-      "context": "Whether the planned rollout of superfast Wi-Fi on Great Western Railways (GWR) (a) will directly replicate the connectivity and functionality offered in the trial of the…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-17/44034"
+      "title": "Telecommunications",
+      "date": "2026-11-16",
+      "dateAnswered": "2026-11-24",
+      "context": "Culture, Media and Sport, if she will make an assessment of the potential merits of establishing a supplier of last resort mechanism for the telecoms sector.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-16/43767"
+    },
+    {
+      "id": "PQ:43762",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "James Naish",
+      "memberParty": "Lab",
+      "title": "Broadband: Lincolnshire and Nottinghamshire",
+      "date": "2026-11-16",
+      "dateAnswered": "2026-11-24",
+      "context": "Culture, Media and Sport, when a new contractor for the Nottinghamshire and West Lincolnshire full fibre contract will be decided by BDUK.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-16/43762"
     },
     {
       "id": "PQ:HL5341",
@@ -104,6 +141,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-16/43815"
     },
     {
+      "id": "PQ:43286",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department for Education",
+      "memberName": "Shivani Raja",
+      "memberParty": "Con",
+      "title": "Schools: Mobile Phones",
+      "date": "2026-11-16",
+      "dateAnswered": "2026-11-24",
+      "context": "What financial support her Department plans to provide to secondary schools in (a) Leicester East, (b) the East Midlands, and (c) England to meet the capital and administrative…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-16/43286"
+    },
+    {
       "id": "PQ:43360",
       "contentType": "question",
       "house": "Commons",
@@ -115,19 +165,6 @@
       "dateAnswered": "2026-11-23",
       "context": "What steps she is taking to improve clinical awareness and training on Ehlers-Danlos syndromes and hypermobility spectrum disorders among GPs and other NHS clinicians.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-16/43360"
-    },
-    {
-      "id": "PQ:43178",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Mike Wood",
-      "memberParty": "Con",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-11-13",
-      "dateAnswered": "2026-11-18",
-      "context": "What steps are being taken to secure the mobile phone broadcast alert service from cyber-hackers.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-13/43178"
     },
     {
       "id": "PQ:42874",
@@ -390,45 +427,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-29/HL4708"
     },
     {
-      "id": "PQ:HL4711",
-      "contentType": "question",
-      "house": "Lords",
-      "label": "Department of Health and Social Care",
-      "memberName": "Lord Campbell-Savours",
-      "memberParty": "Lab",
-      "title": "Foetal Alcohol Spectrum Disorder",
-      "date": "2026-10-29",
-      "dateAnswered": "2026-11-12",
-      "context": "How many integrated care boards in England have commissioned diagnostic and post-diagnostic support pathways for fetal alcohol spectrum disorder in line with National Institute…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-29/HL4711"
-    },
-    {
-      "id": "PQ:HL4710",
-      "contentType": "question",
-      "house": "Lords",
-      "label": "Department of Health and Social Care",
-      "memberName": "Lord Campbell-Savours",
-      "memberParty": "Lab",
-      "title": "Foetal Alcohol Spectrum Disorder",
-      "date": "2026-10-29",
-      "dateAnswered": "2026-11-12",
-      "context": "Further to the Written Answer by Baroness Merron on 27 October (HL3934), whether they plan to commission a national active-case ascertainment study of fetal alcohol spectrum…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-29/HL4710"
-    },
-    {
-      "id": "PQ:HL4709",
-      "contentType": "question",
-      "house": "Lords",
-      "label": "Department of Health and Social Care",
-      "memberName": "Lord Campbell-Savours",
-      "memberParty": "Lab",
-      "title": "Foetal Alcohol Spectrum Disorder",
-      "date": "2026-10-29",
-      "dateAnswered": "2026-11-12",
-      "context": "What assessment they have made of the report from the National Organisation for Fetal Alcohol Spectrum Disorder (FASD), The Cost of Inaction on FASD, published on 23 June; and…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-29/HL4709"
-    },
-    {
       "id": "PQ:38807",
       "contentType": "question",
       "house": "Commons",
@@ -453,32 +451,6 @@
       "dateAnswered": "2026-11-16",
       "context": "Pursuant to the Answer of 19 October 2026 to Question 34158, how much funding was secured for the low earth orbit satellite connectivity on mainline trains programme following the…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-28/38784"
-    },
-    {
-      "id": "PQ:37165",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Stuart Anderson",
-      "memberParty": "Con",
-      "title": "Telecommunications: Outages",
-      "date": "2026-10-21",
-      "dateAnswered": "2026-11-04",
-      "context": "Culture, Media and Sport, what responsibility telecommunications providers have under the plan to maintain consumer access during localised infrastructure failures.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-21/37165"
-    },
-    {
-      "id": "PQ:34309",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Mr Lee Dillon",
-      "memberParty": "LD",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-10-13",
-      "dateAnswered": "2026-11-18",
-      "context": "What guidance the Government provides to local emergency responders on assessing whether an incident meets the criteria for issuing a UK Emergency Alert.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-13/34309"
     },
     {
       "id": "WS:HLWS368",
@@ -542,19 +514,6 @@
       "dateAnswered": "2026-11-12",
       "context": "Pursuant to the Answer of 30 September 2026 to Question 22121, how people in mobile signal blackspots would receive emergency alerts through other mechanisms such as \"text or…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32129"
-    },
-    {
-      "id": "PQ:26382",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Ministry of Housing, Communities and Local Government",
-      "memberName": "Mr Lee Dillon",
-      "memberParty": "LD",
-      "title": "Housing: Sales",
-      "date": "2026-09-01",
-      "dateAnswered": "2026-11-23",
-      "context": "Communities and Local Government, whether proposed reforms to electricity network infrastructure, consents, land access and rights will include protections for homeowners where…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-09-01/26382"
     },
     {
       "id": "PQ:24650",
