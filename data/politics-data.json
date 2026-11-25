@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-24T19:24:10.990Z",
+  "generatedAt": "2026-11-25T03:24:01.712Z",
   "items": [
     {
       "id": "WS:HLWS506",
@@ -141,19 +141,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-16/43815"
     },
     {
-      "id": "PQ:43286",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department for Education",
-      "memberName": "Shivani Raja",
-      "memberParty": "Con",
-      "title": "Schools: Mobile Phones",
-      "date": "2026-11-16",
-      "dateAnswered": "2026-11-24",
-      "context": "What financial support her Department plans to provide to secondary schools in (a) Leicester East, (b) the East Midlands, and (c) England to meet the capital and administrative…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-16/43286"
-    },
-    {
       "id": "PQ:43360",
       "contentType": "question",
       "house": "Commons",
@@ -165,6 +152,19 @@
       "dateAnswered": "2026-11-23",
       "context": "What steps she is taking to improve clinical awareness and training on Ehlers-Danlos syndromes and hypermobility spectrum disorders among GPs and other NHS clinicians.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-16/43360"
+    },
+    {
+      "id": "PQ:43286",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department for Education",
+      "memberName": "Shivani Raja",
+      "memberParty": "Con",
+      "title": "Schools: Mobile Phones",
+      "date": "2026-11-16",
+      "dateAnswered": "2026-11-24",
+      "context": "What financial support her Department plans to provide to secondary schools in (a) Leicester East, (b) the East Midlands, and (c) England to meet the capital and administrative…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-16/43286"
     },
     {
       "id": "PQ:42874",
@@ -193,32 +193,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42871"
     },
     {
-      "id": "PQ:42873",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Sir Gavin Williamson",
-      "memberParty": "Con",
-      "title": "Mobile Phones: Infrastructure",
-      "date": "2026-11-12",
-      "dateAnswered": "2026-11-20",
-      "context": "Culture, Media and Sport, what comparative assessment she has made of the approach taken in (a) other European countries to valuing payments to landowners for hosting mobile…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42873"
-    },
-    {
-      "id": "PQ:42872",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Sir Gavin Williamson",
-      "memberParty": "Con",
-      "title": "Telecommunications: Infrastructure",
-      "date": "2026-11-12",
-      "dateAnswered": "2026-11-20",
-      "context": "Culture, Media and Sport, what assessment her Department has made of (a) the reasons for telecommunications sites ceasing operation and (b) the potential impact of the Electronic…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42872"
-    },
-    {
       "id": "PQ:42861",
       "contentType": "question",
       "house": "Commons",
@@ -245,6 +219,32 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42860"
     },
     {
+      "id": "PQ:42873",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Sir Gavin Williamson",
+      "memberParty": "Con",
+      "title": "Mobile Phones: Infrastructure",
+      "date": "2026-11-12",
+      "dateAnswered": "2026-11-20",
+      "context": "Culture, Media and Sport, what comparative assessment she has made of the approach taken in (a) other European countries to valuing payments to landowners for hosting mobile…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42873"
+    },
+    {
+      "id": "PQ:42872",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Sir Gavin Williamson",
+      "memberParty": "Con",
+      "title": "Telecommunications: Infrastructure",
+      "date": "2026-11-12",
+      "dateAnswered": "2026-11-20",
+      "context": "Culture, Media and Sport, what assessment her Department has made of (a) the reasons for telecommunications sites ceasing operation and (b) the potential impact of the Electronic…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42872"
+    },
+    {
       "id": "PQ:41793",
       "contentType": "question",
       "house": "Commons",
@@ -256,19 +256,6 @@
       "dateAnswered": "2026-11-16",
       "context": "Culture, Media and Sport, with reference to email correspondence of 19 May 2026 and DSIT case reference MC2026-00022556, on mobile phone coverage in the village of Titley, what…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41793"
-    },
-    {
-      "id": "PQ:41241",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department for Business, Innovation, Science and Trade ",
-      "memberName": "Jess Asato",
-      "memberParty": "Lab",
-      "title": "Toys and Games: Artificial Intelligence",
-      "date": "2026-11-10",
-      "dateAnswered": "2026-11-18",
-      "context": "Innovation, Science and Trade, whether he has made an assessment of the adequacy of (a) the Toys (Safety) Regulations 2011 and (b) the Product Security and Telecommunications…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41241"
     },
     {
       "id": "PQ:41647",
@@ -295,6 +282,19 @@
       "dateAnswered": "2026-11-13",
       "context": "What steps her Department is taking to help improve the early identification of Foetal Alcohol Spectrum Disorder.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41646"
+    },
+    {
+      "id": "PQ:41241",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department for Business, Innovation, Science and Trade ",
+      "memberName": "Jess Asato",
+      "memberParty": "Lab",
+      "title": "Toys and Games: Artificial Intelligence",
+      "date": "2026-11-10",
+      "dateAnswered": "2026-11-18",
+      "context": "Innovation, Science and Trade, whether he has made an assessment of the adequacy of (a) the Toys (Safety) Regulations 2011 and (b) the Product Security and Telecommunications…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41241"
     },
     {
       "id": "PQ:40573",
