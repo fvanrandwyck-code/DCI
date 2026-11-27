@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T13:32:01.339Z",
+  "generatedAt": "2026-11-27T23:55:22.472Z",
   "items": [
     {
       "id": "WS:HLWS506",
@@ -26,6 +26,19 @@
       "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-11-24/HCWS497"
     },
     {
+      "id": "PQ:45195",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Stuart Anderson",
+      "memberParty": "Con",
+      "title": "Broadband: Rural Areas",
+      "date": "2026-11-20",
+      "dateAnswered": "2026-11-27",
+      "context": "Culture, Media and Sport, what steps her Department is taking to eliminate mobile phone not-spots in rural areas.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-20/45195"
+    },
+    {
       "id": "PQ:45227",
       "contentType": "question",
       "house": "Commons",
@@ -37,6 +50,71 @@
       "dateAnswered": "2026-11-27",
       "context": "Culture, Media and Sport, pursuant to the oral exchanges between the rt Hon member for New Forest East and the Minister of State for Security on 27 October 2026, following the…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-20/45227"
+    },
+    {
+      "id": "PQ:45297",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department for Education",
+      "memberName": "Paul Davies",
+      "memberParty": "Lab",
+      "title": "Schools: Mobile Phones",
+      "date": "2026-11-20",
+      "dateAnswered": "2026-11-27",
+      "context": "What steps her Department intends to take to ensure the phone ban in schools does not affect the safety of students as they travel to school.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-20/45297"
+    },
+    {
+      "id": "PQ:45069",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Mims Davies",
+      "memberParty": "Con",
+      "title": "Broadband: East Grinstead and Uckfield",
+      "date": "2026-11-19",
+      "dateAnswered": "2026-11-27",
+      "context": "Culture, Media and Sport, what progress her Department has made on reaching gigabit and 5G coverage in the East Grinstead and Uckfield Constituency by 2030.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-19/45069"
+    },
+    {
+      "id": "PQ:44541",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Dame Caroline Dinenage",
+      "memberParty": "Con",
+      "title": "Broadband: Competition",
+      "date": "2026-11-18",
+      "dateAnswered": "2026-11-27",
+      "context": "Culture, Media and Sport, what discussions she has had with Ofcom regarding a) consolidation in the full fibre market, b) the impact on competition and c) the preferred number of…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-18/44541"
+    },
+    {
+      "id": "PQ:44532",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Dame Caroline Dinenage",
+      "memberParty": "Con",
+      "title": "Broadband: Infrastructure",
+      "date": "2026-11-18",
+      "dateAnswered": "2026-11-27",
+      "context": "Culture, Media and Sport, what assessment her Department has made of the potential impact on (a) future private investment in full-fibre infrastructure and (b) their ability to…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-18/44532"
+    },
+    {
+      "id": "PQ:44548",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department for Business, Innovation, Science and Trade ",
+      "memberName": "Mike Wood",
+      "memberParty": "Con",
+      "title": "Mergers: Broadband",
+      "date": "2026-11-18",
+      "dateAnswered": "2026-11-27",
+      "context": "Innovation, Science and Trade, whether the Competitions and Markets Authority received representations from Greater Manchester Combined Authority in relation to broadband mergers,…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-18/44548"
     },
     {
       "id": "PQ:HL5567",
@@ -113,19 +191,6 @@
       "dateAnswered": "2026-11-25",
       "context": "What contribution his Department is making to the protection of critical undersea infrastructure.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-17/44155"
-    },
-    {
-      "id": "PQ:43360",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Tom Morrison",
-      "memberParty": "LD",
-      "title": "Hypermobility",
-      "date": "2026-11-16",
-      "dateAnswered": "2026-11-23",
-      "context": "What steps she is taking to improve clinical awareness and training on Ehlers-Danlos syndromes and hypermobility spectrum disorders among GPs and other NHS clinicians.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-16/43360"
     },
     {
       "id": "PQ:43308",
@@ -206,6 +271,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-16/43815"
     },
     {
+      "id": "PQ:43360",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Tom Morrison",
+      "memberParty": "LD",
+      "title": "Hypermobility",
+      "date": "2026-11-16",
+      "dateAnswered": "2026-11-23",
+      "context": "What steps she is taking to improve clinical awareness and training on Ehlers-Danlos syndromes and hypermobility spectrum disorders among GPs and other NHS clinicians.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-16/43360"
+    },
+    {
       "id": "PQ:43286",
       "contentType": "question",
       "house": "Commons",
@@ -284,19 +362,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42873"
     },
     {
-      "id": "PQ:42872",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Sir Gavin Williamson",
-      "memberParty": "Con",
-      "title": "Telecommunications: Infrastructure",
-      "date": "2026-11-12",
-      "dateAnswered": "2026-11-20",
-      "context": "Culture, Media and Sport, what assessment her Department has made of (a) the reasons for telecommunications sites ceasing operation and (b) the potential impact of the Electronic…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42872"
-    },
-    {
       "id": "PQ:41793",
       "contentType": "question",
       "house": "Commons",
@@ -308,19 +373,6 @@
       "dateAnswered": "2026-11-16",
       "context": "Culture, Media and Sport, with reference to email correspondence of 19 May 2026 and DSIT case reference MC2026-00022556, on mobile phone coverage in the village of Titley, what…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41793"
-    },
-    {
-      "id": "PQ:40371",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Tom Gordon",
-      "memberParty": "LD",
-      "title": "Diabetes: Medical Devices",
-      "date": "2026-11-03",
-      "dateAnswered": "2026-11-16",
-      "context": "What progress her Department has made on the rollout of hybrid closed loop technology to fulfil the NHS five-year implementation strategy.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40371"
     },
     {
       "id": "PQ:40573",
@@ -349,17 +401,17 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40501"
     },
     {
-      "id": "PQ:40500",
+      "id": "PQ:40371",
       "contentType": "question",
       "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Jamie Stone",
+      "label": "Department of Health and Social Care",
+      "memberName": "Tom Gordon",
       "memberParty": "LD",
-      "title": "Broadband",
+      "title": "Diabetes: Medical Devices",
       "date": "2026-11-03",
-      "dateAnswered": "2026-11-10",
-      "context": "Culture, Media and Sport, what assessment she has made of whether Ofcom's revised copper retirement threshold is consistent with the Government's objective of achieving nationwide…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40500"
+      "dateAnswered": "2026-11-16",
+      "context": "What progress her Department has made on the rollout of hybrid closed loop technology to fulfil the NHS five-year implementation strategy.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40371"
     },
     {
       "id": "PQ:HL4785",
@@ -412,19 +464,6 @@
       "dateAnswered": "2026-11-16",
       "context": "What assessment they have made of the United Kingdom's ranking among OECD member states for mobile network performance; and what ranking they expect the United Kingdom to hold by…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/HL4783"
-    },
-    {
-      "id": "PQ:39816",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Alison Bennett",
-      "memberParty": "LD",
-      "title": "Broadband",
-      "date": "2026-11-02",
-      "dateAnswered": "2026-11-10",
-      "context": "Culture, Media and Sport, what steps her Department is taking to require Openreach to publish firm delivery dates for Full Fibre and reasons for delays where work has already…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/39816"
     },
     {
       "id": "PQ:HL4708",
@@ -488,32 +527,6 @@
       "dateAnswered": "2026-11-11",
       "context": "Culture, Media and Sport, what steps the Government is taking to help increase the supply of MTP/MPO Trunk Cables, Ultra-Dense Ribbon Fibre, Single-Mode Fibre, Multimode Fibre and…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/30475"
-    },
-    {
-      "id": "PQ:32062",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Anneliese Dodds",
-      "memberParty": "Lab",
-      "title": "Leasehold: Broadband",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-11-11",
-      "context": "Culture, Media and Sport, whether she has had discussions with the Scottish Government on the potential merits of extending the proposed right for leaseholders to request a full…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32062"
-    },
-    {
-      "id": "PQ:32129",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Cabinet Office",
-      "memberName": "Helen Morgan",
-      "memberParty": "LD",
-      "title": "Emergencies: Mobile Phones",
-      "date": "2026-10-09",
-      "dateAnswered": "2026-11-12",
-      "context": "Pursuant to the Answer of 30 September 2026 to Question 22121, how people in mobile signal blackspots would receive emergency alerts through other mechanisms such as \"text or…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-09/32129"
     },
     {
       "id": "PQ:24650",
