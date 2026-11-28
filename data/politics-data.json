@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T23:55:22.472Z",
+  "generatedAt": "2026-11-28T06:37:23.750Z",
   "items": [
     {
       "id": "WS:HLWS506",
@@ -154,19 +154,6 @@
       "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-11-17/HCWS478"
     },
     {
-      "id": "PQ:43931",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DfT",
-      "memberName": "Caroline Voaden",
-      "memberParty": "LD",
-      "title": "Great Western Railway: Satellites",
-      "date": "2026-11-17",
-      "dateAnswered": "2026-11-24",
-      "context": "What the timeline is for the rollout of satellite connective technology on Great Western Railways.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-17/43931"
-    },
-    {
       "id": "PQ:44190",
       "contentType": "question",
       "house": "Commons",
@@ -191,6 +178,19 @@
       "dateAnswered": "2026-11-25",
       "context": "What contribution his Department is making to the protection of critical undersea infrastructure.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-17/44155"
+    },
+    {
+      "id": "PQ:43931",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DfT",
+      "memberName": "Caroline Voaden",
+      "memberParty": "LD",
+      "title": "Great Western Railway: Satellites",
+      "date": "2026-11-17",
+      "dateAnswered": "2026-11-24",
+      "context": "What the timeline is for the rollout of satellite connective technology on Great Western Railways.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-17/43931"
     },
     {
       "id": "PQ:43308",
@@ -271,19 +271,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-16/43815"
     },
     {
-      "id": "PQ:43360",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Tom Morrison",
-      "memberParty": "LD",
-      "title": "Hypermobility",
-      "date": "2026-11-16",
-      "dateAnswered": "2026-11-23",
-      "context": "What steps she is taking to improve clinical awareness and training on Ehlers-Danlos syndromes and hypermobility spectrum disorders among GPs and other NHS clinicians.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-16/43360"
-    },
-    {
       "id": "PQ:43286",
       "contentType": "question",
       "house": "Commons",
@@ -295,6 +282,19 @@
       "dateAnswered": "2026-11-24",
       "context": "What financial support her Department plans to provide to secondary schools in (a) Leicester East, (b) the East Midlands, and (c) England to meet the capital and administrative…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-16/43286"
+    },
+    {
+      "id": "PQ:43360",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Tom Morrison",
+      "memberParty": "LD",
+      "title": "Hypermobility",
+      "date": "2026-11-16",
+      "dateAnswered": "2026-11-23",
+      "context": "What steps she is taking to improve clinical awareness and training on Ehlers-Danlos syndromes and hypermobility spectrum disorders among GPs and other NHS clinicians.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-16/43360"
     },
     {
       "id": "PQ:42874",
@@ -323,6 +323,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42871"
     },
     {
+      "id": "PQ:42873",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Sir Gavin Williamson",
+      "memberParty": "Con",
+      "title": "Mobile Phones: Infrastructure",
+      "date": "2026-11-12",
+      "dateAnswered": "2026-11-20",
+      "context": "Culture, Media and Sport, what comparative assessment she has made of the approach taken in (a) other European countries to valuing payments to landowners for hosting mobile…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42873"
+    },
+    {
       "id": "PQ:42861",
       "contentType": "question",
       "house": "Commons",
@@ -347,19 +360,6 @@
       "dateAnswered": "2026-11-19",
       "context": "Whether her Department has considered the potential merits of a UK-wide FASD Prevention and Response Programme to mitigate the prevalence of foetal alcohol spectrum disorder…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42860"
-    },
-    {
-      "id": "PQ:42873",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Sir Gavin Williamson",
-      "memberParty": "Con",
-      "title": "Mobile Phones: Infrastructure",
-      "date": "2026-11-12",
-      "dateAnswered": "2026-11-20",
-      "context": "Culture, Media and Sport, what comparative assessment she has made of the approach taken in (a) other European countries to valuing payments to landowners for hosting mobile…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42873"
     },
     {
       "id": "PQ:41793",
