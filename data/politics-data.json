@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-28T06:37:23.750Z",
+  "generatedAt": "2026-11-28T16:41:39.746Z",
   "items": [
     {
       "id": "WS:HLWS506",
@@ -104,19 +104,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-18/44532"
     },
     {
-      "id": "PQ:44548",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department for Business, Innovation, Science and Trade ",
-      "memberName": "Mike Wood",
-      "memberParty": "Con",
-      "title": "Mergers: Broadband",
-      "date": "2026-11-18",
-      "dateAnswered": "2026-11-27",
-      "context": "Innovation, Science and Trade, whether the Competitions and Markets Authority received representations from Greater Manchester Combined Authority in relation to broadband mergers,…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-18/44548"
-    },
-    {
       "id": "PQ:HL5567",
       "contentType": "question",
       "house": "Lords",
@@ -128,6 +115,19 @@
       "dateAnswered": "2026-11-26",
       "context": "What assessment they have made of the impact of transport connectivity within Wales on its economic growth.",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-18/HL5567"
+    },
+    {
+      "id": "PQ:44548",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department for Business, Innovation, Science and Trade ",
+      "memberName": "Mike Wood",
+      "memberParty": "Con",
+      "title": "Mergers: Broadband",
+      "date": "2026-11-18",
+      "dateAnswered": "2026-11-27",
+      "context": "Innovation, Science and Trade, whether the Competitions and Markets Authority received representations from Greater Manchester Combined Authority in relation to broadband mergers,…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-18/44548"
     },
     {
       "id": "WS:HLWS487",
@@ -152,6 +152,19 @@
       "date": "2026-11-17",
       "context": "My Noble Friend the Minister of State, Home Office (Lord Hanson of Flint) has today made the following Written Ministerial Statement:It has been just over a year since the…",
       "url": "https://questions-statements.parliament.uk/written-statements/detail/2026-11-17/HCWS478"
+    },
+    {
+      "id": "PQ:43931",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DfT",
+      "memberName": "Caroline Voaden",
+      "memberParty": "LD",
+      "title": "Great Western Railway: Satellites",
+      "date": "2026-11-17",
+      "dateAnswered": "2026-11-24",
+      "context": "What the timeline is for the rollout of satellite connective technology on Great Western Railways.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-17/43931"
     },
     {
       "id": "PQ:44190",
@@ -180,17 +193,17 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-17/44155"
     },
     {
-      "id": "PQ:43931",
+      "id": "PQ:43360",
       "contentType": "question",
       "house": "Commons",
-      "label": "DfT",
-      "memberName": "Caroline Voaden",
+      "label": "Department of Health and Social Care",
+      "memberName": "Tom Morrison",
       "memberParty": "LD",
-      "title": "Great Western Railway: Satellites",
-      "date": "2026-11-17",
-      "dateAnswered": "2026-11-24",
-      "context": "What the timeline is for the rollout of satellite connective technology on Great Western Railways.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-17/43931"
+      "title": "Hypermobility",
+      "date": "2026-11-16",
+      "dateAnswered": "2026-11-23",
+      "context": "What steps she is taking to improve clinical awareness and training on Ehlers-Danlos syndromes and hypermobility spectrum disorders among GPs and other NHS clinicians.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-16/43360"
     },
     {
       "id": "PQ:43308",
@@ -284,19 +297,6 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-16/43286"
     },
     {
-      "id": "PQ:43360",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Tom Morrison",
-      "memberParty": "LD",
-      "title": "Hypermobility",
-      "date": "2026-11-16",
-      "dateAnswered": "2026-11-23",
-      "context": "What steps she is taking to improve clinical awareness and training on Ehlers-Danlos syndromes and hypermobility spectrum disorders among GPs and other NHS clinicians.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-16/43360"
-    },
-    {
       "id": "PQ:42874",
       "contentType": "question",
       "house": "Commons",
@@ -321,19 +321,6 @@
       "dateAnswered": "2026-11-20",
       "context": "Culture, Media and Sport, what estimate her Department has made of the (a) change in the number of mobile masts and (b) number of notices to quit served to mobile operators in…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42871"
-    },
-    {
-      "id": "PQ:42873",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "DCMS",
-      "memberName": "Sir Gavin Williamson",
-      "memberParty": "Con",
-      "title": "Mobile Phones: Infrastructure",
-      "date": "2026-11-12",
-      "dateAnswered": "2026-11-20",
-      "context": "Culture, Media and Sport, what comparative assessment she has made of the approach taken in (a) other European countries to valuing payments to landowners for hosting mobile…",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42873"
     },
     {
       "id": "PQ:42861",
@@ -362,6 +349,19 @@
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42860"
     },
     {
+      "id": "PQ:42873",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "DCMS",
+      "memberName": "Sir Gavin Williamson",
+      "memberParty": "Con",
+      "title": "Mobile Phones: Infrastructure",
+      "date": "2026-11-12",
+      "dateAnswered": "2026-11-20",
+      "context": "Culture, Media and Sport, what comparative assessment she has made of the approach taken in (a) other European countries to valuing payments to landowners for hosting mobile…",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-12/42873"
+    },
+    {
       "id": "PQ:41793",
       "contentType": "question",
       "house": "Commons",
@@ -373,6 +373,19 @@
       "dateAnswered": "2026-11-16",
       "context": "Culture, Media and Sport, with reference to email correspondence of 19 May 2026 and DSIT case reference MC2026-00022556, on mobile phone coverage in the village of Titley, what…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-10/41793"
+    },
+    {
+      "id": "PQ:40371",
+      "contentType": "question",
+      "house": "Commons",
+      "label": "Department of Health and Social Care",
+      "memberName": "Tom Gordon",
+      "memberParty": "LD",
+      "title": "Diabetes: Medical Devices",
+      "date": "2026-11-03",
+      "dateAnswered": "2026-11-16",
+      "context": "What progress her Department has made on the rollout of hybrid closed loop technology to fulfil the NHS five-year implementation strategy.",
+      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40371"
     },
     {
       "id": "PQ:40573",
@@ -399,19 +412,6 @@
       "dateAnswered": "2026-11-12",
       "context": "Culture, Media and Sport, what assessment she has made of the potential impact of premises being excluded from Ofcom's revised second copper retirement threshold on the likelihood…",
       "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40501"
-    },
-    {
-      "id": "PQ:40371",
-      "contentType": "question",
-      "house": "Commons",
-      "label": "Department of Health and Social Care",
-      "memberName": "Tom Gordon",
-      "memberParty": "LD",
-      "title": "Diabetes: Medical Devices",
-      "date": "2026-11-03",
-      "dateAnswered": "2026-11-16",
-      "context": "What progress her Department has made on the rollout of hybrid closed loop technology to fulfil the NHS five-year implementation strategy.",
-      "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-03/40371"
     },
     {
       "id": "PQ:HL4785",
